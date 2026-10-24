@@ -1,0 +1,1583 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Alkhwarizmi AI Academy — Libya's first AI academy</title>
+<meta name="description" content="Live AI training in Tripoli, in Arabic first. Five-day Executive AI Path, two-week AI Productivity studio and ten-hour AI for Everyone cohorts. Book a free call.">
+<link rel="canonical" href="https://alkhawarizmi.ai/">
+<link rel="alternate" hreflang="en" href="https://alkhawarizmi.ai/?lang=en">
+<link rel="alternate" hreflang="ar" href="https://alkhawarizmi.ai/?lang=ar">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alkhwarizmi AI Academy">
+<meta property="og:title" content="Alkhwarizmi AI Academy — Libya's first AI academy">
+<meta property="og:description" content="Live AI training in Tripoli, in Arabic first. Executives, professionals and the public. Book a free call.">
+<meta property="og:url" content="https://alkhawarizmi.ai/">
+<meta property="og:image" content="https://alkhawarizmi.ai/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#111128">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111128'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='34' fill='%2309C98E'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,500;0,600;0,700;1,500&family=Instrument+Sans:wght@400;500;600&family=Noto+Kufi+Arabic:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Alkhwarizmi AI Academy","alternateName":"أكاديمية الخوارزمي للذكاء الاصطناعي","url":"https://alkhawarizmi.ai/","email":"admin@alkhawarizmi.ai","address":{"@type":"PostalAddress","streetAddress":"Zawiat Dahmani Street","addressLocality":"Tripoli","addressCountry":"LY"},"description":"Libya's first AI academy. Live training in Arabic first.","hasOfferCatalog":{"@type":"OfferCatalog","name":"Programmes","itemListElement":[{"@type":"Course","name":"Executive AI Path","description":"Five days, 20 hours, nine consulting deliverables for your own organisation.","provider":{"@type":"Organization","name":"Alkhwarizmi AI Academy"},"offers":{"@type":"Offer","price":"10200","priceCurrency":"LYD"}},{"@type":"Course","name":"AI Productivity","description":"Two weeks, ten deliverables: apps, video, campaigns and automation.","provider":{"@type":"Organization","name":"Alkhwarizmi AI Academy"},"offers":{"@type":"Offer","price":"7500","priceCurrency":"LYD"}},{"@type":"Course","name":"AI for Everyone","description":"Ten hours over five evenings. No background needed.","provider":{"@type":"Organization","name":"Alkhwarizmi AI Academy"},"offers":{"@type":"Offer","price":"1200","priceCurrency":"LYD"}}]}}
+</script>
+<style>
+/* ---- tokens ---- */
+:root{
+  --navy:#111128; --navy-2:#1A1A36; --paper:#F7F7FA; --white:#FFFFFF;
+  --ink:#16161D; --ink-2:#5C5C6B; --line:#DCDCE4; --line-dark:rgba(255,255,255,.14);
+  --teal:#09C98E; --teal-ink:#077A56; --indigo:#534CB6; --indigo-soft:#ECEBF8;
+  --display:"Familjen Grotesk","Noto Kufi Arabic",system-ui,sans-serif;
+  --body:"Instrument Sans","IBM Plex Sans Arabic",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --fig-ink:#16161D; --fig-quiet:#6B6F80; --fig-rule:#C9CBD6;
+  --radius:14px; --gutter:clamp(20px,5vw,72px); --max:1180px;
+}
+[dir="rtl"]{--display:"Noto Kufi Arabic","Familjen Grotesk",system-ui,sans-serif;--body:"IBM Plex Sans Arabic","Instrument Sans",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;font:16px/1.55 var(--body);color:var(--ink);background:var(--paper)}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.02em;line-height:1.02}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3{letter-spacing:0;line-height:1.25}
+h1{font-size:clamp(40px,6.2vw,76px);font-weight:700}
+h2{font-size:clamp(34px,4.6vw,56px);font-weight:600}
+h3{font-size:clamp(20px,2vw,24px);font-weight:600}
+p{margin:0}
+.lead{font-size:clamp(17px,1.5vw,20px);color:var(--ink-2);max-width:34em;line-height:1.5}
+.dark .lead{color:#B9B9CF}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---- header ---- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(247,247,250,.86);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:var(--max);margin:0 auto;padding:0 var(--gutter);height:64px;display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:18px}
+.brand svg{width:32px;height:32px}
+.menu{display:flex;align-items:center;gap:22px;margin-inline-start:auto;font-size:15px}
+.menu a{text-decoration:none;color:var(--ink-2)}
+.menu a:hover{color:var(--ink)}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:8px;padding:3px;gap:2px}
+.lang button{border:0;background:none;border-radius:6px;padding:4px 11px;font-size:13px;font-weight:600;color:var(--ink-2);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 20px;border-radius:8px;border:1.5px solid transparent;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
+.btn:active{transform:translateY(1px)}
+.btn-teal{background:var(--teal);color:var(--navy)}
+.btn-teal:hover{background:#1ED99E}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-line{border-color:var(--line);background:transparent;color:var(--ink)}
+.dark .btn-line{border-color:var(--line-dark);color:#fff}
+.btn-sm{min-height:38px;padding:6px 14px;font-size:14px}
+.burger{display:none;margin-inline-start:auto;border:1px solid var(--line);background:#fff;border-radius:10px;width:42px;height:42px;cursor:pointer}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);margin:3px auto}
+@media (max-width:860px){
+  .menu{display:none;position:absolute;inset-inline:0;top:64px;background:var(--paper);border-bottom:1px solid var(--line);padding:16px var(--gutter) 20px;flex-direction:column;align-items:flex-start;gap:14px}
+  .menu.open{display:flex}
+  .burger{display:block}
+  .nav .btn-nav{display:none}
+}
+
+/* ---- slides ---- */
+.slide{position:relative;padding:clamp(56px,8vw,96px) var(--gutter);background-image:repeating-linear-gradient(to bottom,transparent 0 31px,rgba(17,17,40,.055) 31px 32px)}
+.slide.dark{background-image:repeating-linear-gradient(to bottom,transparent 0 31px,rgba(255,255,255,.05) 31px 32px)}
+.slide.grey{background-image:repeating-linear-gradient(to bottom,transparent 0 31px,rgba(17,17,40,.06) 31px 32px)}
+.slide-in{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,72px);align-items:start}
+.slide.one .slide-in,.slide-in.one{grid-template-columns:1fr}
+@media (min-width:1000px){.page .slide{min-height:100svh;display:flex;align-items:center}.slide-in{width:100%}}
+#home .slide{padding-block:clamp(56px,7vw,88px)}
+@media (max-width:860px){.slide-in{grid-template-columns:minmax(0,1fr)}}
+.copy,.card,.slide-in>*{min-width:0}
+.dark{background:var(--navy);color:#fff}
+.dark .lead{color:#C4C4DA}
+.count{font-family:var(--display);font-size:13px;color:var(--ink-2);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.count::after{content:"";height:1px;width:40px;background:var(--line)}
+.dark .count{color:#9A9AB8}.dark .count::after{background:var(--line-dark)}
+.copy>*+*{margin-top:24px}
+.copy h2+p,.copy h1+p{margin-top:18px}
+.copy .list{margin-top:28px}
+.kick{font-family:var(--display);font-style:italic;font-weight:500;font-size:18px;color:var(--teal-ink);letter-spacing:0}
+[dir="rtl"] .kick{font-style:normal;font-weight:600;font-size:16px}
+.dark .kick{color:var(--teal)}
+.copy .kick+h2{margin-top:10px}
+.copy h2{max-width:15em}
+.facts{display:grid;gap:20px 28px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-top:32px}
+.fact{padding-top:14px;border-top:2px solid var(--ink)}
+@media (max-width:600px){.facts{grid-template-columns:1fr;gap:14px}.fact{display:grid;grid-template-columns:auto 1fr;gap:2px 16px;align-items:baseline;padding-top:12px}.fact b{font-size:28px}}
+.dark .fact{border-top-color:#fff}
+.fact b{display:block;font-family:var(--display);font-size:clamp(26px,2.6vw,34px);line-height:1.1;letter-spacing:-.02em}
+[dir="rtl"] .fact b{letter-spacing:0}
+.fact span{font-size:14px;color:var(--ink-2)}
+.dark .fact span{color:#B9B9CF}
+.list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.list li{display:flex;gap:12px;align-items:flex-start}
+.list li::before{content:"";flex:0 0 10px;height:10px;border-radius:50%;background:var(--teal);margin-top:8px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:15px;color:var(--ink-2)}
+.dark .meta{color:#B9B9CF}
+.meta b{color:inherit;font-weight:600}
+.price{font-family:var(--display);font-size:clamp(28px,3vw,38px);font-weight:700;letter-spacing:-.02em;padding-top:18px;border-top:1px solid var(--line)}
+[dir="rtl"] .price{letter-spacing:0}
+.price small{font-family:var(--body);font-size:15px;font-weight:400;color:var(--ink-2);letter-spacing:0;margin-inline-start:8px}
+.dark .price small{color:#B9B9CF}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ---- action card: the one element that repeats ---- */
+.card{background:var(--white);color:var(--ink);border-radius:10px;padding:26px;box-shadow:0 1px 0 var(--line),0 24px 48px -32px rgba(17,17,40,.35);position:relative}
+.dark .card{box-shadow:0 0 0 1px rgba(255,255,255,.06),0 30px 60px -30px rgba(0,0,0,.6)}
+.card h3{font-size:22px;margin-bottom:6px;font-weight:700}
+.card .why{font-size:14px;color:var(--ink-2);margin-bottom:18px}
+.card form{display:grid;gap:12px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:480px){.row2{grid-template-columns:1fr}}
+label.f{display:grid;gap:5px;font-size:13px;font-weight:600;color:var(--ink-2)}
+label.f input,label.f select,label.f textarea{width:100%;min-height:46px;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#fff;font-weight:400;font-size:16px;color:var(--ink)}
+label.f textarea{min-height:88px;resize:vertical}
+label.f input:focus,label.f select:focus,label.f textarea:focus{outline:2px solid var(--teal);outline-offset:0;border-color:transparent}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.seg label{position:relative}
+.seg input{position:absolute;opacity:0;inset:0}
+.seg span{display:flex;align-items:center;justify-content:center;text-align:center;min-height:46px;padding:6px 8px;border:1px solid var(--line);border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;line-height:1.2}
+.seg input:checked+span{background:var(--navy);color:#fff;border-color:var(--navy)}
+.seg input:focus-visible+span{outline:3px solid var(--teal);outline-offset:2px}
+.card .btn{width:100%}
+.alt{display:flex;align-items:center;gap:8px;justify-content:center;font-size:14px;color:var(--ink-2);margin-top:4px}
+.alt a{color:var(--teal-ink);font-weight:600;text-decoration:none}
+.hp{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;clip:rect(0 0 0 0);pointer-events:none}
+.done{display:none;padding:20px;border-radius:14px;background:#EAF9F3;border:1px solid #BDEEDB;color:#0C4A34}
+.done b{display:block;font-family:var(--display);font-size:18px;margin-bottom:6px}
+.done a{color:var(--teal-ink);font-weight:600}
+.done .next{margin:10px 0 0}
+.card.sent form{display:none}.card.sent .done{display:block}
+.err{display:none;font-size:14px;color:#A4222B}
+.card.error .err{display:block}
+.note{font-size:12.5px;color:var(--ink-2);text-align:center}
+
+/* ---- hero specifics ---- */
+.hero{padding-top:clamp(48px,7vw,80px)}
+.hero .slide-in{align-items:center}
+.hero h1{max-width:12em}
+.chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line-dark);border-radius:999px;padding:6px 12px 6px 8px;font-size:13px;color:#C4C4DA;margin-bottom:22px}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(9,201,142,.2)}
+.mark{position:absolute;inset-inline-end:var(--gutter);bottom:-40px;width:min(40vw,420px);opacity:.07;pointer-events:none}
+@media (max-width:860px){.mark{display:none}}
+
+/* ---- figures: one hand-drawn explanation per section ---- */
+.fig{margin-top:28px;padding:18px 18px 14px;background:var(--white);border:1px solid var(--line);border-radius:6px}
+.dark .fig{background:rgba(255,255,255,.04);border-color:var(--line-dark);--fig-ink:#fff;--fig-quiet:#B9B9CF;--fig-rule:rgba(255,255,255,.28)}
+.fig-svg{width:100%;height:auto;display:block}
+.fig figcaption{margin-top:10px;font-family:var(--display);font-style:italic;font-size:14px;color:var(--ink-2)}
+.dark .fig figcaption{color:#B9B9CF}
+[dir="rtl"] .fig figcaption{font-style:normal}
+[dir="rtl"] .fig-svg{direction:ltr}
+.fig-svg text{unicode-bidi:plaintext}
+@media (max-width:600px){.fig{overflow-x:auto;-webkit-overflow-scrolling:touch}.fig-svg{min-width:400px}}
+
+/* ---- watch: the video frame ---- */
+.player{position:relative;margin-top:24px;aspect-ratio:16/9;width:100%;max-width:100%;border-radius:12px;overflow:hidden;background:var(--navy);color:#fff;isolation:isolate}
+.player .poster-mark{position:absolute;inset:auto -6% -18% auto;width:62%;opacity:.14;pointer-events:none}
+.player .poster-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.player .play{position:absolute;inset:0;margin:auto;width:84px;height:84px;border:0;background:none;padding:0;cursor:pointer;z-index:2;transition:transform .15s}
+.player .play:hover{transform:scale(1.06)}
+.player .play svg{width:84px;height:84px;filter:drop-shadow(0 12px 24px rgba(0,0,0,.35))}
+.player .poster-note{position:absolute;inset-inline-start:18px;bottom:14px;font-size:13px;color:#C4C4DA;z-index:2}
+.player iframe,.player video{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3;background:#000}
+.vid-cap{margin-top:10px;font-family:var(--display);font-style:italic;font-size:14px;color:var(--ink-2)}
+[dir="rtl"] .vid-cap{font-style:normal}
+#watch .slide-in{align-items:start}
+/* ---- why now: slim band ---- */
+.band{padding-block:clamp(40px,5vw,64px)}
+.band .slide-in{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:center}
+.band h2{font-size:clamp(28px,3.4vw,40px)}
+.band .facts{margin-top:0;grid-template-columns:repeat(3,1fr)}
+.band .lead{font-size:16px}
+@media (max-width:860px){.band .slide-in{grid-template-columns:1fr}.band .facts{margin-top:20px}}
+@media (max-width:600px){.band .facts{grid-template-columns:1fr}}
+/* ---- plain rows (pathways, founders) ---- */
+.rows{margin:8px 0 0;display:grid}
+.rows>div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;padding:16px 0;border-top:1px solid var(--line)}
+.rows>div:last-child{border-bottom:1px solid var(--line)}
+.rows dt{font-family:var(--display);font-weight:600;font-size:18px;grid-column:1}
+.rows dd{margin:0;color:var(--ink-2);font-size:15px;grid-column:1;max-width:38em}
+.rows dd.when{grid-column:2;grid-row:1;color:var(--ink);font-weight:600;font-size:14px;white-space:nowrap}
+@media (max-width:480px){.rows>div{grid-template-columns:1fr}.rows dd.when{grid-column:1;grid-row:auto;white-space:normal}}
+.rows.progs>div{grid-template-columns:minmax(0,1fr) auto;align-items:start}
+.rows.progs dt{font-size:22px}
+.byo{display:inline-block;font-family:var(--body);font-weight:500;font-size:14px;color:var(--teal-ink);margin-inline-start:8px;vertical-align:2px}
+@media (max-width:640px){.byo{display:block;margin:2px 0 0}}
+.rows.progs dd{max-width:48em}
+.rows.progs dd.when{grid-column:1;grid-row:auto;color:var(--ink-2);font-weight:500;white-space:normal;margin-top:4px}
+.rows.progs dd.go{grid-column:2;grid-row:1/4;align-self:center;margin-inline-start:auto}
+@media (max-width:640px){.rows.progs>div{grid-template-columns:1fr}.rows.progs dd.go{grid-column:1;grid-row:auto;margin:12px 0 0;width:100%}.rows.progs dd.go .btn{width:100%}}
+.also{margin-top:18px;color:var(--ink-2);font-size:15px}
+.also a{color:var(--ink);font-weight:600;text-decoration:none;border-bottom:1px solid var(--line)}
+.back{border-bottom:1px solid var(--line);background:var(--paper)}
+.back-in{max-width:var(--max);margin:0 auto;padding:12px var(--gutter);font-size:14px}
+.back a{text-decoration:none;color:var(--ink-2);font-weight:600}
+.back a:hover{color:var(--ink)}
+.page .slide{min-height:0}
+@media (min-width:1000px){.page .slide{min-height:calc(100svh - 110px)}}
+/* ---- contact / footer ---- */
+.contact{display:grid;gap:14px;font-size:16px}
+.contact div{display:grid;gap:2px}
+.contact span{font-size:13px;color:var(--ink-2);font-weight:600}
+.contact a{text-decoration:none;font-weight:600}
+footer{background:var(--navy);color:#9A9AB8;font-size:14px;padding:28px var(--gutter) calc(28px + env(safe-area-inset-bottom))}
+footer .in{max-width:var(--max);margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+footer a{color:#C4C4DA;text-decoration:none}
+
+
+/* ---- mobile bar ---- */
+.bar{display:none;position:fixed;inset-inline:0;bottom:0;z-index:45;background:rgba(17,17,40,.96);padding:10px var(--gutter) calc(10px + env(safe-area-inset-bottom));gap:10px}
+.bar .btn{flex:1}
+@media (max-width:860px){.bar{display:flex}body{padding-bottom:76px}}
+
+/* ================= device pass ================= */
+/* anchors land below the sticky header */
+html{scroll-padding-top:76px}
+section[id],.page,.card{scroll-margin-top:76px}
+/* notch-safe gutters */
+.nav-in,.slide,.back-in,footer{padding-left:max(var(--gutter),env(safe-area-inset-left));padding-right:max(var(--gutter),env(safe-area-inset-right))}
+.nav{padding-top:env(safe-area-inset-top)}
+/* tap targets: 44px minimum everywhere a finger can land */
+.btn,.btn-sm{min-height:46px}
+.brand{min-height:44px}
+.back a{display:inline-flex;align-items:center;min-height:44px}
+.back-in{padding-block:0}
+.also{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px}
+@media (max-width:640px){.also{flex-direction:column;align-items:flex-start;gap:0}.also>span{margin-bottom:4px}.also a{border-bottom:0;width:100%;border-top:1px solid var(--line)}}
+.also a{display:inline-flex;align-items:center;min-height:44px}
+.contact a{display:inline-flex;align-items:center;min-height:44px}
+.lang button{min-height:36px;min-width:40px}
+@media (pointer:coarse){.menu a{display:inline-flex;align-items:center;min-height:44px}.lang button{min-height:40px}}
+@media (max-width:860px){.menu{gap:2px}.menu a{min-height:48px;width:100%;border-bottom:1px solid var(--line)}.menu .lang{margin-top:10px}}
+/* inputs: never below 16px, so iOS doesn't zoom */
+input,select,textarea{font-size:16px}
+/* forms on phones: the bottom bar steps aside while typing */
+html.typing .bar,html.form-in-view .bar{transform:translateY(110%)}
+.bar{transition:transform .2s ease}
+@media (prefers-reduced-motion:reduce){.bar{transition:none}}
+/* short screens (phones in landscape): no bottom bar, slimmer header */
+@media (max-height:500px) and (orientation:landscape){
+  .bar{display:none}
+  body{padding-bottom:0}
+  .nav-in{height:52px}
+  .menu{top:52px;max-height:calc(100svh - 52px);overflow-y:auto}
+  html{scroll-padding-top:60px}
+  section[id],.page,.card{scroll-margin-top:60px}
+}
+/* static hero (no 3D): keep the headline in the first screen */
+@media (max-width:860px){
+  .static .vp{padding:28px 0 8px}
+  .static .fallback{padding:8px 0 0}
+  .static .fallback svg{width:min(150px,38vw)}
+  .static .ov{padding-block:28px}
+  .static .ov-hero{padding-top:12px}
+  .static .eyebrow .eb-no1{display:none}
+  .static .eyebrow .eb-t{display:inline}
+}
+/* the 3D scroll runs shorter on phones */
+@media (max-width:760px){.scrolly{height:620vh}}
+/* figure scrollers: show they scroll */
+@media (max-width:600px){.fig{scrollbar-width:thin}}
+/* very small phones */
+@media (max-width:359px){
+  :root{--gutter:16px}
+  .card{padding:20px}
+  .seg{grid-template-columns:1fr}
+  .seg span{min-height:44px;justify-content:flex-start;padding-inline:14px}
+  .brand span{display:none}
+}
+/* very wide screens: keep the measure */
+@media (min-width:1600px){:root{--max:1280px}}
+/* ---- homepage: glyphs, proof tiles, compact contact ---- */
+.rows.progs>div{grid-template-columns:64px minmax(0,1fr) auto;align-items:start}
+.rows.progs .glyph{grid-row:1/4;width:64px;height:40px;display:block;margin-top:2px}
+.rows.progs .glyph svg{width:64px;height:40px}
+.rows.progs dt,.rows.progs dd,.rows.progs dd.when{grid-column:2;grid-row:auto}
+.rows.progs dd.go{grid-column:3;grid-row:1/4;align-self:center}
+@media (max-width:640px){.rows.progs>div{grid-template-columns:56px minmax(0,1fr)}.rows.progs dd.go{grid-column:1/-1;grid-row:auto;width:100%}.rows.progs .glyph{grid-row:1/4}}
+.proof{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.proof li{display:grid;grid-template-rows:auto auto 1fr;gap:8px;align-content:start;padding:18px 18px 20px;background:var(--white);border:1px solid var(--line);border-radius:10px;color:var(--ink)}
+.proof svg{width:40px;height:40px;color:var(--navy)}
+.proof b{font-family:var(--display);font-weight:600;font-size:19px;line-height:1.15}
+.proof span{font-size:14.5px;color:var(--ink-2)}
+.slide.compact{padding-block:clamp(40px,5vw,64px)}
+.slide.compact .slide-in{align-items:center}
+#start .fig{margin-top:24px}
+#start .fig-svg{max-width:420px}
+#start .facts{margin-top:24px}
+</style>
+<style>/* ---- original scroll hero ---- */
+.nav ul a.pill{color:#fff}
+.pill{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 22px;border-radius:980px;font-size:17px;font-weight:500;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:background-color .2s}
+.pill-dark{background:var(--ink);color:#fff}
+.pill-dark:hover{background:#000}
+.pill-teal{background:var(--teal);color:var(--navy)}
+.pill-teal:hover{background:#0bd99a}
+.pill-sm{min-height:32px;padding:0 14px;font-size:13px}
+.hero .ctas{margin-top:32px;display:flex;gap:24px;justify-content:center;align-items:center;flex-wrap:wrap}
+.fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center}
+.fallback svg{width:min(320px,60vw);height:auto}
+.no-gl .fallback{display:flex}
+.apply .ctas{margin-top:32px;display:flex;gap:24px;justify-content:center;align-items:center;flex-wrap:wrap}
+/* v2 additions */
+.nav ul a.pill-teal{color:var(--navy);font-weight:600}
+.pill-xl{min-height:58px;padding:0 34px;font-size:19px;font-weight:600;letter-spacing:-.01em}
+.pill-teal.glow{box-shadow:0 12px 32px -8px rgba(9,201,142,.55)}
+.pill-teal.glow:hover{box-shadow:0 16px 40px -8px rgba(9,201,142,.7)}
+.pill-outline{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.pill-outline:hover{background:var(--ink);color:#fff}
+.pill-white{background:#fff;color:var(--navy)}
+.pill-white:hover{background:#eef}
+.pill-ghost{background:rgba(255,255,255,.12);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.pill-ghost:hover{background:rgba(255,255,255,.22)}
+/* ---------- v3: cinematic scroll ---------- */
+.scrolly{position:relative;height:900vh}
+.vp{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#fff}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block}
+.fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center}
+.fallback svg{width:min(320px,60vw);height:auto}
+.ov{position:absolute;left:0;right:0;opacity:0;pointer-events:none;will-change:opacity,transform;padding-inline:max(16px,4vw)}
+.ov.on{pointer-events:auto}
+.ov-hero{top:calc(52px + clamp(28px,6vh,72px));text-align:center}
+.ov-hero h1{margin:0 auto;max-width:14ch;font-size:clamp(44px,7.4vw,96px);line-height:1.02;letter-spacing:-.035em;font-weight:700;text-wrap:balance}
+.ov-hero p{margin:18px auto 0;max-width:34ch;font-size:clamp(18px,2vw,23px);line-height:1.4;color:var(--ink-2)}
+.ctas{margin-top:30px;display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap}
+.ov-center{top:50%;text-align:center}
+.ov-top{top:calc(52px + clamp(28px,8vh,96px));text-align:center}
+.ov-left{top:50%;max-width:1180px;margin:0 auto}
+.ov-left > *{max-width:520px}
+.ov h2{margin:0;font-size:clamp(40px,6.4vw,92px);line-height:1;letter-spacing:-.045em;font-weight:700;text-wrap:balance}
+.ov .sub{margin:22px auto 0;max-width:36ch;font-size:clamp(18px,1.9vw,22px);line-height:1.45}
+.ov-left .sub{margin-left:0}
+.ov .kicker{margin:0 0 16px;font-size:19px;font-weight:600;color:var(--teal)}
+.ov-dark{color:#fff}
+.ov-dark .sub{color:#b9b9d6}
+.ov-dark h2{background:linear-gradient(180deg,#fff 30%,#b8f3df 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ov-light{color:var(--ink)}
+.hint{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;font-size:13px;color:var(--ink-2);transition:opacity .4s}
+.hint span{width:22px;height:34px;border-radius:12px;box-shadow:inset 0 0 0 1.5px #b0b0b8;position:relative}
+.hint span::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:var(--ink-2);animation:wheel 1.6s ease-in-out infinite}
+.progress{position:absolute;left:0;right:0;bottom:0;height:3px;background:transparent}
+.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--indigo),var(--teal))}
+.labels{position:absolute;inset:0;pointer-events:none}
+.labels a{position:absolute;left:0;top:0;transform:translate(-50%,-50%);padding:10px 16px;border-radius:980px;background:rgba(17,17,40,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);color:#fff;font-size:14px;font-weight:600;white-space:nowrap;text-decoration:none;opacity:0;will-change:transform,opacity;transition:background-color .2s,box-shadow .2s}
+.labels a b{color:var(--teal);font-weight:600;margin-left:8px}
+.labels a:hover,.labels a:focus-visible{background:rgba(9,201,142,.9);color:var(--navy)}
+.labels a:hover b{color:var(--navy)}
+.labels.on a{pointer-events:auto}
+.nav.dark{background:rgba(17,17,40,.6);border-bottom-color:rgba(255,255,255,.08)}
+.nav.dark .brand,.nav.dark .menu a{color:#e8e8f2}
+.nav.dark ul a.pill-teal{color:var(--navy)}
+/* static fallback (reduced motion or no WebGL) */
+.static .scrolly{height:auto}
+.static .vp{position:relative;height:auto;overflow:visible;padding:120px 0 40px}
+.static #gl,.static .hint,.static .progress,.static .labels{display:none}
+.static .fallback{display:flex;position:relative;padding:40px 0}
+.static .ov{position:relative;top:auto;opacity:1!important;transform:none!important;pointer-events:auto;padding-block:56px}
+.static .ov-dark{background:var(--navy);margin-block:24px}
+.static .hs{height:auto}
+.static .hs-vp{position:relative;height:auto;padding-block:100px}
+.static .hs-track{flex-wrap:wrap;transform:none!important}
+.static .hs-track .tile{opacity:1!important;transform:none!important}
+.static .rise{opacity:1;transform:none}
+.static .reveal-words span{opacity:1}
+@media (max-width:740px){.ov-left{text-align:center;top:34%}.hint{display:none}.ov-left > *{margin-inline:auto}.labels a{font-size:12px;padding:8px 12px}.labels a b{display:none}}
+.pill-ghosty{background:transparent;box-shadow:inset 0 0 0 1.5px currentColor;color:inherit}
+.static .hs-track .card3d{opacity:1!important;transform:none!important;height:auto;min-height:560px}
+/* hero fits short screens so the mark keeps room */
+.ov-hero{top:calc(52px + clamp(16px,4.5vh,64px))}
+.ov-hero .badge{margin-bottom:clamp(10px,2.2vh,22px)}
+.ov-hero h1{font-size:min(7.4vw,10.5vh,96px)}
+.ov-hero p{margin-top:clamp(10px,1.8vh,18px);font-size:clamp(17px,min(2vw,2.6vh),23px)}
+.ov-hero .ctas{margin-top:clamp(16px,3vh,30px)}
+.ov-hero .pill-xl{min-height:clamp(48px,6.4vh,58px)}
+@media (max-height:700px){.hint{bottom:12px}.hint span{display:none}}
+.eyebrow{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:18px}
+.pillno{display:inline-grid;place-items:center;min-width:34px;height:22px;padding:0 8px;border-radius:980px;box-shadow:inset 0 0 0 1px rgba(9,201,142,.45);font-size:11px;letter-spacing:.06em}
+.hs-head .eyebrow{margin-bottom:12px}
+.pill-ghost{background:rgba(255,255,255,.08);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.pill-ghost:hover{background:rgba(255,255,255,.16)}
+.head .eyebrow{justify-content:center}
+.seat-side .pill{justify-content:center}
+.seat-side .pill[disabled]{opacity:.35;box-shadow:none;cursor:not-allowed}
+.book .way.ask .eyebrow{justify-content:flex-start}
+.static .hs-track .card3d{height:auto;min-height:600px}
+.p5-hero .lead{margin:22px 0 0;max-width:36em;font-size:clamp(17px,1.7vw,20px);line-height:1.5;color:#b4b7d3}
+.ctas.left{justify-content:flex-start}
+.orbit-side .pill{justify-content:center}
+.orbit-side .pill[disabled]{opacity:.35;box-shadow:none;cursor:not-allowed}
+.p5-join .eyebrow{justify-content:center}
+.on-pub .nav ul a.pill-teal{color:var(--navy)}
+h1,h2,h3,.pill,.brand,.nav ul a,.label,.ov h2,.ov-hero h1,.p5-hero h1,.p5-h2,.dur b,.facts3 dd,.tk-main h3,.tk-stub b,.ph3,.pick b,.ctab b{font-family:var(--display)}
+.ov-dark h2{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:#fff}
+/* buttons: brand radius, no glow */
+.pill{border-radius:8px;font-weight:700;letter-spacing:.01em}
+.pill-teal.glow,.pill-teal.glow:hover{box-shadow:none}
+.pill-line{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.pill-line:hover{background:rgba(127,127,160,.12)}
+.nav ul a.pill{border-radius:8px}
+.progress i{background:var(--teal)}
+.pcard .pill{min-height:42px;padding:0 16px;font-size:14px}
+.static .pcard{height:auto;min-height:500px}
+.seat-foot .pill[disabled]{opacity:.35;cursor:not-allowed}
+.after .pill-line{color:#fff}
+.cb .pill{min-height:42px;padding:0 16px;font-size:14px}
+.static .pcard{opacity:1;transform:none}
+.sponsor-band .pill-teal{background:var(--navy);color:#fff}
+.sponsor-band .pill-teal:hover{background:#000}
+.nav ul a.pill-line{color:var(--navy)}
+.nav.dark ul a.pill-line,.on-pub .nav ul a.pill-line{color:#fff}
+.sb-row .pill{min-height:46px;flex:none}
+.sb-row .pill{background:var(--teal);color:#0b0b1f}
+.sb-row .pill:hover{filter:brightness(1.08)}
+.ov-book h2{max-width:none}
+.sponsor-band .pill-teal{background:var(--teal);color:var(--navy)}
+.nav.dark .lang,.on-pub .lang{box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
+.nav.dark .lang a[aria-current],.on-pub .lang a[aria-current]{background:#fff;color:var(--navy)}
+.nav.dark .lang a,.on-pub .lang a{color:#c9c9dc}
+/* hero and finale: text on the left, the mark on the right */
+.ov-split{top:50%;max-width:1180px;margin:0 auto;text-align:left}
+.ov-split > *{max-width:540px}
+.ov-split h1,.ov-split h2{margin-left:0;max-width:11ch;text-align:left}
+.ov-split p{margin-left:0}
+.ov-split .ctas{justify-content:flex-start}
+.ov-hero.ov-split h1{font-size:min(6.6vw,10vh,92px)}
+.ov-final h2{font-size:clamp(40px,5vw,72px)}
+.eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 clamp(14px,2.4vh,24px) !important;font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2) !important}
+.eyebrow i{width:28px;height:2px;background:var(--teal)}
+@media (max-width:900px){.ov-split{top:calc(52px + clamp(16px,4vh,48px));text-align:center}.ov-split > *,.ov-split h1,.ov-split h2,.ov-split p{margin-left:auto;margin-right:auto;text-align:center}.ov-split .ctas{justify-content:center}.eyebrow{justify-content:center}.ov-final{top:calc(52px + clamp(28px,8vh,96px))}}
+/* Nº 01: Libya drawn in dots, the first point lit in Tripoli */
+.hero-map{position:absolute;pointer-events:none;z-index:0}
+#gl{position:relative;z-index:1}
+.hero-map .lmap{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.lmap .ld circle{fill:#c9c9da;opacity:0;animation:dotin .5s ease-out forwards;animation-delay:calc(var(--d) * 9ms + 300ms)}
+.lmap .tc{fill:var(--teal)}
+.lmap .tp,.lmap .tp2{fill:none;stroke:var(--teal);stroke-width:.35;transform-box:fill-box;transform-origin:center;animation:tpulse 2.6s ease-out infinite}
+.lmap .tp2{animation-delay:1.3s}
+.tri-label{position:absolute;left:24.2%;top:3.6%;transform:translate(14px,-50%);display:grid;grid-template-columns:auto auto;align-items:center;gap:0 12px;padding:10px 14px 10px 12px;background:rgba(255,255,255,.86);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:8px;box-shadow:0 0 0 1px #e3e3ee,0 18px 40px -24px rgba(17,17,40,.45);white-space:nowrap;opacity:0;animation:labin .8s cubic-bezier(.2,.8,.2,1) 1.1s forwards}
+.tri-label::before{content:"";position:absolute;right:100%;top:50%;width:14px;height:1px;background:var(--teal)}
+.tri-label b{grid-row:1/3;font-family:var(--display);font-weight:800;font-size:30px;line-height:1;letter-spacing:-.02em;background:linear-gradient(135deg,var(--teal),var(--indigo));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tri-label span{font-family:var(--display);font-weight:700;font-size:14px;color:var(--navy)}
+.tri-label small{font-size:11.5px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+@media (max-width:900px){.tri-label{padding:7px 10px}.tri-label b{font-size:22px}.tri-label span{font-size:12px}.tri-label small{font-size:10.5px}}
+@media (prefers-reduced-motion:reduce){.lmap .ld circle,.tri-label{animation:none;opacity:1}.lmap .tp,.lmap .tp2{animation:none}}
+.static .hero-map{display:none}
+@media (max-width:560px){.pm-acts .pill{flex:1}}
+.eyebrow{font-size:13px !important;line-height:1.2}
+.ov-final h2{max-width:14ch}
+@media (max-width:600px){.nav .pill-sm{white-space:nowrap}}
+@media (max-width:700px){.pm-acts .pill{font-size:15px;padding:0 12px;white-space:nowrap}}
+.tri-label{white-space:normal;max-width:calc(75% - 16px)}
+.tri-label span,.tri-label small{min-width:0}
+.eb-no1{display:none}
+@media (max-width:420px) and (max-height:720px){.tri-label{display:none}.eb-t{display:none}.eb-no1{display:inline;color:var(--teal-text)}}
+@media (max-width:900px){.ov-hero.ov-split h1{font-size:min(10vw,5.6vh,64px)}}
+/* Tripoli: the map sits lower, the label above it, joined by a line */
+.hero-map{left:0 !important;top:0 !important;width:100% !important;height:100% !important;inset:0}
+.hero-map .lmap{position:absolute;inset:auto}
+.tri-label{position:absolute;left:0;top:0;transform:none;max-width:min(330px,calc(100vw - 32px));animation:labin2 .8s cubic-bezier(.2,.8,.2,1) 1.4s both}
+.tri-label::before{display:none}
+.tri-lead{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.tri-lead path{fill:none;stroke:var(--teal);stroke-width:1.5;stroke-dasharray:400;stroke-dashoffset:400;animation:lead 1s ease-out 1.1s forwards}
+@media (prefers-reduced-motion:reduce){.tri-lead path{animation:none;stroke-dashoffset:0}.tri-label{animation:none}}
+.nav.dark ul a.active,.on-pub .nav ul a.active{color:#fff}
+@keyframes wheel{0%{opacity:0;transform:translateY(-3px)}40%{opacity:1}100%{opacity:0;transform:translateY(9px)}}
+@keyframes dotin{from{opacity:0;transform:scale(.2);transform-box:fill-box;transform-origin:center}to{opacity:1}}
+@keyframes tpulse{from{transform:scale(.6);opacity:1}to{transform:scale(4.4);opacity:0}}
+@keyframes labin{from{opacity:0;transform:translate(4px,-50%)}to{opacity:1;transform:translate(14px,-50%)}}
+@keyframes labin2{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes lead{to{stroke-dashoffset:0}}
+.grey{background:#EFEFF4}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink-2)}
+.chk input{margin-top:3px;accent-color:var(--teal-ink);width:18px;height:18px}
+:root{--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+.scrolly .ctas a{text-decoration:none}
+[dir="rtl"] .ov-hero h1,[dir="rtl"] .ov h2,[dir="rtl"] .tri-label b{letter-spacing:0}
+@media (max-width:760px){.scrolly{height:620vh}.static .scrolly{height:auto}}
+@media (max-height:500px) and (orientation:landscape){.tri-label,.hero-map{display:none!important}.scrolly{height:620vh}.ov-hero h1{font-size:clamp(28px,6vh,40px)}}
+@media (max-width:380px){.eyebrow i,.eyebrow .eb-t,.eyebrow .eb-no1{display:none!important}.eyebrow{letter-spacing:.06em}}
+html.at-top .bar{transform:translateY(110%)}
+@media (max-width:860px){.static .vp{padding:28px 0 8px}.static .fallback{padding:8px 0 0}.static .fallback svg{width:min(150px,38vw)}.static .ov{padding-block:28px}}
+</style>
+<style>
+/* ---- Arabic typography: Latin tracking and tight leading break the joined script ---- */
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3{line-height:1.3}
+[dir="rtl"] .ov-hero h1,[dir="rtl"] .ov-hero.ov-split h1,[dir="rtl"] .ov h2,[dir="rtl"] .ov-final h2{line-height:1.3;letter-spacing:0}
+[dir="rtl"] .ov-hero.ov-split h1{font-size:min(6vw,9vh,80px)}
+[dir="rtl"] .ov h2{font-size:clamp(36px,5.6vw,80px)}
+[dir="rtl"] .ov-final h2{font-size:clamp(34px,4.4vw,60px);max-width:none}
+[dir="rtl"] .ov-hero h1{max-width:none}
+[dir="rtl"] .eyebrow,[dir="rtl"] .pill,[dir="rtl"] .pill-xl,[dir="rtl"] .btn,[dir="rtl"] .labels a,[dir="rtl"] .seg span,[dir="rtl"] .tri-label span,[dir="rtl"] .tri-label small{letter-spacing:0}
+[dir="rtl"] .eyebrow{text-transform:none;line-height:1.6}
+[dir="rtl"] .fact b{line-height:1.3}
+[dir="rtl"] .proof b{line-height:1.4}
+[dir="rtl"] .seg span,[dir="rtl"] label.f{font-size:14px;line-height:1.45}
+[dir="rtl"] .note{font-size:13.5px}
+[dir="rtl"] .labels a b{margin-left:0;margin-right:8px}
+/* hero and finale read right to left: text block on the right, the mark on the left */
+[dir="rtl"] .ov-split{text-align:right}
+[dir="rtl"] .ov-split h1,[dir="rtl"] .ov-split h2,[dir="rtl"] .ov-split p{margin-left:auto;margin-right:0;text-align:right}
+[dir="rtl"] .ov-left .sub{margin-left:auto;margin-right:0}
+@media (max-width:900px){[dir="rtl"] .ov-split > *,[dir="rtl"] .ov-split h1,[dir="rtl"] .ov-split h2,[dir="rtl"] .ov-split p{margin-left:auto;margin-right:auto;text-align:center}[dir="rtl"] .ov-hero.ov-split h1{font-size:min(9.5vw,5.4vh,60px)}}
+</style>
+</head>
+<body>
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="Alkhwarizmi AI Academy"><svg viewBox="47 57 338 333" aria-hidden="true"><use href="#logo-path"/></svg><span data-t="brand">Alkhwarizmi</span></a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav class="menu" id="menu">
+      <a href="#executive" data-t="nav.exec">Executives</a>
+      <a href="#productivity" data-t="nav.prod">Productivity</a>
+      <a href="#everyone" data-t="nav.every">AI for Everyone</a>
+      <a href="#sponsor" data-t="nav.sponsor">Sponsor</a>
+      <a href="#contact" data-t="nav.contact">Contact</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="ar" aria-pressed="false" lang="ar">العربية</button>
+      </div>
+      <a class="btn btn-teal btn-sm btn-nav" href="#executive" data-t="nav.cta">Book a free call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+
+<section class="scrolly" id="top">
+    <div class="vp" id="vp">
+      <canvas id="gl" aria-hidden="true"></canvas>
+      <div class="fallback" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="47 57 338 333"><defs><linearGradient id="kgB" x1="165.24" y1="290.66" x2="364.88" y2="91.02" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#09C98E"/><stop offset=".89" stop-color="#534CB6"/></linearGradient></defs><path fill="url(#kgB)" d="M141.01,238.34l.11,59.09-4.67-1.96-29.75-7.03c-3.46-5.82-6.1-11.53-8.54-17.93-6.23-2.16-13.09-4.56-19.46-6.39-1.37-.39-4.49,2.1-5.95,1.26-8.03-4.61-.77-4.51-7.76-8.58l-.15-10.68-13.41-19.82c1.72-11.19,13.35-2.67,11.02-15.9-2.06-5.39-3.92-10.99-1.6-16.13l1.59-3.53c3.09-6.85-1.53-10.94-1.38-14.87.54-14.36,2.7-18.94-3.83-32.99-3.47-7.46-6.16-8.72-5.92-12.06,11.33-4.71,11.64-2.81,18.79-14.55,1.96-3.21.04-7.52-1.18-10.75-2.21-5.83-1.99-4.8,3-10.83,1.44-.21,4.28-.22,4.73-1.12l2.02-4.06c7.94-3.29-.09-3.54,13.96-8.02,3.1-.99,5.6-2.01,6.29-4.93.15-.64-1.39-1.76-1.55-2.42-.97-3.99-.19-9.05.99-12.99l6.51,2.08c2.73.87,5.47,3.58,8.29,4.68,15.43,6.02,21.76-5.85,27.82,2.08l.08,136.83,87.97-89.33,7.71,6.19,5.46,3.42c6.34,3.97,10.89,3.6,16.9-.16,4.32-2.71,10.69-9.2,13.09-13.28,2.11-3.58,1.19-6.12-.8-9.43-2.07-3.44-4.17-9.31-2.62-13.35,3.28-8.52,11.38-13.86,19.73-17.23,2.32-.94,4.79-2.14,7-2.08,3.49.1,5.98-.31,8.56-2.51,3.36-2.87,4.6.61,12.58-.59,1.02.12,3.45.75,4.44,1.09l16.94,5.83.44,4.24c.06.59-.84,2.18-1.03,2.57l3.63,3.02,4.1.96-17.95,18.7-69.96,69.65-45.02,46,40.43,38.48c-10.34,11-15.48,24.26-16.82,38.79l.12,18.69c-6.43-4.07-13.17-7.03-19.28-10.39-6.37-3.5-7.95-4.54-12.55-8.63l-63.11-59.12ZM378.11,374.17l.43-13.2-67.41-42.44c-10.58-8.46-10.36-17.79,6.32-25.49l62.7-21.09-1-36.72c-.04-6.57-3.11-14.48-4.79-20.75-8.99-28.6-35.88-48.4-65.88-49.39l-33.48,36.86c21.35-3.03,38.09,1.03,54.55,15.08,6.4,5.8,10.22,13.36,10.14,21.71l-42.39,10.22c-14.03,3.41-25.26,12.04-33.13,23.03-5.41,8.58-8.42,17.69-8.4,27.76l.87,26.77,100.97,59.15v-11.46l20.51-.05ZM349.78,139.33c-.89-7.16-7.81-12.74-15.8-11.49-7.31,1.15-12.26,7.3-11.73,14.26.52,6.78,5.73,12.67,13.74,12.6,8.87-.07,14.79-7.33,13.79-15.37Z"/></svg></div>
+      <div class="labels" id="labels" aria-hidden="true"></div>
+
+      <div class="hero-map" id="heroMap" aria-hidden="true"><svg class="lmap" viewBox="0 0 100.0 99.0" aria-hidden="true"><g class="ld"><circle cx="86.09" cy="93.95" r=".5" style="--d:1534"/><circle cx="88.70" cy="93.95" r=".5" style="--d:1554"/><circle cx="82.17" cy="91.43" r=".5" style="--d:1474"/><circle cx="84.78" cy="91.43" r=".5" style="--d:1494"/><circle cx="87.39" cy="91.43" r=".5" style="--d:1515"/><circle cx="90.00" cy="91.43" r=".5" style="--d:1537"/><circle cx="78.26" cy="88.92" r=".5" style="--d:1414"/><circle cx="80.87" cy="88.92" r=".5" style="--d:1434"/><circle cx="83.48" cy="88.92" r=".5" style="--d:1455"/><circle cx="86.09" cy="88.92" r=".5" style="--d:1476"/><circle cx="88.70" cy="88.92" r=".5" style="--d:1498"/><circle cx="91.30" cy="88.92" r=".5" style="--d:1520"/><circle cx="74.35" cy="86.40" r=".5" style="--d:1356"/><circle cx="76.96" cy="86.40" r=".5" style="--d:1375"/><circle cx="79.57" cy="86.40" r=".5" style="--d:1395"/><circle cx="82.17" cy="86.40" r=".5" style="--d:1415"/><circle cx="84.78" cy="86.40" r=".5" style="--d:1437"/><circle cx="87.39" cy="86.40" r=".5" style="--d:1459"/><circle cx="90.00" cy="86.40" r=".5" style="--d:1481"/><circle cx="92.61" cy="86.40" r=".5" style="--d:1504"/><circle cx="67.83" cy="83.88" r=".5" style="--d:1279"/><circle cx="70.43" cy="83.88" r=".5" style="--d:1297"/><circle cx="73.04" cy="83.88" r=".5" style="--d:1316"/><circle cx="75.65" cy="83.88" r=".5" style="--d:1335"/><circle cx="78.26" cy="83.88" r=".5" style="--d:1355"/><circle cx="80.87" cy="83.88" r=".5" style="--d:1376"/><circle cx="83.48" cy="83.88" r=".5" style="--d:1397"/><circle cx="86.09" cy="83.88" r=".5" style="--d:1419"/><circle cx="88.70" cy="83.88" r=".5" style="--d:1442"/><circle cx="91.30" cy="83.88" r=".5" style="--d:1465"/><circle cx="93.91" cy="83.88" r=".5" style="--d:1489"/><circle cx="63.91" cy="81.36" r=".5" style="--d:1223"/><circle cx="66.52" cy="81.36" r=".5" style="--d:1240"/><circle cx="69.13" cy="81.36" r=".5" style="--d:1258"/><circle cx="71.74" cy="81.36" r=".5" style="--d:1276"/><circle cx="74.35" cy="81.36" r=".5" style="--d:1296"/><circle cx="76.96" cy="81.36" r=".5" style="--d:1316"/><circle cx="79.57" cy="81.36" r=".5" style="--d:1337"/><circle cx="82.17" cy="81.36" r=".5" style="--d:1358"/><circle cx="84.78" cy="81.36" r=".5" style="--d:1380"/><circle cx="87.39" cy="81.36" r=".5" style="--d:1403"/><circle cx="90.00" cy="81.36" r=".5" style="--d:1426"/><circle cx="92.61" cy="81.36" r=".5" style="--d:1450"/><circle cx="95.22" cy="81.36" r=".5" style="--d:1475"/><circle cx="60.00" cy="78.84" r=".5" style="--d:1167"/><circle cx="62.61" cy="78.84" r=".5" style="--d:1183"/><circle cx="65.22" cy="78.84" r=".5" style="--d:1200"/><circle cx="67.83" cy="78.84" r=".5" style="--d:1218"/><circle cx="70.43" cy="78.84" r=".5" style="--d:1237"/><circle cx="73.04" cy="78.84" r=".5" style="--d:1256"/><circle cx="75.65" cy="78.84" r=".5" style="--d:1276"/><circle cx="78.26" cy="78.84" r=".5" style="--d:1297"/><circle cx="80.87" cy="78.84" r=".5" style="--d:1319"/><circle cx="83.48" cy="78.84" r=".5" style="--d:1341"/><circle cx="86.09" cy="78.84" r=".5" style="--d:1364"/><circle cx="88.70" cy="78.84" r=".5" style="--d:1388"/><circle cx="91.30" cy="78.84" r=".5" style="--d:1412"/><circle cx="93.91" cy="78.84" r=".5" style="--d:1436"/><circle cx="96.52" cy="78.84" r=".5" style="--d:1461"/><circle cx="56.09" cy="76.33" r=".5" style="--d:1112"/><circle cx="58.70" cy="76.33" r=".5" style="--d:1127"/><circle cx="61.30" cy="76.33" r=".5" style="--d:1143"/><circle cx="63.91" cy="76.33" r=".5" style="--d:1160"/><circle cx="66.52" cy="76.33" r=".5" style="--d:1178"/><circle cx="69.13" cy="76.33" r=".5" style="--d:1197"/><circle cx="71.74" cy="76.33" r=".5" style="--d:1217"/><circle cx="74.35" cy="76.33" r=".5" style="--d:1237"/><circle cx="76.96" cy="76.33" r=".5" style="--d:1258"/><circle cx="79.57" cy="76.33" r=".5" style="--d:1280"/><circle cx="82.17" cy="76.33" r=".5" style="--d:1302"/><circle cx="84.78" cy="76.33" r=".5" style="--d:1325"/><circle cx="87.39" cy="76.33" r=".5" style="--d:1349"/><circle cx="90.00" cy="76.33" r=".5" style="--d:1373"/><circle cx="92.61" cy="76.33" r=".5" style="--d:1398"/><circle cx="95.22" cy="76.33" r=".5" style="--d:1423"/><circle cx="28.70" cy="73.81" r=".5" style="--d:985"/><circle cx="31.30" cy="73.81" r=".5" style="--d:988"/><circle cx="49.57" cy="73.81" r=".5" style="--d:1045"/><circle cx="52.17" cy="73.81" r=".5" style="--d:1058"/><circle cx="54.78" cy="73.81" r=".5" style="--d:1072"/><circle cx="57.39" cy="73.81" r=".5" style="--d:1088"/><circle cx="60.00" cy="73.81" r=".5" style="--d:1104"/><circle cx="62.61" cy="73.81" r=".5" style="--d:1121"/><circle cx="65.22" cy="73.81" r=".5" style="--d:1139"/><circle cx="67.83" cy="73.81" r=".5" style="--d:1158"/><circle cx="70.43" cy="73.81" r=".5" style="--d:1177"/><circle cx="73.04" cy="73.81" r=".5" style="--d:1198"/><circle cx="75.65" cy="73.81" r=".5" style="--d:1219"/><circle cx="78.26" cy="73.81" r=".5" style="--d:1241"/><circle cx="80.87" cy="73.81" r=".5" style="--d:1263"/><circle cx="83.48" cy="73.81" r=".5" style="--d:1287"/><circle cx="86.09" cy="73.81" r=".5" style="--d:1311"/><circle cx="88.70" cy="73.81" r=".5" style="--d:1335"/><circle cx="91.30" cy="73.81" r=".5" style="--d:1360"/><circle cx="93.91" cy="73.81" r=".5" style="--d:1385"/><circle cx="96.52" cy="73.81" r=".5" style="--d:1411"/><circle cx="24.78" cy="71.29" r=".5" style="--d:948"/><circle cx="27.39" cy="71.29" r=".5" style="--d:949"/><circle cx="30.00" cy="71.29" r=".5" style="--d:951"/><circle cx="32.61" cy="71.29" r=".5" style="--d:955"/><circle cx="35.22" cy="71.29" r=".5" style="--d:960"/><circle cx="45.65" cy="71.29" r=".5" style="--d:994"/><circle cx="48.26" cy="71.29" r=".5" style="--d:1006"/><circle cx="50.87" cy="71.29" r=".5" style="--d:1019"/><circle cx="53.48" cy="71.29" r=".5" style="--d:1033"/><circle cx="56.09" cy="71.29" r=".5" style="--d:1048"/><circle cx="58.70" cy="71.29" r=".5" style="--d:1064"/><circle cx="61.30" cy="71.29" r=".5" style="--d:1081"/><circle cx="63.91" cy="71.29" r=".5" style="--d:1099"/><circle cx="66.52" cy="71.29" r=".5" style="--d:1118"/><circle cx="69.13" cy="71.29" r=".5" style="--d:1138"/><circle cx="71.74" cy="71.29" r=".5" style="--d:1158"/><circle cx="74.35" cy="71.29" r=".5" style="--d:1180"/><circle cx="76.96" cy="71.29" r=".5" style="--d:1202"/><circle cx="79.57" cy="71.29" r=".5" style="--d:1225"/><circle cx="82.17" cy="71.29" r=".5" style="--d:1248"/><circle cx="84.78" cy="71.29" r=".5" style="--d:1272"/><circle cx="87.39" cy="71.29" r=".5" style="--d:1297"/><circle cx="90.00" cy="71.29" r=".5" style="--d:1322"/><circle cx="92.61" cy="71.29" r=".5" style="--d:1348"/><circle cx="95.22" cy="71.29" r=".5" style="--d:1374"/><circle cx="18.26" cy="68.77" r=".5" style="--d:916"/><circle cx="20.87" cy="68.77" r=".5" style="--d:914"/><circle cx="23.48" cy="68.77" r=".5" style="--d:913"/><circle cx="26.09" cy="68.77" r=".5" style="--d:913"/><circle cx="28.70" cy="68.77" r=".5" style="--d:915"/><circle cx="31.30" cy="68.77" r=".5" style="--d:918"/><circle cx="33.91" cy="68.77" r=".5" style="--d:923"/><circle cx="36.52" cy="68.77" r=".5" style="--d:929"/><circle cx="39.13" cy="68.77" r=".5" style="--d:936"/><circle cx="41.74" cy="68.77" r=".5" style="--d:945"/><circle cx="44.35" cy="68.77" r=".5" style="--d:955"/><circle cx="46.96" cy="68.77" r=".5" style="--d:967"/><circle cx="49.57" cy="68.77" r=".5" style="--d:979"/><circle cx="52.17" cy="68.77" r=".5" style="--d:993"/><circle cx="54.78" cy="68.77" r=".5" style="--d:1008"/><circle cx="57.39" cy="68.77" r=".5" style="--d:1024"/><circle cx="60.00" cy="68.77" r=".5" style="--d:1041"/><circle cx="62.61" cy="68.77" r=".5" style="--d:1059"/><circle cx="65.22" cy="68.77" r=".5" style="--d:1078"/><circle cx="67.83" cy="68.77" r=".5" style="--d:1098"/><circle cx="70.43" cy="68.77" r=".5" style="--d:1119"/><circle cx="73.04" cy="68.77" r=".5" style="--d:1141"/><circle cx="75.65" cy="68.77" r=".5" style="--d:1163"/><circle cx="78.26" cy="68.77" r=".5" style="--d:1186"/><circle cx="80.87" cy="68.77" r=".5" style="--d:1209"/><circle cx="83.48" cy="68.77" r=".5" style="--d:1234"/><circle cx="86.09" cy="68.77" r=".5" style="--d:1259"/><circle cx="88.70" cy="68.77" r=".5" style="--d:1284"/><circle cx="91.30" cy="68.77" r=".5" style="--d:1310"/><circle cx="93.91" cy="68.77" r=".5" style="--d:1336"/><circle cx="96.52" cy="68.77" r=".5" style="--d:1363"/><circle cx="16.96" cy="66.25" r=".5" style="--d:883"/><circle cx="19.57" cy="66.25" r=".5" style="--d:880"/><circle cx="22.17" cy="66.25" r=".5" style="--d:878"/><circle cx="24.78" cy="66.25" r=".5" style="--d:877"/><circle cx="27.39" cy="66.25" r=".5" style="--d:878"/><circle cx="30.00" cy="66.25" r=".5" style="--d:881"/><circle cx="32.61" cy="66.25" r=".5" style="--d:885"/><circle cx="35.22" cy="66.25" r=".5" style="--d:891"/><circle cx="37.83" cy="66.25" r=".5" style="--d:898"/><circle cx="40.43" cy="66.25" r=".5" style="--d:906"/><circle cx="43.04" cy="66.25" r=".5" style="--d:916"/><circle cx="45.65" cy="66.25" r=".5" style="--d:927"/><circle cx="48.26" cy="66.25" r=".5" style="--d:940"/><circle cx="50.87" cy="66.25" r=".5" style="--d:954"/><circle cx="53.48" cy="66.25" r=".5" style="--d:969"/><circle cx="56.09" cy="66.25" r=".5" style="--d:985"/><circle cx="58.70" cy="66.25" r=".5" style="--d:1002"/><circle cx="61.30" cy="66.25" r=".5" style="--d:1020"/><circle cx="63.91" cy="66.25" r=".5" style="--d:1039"/><circle cx="66.52" cy="66.25" r=".5" style="--d:1059"/><circle cx="69.13" cy="66.25" r=".5" style="--d:1080"/><circle cx="71.74" cy="66.25" r=".5" style="--d:1101"/><circle cx="74.35" cy="66.25" r=".5" style="--d:1124"/><circle cx="76.96" cy="66.25" r=".5" style="--d:1147"/><circle cx="79.57" cy="66.25" r=".5" style="--d:1171"/><circle cx="82.17" cy="66.25" r=".5" style="--d:1195"/><circle cx="84.78" cy="66.25" r=".5" style="--d:1220"/><circle cx="87.39" cy="66.25" r=".5" style="--d:1246"/><circle cx="90.00" cy="66.25" r=".5" style="--d:1272"/><circle cx="92.61" cy="66.25" r=".5" style="--d:1299"/><circle cx="95.22" cy="66.25" r=".5" style="--d:1326"/><circle cx="15.65" cy="63.74" r=".5" style="--d:850"/><circle cx="18.26" cy="63.74" r=".5" style="--d:846"/><circle cx="20.87" cy="63.74" r=".5" style="--d:843"/><circle cx="23.48" cy="63.74" r=".5" style="--d:842"/><circle cx="26.09" cy="63.74" r=".5" style="--d:842"/><circle cx="28.70" cy="63.74" r=".5" style="--d:844"/><circle cx="31.30" cy="63.74" r=".5" style="--d:848"/><circle cx="33.91" cy="63.74" r=".5" style="--d:853"/><circle cx="36.52" cy="63.74" r=".5" style="--d:860"/><circle cx="39.13" cy="63.74" r=".5" style="--d:868"/><circle cx="41.74" cy="63.74" r=".5" style="--d:877"/><circle cx="44.35" cy="63.74" r=".5" style="--d:888"/><circle cx="46.96" cy="63.74" r=".5" style="--d:900"/><circle cx="49.57" cy="63.74" r=".5" style="--d:914"/><circle cx="52.17" cy="63.74" r=".5" style="--d:929"/><circle cx="54.78" cy="63.74" r=".5" style="--d:945"/><circle cx="57.39" cy="63.74" r=".5" style="--d:962"/><circle cx="60.00" cy="63.74" r=".5" style="--d:980"/><circle cx="62.61" cy="63.74" r=".5" style="--d:999"/><circle cx="65.22" cy="63.74" r=".5" style="--d:1019"/><circle cx="67.83" cy="63.74" r=".5" style="--d:1040"/><circle cx="70.43" cy="63.74" r=".5" style="--d:1062"/><circle cx="73.04" cy="63.74" r=".5" style="--d:1085"/><circle cx="75.65" cy="63.74" r=".5" style="--d:1108"/><circle cx="78.26" cy="63.74" r=".5" style="--d:1132"/><circle cx="80.87" cy="63.74" r=".5" style="--d:1157"/><circle cx="83.48" cy="63.74" r=".5" style="--d:1183"/><circle cx="86.09" cy="63.74" r=".5" style="--d:1208"/><circle cx="88.70" cy="63.74" r=".5" style="--d:1235"/><circle cx="91.30" cy="63.74" r=".5" style="--d:1262"/><circle cx="93.91" cy="63.74" r=".5" style="--d:1289"/><circle cx="96.52" cy="63.74" r=".5" style="--d:1317"/><circle cx="6.52" cy="61.22" r=".5" style="--d:844"/><circle cx="9.13" cy="61.22" r=".5" style="--d:834"/><circle cx="11.74" cy="61.22" r=".5" style="--d:825"/><circle cx="14.35" cy="61.22" r=".5" style="--d:818"/><circle cx="16.96" cy="61.22" r=".5" style="--d:813"/><circle cx="19.57" cy="61.22" r=".5" style="--d:809"/><circle cx="22.17" cy="61.22" r=".5" style="--d:807"/><circle cx="24.78" cy="61.22" r=".5" style="--d:807"/><circle cx="27.39" cy="61.22" r=".5" style="--d:808"/><circle cx="30.00" cy="61.22" r=".5" style="--d:811"/><circle cx="32.61" cy="61.22" r=".5" style="--d:815"/><circle cx="35.22" cy="61.22" r=".5" style="--d:821"/><circle cx="37.83" cy="61.22" r=".5" style="--d:829"/><circle cx="40.43" cy="61.22" r=".5" style="--d:838"/><circle cx="43.04" cy="61.22" r=".5" style="--d:849"/><circle cx="45.65" cy="61.22" r=".5" style="--d:861"/><circle cx="48.26" cy="61.22" r=".5" style="--d:874"/><circle cx="50.87" cy="61.22" r=".5" style="--d:889"/><circle cx="53.48" cy="61.22" r=".5" style="--d:905"/><circle cx="56.09" cy="61.22" r=".5" style="--d:922"/><circle cx="58.70" cy="61.22" r=".5" style="--d:940"/><circle cx="61.30" cy="61.22" r=".5" style="--d:960"/><circle cx="63.91" cy="61.22" r=".5" style="--d:980"/><circle cx="66.52" cy="61.22" r=".5" style="--d:1001"/><circle cx="69.13" cy="61.22" r=".5" style="--d:1023"/><circle cx="71.74" cy="61.22" r=".5" style="--d:1046"/><circle cx="74.35" cy="61.22" r=".5" style="--d:1070"/><circle cx="76.96" cy="61.22" r=".5" style="--d:1094"/><circle cx="79.57" cy="61.22" r=".5" style="--d:1119"/><circle cx="82.17" cy="61.22" r=".5" style="--d:1145"/><circle cx="84.78" cy="61.22" r=".5" style="--d:1171"/><circle cx="87.39" cy="61.22" r=".5" style="--d:1198"/><circle cx="90.00" cy="61.22" r=".5" style="--d:1225"/><circle cx="92.61" cy="61.22" r=".5" style="--d:1252"/><circle cx="95.22" cy="61.22" r=".5" style="--d:1281"/><circle cx="5.22" cy="58.70" r=".5" style="--d:816"/><circle cx="7.83" cy="58.70" r=".5" style="--d:805"/><circle cx="10.43" cy="58.70" r=".5" style="--d:795"/><circle cx="13.04" cy="58.70" r=".5" style="--d:787"/><circle cx="15.65" cy="58.70" r=".5" style="--d:781"/><circle cx="18.26" cy="58.70" r=".5" style="--d:776"/><circle cx="20.87" cy="58.70" r=".5" style="--d:773"/><circle cx="23.48" cy="58.70" r=".5" style="--d:772"/><circle cx="26.09" cy="58.70" r=".5" style="--d:772"/><circle cx="28.70" cy="58.70" r=".5" style="--d:774"/><circle cx="31.30" cy="58.70" r=".5" style="--d:778"/><circle cx="33.91" cy="58.70" r=".5" style="--d:784"/><circle cx="36.52" cy="58.70" r=".5" style="--d:791"/><circle cx="39.13" cy="58.70" r=".5" style="--d:799"/><circle cx="41.74" cy="58.70" r=".5" style="--d:810"/><circle cx="44.35" cy="58.70" r=".5" style="--d:822"/><circle cx="46.96" cy="58.70" r=".5" style="--d:835"/><circle cx="49.57" cy="58.70" r=".5" style="--d:850"/><circle cx="52.17" cy="58.70" r=".5" style="--d:865"/><circle cx="54.78" cy="58.70" r=".5" style="--d:883"/><circle cx="57.39" cy="58.70" r=".5" style="--d:901"/><circle cx="60.00" cy="58.70" r=".5" style="--d:920"/><circle cx="62.61" cy="58.70" r=".5" style="--d:941"/><circle cx="65.22" cy="58.70" r=".5" style="--d:962"/><circle cx="67.83" cy="58.70" r=".5" style="--d:984"/><circle cx="70.43" cy="58.70" r=".5" style="--d:1007"/><circle cx="73.04" cy="58.70" r=".5" style="--d:1031"/><circle cx="75.65" cy="58.70" r=".5" style="--d:1056"/><circle cx="78.26" cy="58.70" r=".5" style="--d:1081"/><circle cx="80.87" cy="58.70" r=".5" style="--d:1107"/><circle cx="83.48" cy="58.70" r=".5" style="--d:1133"/><circle cx="86.09" cy="58.70" r=".5" style="--d:1160"/><circle cx="88.70" cy="58.70" r=".5" style="--d:1188"/><circle cx="91.30" cy="58.70" r=".5" style="--d:1216"/><circle cx="93.91" cy="58.70" r=".5" style="--d:1244"/><circle cx="96.52" cy="58.70" r=".5" style="--d:1273"/><circle cx="6.52" cy="56.18" r=".5" style="--d:777"/><circle cx="9.13" cy="56.18" r=".5" style="--d:766"/><circle cx="11.74" cy="56.18" r=".5" style="--d:757"/><circle cx="14.35" cy="56.18" r=".5" style="--d:749"/><circle cx="16.96" cy="56.18" r=".5" style="--d:743"/><circle cx="19.57" cy="56.18" r=".5" style="--d:739"/><circle cx="22.17" cy="56.18" r=".5" style="--d:737"/><circle cx="24.78" cy="56.18" r=".5" style="--d:736"/><circle cx="27.39" cy="56.18" r=".5" style="--d:738"/><circle cx="30.00" cy="56.18" r=".5" style="--d:741"/><circle cx="32.61" cy="56.18" r=".5" style="--d:746"/><circle cx="35.22" cy="56.18" r=".5" style="--d:752"/><circle cx="37.83" cy="56.18" r=".5" style="--d:761"/><circle cx="40.43" cy="56.18" r=".5" style="--d:771"/><circle cx="43.04" cy="56.18" r=".5" style="--d:782"/><circle cx="45.65" cy="56.18" r=".5" style="--d:795"/><circle cx="48.26" cy="56.18" r=".5" style="--d:810"/><circle cx="50.87" cy="56.18" r=".5" style="--d:826"/><circle cx="53.48" cy="56.18" r=".5" style="--d:843"/><circle cx="56.09" cy="56.18" r=".5" style="--d:861"/><circle cx="58.70" cy="56.18" r=".5" style="--d:881"/><circle cx="61.30" cy="56.18" r=".5" style="--d:901"/><circle cx="63.91" cy="56.18" r=".5" style="--d:923"/><circle cx="66.52" cy="56.18" r=".5" style="--d:945"/><circle cx="69.13" cy="56.18" r=".5" style="--d:969"/><circle cx="71.74" cy="56.18" r=".5" style="--d:993"/><circle cx="74.35" cy="56.18" r=".5" style="--d:1018"/><circle cx="76.96" cy="56.18" r=".5" style="--d:1043"/><circle cx="79.57" cy="56.18" r=".5" style="--d:1069"/><circle cx="82.17" cy="56.18" r=".5" style="--d:1096"/><circle cx="84.78" cy="56.18" r=".5" style="--d:1123"/><circle cx="87.39" cy="56.18" r=".5" style="--d:1151"/><circle cx="90.00" cy="56.18" r=".5" style="--d:1180"/><circle cx="92.61" cy="56.18" r=".5" style="--d:1208"/><circle cx="95.22" cy="56.18" r=".5" style="--d:1237"/><circle cx="5.22" cy="53.67" r=".5" style="--d:750"/><circle cx="7.83" cy="53.67" r=".5" style="--d:737"/><circle cx="10.43" cy="53.67" r=".5" style="--d:727"/><circle cx="13.04" cy="53.67" r=".5" style="--d:718"/><circle cx="15.65" cy="53.67" r=".5" style="--d:711"/><circle cx="18.26" cy="53.67" r=".5" style="--d:706"/><circle cx="20.87" cy="53.67" r=".5" style="--d:703"/><circle cx="23.48" cy="53.67" r=".5" style="--d:701"/><circle cx="26.09" cy="53.67" r=".5" style="--d:702"/><circle cx="28.70" cy="53.67" r=".5" style="--d:704"/><circle cx="31.30" cy="53.67" r=".5" style="--d:708"/><circle cx="33.91" cy="53.67" r=".5" style="--d:714"/><circle cx="36.52" cy="53.67" r=".5" style="--d:722"/><circle cx="39.13" cy="53.67" r=".5" style="--d:732"/><circle cx="41.74" cy="53.67" r=".5" style="--d:743"/><circle cx="44.35" cy="53.67" r=".5" style="--d:756"/><circle cx="46.96" cy="53.67" r=".5" style="--d:770"/><circle cx="49.57" cy="53.67" r=".5" style="--d:786"/><circle cx="52.17" cy="53.67" r=".5" style="--d:803"/><circle cx="54.78" cy="53.67" r=".5" style="--d:822"/><circle cx="57.39" cy="53.67" r=".5" style="--d:841"/><circle cx="60.00" cy="53.67" r=".5" style="--d:862"/><circle cx="62.61" cy="53.67" r=".5" style="--d:884"/><circle cx="65.22" cy="53.67" r=".5" style="--d:906"/><circle cx="67.83" cy="53.67" r=".5" style="--d:930"/><circle cx="70.43" cy="53.67" r=".5" style="--d:954"/><circle cx="73.04" cy="53.67" r=".5" style="--d:980"/><circle cx="75.65" cy="53.67" r=".5" style="--d:1005"/><circle cx="78.26" cy="53.67" r=".5" style="--d:1032"/><circle cx="80.87" cy="53.67" r=".5" style="--d:1059"/><circle cx="83.48" cy="53.67" r=".5" style="--d:1087"/><circle cx="86.09" cy="53.67" r=".5" style="--d:1115"/><circle cx="88.70" cy="53.67" r=".5" style="--d:1143"/><circle cx="91.30" cy="53.67" r=".5" style="--d:1172"/><circle cx="93.91" cy="53.67" r=".5" style="--d:1202"/><circle cx="96.52" cy="53.67" r=".5" style="--d:1232"/><circle cx="3.91" cy="51.15" r=".5" style="--d:724"/><circle cx="6.52" cy="51.15" r=".5" style="--d:710"/><circle cx="9.13" cy="51.15" r=".5" style="--d:698"/><circle cx="11.74" cy="51.15" r=".5" style="--d:688"/><circle cx="14.35" cy="51.15" r=".5" style="--d:680"/><circle cx="16.96" cy="51.15" r=".5" style="--d:673"/><circle cx="19.57" cy="51.15" r=".5" style="--d:669"/><circle cx="22.17" cy="51.15" r=".5" style="--d:666"/><circle cx="24.78" cy="51.15" r=".5" style="--d:666"/><circle cx="27.39" cy="51.15" r=".5" style="--d:667"/><circle cx="30.00" cy="51.15" r=".5" style="--d:671"/><circle cx="32.61" cy="51.15" r=".5" style="--d:676"/><circle cx="35.22" cy="51.15" r=".5" style="--d:684"/><circle cx="37.83" cy="51.15" r=".5" style="--d:693"/><circle cx="40.43" cy="51.15" r=".5" style="--d:704"/><circle cx="43.04" cy="51.15" r=".5" style="--d:716"/><circle cx="45.65" cy="51.15" r=".5" style="--d:731"/><circle cx="48.26" cy="51.15" r=".5" style="--d:746"/><circle cx="50.87" cy="51.15" r=".5" style="--d:764"/><circle cx="53.48" cy="51.15" r=".5" style="--d:782"/><circle cx="56.09" cy="51.15" r=".5" style="--d:802"/><circle cx="58.70" cy="51.15" r=".5" style="--d:823"/><circle cx="61.30" cy="51.15" r=".5" style="--d:845"/><circle cx="63.91" cy="51.15" r=".5" style="--d:868"/><circle cx="66.52" cy="51.15" r=".5" style="--d:891"/><circle cx="69.13" cy="51.15" r=".5" style="--d:916"/><circle cx="71.74" cy="51.15" r=".5" style="--d:942"/><circle cx="74.35" cy="51.15" r=".5" style="--d:968"/><circle cx="76.96" cy="51.15" r=".5" style="--d:995"/><circle cx="79.57" cy="51.15" r=".5" style="--d:1022"/><circle cx="82.17" cy="51.15" r=".5" style="--d:1050"/><circle cx="84.78" cy="51.15" r=".5" style="--d:1078"/><circle cx="87.39" cy="51.15" r=".5" style="--d:1107"/><circle cx="90.00" cy="51.15" r=".5" style="--d:1137"/><circle cx="92.61" cy="51.15" r=".5" style="--d:1167"/><circle cx="95.22" cy="51.15" r=".5" style="--d:1197"/><circle cx="5.22" cy="48.63" r=".5" style="--d:684"/><circle cx="7.83" cy="48.63" r=".5" style="--d:671"/><circle cx="10.43" cy="48.63" r=".5" style="--d:659"/><circle cx="13.04" cy="48.63" r=".5" style="--d:649"/><circle cx="15.65" cy="48.63" r=".5" style="--d:642"/><circle cx="18.26" cy="48.63" r=".5" style="--d:636"/><circle cx="20.87" cy="48.63" r=".5" style="--d:632"/><circle cx="23.48" cy="48.63" r=".5" style="--d:631"/><circle cx="26.09" cy="48.63" r=".5" style="--d:631"/><circle cx="28.70" cy="48.63" r=".5" style="--d:634"/><circle cx="31.30" cy="48.63" r=".5" style="--d:638"/><circle cx="33.91" cy="48.63" r=".5" style="--d:645"/><circle cx="36.52" cy="48.63" r=".5" style="--d:654"/><circle cx="39.13" cy="48.63" r=".5" style="--d:664"/><circle cx="41.74" cy="48.63" r=".5" style="--d:677"/><circle cx="44.35" cy="48.63" r=".5" style="--d:691"/><circle cx="46.96" cy="48.63" r=".5" style="--d:707"/><circle cx="49.57" cy="48.63" r=".5" style="--d:724"/><circle cx="52.17" cy="48.63" r=".5" style="--d:742"/><circle cx="54.78" cy="48.63" r=".5" style="--d:762"/><circle cx="57.39" cy="48.63" r=".5" style="--d:783"/><circle cx="60.00" cy="48.63" r=".5" style="--d:806"/><circle cx="62.61" cy="48.63" r=".5" style="--d:829"/><circle cx="65.22" cy="48.63" r=".5" style="--d:853"/><circle cx="67.83" cy="48.63" r=".5" style="--d:878"/><circle cx="70.43" cy="48.63" r=".5" style="--d:904"/><circle cx="73.04" cy="48.63" r=".5" style="--d:930"/><circle cx="75.65" cy="48.63" r=".5" style="--d:958"/><circle cx="78.26" cy="48.63" r=".5" style="--d:985"/><circle cx="80.87" cy="48.63" r=".5" style="--d:1014"/><circle cx="83.48" cy="48.63" r=".5" style="--d:1042"/><circle cx="86.09" cy="48.63" r=".5" style="--d:1072"/><circle cx="88.70" cy="48.63" r=".5" style="--d:1102"/><circle cx="91.30" cy="48.63" r=".5" style="--d:1132"/><circle cx="93.91" cy="48.63" r=".5" style="--d:1162"/><circle cx="96.52" cy="48.63" r=".5" style="--d:1193"/><circle cx="3.91" cy="46.11" r=".5" style="--d:659"/><circle cx="6.52" cy="46.11" r=".5" style="--d:644"/><circle cx="9.13" cy="46.11" r=".5" style="--d:631"/><circle cx="11.74" cy="46.11" r=".5" style="--d:620"/><circle cx="14.35" cy="46.11" r=".5" style="--d:611"/><circle cx="16.96" cy="46.11" r=".5" style="--d:604"/><circle cx="19.57" cy="46.11" r=".5" style="--d:599"/><circle cx="22.17" cy="46.11" r=".5" style="--d:596"/><circle cx="24.78" cy="46.11" r=".5" style="--d:595"/><circle cx="27.39" cy="46.11" r=".5" style="--d:597"/><circle cx="30.00" cy="46.11" r=".5" style="--d:601"/><circle cx="32.61" cy="46.11" r=".5" style="--d:607"/><circle cx="35.22" cy="46.11" r=".5" style="--d:615"/><circle cx="37.83" cy="46.11" r=".5" style="--d:625"/><circle cx="40.43" cy="46.11" r=".5" style="--d:637"/><circle cx="43.04" cy="46.11" r=".5" style="--d:651"/><circle cx="45.65" cy="46.11" r=".5" style="--d:667"/><circle cx="48.26" cy="46.11" r=".5" style="--d:684"/><circle cx="50.87" cy="46.11" r=".5" style="--d:703"/><circle cx="53.48" cy="46.11" r=".5" style="--d:723"/><circle cx="56.09" cy="46.11" r=".5" style="--d:744"/><circle cx="58.70" cy="46.11" r=".5" style="--d:767"/><circle cx="61.30" cy="46.11" r=".5" style="--d:790"/><circle cx="63.91" cy="46.11" r=".5" style="--d:815"/><circle cx="66.52" cy="46.11" r=".5" style="--d:840"/><circle cx="69.13" cy="46.11" r=".5" style="--d:866"/><circle cx="71.74" cy="46.11" r=".5" style="--d:893"/><circle cx="74.35" cy="46.11" r=".5" style="--d:921"/><circle cx="76.96" cy="46.11" r=".5" style="--d:949"/><circle cx="79.57" cy="46.11" r=".5" style="--d:978"/><circle cx="82.17" cy="46.11" r=".5" style="--d:1007"/><circle cx="84.78" cy="46.11" r=".5" style="--d:1036"/><circle cx="87.39" cy="46.11" r=".5" style="--d:1067"/><circle cx="90.00" cy="46.11" r=".5" style="--d:1097"/><circle cx="92.61" cy="46.11" r=".5" style="--d:1128"/><circle cx="95.22" cy="46.11" r=".5" style="--d:1159"/><circle cx="2.61" cy="43.59" r=".5" style="--d:636"/><circle cx="5.22" cy="43.59" r=".5" style="--d:620"/><circle cx="7.83" cy="43.59" r=".5" style="--d:605"/><circle cx="10.43" cy="43.59" r=".5" style="--d:592"/><circle cx="13.04" cy="43.59" r=".5" style="--d:581"/><circle cx="15.65" cy="43.59" r=".5" style="--d:573"/><circle cx="18.26" cy="43.59" r=".5" style="--d:566"/><circle cx="20.87" cy="43.59" r=".5" style="--d:562"/><circle cx="23.48" cy="43.59" r=".5" style="--d:560"/><circle cx="26.09" cy="43.59" r=".5" style="--d:561"/><circle cx="28.70" cy="43.59" r=".5" style="--d:564"/><circle cx="31.30" cy="43.59" r=".5" style="--d:569"/><circle cx="33.91" cy="43.59" r=".5" style="--d:576"/><circle cx="36.52" cy="43.59" r=".5" style="--d:586"/><circle cx="39.13" cy="43.59" r=".5" style="--d:598"/><circle cx="41.74" cy="43.59" r=".5" style="--d:612"/><circle cx="44.35" cy="43.59" r=".5" style="--d:627"/><circle cx="46.96" cy="43.59" r=".5" style="--d:645"/><circle cx="49.57" cy="43.59" r=".5" style="--d:663"/><circle cx="52.17" cy="43.59" r=".5" style="--d:684"/><circle cx="54.78" cy="43.59" r=".5" style="--d:705"/><circle cx="57.39" cy="43.59" r=".5" style="--d:728"/><circle cx="60.00" cy="43.59" r=".5" style="--d:752"/><circle cx="62.61" cy="43.59" r=".5" style="--d:777"/><circle cx="65.22" cy="43.59" r=".5" style="--d:802"/><circle cx="67.83" cy="43.59" r=".5" style="--d:829"/><circle cx="70.43" cy="43.59" r=".5" style="--d:856"/><circle cx="73.04" cy="43.59" r=".5" style="--d:884"/><circle cx="75.65" cy="43.59" r=".5" style="--d:913"/><circle cx="78.26" cy="43.59" r=".5" style="--d:942"/><circle cx="80.87" cy="43.59" r=".5" style="--d:971"/><circle cx="83.48" cy="43.59" r=".5" style="--d:1001"/><circle cx="86.09" cy="43.59" r=".5" style="--d:1032"/><circle cx="88.70" cy="43.59" r=".5" style="--d:1063"/><circle cx="91.30" cy="43.59" r=".5" style="--d:1094"/><circle cx="93.91" cy="43.59" r=".5" style="--d:1125"/><circle cx="96.52" cy="43.59" r=".5" style="--d:1157"/><circle cx="3.91" cy="41.08" r=".5" style="--d:596"/><circle cx="6.52" cy="41.08" r=".5" style="--d:580"/><circle cx="9.13" cy="41.08" r=".5" style="--d:565"/><circle cx="11.74" cy="41.08" r=".5" style="--d:553"/><circle cx="14.35" cy="41.08" r=".5" style="--d:542"/><circle cx="16.96" cy="41.08" r=".5" style="--d:534"/><circle cx="19.57" cy="41.08" r=".5" style="--d:529"/><circle cx="22.17" cy="41.08" r=".5" style="--d:526"/><circle cx="24.78" cy="41.08" r=".5" style="--d:525"/><circle cx="27.39" cy="41.08" r=".5" style="--d:527"/><circle cx="30.00" cy="41.08" r=".5" style="--d:531"/><circle cx="32.61" cy="41.08" r=".5" style="--d:538"/><circle cx="35.22" cy="41.08" r=".5" style="--d:547"/><circle cx="37.83" cy="41.08" r=".5" style="--d:559"/><circle cx="40.43" cy="41.08" r=".5" style="--d:572"/><circle cx="43.04" cy="41.08" r=".5" style="--d:588"/><circle cx="45.65" cy="41.08" r=".5" style="--d:605"/><circle cx="48.26" cy="41.08" r=".5" style="--d:624"/><circle cx="50.87" cy="41.08" r=".5" style="--d:644"/><circle cx="53.48" cy="41.08" r=".5" style="--d:666"/><circle cx="56.09" cy="41.08" r=".5" style="--d:689"/><circle cx="58.70" cy="41.08" r=".5" style="--d:713"/><circle cx="61.30" cy="41.08" r=".5" style="--d:739"/><circle cx="63.91" cy="41.08" r=".5" style="--d:765"/><circle cx="66.52" cy="41.08" r=".5" style="--d:792"/><circle cx="69.13" cy="41.08" r=".5" style="--d:819"/><circle cx="71.74" cy="41.08" r=".5" style="--d:848"/><circle cx="74.35" cy="41.08" r=".5" style="--d:877"/><circle cx="76.96" cy="41.08" r=".5" style="--d:906"/><circle cx="79.57" cy="41.08" r=".5" style="--d:936"/><circle cx="82.17" cy="41.08" r=".5" style="--d:967"/><circle cx="84.78" cy="41.08" r=".5" style="--d:998"/><circle cx="87.39" cy="41.08" r=".5" style="--d:1029"/><circle cx="90.00" cy="41.08" r=".5" style="--d:1060"/><circle cx="92.61" cy="41.08" r=".5" style="--d:1092"/><circle cx="95.22" cy="41.08" r=".5" style="--d:1124"/><circle cx="5.22" cy="38.56" r=".5" style="--d:557"/><circle cx="7.83" cy="38.56" r=".5" style="--d:540"/><circle cx="10.43" cy="38.56" r=".5" style="--d:526"/><circle cx="13.04" cy="38.56" r=".5" style="--d:514"/><circle cx="15.65" cy="38.56" r=".5" style="--d:504"/><circle cx="18.26" cy="38.56" r=".5" style="--d:496"/><circle cx="20.87" cy="38.56" r=".5" style="--d:492"/><circle cx="23.48" cy="38.56" r=".5" style="--d:490"/><circle cx="26.09" cy="38.56" r=".5" style="--d:490"/><circle cx="28.70" cy="38.56" r=".5" style="--d:494"/><circle cx="31.30" cy="38.56" r=".5" style="--d:500"/><circle cx="33.91" cy="38.56" r=".5" style="--d:508"/><circle cx="36.52" cy="38.56" r=".5" style="--d:519"/><circle cx="39.13" cy="38.56" r=".5" style="--d:532"/><circle cx="41.74" cy="38.56" r=".5" style="--d:548"/><circle cx="44.35" cy="38.56" r=".5" style="--d:565"/><circle cx="46.96" cy="38.56" r=".5" style="--d:584"/><circle cx="49.57" cy="38.56" r=".5" style="--d:605"/><circle cx="52.17" cy="38.56" r=".5" style="--d:627"/><circle cx="54.78" cy="38.56" r=".5" style="--d:651"/><circle cx="57.39" cy="38.56" r=".5" style="--d:675"/><circle cx="60.00" cy="38.56" r=".5" style="--d:701"/><circle cx="62.61" cy="38.56" r=".5" style="--d:727"/><circle cx="65.22" cy="38.56" r=".5" style="--d:755"/><circle cx="67.83" cy="38.56" r=".5" style="--d:783"/><circle cx="70.43" cy="38.56" r=".5" style="--d:812"/><circle cx="73.04" cy="38.56" r=".5" style="--d:841"/><circle cx="75.65" cy="38.56" r=".5" style="--d:871"/><circle cx="78.26" cy="38.56" r=".5" style="--d:902"/><circle cx="80.87" cy="38.56" r=".5" style="--d:932"/><circle cx="83.48" cy="38.56" r=".5" style="--d:964"/><circle cx="86.09" cy="38.56" r=".5" style="--d:995"/><circle cx="88.70" cy="38.56" r=".5" style="--d:1027"/><circle cx="91.30" cy="38.56" r=".5" style="--d:1060"/><circle cx="93.91" cy="38.56" r=".5" style="--d:1092"/><circle cx="96.52" cy="38.56" r=".5" style="--d:1125"/><circle cx="3.91" cy="36.04" r=".5" style="--d:535"/><circle cx="6.52" cy="36.04" r=".5" style="--d:517"/><circle cx="9.13" cy="36.04" r=".5" style="--d:501"/><circle cx="11.74" cy="36.04" r=".5" style="--d:486"/><circle cx="14.35" cy="36.04" r=".5" style="--d:475"/><circle cx="16.96" cy="36.04" r=".5" style="--d:465"/><circle cx="19.57" cy="36.04" r=".5" style="--d:459"/><circle cx="22.17" cy="36.04" r=".5" style="--d:455"/><circle cx="24.78" cy="36.04" r=".5" style="--d:454"/><circle cx="27.39" cy="36.04" r=".5" style="--d:457"/><circle cx="30.00" cy="36.04" r=".5" style="--d:462"/><circle cx="32.61" cy="36.04" r=".5" style="--d:469"/><circle cx="35.22" cy="36.04" r=".5" style="--d:480"/><circle cx="37.83" cy="36.04" r=".5" style="--d:493"/><circle cx="40.43" cy="36.04" r=".5" style="--d:508"/><circle cx="43.04" cy="36.04" r=".5" style="--d:526"/><circle cx="45.65" cy="36.04" r=".5" style="--d:545"/><circle cx="48.26" cy="36.04" r=".5" style="--d:566"/><circle cx="50.87" cy="36.04" r=".5" style="--d:588"/><circle cx="53.48" cy="36.04" r=".5" style="--d:612"/><circle cx="56.09" cy="36.04" r=".5" style="--d:637"/><circle cx="58.70" cy="36.04" r=".5" style="--d:663"/><circle cx="61.30" cy="36.04" r=".5" style="--d:690"/><circle cx="63.91" cy="36.04" r=".5" style="--d:718"/><circle cx="66.52" cy="36.04" r=".5" style="--d:747"/><circle cx="69.13" cy="36.04" r=".5" style="--d:776"/><circle cx="71.74" cy="36.04" r=".5" style="--d:806"/><circle cx="74.35" cy="36.04" r=".5" style="--d:836"/><circle cx="76.96" cy="36.04" r=".5" style="--d:867"/><circle cx="79.57" cy="36.04" r=".5" style="--d:899"/><circle cx="82.17" cy="36.04" r=".5" style="--d:930"/><circle cx="84.78" cy="36.04" r=".5" style="--d:962"/><circle cx="87.39" cy="36.04" r=".5" style="--d:995"/><circle cx="90.00" cy="36.04" r=".5" style="--d:1027"/><circle cx="92.61" cy="36.04" r=".5" style="--d:1060"/><circle cx="95.22" cy="36.04" r=".5" style="--d:1093"/><circle cx="5.22" cy="33.52" r=".5" style="--d:496"/><circle cx="7.83" cy="33.52" r=".5" style="--d:477"/><circle cx="10.43" cy="33.52" r=".5" style="--d:461"/><circle cx="13.04" cy="33.52" r=".5" style="--d:447"/><circle cx="15.65" cy="33.52" r=".5" style="--d:436"/><circle cx="18.26" cy="33.52" r=".5" style="--d:427"/><circle cx="20.87" cy="33.52" r=".5" style="--d:422"/><circle cx="23.48" cy="33.52" r=".5" style="--d:419"/><circle cx="26.09" cy="33.52" r=".5" style="--d:420"/><circle cx="28.70" cy="33.52" r=".5" style="--d:424"/><circle cx="31.30" cy="33.52" r=".5" style="--d:431"/><circle cx="33.91" cy="33.52" r=".5" style="--d:441"/><circle cx="36.52" cy="33.52" r=".5" style="--d:453"/><circle cx="39.13" cy="33.52" r=".5" style="--d:468"/><circle cx="41.74" cy="33.52" r=".5" style="--d:486"/><circle cx="44.35" cy="33.52" r=".5" style="--d:505"/><circle cx="46.96" cy="33.52" r=".5" style="--d:527"/><circle cx="49.57" cy="33.52" r=".5" style="--d:549"/><circle cx="52.17" cy="33.52" r=".5" style="--d:574"/><circle cx="54.78" cy="33.52" r=".5" style="--d:599"/><circle cx="57.39" cy="33.52" r=".5" style="--d:626"/><circle cx="60.00" cy="33.52" r=".5" style="--d:654"/><circle cx="62.61" cy="33.52" r=".5" style="--d:682"/><circle cx="65.22" cy="33.52" r=".5" style="--d:711"/><circle cx="67.83" cy="33.52" r=".5" style="--d:741"/><circle cx="70.43" cy="33.52" r=".5" style="--d:771"/><circle cx="73.04" cy="33.52" r=".5" style="--d:802"/><circle cx="75.65" cy="33.52" r=".5" style="--d:834"/><circle cx="78.26" cy="33.52" r=".5" style="--d:865"/><circle cx="80.87" cy="33.52" r=".5" style="--d:897"/><circle cx="83.48" cy="33.52" r=".5" style="--d:930"/><circle cx="86.09" cy="33.52" r=".5" style="--d:963"/><circle cx="88.70" cy="33.52" r=".5" style="--d:996"/><circle cx="91.30" cy="33.52" r=".5" style="--d:1029"/><circle cx="93.91" cy="33.52" r=".5" style="--d:1062"/><circle cx="96.52" cy="33.52" r=".5" style="--d:1096"/><circle cx="3.91" cy="31.00" r=".5" style="--d:477"/><circle cx="6.52" cy="31.00" r=".5" style="--d:456"/><circle cx="9.13" cy="31.00" r=".5" style="--d:438"/><circle cx="11.74" cy="31.00" r=".5" style="--d:421"/><circle cx="14.35" cy="31.00" r=".5" style="--d:408"/><circle cx="16.96" cy="31.00" r=".5" style="--d:397"/><circle cx="19.57" cy="31.00" r=".5" style="--d:389"/><circle cx="22.17" cy="31.00" r=".5" style="--d:385"/><circle cx="24.78" cy="31.00" r=".5" style="--d:384"/><circle cx="27.39" cy="31.00" r=".5" style="--d:386"/><circle cx="30.00" cy="31.00" r=".5" style="--d:392"/><circle cx="32.61" cy="31.00" r=".5" style="--d:402"/><circle cx="35.22" cy="31.00" r=".5" style="--d:414"/><circle cx="37.83" cy="31.00" r=".5" style="--d:429"/><circle cx="40.43" cy="31.00" r=".5" style="--d:446"/><circle cx="43.04" cy="31.00" r=".5" style="--d:466"/><circle cx="45.65" cy="31.00" r=".5" style="--d:488"/><circle cx="48.26" cy="31.00" r=".5" style="--d:511"/><circle cx="50.87" cy="31.00" r=".5" style="--d:536"/><circle cx="53.48" cy="31.00" r=".5" style="--d:562"/><circle cx="56.09" cy="31.00" r=".5" style="--d:589"/><circle cx="58.70" cy="31.00" r=".5" style="--d:617"/><circle cx="61.30" cy="31.00" r=".5" style="--d:646"/><circle cx="63.91" cy="31.00" r=".5" style="--d:676"/><circle cx="66.52" cy="31.00" r=".5" style="--d:706"/><circle cx="69.13" cy="31.00" r=".5" style="--d:737"/><circle cx="71.74" cy="31.00" r=".5" style="--d:768"/><circle cx="74.35" cy="31.00" r=".5" style="--d:800"/><circle cx="76.96" cy="31.00" r=".5" style="--d:833"/><circle cx="79.57" cy="31.00" r=".5" style="--d:865"/><circle cx="82.17" cy="31.00" r=".5" style="--d:898"/><circle cx="84.78" cy="31.00" r=".5" style="--d:931"/><circle cx="87.39" cy="31.00" r=".5" style="--d:965"/><circle cx="90.00" cy="31.00" r=".5" style="--d:998"/><circle cx="92.61" cy="31.00" r=".5" style="--d:1032"/><circle cx="95.22" cy="31.00" r=".5" style="--d:1066"/><circle cx="2.61" cy="28.49" r=".5" style="--d:461"/><circle cx="5.22" cy="28.49" r=".5" style="--d:438"/><circle cx="7.83" cy="28.49" r=".5" style="--d:417"/><circle cx="10.43" cy="28.49" r=".5" style="--d:398"/><circle cx="13.04" cy="28.49" r=".5" style="--d:382"/><circle cx="15.65" cy="28.49" r=".5" style="--d:368"/><circle cx="18.26" cy="28.49" r=".5" style="--d:358"/><circle cx="20.87" cy="28.49" r=".5" style="--d:352"/><circle cx="23.48" cy="28.49" r=".5" style="--d:349"/><circle cx="26.09" cy="28.49" r=".5" style="--d:350"/><circle cx="28.70" cy="28.49" r=".5" style="--d:354"/><circle cx="31.30" cy="28.49" r=".5" style="--d:363"/><circle cx="33.91" cy="28.49" r=".5" style="--d:374"/><circle cx="36.52" cy="28.49" r=".5" style="--d:389"/><circle cx="39.13" cy="28.49" r=".5" style="--d:407"/><circle cx="41.74" cy="28.49" r=".5" style="--d:427"/><circle cx="44.35" cy="28.49" r=".5" style="--d:449"/><circle cx="46.96" cy="28.49" r=".5" style="--d:472"/><circle cx="49.57" cy="28.49" r=".5" style="--d:498"/><circle cx="52.17" cy="28.49" r=".5" style="--d:524"/><circle cx="54.78" cy="28.49" r=".5" style="--d:552"/><circle cx="57.39" cy="28.49" r=".5" style="--d:581"/><circle cx="60.00" cy="28.49" r=".5" style="--d:611"/><circle cx="62.61" cy="28.49" r=".5" style="--d:641"/><circle cx="65.22" cy="28.49" r=".5" style="--d:672"/><circle cx="67.83" cy="28.49" r=".5" style="--d:703"/><circle cx="70.43" cy="28.49" r=".5" style="--d:735"/><circle cx="73.04" cy="28.49" r=".5" style="--d:768"/><circle cx="75.65" cy="28.49" r=".5" style="--d:800"/><circle cx="78.26" cy="28.49" r=".5" style="--d:833"/><circle cx="80.87" cy="28.49" r=".5" style="--d:867"/><circle cx="83.48" cy="28.49" r=".5" style="--d:900"/><circle cx="86.09" cy="28.49" r=".5" style="--d:934"/><circle cx="88.70" cy="28.49" r=".5" style="--d:968"/><circle cx="91.30" cy="28.49" r=".5" style="--d:1002"/><circle cx="93.91" cy="28.49" r=".5" style="--d:1037"/><circle cx="96.52" cy="28.49" r=".5" style="--d:1071"/><circle cx="3.91" cy="25.97" r=".5" style="--d:422"/><circle cx="6.52" cy="25.97" r=".5" style="--d:399"/><circle cx="9.13" cy="25.97" r=".5" style="--d:377"/><circle cx="11.74" cy="25.97" r=".5" style="--d:358"/><circle cx="14.35" cy="25.97" r=".5" style="--d:342"/><circle cx="16.96" cy="25.97" r=".5" style="--d:329"/><circle cx="19.57" cy="25.97" r=".5" style="--d:320"/><circle cx="22.17" cy="25.97" r=".5" style="--d:315"/><circle cx="24.78" cy="25.97" r=".5" style="--d:313"/><circle cx="27.39" cy="25.97" r=".5" style="--d:317"/><circle cx="30.00" cy="25.97" r=".5" style="--d:324"/><circle cx="32.61" cy="25.97" r=".5" style="--d:335"/><circle cx="35.22" cy="25.97" r=".5" style="--d:349"/><circle cx="37.83" cy="25.97" r=".5" style="--d:367"/><circle cx="40.43" cy="25.97" r=".5" style="--d:387"/><circle cx="43.04" cy="25.97" r=".5" style="--d:410"/><circle cx="45.65" cy="25.97" r=".5" style="--d:434"/><circle cx="48.26" cy="25.97" r=".5" style="--d:460"/><circle cx="50.87" cy="25.97" r=".5" style="--d:488"/><circle cx="53.48" cy="25.97" r=".5" style="--d:516"/><circle cx="56.09" cy="25.97" r=".5" style="--d:546"/><circle cx="58.70" cy="25.97" r=".5" style="--d:576"/><circle cx="61.30" cy="25.97" r=".5" style="--d:607"/><circle cx="63.91" cy="25.97" r=".5" style="--d:638"/><circle cx="66.52" cy="25.97" r=".5" style="--d:670"/><circle cx="69.13" cy="25.97" r=".5" style="--d:703"/><circle cx="71.74" cy="25.97" r=".5" style="--d:736"/><circle cx="74.35" cy="25.97" r=".5" style="--d:769"/><circle cx="76.96" cy="25.97" r=".5" style="--d:802"/><circle cx="79.57" cy="25.97" r=".5" style="--d:836"/><circle cx="82.17" cy="25.97" r=".5" style="--d:870"/><circle cx="84.78" cy="25.97" r=".5" style="--d:904"/><circle cx="87.39" cy="25.97" r=".5" style="--d:939"/><circle cx="90.00" cy="25.97" r=".5" style="--d:973"/><circle cx="92.61" cy="25.97" r=".5" style="--d:1008"/><circle cx="95.22" cy="25.97" r=".5" style="--d:1043"/><circle cx="2.61" cy="23.45" r=".5" style="--d:410"/><circle cx="5.22" cy="23.45" r=".5" style="--d:384"/><circle cx="7.83" cy="23.45" r=".5" style="--d:360"/><circle cx="10.43" cy="23.45" r=".5" style="--d:338"/><circle cx="13.04" cy="23.45" r=".5" style="--d:319"/><circle cx="15.65" cy="23.45" r=".5" style="--d:302"/><circle cx="18.26" cy="23.45" r=".5" style="--d:290"/><circle cx="20.87" cy="23.45" r=".5" style="--d:282"/><circle cx="23.48" cy="23.45" r=".5" style="--d:278"/><circle cx="26.09" cy="23.45" r=".5" style="--d:279"/><circle cx="28.70" cy="23.45" r=".5" style="--d:285"/><circle cx="31.30" cy="23.45" r=".5" style="--d:295"/><circle cx="33.91" cy="23.45" r=".5" style="--d:310"/><circle cx="36.52" cy="23.45" r=".5" style="--d:327"/><circle cx="39.13" cy="23.45" r=".5" style="--d:348"/><circle cx="41.74" cy="23.45" r=".5" style="--d:371"/><circle cx="44.35" cy="23.45" r=".5" style="--d:396"/><circle cx="46.96" cy="23.45" r=".5" style="--d:423"/><circle cx="49.57" cy="23.45" r=".5" style="--d:451"/><circle cx="52.17" cy="23.45" r=".5" style="--d:481"/><circle cx="54.78" cy="23.45" r=".5" style="--d:511"/><circle cx="57.39" cy="23.45" r=".5" style="--d:542"/><circle cx="60.00" cy="23.45" r=".5" style="--d:573"/><circle cx="62.61" cy="23.45" r=".5" style="--d:606"/><circle cx="65.22" cy="23.45" r=".5" style="--d:638"/><circle cx="67.83" cy="23.45" r=".5" style="--d:671"/><circle cx="70.43" cy="23.45" r=".5" style="--d:705"/><circle cx="73.04" cy="23.45" r=".5" style="--d:738"/><circle cx="75.65" cy="23.45" r=".5" style="--d:772"/><circle cx="78.26" cy="23.45" r=".5" style="--d:806"/><circle cx="80.87" cy="23.45" r=".5" style="--d:841"/><circle cx="83.48" cy="23.45" r=".5" style="--d:875"/><circle cx="86.09" cy="23.45" r=".5" style="--d:910"/><circle cx="88.70" cy="23.45" r=".5" style="--d:945"/><circle cx="91.30" cy="23.45" r=".5" style="--d:980"/><circle cx="93.91" cy="23.45" r=".5" style="--d:1015"/><circle cx="96.52" cy="23.45" r=".5" style="--d:1050"/><circle cx="3.91" cy="20.93" r=".5" style="--d:373"/><circle cx="6.52" cy="20.93" r=".5" style="--d:346"/><circle cx="9.13" cy="20.93" r=".5" style="--d:321"/><circle cx="11.74" cy="20.93" r=".5" style="--d:299"/><circle cx="14.35" cy="20.93" r=".5" style="--d:279"/><circle cx="16.96" cy="20.93" r=".5" style="--d:263"/><circle cx="19.57" cy="20.93" r=".5" style="--d:251"/><circle cx="22.17" cy="20.93" r=".5" style="--d:244"/><circle cx="24.78" cy="20.93" r=".5" style="--d:243"/><circle cx="27.39" cy="20.93" r=".5" style="--d:247"/><circle cx="30.00" cy="20.93" r=".5" style="--d:256"/><circle cx="32.61" cy="20.93" r=".5" style="--d:270"/><circle cx="35.22" cy="20.93" r=".5" style="--d:288"/><circle cx="37.83" cy="20.93" r=".5" style="--d:309"/><circle cx="40.43" cy="20.93" r=".5" style="--d:333"/><circle cx="43.04" cy="20.93" r=".5" style="--d:359"/><circle cx="45.65" cy="20.93" r=".5" style="--d:386"/><circle cx="48.26" cy="20.93" r=".5" style="--d:415"/><circle cx="50.87" cy="20.93" r=".5" style="--d:446"/><circle cx="53.48" cy="20.93" r=".5" style="--d:477"/><circle cx="56.09" cy="20.93" r=".5" style="--d:508"/><circle cx="63.91" cy="20.93" r=".5" style="--d:607"/><circle cx="66.52" cy="20.93" r=".5" style="--d:641"/><circle cx="69.13" cy="20.93" r=".5" style="--d:674"/><circle cx="71.74" cy="20.93" r=".5" style="--d:709"/><circle cx="74.35" cy="20.93" r=".5" style="--d:743"/><circle cx="76.96" cy="20.93" r=".5" style="--d:778"/><circle cx="79.57" cy="20.93" r=".5" style="--d:812"/><circle cx="82.17" cy="20.93" r=".5" style="--d:847"/><circle cx="84.78" cy="20.93" r=".5" style="--d:882"/><circle cx="87.39" cy="20.93" r=".5" style="--d:918"/><circle cx="90.00" cy="20.93" r=".5" style="--d:953"/><circle cx="92.61" cy="20.93" r=".5" style="--d:988"/><circle cx="95.22" cy="20.93" r=".5" style="--d:1024"/><circle cx="7.83" cy="18.41" r=".5" style="--d:309"/><circle cx="10.43" cy="18.41" r=".5" style="--d:283"/><circle cx="13.04" cy="18.41" r=".5" style="--d:259"/><circle cx="15.65" cy="18.41" r=".5" style="--d:239"/><circle cx="18.26" cy="18.41" r=".5" style="--d:223"/><circle cx="20.87" cy="18.41" r=".5" style="--d:213"/><circle cx="23.48" cy="18.41" r=".5" style="--d:208"/><circle cx="26.09" cy="18.41" r=".5" style="--d:209"/><circle cx="28.70" cy="18.41" r=".5" style="--d:217"/><circle cx="31.30" cy="18.41" r=".5" style="--d:230"/><circle cx="33.91" cy="18.41" r=".5" style="--d:248"/><circle cx="36.52" cy="18.41" r=".5" style="--d:270"/><circle cx="39.13" cy="18.41" r=".5" style="--d:295"/><circle cx="41.74" cy="18.41" r=".5" style="--d:322"/><circle cx="44.35" cy="18.41" r=".5" style="--d:350"/><circle cx="46.96" cy="18.41" r=".5" style="--d:380"/><circle cx="49.57" cy="18.41" r=".5" style="--d:412"/><circle cx="52.17" cy="18.41" r=".5" style="--d:443"/><circle cx="67.83" cy="18.41" r=".5" style="--d:645"/><circle cx="70.43" cy="18.41" r=".5" style="--d:680"/><circle cx="73.04" cy="18.41" r=".5" style="--d:715"/><circle cx="75.65" cy="18.41" r=".5" style="--d:750"/><circle cx="78.26" cy="18.41" r=".5" style="--d:785"/><circle cx="80.87" cy="18.41" r=".5" style="--d:820"/><circle cx="83.48" cy="18.41" r=".5" style="--d:856"/><circle cx="86.09" cy="18.41" r=".5" style="--d:891"/><circle cx="88.70" cy="18.41" r=".5" style="--d:927"/><circle cx="91.30" cy="18.41" r=".5" style="--d:962"/><circle cx="93.91" cy="18.41" r=".5" style="--d:998"/><circle cx="96.52" cy="18.41" r=".5" style="--d:1034"/><circle cx="6.52" cy="15.90" r=".5" style="--d:301"/><circle cx="9.13" cy="15.90" r=".5" style="--d:272"/><circle cx="11.74" cy="15.90" r=".5" style="--d:245"/><circle cx="14.35" cy="15.90" r=".5" style="--d:220"/><circle cx="16.96" cy="15.90" r=".5" style="--d:200"/><circle cx="19.57" cy="15.90" r=".5" style="--d:184"/><circle cx="22.17" cy="15.90" r=".5" style="--d:175"/><circle cx="24.78" cy="15.90" r=".5" style="--d:172"/><circle cx="27.39" cy="15.90" r=".5" style="--d:178"/><circle cx="30.00" cy="15.90" r=".5" style="--d:191"/><circle cx="32.61" cy="15.90" r=".5" style="--d:209"/><circle cx="35.22" cy="15.90" r=".5" style="--d:231"/><circle cx="37.83" cy="15.90" r=".5" style="--d:257"/><circle cx="40.43" cy="15.90" r=".5" style="--d:285"/><circle cx="43.04" cy="15.90" r=".5" style="--d:315"/><circle cx="45.65" cy="15.90" r=".5" style="--d:346"/><circle cx="69.13" cy="15.90" r=".5" style="--d:652"/><circle cx="71.74" cy="15.90" r=".5" style="--d:688"/><circle cx="74.35" cy="15.90" r=".5" style="--d:723"/><circle cx="76.96" cy="15.90" r=".5" style="--d:759"/><circle cx="79.57" cy="15.90" r=".5" style="--d:794"/><circle cx="82.17" cy="15.90" r=".5" style="--d:830"/><circle cx="84.78" cy="15.90" r=".5" style="--d:866"/><circle cx="87.39" cy="15.90" r=".5" style="--d:901"/><circle cx="90.00" cy="15.90" r=".5" style="--d:937"/><circle cx="92.61" cy="15.90" r=".5" style="--d:973"/><circle cx="95.22" cy="15.90" r=".5" style="--d:1009"/><circle cx="7.83" cy="13.38" r=".5" style="--d:266"/><circle cx="10.43" cy="13.38" r=".5" style="--d:236"/><circle cx="13.04" cy="13.38" r=".5" style="--d:207"/><circle cx="15.65" cy="13.38" r=".5" style="--d:181"/><circle cx="18.26" cy="13.38" r=".5" style="--d:160"/><circle cx="20.87" cy="13.38" r=".5" style="--d:145"/><circle cx="23.48" cy="13.38" r=".5" style="--d:137"/><circle cx="26.09" cy="13.38" r=".5" style="--d:140"/><circle cx="28.70" cy="13.38" r=".5" style="--d:151"/><circle cx="31.30" cy="13.38" r=".5" style="--d:170"/><circle cx="33.91" cy="13.38" r=".5" style="--d:193"/><circle cx="36.52" cy="13.38" r=".5" style="--d:221"/><circle cx="39.13" cy="13.38" r=".5" style="--d:250"/><circle cx="67.83" cy="13.38" r=".5" style="--d:626"/><circle cx="70.43" cy="13.38" r=".5" style="--d:662"/><circle cx="73.04" cy="13.38" r=".5" style="--d:698"/><circle cx="75.65" cy="13.38" r=".5" style="--d:733"/><circle cx="78.26" cy="13.38" r=".5" style="--d:769"/><circle cx="80.87" cy="13.38" r=".5" style="--d:805"/><circle cx="83.48" cy="13.38" r=".5" style="--d:841"/><circle cx="86.09" cy="13.38" r=".5" style="--d:877"/><circle cx="88.70" cy="13.38" r=".5" style="--d:913"/><circle cx="91.30" cy="13.38" r=".5" style="--d:950"/><circle cx="93.91" cy="13.38" r=".5" style="--d:986"/><circle cx="96.52" cy="13.38" r=".5" style="--d:1022"/><circle cx="9.13" cy="10.86" r=".5" style="--d:233"/><circle cx="11.74" cy="10.86" r=".5" style="--d:201"/><circle cx="14.35" cy="10.86" r=".5" style="--d:171"/><circle cx="16.96" cy="10.86" r=".5" style="--d:143"/><circle cx="19.57" cy="10.86" r=".5" style="--d:120"/><circle cx="22.17" cy="10.86" r=".5" style="--d:105"/><circle cx="24.78" cy="10.86" r=".5" style="--d:102"/><circle cx="27.39" cy="10.86" r=".5" style="--d:111"/><circle cx="30.00" cy="10.86" r=".5" style="--d:130"/><circle cx="32.61" cy="10.86" r=".5" style="--d:156"/><circle cx="35.22" cy="10.86" r=".5" style="--d:185"/><circle cx="37.83" cy="10.86" r=".5" style="--d:216"/><circle cx="69.13" cy="10.86" r=".5" style="--d:637"/><circle cx="71.74" cy="10.86" r=".5" style="--d:673"/><circle cx="74.35" cy="10.86" r=".5" style="--d:710"/><circle cx="76.96" cy="10.86" r=".5" style="--d:746"/><circle cx="79.57" cy="10.86" r=".5" style="--d:782"/><circle cx="82.17" cy="10.86" r=".5" style="--d:818"/><circle cx="84.78" cy="10.86" r=".5" style="--d:854"/><circle cx="87.39" cy="10.86" r=".5" style="--d:891"/><circle cx="90.00" cy="10.86" r=".5" style="--d:927"/><circle cx="92.61" cy="10.86" r=".5" style="--d:963"/><circle cx="95.22" cy="10.86" r=".5" style="--d:1000"/><circle cx="13.04" cy="8.34" r=".5" style="--d:169"/><circle cx="15.65" cy="8.34" r=".5" style="--d:136"/><circle cx="18.26" cy="8.34" r=".5" style="--d:106"/><circle cx="20.87" cy="8.34" r=".5" style="--d:81"/><circle cx="23.48" cy="8.34" r=".5" style="--d:67"/><circle cx="26.09" cy="8.34" r=".5" style="--d:72"/><circle cx="28.70" cy="8.34" r=".5" style="--d:92"/><circle cx="31.30" cy="8.34" r=".5" style="--d:120"/><circle cx="33.91" cy="8.34" r=".5" style="--d:152"/><circle cx="36.52" cy="8.34" r=".5" style="--d:185"/><circle cx="67.83" cy="8.34" r=".5" style="--d:614"/><circle cx="70.43" cy="8.34" r=".5" style="--d:651"/><circle cx="73.04" cy="8.34" r=".5" style="--d:687"/><circle cx="75.65" cy="8.34" r=".5" style="--d:723"/><circle cx="78.26" cy="8.34" r=".5" style="--d:760"/><circle cx="80.87" cy="8.34" r=".5" style="--d:796"/><circle cx="83.48" cy="8.34" r=".5" style="--d:833"/><circle cx="86.09" cy="8.34" r=".5" style="--d:869"/><circle cx="88.70" cy="8.34" r=".5" style="--d:905"/><circle cx="14.35" cy="5.82" r=".5" style="--d:141"/><circle cx="16.96" cy="5.82" r=".5" style="--d:105"/><circle cx="19.57" cy="5.82" r=".5" style="--d:71"/><circle cx="22.17" cy="5.82" r=".5" style="--d:42"/><circle cx="24.78" cy="5.82" r=".5" style="--d:32"/><circle cx="27.39" cy="5.82" r=".5" style="--d:55"/><circle cx="30.00" cy="5.82" r=".5" style="--d:87"/><circle cx="32.61" cy="5.82" r=".5" style="--d:122"/><circle cx="71.74" cy="5.82" r=".5" style="--d:666"/><circle cx="74.35" cy="5.82" r=".5" style="--d:703"/><circle cx="76.96" cy="5.82" r=".5" style="--d:739"/><circle cx="79.57" cy="5.82" r=".5" style="--d:776"/><circle cx="82.17" cy="5.82" r=".5" style="--d:812"/><circle cx="84.78" cy="5.82" r=".5" style="--d:849"/><circle cx="15.65" cy="3.31" r=".5" style="--d:119"/></g><g class="tri" transform="translate(24.16 3.56)"><circle class="tp2" r="1.6"/><circle class="tp" r="1.6"/><circle class="tc" r="1"/></g></svg>
+        <svg class="tri-lead" aria-hidden="true"><path id="triLead" d=""/></svg>
+        <div class="tri-label"><b>Nº 01</b><span data-t="tri.1">The first AI academy in Libya</span><small data-t="tri.2">Tripoli · 32.89° N, 13.19° E</small></div>
+      </div>
+      <div class="ov ov-hero ov-split" data-stack="1" data-a="-1" data-b="0.065">
+        <div class="eyebrow"><span data-t="eb.1">Alkhwarizmi AI Academy</span><i></i><span class="eb-t" data-t="eb.2">Tripoli</span><span class="eb-no1" data-t="eb.3">Nº 01 in Libya</span></div>
+        <h1 data-t="hero.h1">Intelligence, made in Libya.</h1>
+        <p data-t="hero.lead">Live classes, in Arabic first, on a campus in Tripoli. Whether you run an organisation or want a new skill, you leave with something that works.</p>
+        <div class="ctas">
+          <a class="pill pill-teal pill-xl glow" href="#executive" data-t="hero.cta1">Book a free call</a>
+          <a class="pill pill-outline pill-xl" href="#programmes" data-t="hero.cta2">See the programmes</a>
+        </div>
+      </div>
+      <div class="hint" id="hint" aria-hidden="true"><span></span><em style="font-style:normal" data-t="hint">Scroll to enter</em></div>
+
+      <div class="ov ov-dark ov-top ov-book" data-a="0.29" data-b="0.45">
+        <p class="kicker" data-t="k1">Libya's first AI academy</p>
+        <h2 data-t="ov1.h">Every skill starts on a page.</h2>
+        <p class="sub" data-t="ov1.p">Anyone can watch a video about AI. Very few finish it. Here you learn live, in the room, in Arabic first.</p>
+      </div>
+
+      <div class="ov ov-dark ov-left" data-a="0.55" data-b="0.69">
+        <p class="kicker" data-t="k2">Every pathway ends with proof</p>
+        <h2 data-t="ov2.h">Then you build.</h2>
+        <p class="sub" data-t="ov2.p">A portfolio. A working app. A ninety-day plan. An AI roadmap for your own organisation. Real things, made in Libya.</p>
+      </div>
+
+      <div class="ov ov-light ov-split ov-final" data-stack="1" data-a="0.86" data-b="1.2">
+        <h2 data-t="ov3.h">Your place in Libya's AI future starts here.</h2>
+        <div class="ctas">
+          <a class="pill pill-teal pill-xl glow" href="#executive" data-t="hero.cta1">Book a free call</a>
+          <a class="pill pill-outline pill-xl" href="#programmes" data-t="hero.cta2">See the programmes</a>
+        </div>
+      </div>
+
+      <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+<!-- Watch: ninety seconds inside the academy, and the router form -->
+<section class="slide" id="watch" data-title="Watch">
+  <div class="slide-in">
+    <div class="copy">
+      <p class="kick" data-t="w.k">Inside the academy</p>
+      <h2 data-t="w.h">Ninety seconds inside Libya's first AI academy.</h2>
+      <div class="player" id="player">
+        <button type="button" class="play" id="playBtn" aria-label="Play the video"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#09C98E"/><path d="M19 15l14 9-14 9z" fill="#111128"/></svg></button>
+        <svg class="poster-mark" viewBox="47 57 338 333" aria-hidden="true"><use href="#logo-path"/></svg>
+        <span class="poster-note" id="posterNote" data-t="w.soon">Film arriving 30 October</span>
+      </div>
+      <p class="vid-cap" data-t="w.cap">Filmed on campus, Zawiat Dahmani Street, Tripoli.</p>
+    </div>
+    <div class="card" data-form="start">
+      <h3 data-t="start.h">Tell us who you are</h3>
+      <p class="why" data-t="start.why">We reply on WhatsApp within one working day with the right programme and dates.</p>
+      <form novalidate>
+        <div class="seg" role="radiogroup">
+          <label><input type="radio" name="iam" value="leader" checked><span data-t="start.lead">I lead an organisation</span></label>
+          <label><input type="radio" name="iam" value="learner"><span data-t="start.learn">I want a new skill</span></label>
+          <label><input type="radio" name="iam" value="sponsor"><span data-t="start.sponsor">I want to sponsor</span></label>
+        </div>
+        <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
+        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off">
+        <button class="btn btn-navy" type="submit" data-t="start.btn">Get the right programme</button>
+        <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
+        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
+      </form>
+      <div class="done"><b data-t="done.h">Received.</b><span data-t="done.p">We will reply on WhatsApp within one working day.</span> <a class="wa-link" href="#" data-t="done.wa">Message us now</a><p class="next"><a class="next-link" href="#programmes" data-t="start.n2">Meanwhile, see the programmes</a><span hidden data-t="start.n1">Meanwhile, see the Executive AI Path</span><span hidden data-t="start.n3">Meanwhile, see how sponsorship works</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide grey" id="programmes">
+  <div class="slide-in one">
+    <div class="copy">
+      <p class="kick" data-t="pg.k">Programmes</p>
+      <h2 data-t="pg.h">Three ways in. Pick yours.</h2>
+      <dl class="rows progs">
+        <div><span class="glyph"><svg viewBox="0 0 64 40" aria-hidden="true"><line x1="6" y1="30" x2="58" y2="30" stroke="var(--fig-rule)" stroke-width="1.5"/><circle cx="8" cy="30" r="2.5" fill="var(--fig-ink)"/><rect x="4" y="18" width="8" height="5" rx="1" fill="#09C98E"/><circle cx="20" cy="30" r="2.5" fill="var(--fig-ink)"/><rect x="16" y="14" width="8" height="5" rx="1" fill="#09C98E"/><circle cx="32" cy="30" r="2.5" fill="var(--fig-ink)"/><rect x="28" y="14" width="8" height="5" rx="1" fill="#09C98E"/><circle cx="44" cy="30" r="2.5" fill="var(--fig-ink)"/><rect x="40" y="14" width="8" height="5" rx="1" fill="#09C98E"/><circle cx="56" cy="30" r="2.5" fill="var(--fig-ink)"/><rect x="52" y="14" width="8" height="5" rx="1" fill="#09C98E"/><rect x="52" y="8" width="8" height="5" rx="1" fill="#534CB6"/></svg></span><dt data-t="exec.k">Executive AI Path</dt><dd data-t="pg.1">Five days. Nine deliverables for your own organisation. For CEOs, directors and heads of department.</dd><dd class="when" data-t="pg.1m">5 days · next cohort starts 15 November</dd><dd class="go"><a class="btn btn-teal btn-sm" href="#executive" data-t="pg.1b">See the programme</a></dd></div>
+        <div><span class="glyph"><svg viewBox="0 0 64 40" aria-hidden="true"><rect x="4" y="6" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="16" y="6" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="28" y="6" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="40" y="6" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="52" y="6" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="4" y="24" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="16" y="24" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="28" y="24" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="40" y="24" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="52" y="24" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><path d="M2 20 C 18 18, 30 24, 44 20 S 58 17, 62 20" fill="none" stroke="#09C98E" stroke-width="2.5" stroke-linecap="round"/></svg></span><dt data-t="prod.k">AI Productivity <small class="byo" data-t="prod.byo">Bring your own project</small></dt><dd data-t="pg.2">Two weeks. Ten things you made: an app, a video, a campaign, an automation. For creators, marketers and founders.</dd><dd class="when" data-t="pg.2m">2 weeks · first cohort in November</dd><dd class="go"><a class="btn btn-navy btn-sm" href="#productivity" data-t="pg.2b">See the programme</a></dd></div>
+        <div><span class="glyph"><svg viewBox="0 0 64 40" aria-hidden="true"><rect x="4" y="10" width="9" height="20" rx="2" fill="#09C98E" fill-opacity=".18" stroke="#09C98E" stroke-width="1.5"/><circle cx="8.5" cy="24" r="1.6" fill="var(--fig-ink)"/><rect x="16" y="10" width="9" height="20" rx="2" fill="#09C98E" fill-opacity=".18" stroke="#09C98E" stroke-width="1.5"/><circle cx="20.5" cy="24" r="1.6" fill="var(--fig-ink)"/><rect x="28" y="10" width="9" height="20" rx="2" fill="#09C98E" fill-opacity=".18" stroke="#09C98E" stroke-width="1.5"/><circle cx="32.5" cy="24" r="1.6" fill="var(--fig-ink)"/><rect x="40" y="10" width="9" height="20" rx="2" fill="#09C98E" fill-opacity=".18" stroke="#09C98E" stroke-width="1.5"/><circle cx="44.5" cy="24" r="1.6" fill="var(--fig-ink)"/><rect x="52" y="10" width="9" height="20" rx="2" fill="#09C98E" fill-opacity=".18" stroke="#09C98E" stroke-width="1.5"/><circle cx="56.5" cy="24" r="1.6" fill="var(--fig-ink)"/></svg></span><dt data-t="every.k">AI for Everyone</dt><dd data-t="pg.3">Ten hours over five evenings, in Arabic. No background needed, a phone is enough.</dd><dd class="when" data-t="pg.3m">10 hours · a new cohort every month</dd><dd class="go"><a class="btn btn-navy btn-sm" href="#everyone" data-t="pg.3b">See the programme</a></dd></div>
+      </dl>
+      <p class="also"><span data-t="pg.also">For organisations:</span> <a href="#sponsor" data-t="pg.a1">Sponsor a month</a><a href="#companies" data-t="pg.a2">Train your team</a><a href="#pathways" data-t="pg.a3">2027 pathways</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- Why now: a slim band of facts -->
+<section class="slide dark band" id="start" data-title="Why now">
+  <div class="slide-in">
+    <div class="copy">
+      <p class="kick" data-t="why.k">Why now</p>
+      <h2 data-t="why.h">Libya is online. Almost nobody is trained.</h2>
+      <p class="lead" data-t="why.lead">The AI tools people use at work change every few weeks. Until now there was nowhere in Libya to learn them live, in Arabic.</p>
+    </div>
+    <div class="facts">
+        <div class="fact"><b data-t="why.f1b">9 in 10</b><span data-t="why.f1">Libyans are online</span></div>
+        <div class="fact"><b data-t="why.f2b">Weeks</b><span data-t="why.f2">between major AI model releases</span></div>
+        <div class="fact"><b data-t="why.f3b">Zero</b><span data-t="why.f3">AI academies in Libya before this one</span></div>
+      </div>
+  </div>
+</section>
+
+<!-- 9 · Why Alkhwarizmi -->
+<section class="slide" id="about" data-title="Why us">
+  <div class="slide-in">
+    <div class="copy">
+      <p class="kick" data-t="ab.k">Why Alkhwarizmi</p>
+      <h2 data-t="ab.h">Why people choose Alkhwarizmi.</h2>
+      <ul class="proof">
+        <li><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="10" width="36" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="42" r="3" fill="currentColor"/><circle cx="31" cy="42" r="3" fill="currentColor"/><path d="M12 20h24M12 26h14" stroke="#09C98E" stroke-width="2.5" stroke-linecap="round"/></svg><b data-t="ab.t1">Live, in the room</b><span data-t="ab.t1s">A classroom on Zawiat Dahmani Street, not a video. People finish what they start here.</span></li>
+        <li><svg viewBox="0 0 48 48" aria-hidden="true"><text x="24" y="33" text-anchor="middle" font-family="'Noto Kufi Arabic','IBM Plex Sans Arabic',sans-serif" font-size="26" font-weight="700" fill="currentColor">ع</text><path d="M8 40h32" stroke="#09C98E" stroke-width="2.5" stroke-linecap="round"/></svg><b data-t="ab.t2">Arabic first</b><span data-t="ab.t2s">Taught in Arabic, with English for the terms the industry already uses.</span></li>
+        <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 6h18l8 8v28H12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M30 6v8h8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M18 28l5 5 9-11" fill="none" stroke="#09C98E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><b data-t="ab.t3">You leave with proof</b><span data-t="ab.t3s">A roadmap for your organisation, a working app, a portfolio. Never just notes.</span></li>
+      </ul>
+    </div>
+    <div class="card" data-form="visit">
+      <h3 data-t="ab.c.h">Visit the campus</h3>
+      <p class="why" data-t="ab.c.why">Come and see a class. Thirty minutes, no obligation.</p>
+      <form novalidate>
+        <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
+        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off">
+        <button class="btn btn-teal" type="submit" data-t="ab.c.btn">Arrange a visit</button>
+        <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
+        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
+      </form>
+      <div class="done"><b data-t="done.visit">Visit requested.</b><span data-t="done.p">We will reply on WhatsApp within one working day.</span> <a class="wa-link" href="#" data-t="done.wa">Message us now</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · Contact -->
+<section class="slide grey compact" id="contact" data-title="Contact">
+  <div class="slide-in">
+    <div class="copy">
+      <p class="kick" data-t="ct.k">Contact</p>
+      <h2 data-t="ct.h">Ask us anything.</h2>
+      <p class="lead" data-t="ct.lead">A person from the academy replies within one working day, never a bot.</p>
+      <div class="contact">
+        <div class="wa-only"><span data-t="ct.wa">WhatsApp</span><a class="wa-link wa-num" href="#"></a></div>
+        <div><span data-t="ct.email">Email</span><a href="mailto:admin@alkhawarizmi.ai">admin@alkhawarizmi.ai</a></div>
+        <div><span data-t="ct.campus">Campus</span><a href="https://maps.google.com/?q=Zawiat+Dahmani+Street,+Tripoli,+Libya" target="_blank" rel="noopener" data-t="ct.addr">Zawiat Dahmani Street, Tripoli, Libya</a></div>
+      </div>
+    </div>
+    <div class="card" data-form="question">
+      <h3 data-t="ct.c.h">Send a question</h3>
+      <p class="why" data-t="ct.c.why">Content, dates, fees, or training for your team.</p>
+      <form novalidate>
+        <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
+        <label class="f"><span data-t="f.reach">WhatsApp number or email</span><input name="phone" autocomplete="tel" required></label>
+        <label class="f"><span data-t="f.q">Your question</span><textarea name="need" required></textarea></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off">
+        <button class="btn btn-navy" type="submit" data-t="ct.c.btn">Send my question</button>
+        <p class="err" data-t="f.err4">Please add your name, a way to reach you and your question.</p>
+      </form>
+      <div class="done"><b data-t="done.q">Question sent.</b><span data-t="ct.done">We reply within one working day.</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div id="pages">
+<div class="page" id="executive" hidden>
+<div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
+<!-- 3 · Executive AI Path -->
+<section class="slide" id="s-executive" data-title="Executives">
+  <div class="slide-in">
+    <div class="copy">
+      <p class="kick" data-t="exec.k">Executive AI Path</p>
+      <h2 data-t="exec.h">Five days. Nine deliverables for your own organisation.</h2>
+      <p class="lead" data-t="exec.lead">For CEOs, directors and heads of department. You don't leave with notes. You leave with an AI strategy, a funded 90-day roadmap and the questions that stop a vendor selling you the wrong thing.</p>
+      <figure class="fig"><svg class="fig-svg" viewBox="0 0 460 130" role="img" aria-label="Five days, nine deliverables, ending in a 90-day roadmap" font-family="var(--body)" font-size="12"><line x1="20" y1="60" x2="440" y2="60" stroke="var(--fig-rule)" stroke-width="1.5"/><circle cx="36" cy="60" r="6" fill="var(--fig-ink)"/><text x="36" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.sun">Sun</text><circle cx="114" cy="60" r="6" fill="var(--fig-ink)"/><text x="114" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.mon">Mon</text><circle cx="192" cy="60" r="6" fill="var(--fig-ink)"/><text x="192" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.tue">Tue</text><circle cx="270" cy="60" r="6" fill="var(--fig-ink)"/><text x="270" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.wed">Wed</text><circle cx="348" cy="60" r="6" fill="var(--fig-ink)"/><text x="348" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.thu">Thu</text><rect x="22" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="100" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="100" y="14" width="28" height="12" rx="2" fill="#09C98E"/><rect x="178" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="178" y="14" width="28" height="12" rx="2" fill="#09C98E"/><rect x="256" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="256" y="14" width="28" height="12" rx="2" fill="#09C98E"/><rect x="334" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="334" y="14" width="28" height="12" rx="2" fill="#534CB6"/><rect x="394" y="18" width="12" height="12" rx="2" fill="#534CB6"/><text x="412" y="28" fill="var(--fig-ink)" font-weight="600" data-t="fig.ex1">9 deliverables</text><text x="230" y="118" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="fig.ex2">Five days. You leave with a funded 90-day roadmap.</text></svg><figcaption data-t="fig.cap.ex">Figure 2. The five days, and what stacks up.</figcaption></figure>
+      <ul class="list">
+        <li data-t="exec.l1">Size the AI opportunity in your organisation in numbers your CFO will accept</li>
+        <li data-t="exec.l2">Know where generative AI breaks: data leakage, hallucination, prompt injection, and the controls to demand</li>
+        <li data-t="exec.l3">Read a vendor pitch and a contract without being locked in</li>
+        <li data-t="exec.l4">Finish with your AI North Star, a 90-day roadmap and a closing advisory session</li>
+      </ul>
+      <p class="meta"><b data-t="exec.m1">5 days, Sunday to Thursday</b><span data-t="exec.m2">20 hours, 14 modules, 5 no-code labs</span><span data-t="exec.m3">7 seats a cohort</span></p>
+      <p class="price">10,200 <small data-t="cur">LYD a seat</small></p>
+    </div>
+    <div class="card" data-form="exec-call" data-program="Executive AI Path">
+      <h3 data-t="exec.c.h">Book a free 20-minute call</h3>
+      <p class="why" data-t="exec.c.why">Next cohort starts Sunday 15 November 2026. An academy director calls you, answers your questions and holds a seat if it fits.</p>
+      <form novalidate>
+        <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
+        <div class="row2">
+          <label class="f"><span data-t="f.role">Role</span><input name="role" autocomplete="organization-title"></label>
+          <label class="f"><span data-t="f.org">Organisation</span><input name="org" autocomplete="organization" autocapitalize="words" enterkeyhint="next"></label>
+        </div>
+        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required></label>
+        <label class="f"><span data-t="f.when">Best time to call</span>
+          <select name="when"><option value="morning" data-t="o.morning">Morning</option><option value="afternoon" data-t="o.afternoon">Afternoon</option><option value="evening" data-t="o.evening">Evening</option></select></label>
+        <label class="chk"><input type="checkbox" name="readiness" value="yes" checked><span data-t="exec.c.chk">Also send me the free AI readiness check for Libyan organisations</span></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off">
+        <button class="btn btn-teal" type="submit" data-t="exec.c.btn">Book my call</button>
+        <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
+        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
+      </form>
+      <div class="done"><b data-t="done.call">Call requested.</b><span data-t="done.p">We will reply on WhatsApp within one working day.</span> <a class="wa-link" href="#" data-t="done.wa">Message us now</a></div>
+    </div>
+  </div>
+</section>
+</div>
+<div class="page" id="productivity" hidden>
+<div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
+<!-- 4 · AI Productivity -->
+<section class="slide" id="s-productivity" data-title="AI Productivity">
+  <div class="slide-in">
+    <div class="copy">
+      <p class="kick" data-t="prod.k">AI Productivity · Bring your own project</p>
+      <h2 data-t="prod.h">Two weeks. Ten things you made.</h2>
+      <p class="lead" data-t="prod.lead">For creators, marketers, founders and freelancers. Other courses teach you to understand AI. This one teaches you to produce with it. Bring the project you are working on: every lab over the two weeks feeds it, and you leave with it built.</p>
+      <figure class="fig"><svg class="fig-svg" viewBox="0 0 460 150" role="img" aria-label="Ten deliverables over two weeks, your own project running through" font-family="var(--body)" font-size="12"><rect x="20" y="14" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="59" y="35" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.app">App</text><rect x="106" y="14" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="145" y="35" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.auto">Automation</text><rect x="192" y="14" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="231" y="35" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.img">Image</text><rect x="278" y="14" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="317" y="35" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.brand">Brand</text><rect x="364" y="14" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="403" y="35" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.prompt">Prompts</text><rect x="20" y="66" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="59" y="87" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.video">Video</text><rect x="106" y="66" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="145" y="87" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.voice">Voice</text><rect x="192" y="66" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="231" y="87" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.music">Music</text><rect x="278" y="66" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="317" y="87" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.camp">Campaign</text><rect x="364" y="66" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="403" y="87" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.copy">Copy</text><path d="M14 57 C 80 50, 140 64, 230 57 S 380 50, 452 57" fill="none" stroke="#09C98E" stroke-width="3" stroke-linecap="round"/><text x="20" y="126" fill="var(--fig-ink)" font-weight="600" data-t="fig.pr1">Your own project runs through all ten.</text><text x="20" y="142" fill="var(--fig-ink)" fill="var(--fig-quiet)" data-t="fig.pr2">Week one, then week two.</text></svg><figcaption data-t="fig.cap.pr">Figure 3. Ten deliverables, one project.</figcaption></figure>
+      <ul class="list">
+        <li data-t="prod.l1">Week one: productivity, AI coding, automation, image and brand design</li>
+        <li data-t="prod.l2">Week two: AI video, voice and music, campaigns and copy</li>
+        <li data-t="prod.l3">By day three you ship your first app or video</li>
+        <li data-t="prod.l4">You leave with your own project built, and a portfolio you can show a client</li>
+      </ul>
+      <p class="meta"><b data-t="prod.m1">10 teaching days, Sunday to Thursday</b><span data-t="prod.m2">Small cohorts, live studio labs</span></p>
+      <p class="price">7,500 <small data-t="cur">LYD a seat</small></p>
+    </div>
+    <div class="card" data-form="prod-seat" data-program="AI Productivity">
+      <h3 data-t="prod.c.h">Reserve a seat</h3>
+      <p class="why" data-t="prod.c.why">First cohort in November 2026. Nothing to pay now; we confirm your seat and the dates on WhatsApp.</p>
+      <form novalidate>
+        <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
+        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required></label>
+        <label class="f"><span data-t="f.make">What do you make?</span>
+          <select name="work"><option value="content" data-t="o.content">Content and social media</option><option value="marketing" data-t="o.marketing">Marketing</option><option value="business" data-t="o.business">I run a business</option><option value="freelance" data-t="o.freelance">Freelance work</option><option value="other" data-t="o.other">Something else</option></select></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off">
+        <button class="btn btn-teal" type="submit" data-t="prod.c.btn">Reserve my seat</button>
+        <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
+        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
+      </form>
+      <div class="done"><b data-t="done.seat">Seat requested.</b><span data-t="done.p">We will reply on WhatsApp within one working day.</span> <a class="wa-link" href="#" data-t="done.wa">Message us now</a></div>
+    </div>
+  </div>
+</section>
+</div>
+<div class="page" id="everyone" hidden>
+<div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
+<!-- 5 · AI for Everyone -->
+<section class="slide grey" id="s-everyone" data-title="AI for Everyone">
+  <div class="slide-in">
+    <div class="copy">
+      <p class="kick" data-t="every.k">AI for Everyone</p>
+      <h2 data-t="every.h">Ten hours, and the conversation stops going over your head.</h2>
+      <p class="lead" data-t="every.lead">Five evenings, two hours each, Sunday to Thursday, in Arabic. No background needed. A phone is enough.</p>
+      <figure class="fig"><svg class="fig-svg" viewBox="0 0 460 120" role="img" aria-label="Five evenings of two hours with twelve labs" font-family="var(--body)" font-size="12"><rect x="20" y="16" width="76" height="48" rx="6" fill="#09C98E" fill-opacity="0.14" stroke="#09C98E" stroke-width="1.5"/><text x="58" y="36" fill="var(--fig-ink)" text-anchor="middle" font-weight="600">2 h</text><circle cx="38" cy="52" r="4" fill="var(--fig-ink)"/><circle cx="54" cy="52" r="4" fill="var(--fig-ink)"/><rect x="108" y="16" width="76" height="48" rx="6" fill="#09C98E" fill-opacity="0.14" stroke="#09C98E" stroke-width="1.5"/><text x="146" y="36" fill="var(--fig-ink)" text-anchor="middle" font-weight="600">2 h</text><circle cx="126" cy="52" r="4" fill="var(--fig-ink)"/><circle cx="142" cy="52" r="4" fill="var(--fig-ink)"/><circle cx="158" cy="52" r="4" fill="var(--fig-ink)"/><rect x="196" y="16" width="76" height="48" rx="6" fill="#09C98E" fill-opacity="0.14" stroke="#09C98E" stroke-width="1.5"/><text x="234" y="36" fill="var(--fig-ink)" text-anchor="middle" font-weight="600">2 h</text><circle cx="214" cy="52" r="4" fill="var(--fig-ink)"/><circle cx="230" cy="52" r="4" fill="var(--fig-ink)"/><circle cx="246" cy="52" r="4" fill="var(--fig-ink)"/><rect x="284" y="16" width="76" height="48" rx="6" fill="#09C98E" fill-opacity="0.14" stroke="#09C98E" stroke-width="1.5"/><text x="322" y="36" fill="var(--fig-ink)" text-anchor="middle" font-weight="600">2 h</text><circle cx="302" cy="52" r="4" fill="var(--fig-ink)"/><circle cx="318" cy="52" r="4" fill="var(--fig-ink)"/><rect x="372" y="16" width="76" height="48" rx="6" fill="#09C98E" fill-opacity="0.14" stroke="#09C98E" stroke-width="1.5"/><text x="410" y="36" fill="var(--fig-ink)" text-anchor="middle" font-weight="600">2 h</text><circle cx="390" cy="52" r="4" fill="var(--fig-ink)"/><circle cx="406" cy="52" r="4" fill="var(--fig-ink)"/><text x="20" y="92" fill="var(--fig-ink)" font-weight="600" data-t="fig.ev1">Five evenings, two hours each, 12 hands-on labs</text><text x="20" y="110" fill="var(--fig-ink)" fill="var(--fig-quiet)" data-t="fig.ev2">No background needed. A phone is enough.</text></svg><figcaption data-t="fig.cap.ev">Figure 4. Five evenings.</figcaption></figure>
+      <ul class="list">
+        <li data-t="every.l1">What AI is and what it cannot do</li>
+        <li data-t="every.l2">Write, summarise and translate with prompts that work</li>
+        <li data-t="every.l3">Spot a cloned voice note, the four scam patterns, and what never to type into AI</li>
+        <li data-t="every.l4">Automate one real task from your own job, then teach it back</li>
+      </ul>
+      <p class="meta"><b data-t="every.m1">10 hours, 12 hands-on labs</b><span data-t="every.m2">30 people a cohort, a new cohort every month</span></p>
+      <p class="price">1,200 <small data-t="every.price">LYD, or free in a sponsored cohort</small></p>
+    </div>
+    <div class="card" data-form="everyone-seat" data-program="AI for Everyone">
+      <h3 data-t="every.c.h">Join the next cohort</h3>
+      <p class="why" data-t="every.c.why">We tell you the next open dates and whether a sponsored, free seat is available.</p>
+      <form novalidate>
+        <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
+        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required></label>
+        <label class="f"><span data-t="f.city">City</span><input name="city" autocomplete="address-level2" placeholder="Tripoli" data-tp="f.city.ph"></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off">
+        <button class="btn btn-navy" type="submit" data-t="every.c.btn">Save me a seat</button>
+        <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
+        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
+      </form>
+      <div class="done"><b data-t="done.seat">Seat requested.</b><span data-t="done.p">We will reply on WhatsApp within one working day.</span> <a class="wa-link" href="#" data-t="done.wa">Message us now</a></div>
+    </div>
+  </div>
+</section>
+</div>
+<div class="page" id="sponsor" hidden>
+<div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
+<!-- 6 · Sponsor -->
+<section class="slide dark" id="s-sponsor" data-title="Sponsor">
+  <div class="slide-in">
+    <div class="copy">
+      <p class="kick" data-t="sp.k">AI Literacy Initiative</p>
+      <h2 data-t="sp.h">Sponsor a month. Your name on thirty certificates.</h2>
+      <p class="lead" data-t="sp.lead">The AI Literacy Initiative funds AI for Everyone one month at a time. One sponsor, one cohort of thirty people who pay nothing. A teacher who can spot a cloned voice. A shopkeeper who answers customers in two languages. A nurse who checks before she trusts.</p>
+      <figure class="fig"><svg class="fig-svg" viewBox="0 0 460 112" role="img" aria-label="Twelve months, one sponsor each, your name on a month" font-family="var(--body)" font-size="12"><rect x="20" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="56" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="92" y="16" width="30" height="40" rx="4" fill="#09C98E" stroke="#09C98E" stroke-width="1.5"/><text x="107" y="42" fill="var(--fig-ink)" text-anchor="middle" font-weight="700" fill="var(--navy)" font-size="11" data-t="fig.sp0">You</text><rect x="128" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="164" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="200" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="236" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="272" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="308" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="344" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="380" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="416" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="20" y="84" fill="var(--fig-ink)" font-weight="600" data-t="fig.sp1">One sponsor a month. Thirty people, free to them.</text><text x="20" y="102" fill="var(--fig-ink)" fill="var(--fig-quiet)" data-t="fig.sp2">Your name on all thirty certificates.</text></svg><figcaption data-t="fig.cap.sp">Figure 5. Your month.</figcaption></figure>
+      <div class="facts">
+        <div class="fact"><b>36,000</b><span data-t="sp.f1">LYD funds one cohort</span></div>
+        <div class="fact"><b>30</b><span data-t="sp.f2">people, free to them</span></div>
+        <div class="fact"><b>12</b><span data-t="sp.f3">months to choose from in 2027</span></div>
+      </div>
+      <ul class="list">
+        <li data-t="sp.l1">Your organisation's name on all thirty certificates</li>
+        <li data-t="sp.l2">Choose a public cohort or a group you care about</li>
+        <li data-t="sp.l3">A report after the cohort: scam-detection scores before and after, labs completed</li>
+      </ul>
+    </div>
+    <div class="card" data-form="sponsor" data-program="AI Literacy Initiative">
+      <h3 data-t="sp.c.h">Apply to sponsor a month</h3>
+      <p class="why" data-t="sp.c.why">Each month has one sponsor. We reply within one working day and confirm your month within five.</p>
+      <form novalidate>
+        <label class="f"><span data-t="f.org">Organisation</span><input name="org" autocomplete="organization" autocapitalize="words" enterkeyhint="next" required></label>
+        <label class="f"><span data-t="f.contact">Contact name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
+        <div class="row2">
+          <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required></label>
+          <label class="f"><span data-t="f.email">Email</span><input name="email" type="email" inputmode="email" autocapitalize="off" autocomplete="email" enterkeyhint="next"></label>
+        </div>
+        <label class="f"><span data-t="f.month">Preferred month</span>
+          <select name="month"><option value="2027-01" data-t="m.jan">January 2027</option><option value="2027-02" data-t="m.feb">February 2027</option><option value="2027-03" data-t="m.mar">March 2027</option><option value="2027-04" data-t="m.apr">April 2027</option><option value="2027-05" data-t="m.may">May 2027</option><option value="2027-06" data-t="m.jun">June 2027</option><option value="2027-07" data-t="m.jul">July 2027</option><option value="2027-08" data-t="m.aug">August 2027</option><option value="2027-09" data-t="m.sep">September 2027</option><option value="2027-10" data-t="m.oct">October 2027</option><option value="2027-11" data-t="m.nov">November 2027</option><option value="2027-12" data-t="m.dec">December 2027</option><option value="any" data-t="m.any">Any month</option></select></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off">
+        <button class="btn btn-teal" type="submit" data-t="sp.c.btn">Apply to sponsor</button>
+        <p class="err" data-t="f.err3">Please add your organisation, a contact name and a WhatsApp number.</p>
+        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
+      </form>
+      <div class="done"><b data-t="done.app">Application received.</b><span data-t="sp.done">We confirm your month within five working days.</span> <a class="wa-link" href="#" data-t="done.wa">Message us now</a></div>
+    </div>
+  </div>
+</section>
+</div>
+<div class="page" id="companies" hidden>
+<div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
+<!-- 7 · Companies -->
+<section class="slide" id="s-companies" data-title="Companies">
+  <div class="slide-in">
+    <div class="copy">
+      <p class="kick" data-t="co.k">Custom AI Training</p>
+      <h2 data-t="co.h">Train your whole team on your own data.</h2>
+      <p class="lead" data-t="co.lead">Your staff are already using AI at work, with no rules and no training. We build a programme for your industry, your data and your workflows, delivered at your site, on our campus or online, in Arabic.</p>
+      <figure class="fig"><svg class="fig-svg" viewBox="0 0 460 104" role="img" aria-label="Four steps from consultation to a report to leadership" font-family="var(--body)" font-size="12"><rect x="20" y="20" width="98" height="44" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="69" y="46" fill="var(--fig-ink)" text-anchor="middle" font-size="11" data-t="c.1">Free consultation</text><path d="M120 42 L130 42" stroke="var(--fig-ink)" stroke-width="1.5" marker-end="url(#fig-arrow)"/><rect x="132" y="20" width="98" height="44" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="181" y="46" fill="var(--fig-ink)" text-anchor="middle" font-size="11" data-t="c.2">Rules for AI at work</text><path d="M232 42 L242 42" stroke="var(--fig-ink)" stroke-width="1.5" marker-end="url(#fig-arrow)"/><rect x="244" y="20" width="98" height="44" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="293" y="46" fill="var(--fig-ink)" text-anchor="middle" font-size="11" data-t="c.3">Labs on your tasks</text><path d="M344 42 L354 42" stroke="var(--fig-ink)" stroke-width="1.5" marker-end="url(#fig-arrow)"/><rect x="356" y="20" width="98" height="44" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="405" y="46" fill="var(--fig-ink)" text-anchor="middle" font-size="11" data-t="c.4">Report to leadership</text><text x="20" y="94" fill="var(--fig-ink)" font-weight="600" data-t="fig.co1">At your site, on our campus, or online. In Arabic.</text></svg><figcaption data-t="fig.cap.co">Figure 6. How a team programme runs.</figcaption></figure>
+      <ul class="list">
+        <li data-t="co.l1">A free consultation to scope what your team needs</li>
+        <li data-t="co.l2">Clear rules on what may and may not go into an AI tool</li>
+        <li data-t="co.l3">Hands-on labs on your real tasks, not generic examples</li>
+        <li data-t="co.l4">A report to leadership on what changed</li>
+      </ul>
+    </div>
+    <div class="card" data-form="company" data-program="Custom AI Training">
+      <h3 data-t="co.c.h">Request a proposal</h3>
+      <p class="why" data-t="co.c.why">Tell us about the team. We reply within one working day and send a scope and price within a week.</p>
+      <form novalidate>
+        <label class="f"><span data-t="f.org">Company</span><input name="org" autocomplete="organization" autocapitalize="words" enterkeyhint="next" required></label>
+        <div class="row2">
+          <label class="f"><span data-t="f.contact">Contact name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
+          <label class="f"><span data-t="f.size">Team size</span>
+            <select name="size"><option value="1-10">1–10</option><option value="11-50">11–50</option><option value="51-200">51–200</option><option value="200+">200+</option></select></label>
+        </div>
+        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required></label>
+        <label class="f"><span data-t="f.need">What should the team be able to do afterwards?</span><textarea name="need"></textarea></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off">
+        <button class="btn btn-navy" type="submit" data-t="co.c.btn">Request a proposal</button>
+        <p class="err" data-t="f.err3">Please add your company, a contact name and a WhatsApp number.</p>
+        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
+      </form>
+      <div class="done"><b data-t="done.req">Request received.</b><span data-t="co.done">We will contact you within one working day to set up the consultation.</span> <a class="wa-link" href="#" data-t="done.wa">Message us now</a></div>
+    </div>
+  </div>
+</section>
+</div>
+<div class="page" id="pathways" hidden>
+<div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
+<!-- 8 · More pathways -->
+<section class="slide grey" id="s-pathways" data-title="More pathways">
+  <div class="slide-in">
+    <div class="copy">
+      <p class="kick" data-t="pw.k">More pathways</p>
+      <h2 data-t="pw.h">Opening in 2027.</h2>
+      <p class="lead" data-t="pw.lead">Join the waitlist and you hear first when dates are set.</p>
+      <figure class="fig"><svg class="fig-svg" viewBox="0 0 460 80" role="img" aria-label="Three more pathways along 2027" font-family="var(--body)" font-size="12"><line x1="20" y1="40" x2="440" y2="40" stroke="var(--fig-rule)" stroke-width="1.5"/><circle cx="60" cy="40" r="6" fill="#534CB6"/><text x="60" y="24" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" font-size="11" data-t="m.jan">Jan 2027</text><text x="60" y="66" fill="var(--fig-ink)" text-anchor="middle" font-weight="600" data-t="fig.pa1">Diploma</text><circle cx="230" cy="40" r="6" fill="#534CB6"/><text x="230" y="24" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" font-size="11">2027</text><text x="230" y="66" fill="var(--fig-ink)" text-anchor="middle" font-weight="600" data-t="fig.pa2">AI for Kids</text><circle cx="400" cy="40" r="6" fill="#534CB6"/><text x="400" y="24" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" font-size="11" data-t="pw.q3">On request</text><text x="400" y="66" fill="var(--fig-ink)" text-anchor="middle" font-weight="600" data-t="fig.pa3">Policymakers</text></svg><figcaption data-t="fig.cap.pa">Figure 7. What opens in 2027.</figcaption></figure>
+      <dl class="rows">
+        <div><dt data-t="pw.1">AI Practitioner Diploma</dt><dd data-t="pw.1s">Eight months, about 640 contact hours, from beginner to a practitioner someone will hire. 19,200 LYD.</dd><dd class="when" data-t="pw.q1">January 2027</dd></div>
+        <div><dt data-t="pw.2">AI for Kids</dt><dd data-t="pw.2s">Ages 10 to 16, two certified levels, two weeks each. 1,920 LYD a level.</dd><dd class="when" data-t="pw.q2">2027</dd></div>
+        <div><dt data-t="pw.3">AI for Policymakers</dt><dd data-t="pw.3s">For ministries and public bodies: the rules Libya needs and how to write them.</dd><dd class="when" data-t="pw.q3">On request</dd></div>
+      </dl>
+    </div>
+    <div class="card" data-form="waitlist">
+      <h3 data-t="pw.c.h">Join the waitlist</h3>
+      <p class="why" data-t="pw.c.why">No commitment. One message when the dates are confirmed.</p>
+      <form novalidate>
+        <label class="f"><span data-t="f.pathway">Pathway</span>
+          <select name="program"><option value="AI Practitioner Diploma" data-t="pw.1">AI Practitioner Diploma</option><option value="AI for Kids" data-t="pw.2">AI for Kids</option><option value="AI for Policymakers" data-t="pw.3">AI for Policymakers</option></select></label>
+        <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
+        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off">
+        <button class="btn btn-navy" type="submit" data-t="pw.c.btn">Add me to the waitlist</button>
+        <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
+      </form>
+      <div class="done"><b data-t="done.list">You're on the list.</b><span data-t="pw.done">We message you when dates are confirmed.</span></div>
+    </div>
+  </div>
+</section>
+</div>
+</div>
+
+<footer>
+  <div class="in">
+    <span data-t="ft.copy">© 2026 Alkhwarizmi AI Academy. The first AI academy in Libya.</span>
+    <span><a href="mailto:admin@alkhawarizmi.ai">admin@alkhawarizmi.ai</a></span>
+  </div>
+</footer>
+
+
+<div class="bar">
+  <a class="btn btn-teal" href="#executive" data-t="bar.call">Book a free call</a>
+  <a class="btn btn-line wa-link wa-only" href="#" style="border-color:rgba(255,255,255,.3);color:#fff" data-t="f.wa">WhatsApp</a>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><marker id="fig-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--fig-ink)"/></marker></defs></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="lg" x1="165.24" y1="290.66" x2="364.88" y2="91.02" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#09C98E"/><stop offset=".89" stop-color="#534CB6"/></linearGradient><path id="logo-path" fill="url(#lg)" d="M141.01,238.34l.11,59.09-4.67-1.96-29.75-7.03c-3.46-5.82-6.1-11.53-8.54-17.93-6.23-2.16-13.09-4.56-19.46-6.39-1.37-.39-4.49,2.1-5.95,1.26-8.03-4.61-.77-4.51-7.76-8.58l-.15-10.68-13.41-19.82c1.72-11.19,13.35-2.67,11.02-15.9-2.06-5.39-3.92-10.99-1.6-16.13l1.59-3.53c3.09-6.85-1.53-10.94-1.38-14.87.54-14.36,2.7-18.94-3.83-32.99-3.47-7.46-6.16-8.72-5.92-12.06,11.33-4.71,11.64-2.81,18.79-14.55,1.96-3.21.04-7.52-1.18-10.75-2.21-5.83-1.99-4.8,3-10.83,1.44-.21,4.28-.22,4.73-1.12l2.02-4.06c7.94-3.29-.09-3.54,13.96-8.02,3.1-.99,5.6-2.01,6.29-4.93.15-.64-1.39-1.76-1.55-2.42-.97-3.99-.19-9.05.99-12.99l6.51,2.08c2.73.87,5.47,3.58,8.29,4.68,15.43,6.02,21.76-5.85,27.82,2.08l.08,136.83,87.97-89.33,7.71,6.19,5.46,3.42c6.34,3.97,10.89,3.6,16.9-.16,4.32-2.71,10.69-9.2,13.09-13.28,2.11-3.58,1.19-6.12-.8-9.43-2.07-3.44-4.17-9.31-2.62-13.35,3.28-8.52,11.38-13.86,19.73-17.23,2.32-.94,4.79-2.14,7-2.08,3.49.1,5.98-.31,8.56-2.51,3.36-2.87,4.6.61,12.58-.59,1.02.12,3.45.75,4.44,1.09l16.94,5.83.44,4.24c.06.59-.84,2.18-1.03,2.57l3.63,3.02,4.1.96-17.95,18.7-69.96,69.65-45.02,46,40.43,38.48c-10.34,11-15.48,24.26-16.82,38.79l.12,18.69c-6.43-4.07-13.17-7.03-19.28-10.39-6.37-3.5-7.95-4.54-12.55-8.63l-63.11-59.12ZM378.11,374.17l.43-13.2-67.41-42.44c-10.58-8.46-10.36-17.79,6.32-25.49l62.7-21.09-1-36.72c-.04-6.57-3.11-14.48-4.79-20.75-8.99-28.6-35.88-48.4-65.88-49.39l-33.48,36.86c21.35-3.03,38.09,1.03,54.55,15.08,6.4,5.8,10.22,13.36,10.14,21.71l-42.39,10.22c-14.03,3.41-25.26,12.04-33.13,23.03-5.41,8.58-8.42,17.69-8.4,27.76l.87,26.77,100.97,59.15v-11.46l20.51-.05ZM349.78,139.33c-.89-7.16-7.81-12.74-15.8-11.49-7.31,1.15-12.26,7.3-11.73,14.26.52,6.78,5.73,12.67,13.74,12.6,8.87-.07,14.79-7.33,13.79-15.37Z"/></defs></svg>
+
+<script>
+/* =====================================================================
+   SETUP — edit these five lines, nothing else is required.
+   ---------------------------------------------------------------------
+   WHATSAPP   : the academy's WhatsApp number, digits only, with country
+                code and no plus sign, e.g. '218912345678'. Until it is
+                set, every WhatsApp button and the number in Contact are
+                hidden, so nothing shows a placeholder.
+   FORM_ENDPOINT : where form submissions go. Create a free form at
+                formspree.io (or any service that accepts a JSON POST),
+                paste its URL here, and submissions arrive by email at
+                admin@alkhawarizmi.ai. While it is empty, forms fall back
+                to opening WhatsApp with the details pre-filled.
+   GA4_ID / META_PIXEL_ID : analytics, loaded only when set.
+   ===================================================================== */
+var CONFIG = {
+  WHATSAPP: '',
+  FORM_ENDPOINT: '',
+  EMAIL: 'admin@alkhawarizmi.ai',
+  GA4_ID: '',
+  META_PIXEL_ID: '',
+  /* VIDEO: a YouTube or Vimeo link, or a direct .mp4 URL. VIDEO_POSTER: an image for the frame (optional).
+     SHOW_VIDEO_PLACEHOLDER: keep the frame visible before the film is ready (set false to hide the section until VIDEO is set). */
+  VIDEO: '',
+  VIDEO_POSTER: '',
+  SHOW_VIDEO_PLACEHOLDER: true
+};
+
+/* ---------- translations ---------- */
+var T = {
+en:{},
+ar:{
+ 'brand':'الخوارزمي',
+ 'nav.exec':'للقادة','nav.prod':'الإنتاجية','nav.every':'الذكاء الاصطناعي للجميع','nav.sponsor':'الرعاية','nav.contact':'تواصل معنا','nav.cta':'احجز مكالمة مجانية',
+ 'hero.chip':'الحرم الجامعي يفتح في طرابلس، نوفمبر 2026',
+ 'hero.h1':'ذكاءٌ صُنع في ليبيا.',
+ 'eb.1':'أكاديمية الخوارزمي للذكاء الاصطناعي','eb.2':'طرابلس','eb.3':'الأولى في ليبيا','tri.1':'أول أكاديمية للذكاء الاصطناعي في ليبيا','tri.2':'طرابلس · 32.89° شمالاً، 13.19° شرقاً','hint':'مرّر للدخول',
+ 'k1':'أول أكاديمية للذكاء الاصطناعي في ليبيا','ov1.h':'كل مهارة تبدأ من صفحة.','ov1.p':'أي شخص يستطيع مشاهدة فيديو عن الذكاء الاصطناعي. القليلون يكملونه. هنا تتعلم حضورياً، في القاعة، بالعربية أولاً.',
+ 'k2':'كل مسار ينتهي بدليل','ov2.h':'ثم تبني.','ov2.p':'معرض أعمال. تطبيق يعمل. خطة لتسعين يوماً. خارطة طريق للذكاء الاصطناعي لمؤسستك أنت. أشياء حقيقية، صُنعت في ليبيا.',
+ 'ov3.h':'مكانك في مستقبل ليبيا مع الذكاء الاصطناعي يبدأ هنا.',
+ 'exec.c.chk':'أرسلوا لي أيضاً فحص الجاهزية المجاني للمؤسسات الليبية',
+ 'hero.lead':'دروس حضورية مباشرة، بالعربية أولاً، في حرمٍ جامعي بطرابلس. سواء كنت تدير مؤسسة أو تريد مهارة جديدة، تغادر ومعك شيء يعمل فعلاً.',
+ 'hero.cta1':'احجز مكالمة مجانية','hero.cta2':'استعرض البرامج',
+ 'start.h':'عرّفنا بنفسك','start.why':'نرد عليك عبر واتساب خلال يوم عمل واحد بالبرنامج المناسب ومواعيده.',
+ 'start.lead':'أدير مؤسسة','start.learn':'أريد مهارة جديدة','start.sponsor':'أريد أن أرعى دفعة','start.btn':'اعرف البرنامج المناسب لك','start.n1':'في الأثناء، اطّلع على المسار التنفيذي','start.n2':'في الأثناء، اطّلع على البرامج','start.n3':'في الأثناء، اطّلع على الرعاية',
+ 'f.city.ph':'طرابلس','f.name':'الاسم','f.whatsapp':'رقم واتساب','f.org':'المؤسسة','f.email':'البريد الإلكتروني','f.role':'المنصب','f.when':'أفضل وقت للاتصال','f.make':'ماذا تصنع؟','f.city':'المدينة','f.contact':'اسم جهة الاتصال','f.month':'الشهر المفضل','f.size':'حجم الفريق','f.need':'ماذا يجب أن يستطيع الفريق فعله بعد التدريب؟','f.pathway':'المسار','f.reach':'رقم واتساب أو بريد إلكتروني','f.q':'سؤالك',
+ 'f.err':'يرجى إضافة اسمك ورقم واتساب يمكننا الوصول إليك عبره.','f.err2':'يرجى إضافة اسمك وبريد إلكتروني صحيح.','f.err3':'يرجى إضافة اسم المؤسسة واسم جهة الاتصال ورقم واتساب.','f.err4':'يرجى إضافة اسمك ووسيلة للتواصل معك وسؤالك.',
+ 'f.or':'أو راسلنا مباشرة:','f.wa':'واتساب',
+ 'done.h':'وصلتنا رسالتك.','done.p':'سنرد عليك عبر واتساب خلال يوم عمل واحد.','done.wa':'راسلنا الآن','done.call':'تم طلب المكالمة.','done.seat':'تم طلب المقعد.','done.app':'وصلنا طلبك.','done.req':'وصلنا طلبك.','done.list':'أنت على القائمة.','done.visit':'تم طلب الزيارة.','done.q':'تم إرسال سؤالك.',
+ 'c2':'2 / 10','c3':'3 / 10','c4':'4 / 10','c5':'5 / 10','c6':'6 / 10','c7':'7 / 10','c8':'8 / 10','c9':'9 / 10','c10':'10 / 10',
+ 'fig.why1':'9 من كل 10 ليبيين متصلون','fig.why2':'0 أكاديميات للذكاء الاصطناعي، حتى الآن','d.sun':'الأحد','d.mon':'الاثنين','d.tue':'الثلاثاء','d.wed':'الأربعاء','d.thu':'الخميس','fig.ex1':'9 مخرجات','fig.ex2':'خمسة أيام. تغادر بخارطة طريق ممولة لتسعين يوماً.','p.app':'تطبيق','p.auto':'أتمتة','p.img':'صورة','p.brand':'هوية','p.prompt':'أوامر','p.video':'فيديو','p.voice':'صوت','p.music':'موسيقى','p.camp':'حملة','p.copy':'نصوص','fig.pr1':'مشروعك يمر عبر العشرة كلها.','fig.pr2':'الأسبوع الأول، ثم الثاني.','fig.ev1':'خمس أمسيات، ساعتان لكل منها، 12 مختبراً','fig.ev2':'لا تحتاج إلى خلفية. الهاتف يكفي.','fig.sp0':'أنت','fig.sp1':'راعٍ واحد كل شهر. ثلاثون شخصاً، مجاناً لهم.','fig.sp2':'اسمك على الشهادات الثلاثين كلها.','c.1':'استشارة مجانية','c.2':'قواعد الذكاء الاصطناعي في العمل','c.3':'مختبرات على مهامكم','c.4':'تقرير للإدارة','fig.co1':'في مقركم، أو في حرمنا، أو عن بُعد. بالعربية.','fig.pa1':'الدبلوم','fig.pa2':'للأطفال','fig.pa3':'صنّاع السياسات','fig.ab1':'خارطة طريق','fig.ab2':'تطبيق يعمل','fig.ab3':'معرض أعمال','fig.cap.why':'الشكل 1. تسعة من كل عشرة ليبيين متصلون. ولا يكاد أحد مدرَّباً.','fig.cap.ab':'الشكل 1. ما تغادر به.','fig.cap.ex':'الشكل 2. الأيام الخمسة، وما يتراكم فيها.','fig.cap.pr':'الشكل 3. عشرة مخرجات، مشروع واحد.','fig.cap.ev':'الشكل 4. خمس أمسيات.','fig.cap.sp':'الشكل 5. شهرك.','fig.cap.co':'الشكل 6. كيف يسير برنامج الفريق.','fig.cap.pa':'الشكل 7. ما يُفتح في 2027.',
+ 'w.k':'داخل الأكاديمية','w.h':'تسعون ثانية داخل أول أكاديمية للذكاء الاصطناعي في ليبيا.','w.soon':'الفيلم يصل في 30 أكتوبر','w.cap':'صُوّر في الحرم الجامعي، شارع زاوية الدهماني، طرابلس.',
+ 'why.k':'لماذا الآن','pg.k':'البرامج','pg.h':'ثلاثة مداخل. اختر مدخلك.','pg.1':'خمسة أيام. تسعة مخرجات لمؤسستك أنت. للرؤساء التنفيذيين والمديرين ورؤساء الأقسام.','pg.1m':'5 أيام · الدفعة القادمة تبدأ 15 نوفمبر','pg.1b':'اطّلع على البرنامج','pg.2':'أسبوعان. عشرة أشياء صنعتها بنفسك: تطبيق، وفيديو، وحملة، وأتمتة. لصنّاع المحتوى والمسوّقين وروّاد الأعمال.','pg.2m':'أسبوعان · الدفعة الأولى في نوفمبر','pg.2b':'اطّلع على البرنامج','pg.3':'عشر ساعات على خمس أمسيات، بالعربية. لا تحتاج إلى خلفية مسبقة، الهاتف يكفي.','pg.3m':'10 ساعات · دفعة جديدة كل شهر','pg.3b':'اطّلع على البرنامج','pg.also':'للمؤسسات:','pg.a1':'ارعَ شهراً','pg.a2':'درّب فريقك','pg.a3':'مسارات 2027','back':'← كل البرامج','exec.k':'المسار التنفيذي للذكاء الاصطناعي','prod.k':'إنتاجية الذكاء الاصطناعي · أحضر مشروعك الخاص','prod.byo':'أحضر مشروعك الخاص','every.k':'الذكاء الاصطناعي للجميع','sp.k':'مبادرة محو الأمية بالذكاء الاصطناعي','co.k':'تدريب مخصص للذكاء الاصطناعي','pw.k':'مسارات أخرى','ab.k':'لماذا الخوارزمي','ct.k':'تواصل معنا',
+ 'why.h':'ليبيا متصلة بالإنترنت. ولا أحد تقريباً مدرَّب.',
+ 'why.lead':'أدوات الذكاء الاصطناعي التي يستخدمها الناس في العمل تتغير كل بضعة أسابيع. وحتى اليوم لم يكن في ليبيا مكان لتعلّمها حضورياً، بالعربية.',
+ 'why.f1b':'9 من 10','why.f1':'من الليبيين متصلون بالإنترنت','why.f2b':'أسابيع','why.f2':'بين كل إصدار رئيسي وآخر لنماذج الذكاء الاصطناعي','why.f3b':'صفر','why.f3':'أكاديميات للذكاء الاصطناعي في ليبيا قبل هذه',
+ 'ready.h':'احصل على فحص الجاهزية للذكاء الاصطناعي','ready.why':'قائمة مختصرة للمؤسسات الليبية: أين يؤتي الذكاء الاصطناعي ثماره أولاً، وما الذي يجب تجهيزه قبل البدء. مجاناً، إلى بريدك.','ready.btn':'أرسلوا لي الفحص','ready.done':'القائمة في طريقها إليك خلال يوم عمل واحد.',
+ 'exec.h':'خمسة أيام. تسعة مخرجات لمؤسستك أنت.',
+ 'exec.lead':'للرؤساء التنفيذيين والمديرين ورؤساء الأقسام. لا تغادر ومعك ملاحظات، بل تغادر ومعك استراتيجية للذكاء الاصطناعي، وخارطة طريق ممولة لتسعين يوماً، والأسئلة التي تمنع أي مورّد من بيعك الشيء الخطأ.',
+ 'exec.l1':'قدّر فرصة الذكاء الاصطناعي في مؤسستك بأرقام يقبلها مديرك المالي',
+ 'exec.l2':'اعرف أين يخفق الذكاء الاصطناعي التوليدي: تسرب البيانات، والهلوسة، وحقن الأوامر، والضوابط التي يجب أن تطلبها',
+ 'exec.l3':'اقرأ عرض المورّد والعقد دون أن تُقيَّد به',
+ 'exec.l4':'اختم بنجم الشمال لمؤسستك، وخارطة طريق لتسعين يوماً، وجلسة استشارية ختامية',
+ 'exec.m1':'5 أيام، من الأحد إلى الخميس','exec.m2':'20 ساعة، 14 وحدة، 5 مختبرات بلا برمجة','exec.m3':'7 مقاعد في الدفعة','cur':'دينار ليبي للمقعد',
+ 'exec.c.h':'احجز مكالمة مجانية لعشرين دقيقة','exec.c.why':'الدفعة القادمة تبدأ الأحد 15 نوفمبر 2026. يتصل بك مدير من الأكاديمية، ويجيب عن أسئلتك، ويحجز لك مقعداً إن كان البرنامج مناسباً.',
+ 'o.morning':'صباحاً','o.afternoon':'بعد الظهر','o.evening':'مساءً','exec.c.btn':'احجز مكالمتي',
+ 'prod.h':'أسبوعان. عشرة أشياء صنعتها بنفسك.',
+ 'prod.lead':'لصنّاع المحتوى والمسوّقين وروّاد الأعمال والمستقلين. الدورات الأخرى تعلّمك أن تفهم الذكاء الاصطناعي. هذه تعلّمك أن تنتج به. أحضر المشروع الذي تعمل عليه: كل مختبر خلال الأسبوعين يصبّ فيه، وتغادر وهو مبنيّ.',
+ 'prod.l1':'الأسبوع الأول: الإنتاجية، والبرمجة بالذكاء الاصطناعي، والأتمتة، وتصميم الصور والهوية',
+ 'prod.l2':'الأسبوع الثاني: فيديو وصوت وموسيقى بالذكاء الاصطناعي، والحملات والنصوص',
+ 'prod.l3':'بحلول اليوم الثالث تنجز أول تطبيق أو فيديو لك',
+ 'prod.l4':'تغادر ومشروعك مبنيّ، ومعك معرض أعمال يمكنك عرضه على عميل',
+ 'prod.m1':'10 أيام تدريس، من الأحد إلى الخميس','prod.m2':'دفعات صغيرة، مختبرات استوديو مباشرة',
+ 'prod.c.h':'احجز مقعداً','prod.c.why':'الدفعة الأولى في نوفمبر 2026. لا شيء تدفعه الآن؛ نؤكد مقعدك والمواعيد عبر واتساب.',
+ 'o.content':'محتوى ووسائل تواصل','o.marketing':'تسويق','o.business':'أدير عملاً تجارياً','o.freelance':'عمل حر','o.other':'شيء آخر','prod.c.btn':'احجز مقعدي',
+ 'every.h':'عشر ساعات، ويتوقف الحديث عن أن يمرّ فوق رأسك.',
+ 'every.lead':'خمس أمسيات، ساعتان في كل منها، من الأحد إلى الخميس، بالعربية. لا تحتاج إلى خلفية مسبقة. الهاتف يكفي.',
+ 'every.l1':'ما هو الذكاء الاصطناعي وما الذي لا يستطيع فعله',
+ 'every.l2':'اكتب ولخّص وترجم بأوامر تعمل فعلاً',
+ 'every.l3':'اكتشف الرسالة الصوتية المزيفة، وأنماط الاحتيال الأربعة، وما الذي لا تكتبه أبداً في الذكاء الاصطناعي',
+ 'every.l4':'أتمت مهمة حقيقية من عملك، ثم علّمها لغيرك',
+ 'every.m1':'10 ساعات، 12 مختبراً عملياً','every.m2':'30 شخصاً في الدفعة، ودفعة جديدة كل شهر','every.price':'دينار ليبي، أو مجاناً في دفعة مرعية',
+ 'every.c.h':'انضم إلى الدفعة القادمة','every.c.why':'نخبرك بالمواعيد المفتوحة القادمة وما إذا كان هناك مقعد مجاني مرعي.','every.c.btn':'احجزوا لي مقعداً',
+ 'sp.h':'ارعَ شهراً. واسمك على ثلاثين شهادة.',
+ 'sp.lead':'تموّل مبادرة محو الأمية بالذكاء الاصطناعي برنامج "الذكاء الاصطناعي للجميع" شهراً بشهر. راعٍ واحد، ودفعة واحدة من ثلاثين شخصاً لا يدفعون شيئاً. معلّمة تكتشف الصوت المزيف. صاحب متجر يرد على زبائنه بلغتين. ممرضة تتحقق قبل أن تثق.',
+ 'sp.f1':'دينار ليبي تموّل دفعة واحدة','sp.f2':'شخصاً، مجاناً لهم','sp.f3':'شهراً للاختيار من بينها في 2027',
+ 'sp.l1':'اسم مؤسستك على الشهادات الثلاثين كلها','sp.l2':'اختر دفعة عامة أو مجموعة تهمّك','sp.l3':'تقرير بعد الدفعة: درجات اكتشاف الاحتيال قبل وبعد، والمختبرات المنجزة',
+ 'sp.c.h':'قدّم طلباً لرعاية شهر','sp.c.why':'لكل شهر راعٍ واحد. نرد خلال يوم عمل واحد ونؤكد شهرك خلال خمسة أيام.',
+ 'm.jan':'يناير 2027','m.feb':'فبراير 2027','m.mar':'مارس 2027','m.apr':'أبريل 2027','m.may':'مايو 2027','m.jun':'يونيو 2027','m.jul':'يوليو 2027','m.aug':'أغسطس 2027','m.sep':'سبتمبر 2027','m.oct':'أكتوبر 2027','m.nov':'نوفمبر 2027','m.dec':'ديسمبر 2027','m.any':'أي شهر',
+ 'sp.c.btn':'قدّم طلب الرعاية','sp.done':'نؤكد شهرك خلال خمسة أيام عمل.',
+ 'co.h':'درّب فريقك كله على بياناتكم أنتم.',
+ 'co.lead':'موظفوك يستخدمون الذكاء الاصطناعي في العمل بالفعل، بلا قواعد وبلا تدريب. نبني برنامجاً لقطاعكم وبياناتكم وسير عملكم، يُقدَّم في مقركم أو في حرمنا الجامعي أو عن بُعد، بالعربية.',
+ 'co.l1':'استشارة مجانية لتحديد ما يحتاجه فريقك','co.l2':'قواعد واضحة لما يجوز وما لا يجوز إدخاله في أدوات الذكاء الاصطناعي','co.l3':'مختبرات عملية على مهامكم الحقيقية، لا على أمثلة عامة','co.l4':'تقرير للإدارة عمّا تغيّر',
+ 'co.c.h':'اطلب عرضاً','co.c.why':'حدّثنا عن الفريق. نرد خلال يوم عمل واحد ونرسل نطاق العمل والسعر خلال أسبوع.','co.c.btn':'اطلب عرضاً','co.done':'سنتواصل معك خلال يوم عمل واحد لترتيب الاستشارة.',
+ 'pw.h':'تُفتح في 2027.','pw.lead':'انضم إلى قائمة الانتظار لتكون أول من يعرف عند تحديد المواعيد.',
+ 'pw.1':'دبلوم ممارس الذكاء الاصطناعي','pw.1s':'ثمانية أشهر، نحو 640 ساعة تدريس، من مبتدئ إلى ممارس يوظّفه أحد. 19,200 دينار ليبي.','pw.q1':'يناير 2027',
+ 'pw.2':'الذكاء الاصطناعي للأطفال','pw.2s':'من 10 إلى 16 عاماً، مستويان معتمدان، أسبوعان لكل مستوى. 1,920 دينار ليبي للمستوى.','pw.q2':'2027',
+ 'pw.3':'الذكاء الاصطناعي لصنّاع السياسات','pw.3s':'للوزارات والهيئات العامة: القواعد التي تحتاجها ليبيا وكيف تُكتب.','pw.q3':'عند الطلب',
+ 'pw.c.h':'انضم إلى قائمة الانتظار','pw.c.why':'بلا التزام. رسالة واحدة عند تأكيد المواعيد.','pw.c.btn':'أضفني إلى القائمة','pw.done':'نراسلك عند تأكيد المواعيد.',
+ 'ab.h':'لماذا يختار الناس الخوارزمي.','ab.t1':'حضورياً، في القاعة','ab.t1s':'قاعة دراسية في شارع زاوية الدهماني، لا فيديو. هنا يكمل الناس ما بدأوه.','ab.t2':'بالعربية أولاً','ab.t2s':'نعلّم بالعربية، مع الإنجليزية للمصطلحات التي يستخدمها القطاع أصلاً.','ab.t3':'تغادر ومعك دليل','ab.t3s':'خارطة طريق لمؤسستك، أو تطبيق يعمل، أو معرض أعمال. لا مجرد ملاحظات.',
+ 'ab.lead':'تتعلم في قاعة دراسية بشارع زاوية الدهماني، بالعربية أولاً، مع أشخاص يبنون بهذه الأدوات كل يوم. كل برنامج ينتهي بشيء صنعته بنفسك: خارطة طريق لمؤسستك، أو تطبيق يعمل، أو معرض أعمال.',
+  'ab.c.h':'زُر الحرم الجامعي','ab.c.why':'تعال وشاهد حصة دراسية. ثلاثون دقيقة، بلا أي التزام.','ab.c.btn':'رتّب زيارة',
+ 'ct.h':'اسألنا أي شيء.','ct.lead':'يرد عليك شخص من الأكاديمية خلال يوم عمل واحد، وليس روبوتاً.',
+ 'ct.wa':'واتساب','ct.email':'البريد الإلكتروني','ct.campus':'الحرم الجامعي','ct.addr':'شارع زاوية الدهماني، طرابلس، ليبيا',
+ 'ct.c.h':'أرسل سؤالاً','ct.c.why':'عن المحتوى أو المواعيد أو الرسوم أو تدريب فريقك.','ct.c.btn':'أرسل سؤالي','ct.done':'نرد خلال يوم عمل واحد.',
+ 'ft.copy':'© 2026 أكاديمية الخوارزمي للذكاء الاصطناعي. أول أكاديمية للذكاء الاصطناعي في ليبيا.',
+ 'bar.call':'احجز مكالمة مجانية',
+ 'title':'أكاديمية الخوارزمي للذكاء الاصطناعي — أول أكاديمية للذكاء الاصطناعي في ليبيا',
+ 'desc':'تدريب حضوري على الذكاء الاصطناعي في طرابلس، بالعربية أولاً. مسار تنفيذي في خمسة أيام، واستوديو إنتاجية في أسبوعين، ودفعات "الذكاء الاصطناعي للجميع" في عشر ساعات. احجز مكالمة مجانية.'
+}};
+
+(function(){
+  var $=function(s,c){return (c||document).querySelector(s)}, $$=function(s,c){return [].slice.call((c||document).querySelectorAll(s))};
+
+  /* ---------- language ---------- */
+  var en={};
+  $$('[data-t]').forEach(function(el){ var k=el.getAttribute('data-t'); if(!(k in en)) en[k]=el.textContent; });
+  $$('[data-tp]').forEach(function(el){ var k=el.getAttribute('data-tp'); if(!(k in en)) en[k]=el.placeholder; });
+  en.title=document.title; en.desc=$('meta[name=description]').content; T.en=en;
+  function setLang(l){
+    var d=T[l]||T.en;
+    $$('[data-t]').forEach(function(el){ var k=el.getAttribute('data-t'); if(d[k]!=null) el.textContent=d[k]; else if(T.en[k]!=null) el.textContent=T.en[k]; });
+    $$('[data-tp]').forEach(function(el){ var k=el.getAttribute('data-tp'); el.placeholder=(d[k]!=null?d[k]:T.en[k])||''; });
+    document.documentElement.lang=l; document.documentElement.dir=(l==='ar'?'rtl':'ltr');
+    document.title=d.title||T.en.title; $('meta[name=description]').content=d.desc||T.en.desc;
+    $$('.lang button').forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-lang')===l?'true':'false'); });
+    try{localStorage.setItem('lang',l);}catch(e){}
+    if(typeof route==='function') route();
+  }
+  $$('.lang button').forEach(function(b){ b.addEventListener('click',function(){ setLang(b.getAttribute('data-lang')); }); });
+  var q=new URLSearchParams(location.search).get('lang'), saved=null; try{saved=localStorage.getItem('lang');}catch(e){}
+  var initial=(q==='ar'||q==='en')?q:(saved||((navigator.language||'').slice(0,2)==='ar'?'ar':'en'));
+
+
+  /* ---------- pages: one programme per view, the homepage stays short ---------- */
+  var home=$('#home'), pagesEl=$('#pages'), pageIds=$$('.page').map(function(p){return p.id;});
+  function route(){
+    var h=(location.hash||'').replace('#','');
+    var isPage=pageIds.indexOf(h)>=0;
+    $$('.page').forEach(function(p){ p.hidden=(p.id!==h); });
+    home.hidden=isPage; pagesEl.hidden=!isPage;
+    document.documentElement.classList.toggle('on-page',isPage);
+    window.__paused=isPage; if(isPage){ $('#nav').classList.remove('dark'); }
+    var barA=$('.bar a.btn-teal');
+    if(isPage){ var card=$('#'+h+' .card'), cb=card&&$('button[type=submit]',card); if(barA&&cb){ barA.textContent=cb.textContent; barA.href='#'+h; barA.onclick=function(e){ e.preventDefault(); card.scrollIntoView({behavior:'smooth',block:'start'}); var f=$('input',card); f&&setTimeout(function(){f.focus({preventScroll:true});},500); }; } }
+    else if(barA){ barA.textContent=(T[document.documentElement.lang]||T.en)['bar.call']; barA.href='#executive'; barA.onclick=null; }
+    if(isPage){ window.scrollTo(0,0); var h2=$('#'+h+' h2'); document.title=(h2?h2.textContent+' · ':'')+(T[document.documentElement.lang]||T.en).title; }
+    else { document.title=(T[document.documentElement.lang]||T.en).title; if(h){ var el=document.getElementById(h); if(el) setTimeout(function(){ el.scrollIntoView({block:'start'}); },0); } }
+  }
+  addEventListener('hashchange',route);
+  if(initial!=='en') setLang(initial); else route();
+
+  /* ---------- menu ---------- */
+  var burger=$('#burger'), menu=$('#menu');
+  burger.addEventListener('click',function(){ var o=menu.classList.toggle('open'); burger.setAttribute('aria-expanded',o?'true':'false'); });
+  $$('#menu a').forEach(function(a){ a.addEventListener('click',function(){ menu.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }); });
+
+  /* ---------- phones: hide the bottom bar while a field has focus ---------- */
+  document.addEventListener('focusin',function(e){ if(e.target.matches('input:not([type=checkbox]):not([type=radio]),select,textarea')) document.documentElement.classList.add('typing'); });
+  document.addEventListener('focusout',function(){ setTimeout(function(){ var a=document.activeElement; if(!a||!a.matches('input,select,textarea')) document.documentElement.classList.remove('typing'); },60); });
+
+  /* the bottom bar repeats the form's action, so it steps aside whenever a form is on screen */
+  if('IntersectionObserver' in window){
+    var onCards=new Set();
+    var cio=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) onCards.add(e.target); else onCards.delete(e.target); }); document.documentElement.classList.toggle('form-in-view', onCards.size>0); },{threshold:0.25});
+    $$('.card').forEach(function(c){ cio.observe(c); });
+  }
+
+  /* the hero already has its own call button: the bottom bar appears once you scroll past it */
+  function atTop(){ document.documentElement.classList.toggle('at-top', scrollY < innerHeight*0.7 && !document.documentElement.classList.contains('on-page')); }
+  addEventListener('scroll',atTop,{passive:true}); addEventListener('hashchange',function(){ setTimeout(atTop,0); }); atTop();
+  /* close the phone menu with Escape or a tap outside */
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&menu.classList.contains('open')){ menu.classList.remove('open'); burger.setAttribute('aria-expanded','false'); burger.focus(); } });
+  document.addEventListener('click',function(e){ if(menu.classList.contains('open')&&!e.target.closest('#menu')&&!e.target.closest('#burger')){ menu.classList.remove('open'); burger.setAttribute('aria-expanded','false'); } });
+
+  /* ---------- WhatsApp wiring ---------- */
+  var wa=(CONFIG.WHATSAPP||'').replace(/\D/g,'');
+  function waUrl(text){ return 'https://wa.me/'+wa+(text?'?text='+encodeURIComponent(text):''); }
+  if(!wa){ $$('.wa-only').forEach(function(e){ e.style.display='none'; }); $$('.alt').forEach(function(e){ e.style.display='none'; }); $$('.done .wa-link').forEach(function(e){ e.style.display='none'; }); console.warn('Alkhwarizmi site: CONFIG.WHATSAPP is empty, WhatsApp buttons hidden.'); }
+  else {
+    $$('.wa-num').forEach(function(a){ a.textContent='+'+wa; });
+    $$('.wa-link').forEach(function(a){ a.href=waUrl('Hello Alkhwarizmi, '); a.target='_blank'; a.rel='noopener'; });
+  }
+
+  /* ---------- source tracking ---------- */
+  var p=new URLSearchParams(location.search), src={};
+  ['utm_source','utm_medium','utm_campaign','ref'].forEach(function(k){ if(p.get(k)) src[k]=p.get(k); });
+  if(!src.utm_source && document.referrer){ try{ src.referrer=new URL(document.referrer).hostname; }catch(e){} }
+  try{ if(Object.keys(src).length) sessionStorage.setItem('src',JSON.stringify(src)); else src=JSON.parse(sessionStorage.getItem('src')||'{}'); }catch(e){}
+
+  /* ---------- analytics (only when configured) ---------- */
+  if(CONFIG.GA4_ID){ var g=document.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id='+CONFIG.GA4_ID; document.head.appendChild(g); window.dataLayer=window.dataLayer||[]; window.gtag=function(){dataLayer.push(arguments);}; gtag('js',new Date()); gtag('config',CONFIG.GA4_ID); }
+  if(CONFIG.META_PIXEL_ID){ !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init',CONFIG.META_PIXEL_ID); fbq('track','PageView'); }
+  function track(name,data){ try{ if(window.gtag) gtag('event',name,data); if(window.fbq) fbq('track','Lead',data); }catch(e){} }
+
+
+  /* ---------- video: nothing loads until the viewer presses play ---------- */
+  (function(){
+    var pl=$('#player'), btn=$('#playBtn'), sec=$('#watch'); if(!pl) return;
+    var url=(CONFIG.VIDEO||'').trim();
+    if(CONFIG.VIDEO_POSTER){ var im=document.createElement('img'); im.className='poster-img'; im.alt=''; im.src=CONFIG.VIDEO_POSTER; pl.insertBefore(im, pl.firstChild); }
+    if(!url){ if(!CONFIG.SHOW_VIDEO_PLACEHOLDER){ sec.hidden=true; } else { btn.disabled=true; btn.style.opacity='.55'; } return; }
+    $('#posterNote').hidden=true;
+    function embed(){
+      var m; var el;
+      if((m=url.match(/(?:youtu\.be\/|v=|\/embed\/|\/shorts\/)([\w-]{6,})/))){ el=document.createElement('iframe'); el.src='https://www.youtube-nocookie.com/embed/'+m[1]+'?autoplay=1&rel=0&modestbranding=1'; el.allow='autoplay; fullscreen; picture-in-picture'; el.allowFullscreen=true; el.title='Alkhwarizmi AI Academy'; }
+      else if((m=url.match(/vimeo\.com\/(?:video\/)?(\d+)/))){ el=document.createElement('iframe'); el.src='https://player.vimeo.com/video/'+m[1]+'?autoplay=1'; el.allow='autoplay; fullscreen; picture-in-picture'; el.allowFullscreen=true; el.title='Alkhwarizmi AI Academy'; }
+      else { el=document.createElement('video'); el.src=url; el.controls=true; el.autoplay=true; el.playsInline=true; el.setAttribute('playsinline',''); }
+      pl.appendChild(el); btn.hidden=true; track('video_play',{});
+    }
+    btn.addEventListener('click',embed);
+  })();
+
+  /* ---------- forms ---------- */
+  $$('.card').forEach(function(card){
+    var form=$('form',card); if(!form) return;
+    var kind=card.getAttribute('data-form'), program=card.getAttribute('data-program')||'';
+    form.addEventListener('submit',function(e){
+      e.preventDefault(); card.classList.remove('error');
+      if($('input[name=website]',form).value) return; /* honeypot */
+      var data={form:kind, program:program, lang:document.documentElement.lang, page:location.href};
+      $$('input,select,textarea',form).forEach(function(i){ if(i.name==='website') return; if(i.type==='radio'||i.type==='checkbox'){ if(i.checked) data[i.name]=i.value; return; } data[i.name]=i.value.trim(); });
+      if(data.program==='' && data.iam) data.program=data.iam;
+      for(var k in src) data[k]=src[k];
+      var ok=$$('[required]',form).every(function(i){ return i.value.trim().length>0; });
+      if(ok && $('input[type=email][required]',form)) ok=/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(data.email||'');
+      if(!ok){ card.classList.add('error'); var f=$$('[required]',form).filter(function(i){return !i.value.trim();})[0]; if(f) f.focus(); return; }
+      var btn=$('button[type=submit]',form), label=btn.textContent; btn.disabled=true; btn.textContent='…';
+      var summary=Object.keys(data).filter(function(k){return ['form','page','lang'].indexOf(k)<0 && data[k];}).map(function(k){return k+': '+data[k];}).join('\n');
+      function finish(){ card.classList.add('sent'); if(kind==='start'){ var nx=$('.next-link',card); if(nx){ var map={leader:['#executive','start.n1'],learner:['#programmes','start.n2'],sponsor:['#sponsor','start.n3']}, m=map[data.iam]||map.learner, tt=(T[document.documentElement.lang]||T.en); nx.href=m[0]; nx.textContent=tt[m[1]]||T.en[m[1]]||nx.textContent; } } track('generate_lead',{form:kind,program:program}); var d=$('.done .wa-link',card); if(d&&wa){ d.href=waUrl('Hello Alkhwarizmi, I just sent a form on the website.\n'+summary); } card.scrollIntoView({block:'nearest'}); }
+      function fallback(){ /* no endpoint: hand off to WhatsApp, or email */
+        if(wa){ window.open(waUrl('Hello Alkhwarizmi,\n'+summary),'_blank','noopener'); }
+        else { location.href='mailto:'+CONFIG.EMAIL+'?subject='+encodeURIComponent('Website: '+kind+(program?' / '+program:''))+'&body='+encodeURIComponent(summary); }
+        finish();
+      }
+      if(!CONFIG.FORM_ENDPOINT){ fallback(); btn.disabled=false; btn.textContent=label; return; }
+      data._subject='Website lead: '+kind+(program?' / '+program:''); data._replyto=data.email||'';
+      fetch(CONFIG.FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+        .then(function(r){ if(!r.ok) throw new Error(r.status); finish(); })
+        .catch(function(){ fallback(); })
+        .then(function(){ btn.disabled=false; btn.textContent=label; });
+    });
+  });
+})();
+</script>
+<script>
+(function(){ var root=document.documentElement; if(matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('static'); setTimeout(function(){ if(!window.__mark) root.classList.add('static'); },6000); })();
+</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import { SVGLoader } from 'three/addons/loaders/SVGLoader.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+const root = document.documentElement;
+if (!root.classList.contains('static')) {
+const canvas = document.getElementById('gl'), vp = document.getElementById('vp'), scrolly = document.getElementById('top');
+const nav = document.getElementById('nav'), hint = document.getElementById('hint'), bar = document.getElementById('bar');
+const labelsEl = document.getElementById('labels');
+const ovs = [...document.querySelectorAll('.ov')];
+let renderer;
+try { renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' }); }
+catch (e) { root.classList.add('static'); throw e; }
+renderer.setPixelRatio(Math.min(devicePixelRatio, innerWidth < 760 ? 1.5 : 2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+const small = innerWidth < 760 || (navigator.connection && navigator.connection.saveData) || (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4);
+
+const scene = new THREE.Scene();
+scene.environment = new THREE.PMREMGenerator(renderer).fromScene(new RoomEnvironment(), 0.04).texture;
+const camera = new THREE.PerspectiveCamera(30, 1, 1, 30000);
+const key = new THREE.DirectionalLight(0xffffff, 1.4); key.position.set(300, 500, 800); scene.add(key);
+scene.add(new THREE.HemisphereLight(0xffffff, 0xdfe6f5, 0.6));
+
+/* ---- the mark ---- */
+const D = "M141.01,238.34l.11,59.09-4.67-1.96-29.75-7.03c-3.46-5.82-6.1-11.53-8.54-17.93-6.23-2.16-13.09-4.56-19.46-6.39-1.37-.39-4.49,2.1-5.95,1.26-8.03-4.61-.77-4.51-7.76-8.58l-.15-10.68-13.41-19.82c1.72-11.19,13.35-2.67,11.02-15.9-2.06-5.39-3.92-10.99-1.6-16.13l1.59-3.53c3.09-6.85-1.53-10.94-1.38-14.87.54-14.36,2.7-18.94-3.83-32.99-3.47-7.46-6.16-8.72-5.92-12.06,11.33-4.71,11.64-2.81,18.79-14.55,1.96-3.21.04-7.52-1.18-10.75-2.21-5.83-1.99-4.8,3-10.83,1.44-.21,4.28-.22,4.73-1.12l2.02-4.06c7.94-3.29-.09-3.54,13.96-8.02,3.1-.99,5.6-2.01,6.29-4.93.15-.64-1.39-1.76-1.55-2.42-.97-3.99-.19-9.05.99-12.99l6.51,2.08c2.73.87,5.47,3.58,8.29,4.68,15.43,6.02,21.76-5.85,27.82,2.08l.08,136.83,87.97-89.33,7.71,6.19,5.46,3.42c6.34,3.97,10.89,3.6,16.9-.16,4.32-2.71,10.69-9.2,13.09-13.28,2.11-3.58,1.19-6.12-.8-9.43-2.07-3.44-4.17-9.31-2.62-13.35,3.28-8.52,11.38-13.86,19.73-17.23,2.32-.94,4.79-2.14,7-2.08,3.49.1,5.98-.31,8.56-2.51,3.36-2.87,4.6.61,12.58-.59,1.02.12,3.45.75,4.44,1.09l16.94,5.83.44,4.24c.06.59-.84,2.18-1.03,2.57l3.63,3.02,4.1.96-17.95,18.7-69.96,69.65-45.02,46,40.43,38.48c-10.34,11-15.48,24.26-16.82,38.79l.12,18.69c-6.43-4.07-13.17-7.03-19.28-10.39-6.37-3.5-7.95-4.54-12.55-8.63l-63.11-59.12ZM378.11,374.17l.43-13.2-67.41-42.44c-10.58-8.46-10.36-17.79,6.32-25.49l62.7-21.09-1-36.72c-.04-6.57-3.11-14.48-4.79-20.75-8.99-28.6-35.88-48.4-65.88-49.39l-33.48,36.86c21.35-3.03,38.09,1.03,54.55,15.08,6.4,5.8,10.22,13.36,10.14,21.71l-42.39,10.22c-14.03,3.41-25.26,12.04-33.13,23.03-5.41,8.58-8.42,17.69-8.4,27.76l.87,26.77,100.97,59.15v-11.46l20.51-.05ZM349.78,139.33c-.89-7.16-7.81-12.74-15.8-11.49-7.31,1.15-12.26,7.3-11.73,14.26.52,6.78,5.73,12.67,13.74,12.6,8.87-.07,14.79-7.33,13.79-15.37Z";
+const parsed = new SVGLoader().parse('<svg xmlns="http://www.w3.org/2000/svg"><path d="' + D + '"/></svg>');
+const shapes = []; parsed.paths.forEach(p => SVGLoader.createShapes(p).forEach(s => shapes.push(s)));
+const teal = new THREE.Color('#09c98e'), indigo = new THREE.Color('#534cb6');
+const gx = 364.88 - 165.24, gy = 91.02 - 290.66, gl2 = gx * gx + gy * gy;
+const gradT = (x, y) => Math.min(1, Math.max(0, (((x - 165.24) * gx + (y - 290.66) * gy) / gl2) / 0.89));
+
+const outer = new THREE.Group(); scene.add(outer);
+const zoom = new THREE.Group(); outer.add(zoom);
+const flip = new THREE.Group(); flip.scale.y = -1; zoom.add(flip);
+const mats = [];
+shapes.forEach(s => {
+  const geo = new THREE.ExtrudeGeometry(s, { depth: 34, bevelEnabled: true, bevelThickness: 5, bevelSize: 2.5, bevelSegments: 8, curveSegments: 36 });
+  const pos = geo.attributes.position, col = new Float32Array(pos.count * 3), c = new THREE.Color();
+  for (let i = 0; i < pos.count; i++) { c.copy(teal).lerp(indigo, gradT(pos.getX(i), pos.getY(i))); col.set([c.r, c.g, c.b], i * 3); }
+  geo.setAttribute('color', new THREE.BufferAttribute(col, 3));
+  const m = new THREE.MeshPhysicalMaterial({ vertexColors: true, roughness: 0.28, metalness: 0.05, clearcoat: 1, clearcoatRoughness: 0.12, transparent: true });
+  mats.push(m); flip.add(new THREE.Mesh(geo, m));
+});
+const ctr = new THREE.Box3().setFromObject(flip).getCenter(new THREE.Vector3());
+flip.position.set(-ctr.x, -ctr.y, -ctr.z);
+
+/* ---- particles: the mark -> an open book -> a city rising out of its pages ---- */
+const N = small ? 3600 : 7200;
+const tris = []; let total = 0;
+shapes.forEach(s => {
+  const g = new THREE.ShapeGeometry(s, 24); const p = g.attributes.position, idx = g.index.array;
+  for (let i = 0; i < idx.length; i += 3) {
+    const a = [p.getX(idx[i]), p.getY(idx[i])], b = [p.getX(idx[i + 1]), p.getY(idx[i + 1])], c = [p.getX(idx[i + 2]), p.getY(idx[i + 2])];
+    const area = Math.abs((b[0] - a[0]) * (c[1] - a[1]) - (c[0] - a[0]) * (b[1] - a[1])) / 2;
+    total += area; tris.push({ a, b, c, cum: total });
+  }
+});
+const rnd = (() => { let s = 7; return () => (s = (s * 16807) % 2147483647) / 2147483647; })();
+const gauss = () => { let u = 0, v = 0; while (!u) u = rnd(); while (!v) v = rnd(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
+const A = new Float32Array(N * 3), B = new Float32Array(N * 3), C = new Float32Array(N * 3);
+const colA = new Float32Array(N * 3), colB = new Float32Array(N * 3), colC = new Float32Array(N * 3), col = new Float32Array(N * 3);
+const seed = new Float32Array(N), rise = new Float32Array(N);
+const tmpC = new THREE.Color(), WHITE3 = new THREE.Color('#ffffff'), MIST = new THREE.Color('#bfeee0');
+
+// book geometry (book space: x across, y up, z along the spine)
+const PW = 480, PD = 300;                                    // page width, half depth
+const pageY = x => { const u = Math.min(1, Math.abs(x) / PW); return 64 * Math.sqrt(u) - 30 * u * u; };
+const bez = (s, a, b, c) => (1 - s) * (1 - s) * a + 2 * (1 - s) * s * b + s * s * c;
+function bookPoint(role) {
+  if (role < 0.64) {                                         // printed pages: lines of "text"
+    for (let k = 0; k < 40; k++) {
+      const side = rnd() < .5 ? -1 : 1, ax = 46 + rnd() * (PW - 92), row = (rnd() * 17) | 0;
+      const word = Math.sin(Math.floor(ax / 34) * 12.9898 + row * 78.233 + side * 3.1) * 43758.5453;
+      if (word - Math.floor(word) < 0.28 && k < 39) continue;  // gaps between words
+      const z = -PD + 46 + row * ((2 * PD - 92) / 16) + gauss() * 2.2, x = side * ax;
+      return [x, pageY(x) + 1.5, z, 0];
+    }
+  }
+  if (role < 0.76) {                                         // page edges and the stack of pages
+    const side = rnd() < .5 ? -1 : 1, t = rnd();
+    if (rnd() < .5) { const x = side * PW; return [x, pageY(x) - rnd() * 26, -PD + t * 2 * PD, 1]; }
+    const x = side * t * PW, z = rnd() < .5 ? -PD : PD; return [x, pageY(x) - rnd() * 4, z, 1];
+  }
+  if (role < 0.94) {                                         // the page being turned, with its own lines
+    const s = .04 + rnd() * .92, row = (rnd() * 17) | 0, z = -PD + 46 + row * ((2 * PD - 92) / 16) + gauss() * 2;
+    const edge = rnd() < .2, zz = edge ? (rnd() < .5 ? -PD : PD) : z, ss = edge ? rnd() : s;
+    return [bez(ss, 0, 140, -150), bez(ss, 0, 340, 270) + 6, zz, 2];
+  }
+  const s = rnd();                                           // ideas lifting off the page
+  return [-40 + gauss() * 90, 150 + Math.pow(s, .7) * 200, gauss() * 110, 3];
+}
+
+// the city: towers standing on the open pages, tallest toward the spine
+const towers = [];
+const GX = small ? 6 : 8, GZ = small ? 4 : 5;
+for (let gx = 0; gx < GX; gx++) for (let gz = 0; gz < GZ; gz++) {
+  if (rnd() < .14) continue;
+  const cx = -PW + 40 + (gx + .5) * ((2 * PW - 80) / GX) + gauss() * 10, cz = -PD + 30 + (gz + .5) * ((2 * PD - 60) / GZ) + gauss() * 8;
+  if (Math.abs(cx) < 46) continue;
+  const centre = 1 - Math.min(1, Math.hypot(cx / PW, cz / PD * .8));
+  const h = 70 + Math.pow(rnd(), 1.4) * 170 + centre * 300 + (rnd() < .12 ? 120 : 0);
+  const w = 34 + rnd() * 26, d = 30 + rnd() * 24;
+  towers.push({ cx, cz, w, d, h, base: pageY(cx), area: (w + d) * h });
+}
+const tArea = towers.reduce((a, t) => a + t.area, 0);
+let maxH = 0; towers.forEach(t => maxH = Math.max(maxH, t.h));
+const towerOf = () => { let r = rnd() * tArea; for (const t of towers) { r -= t.area; if (r <= 0) return t; } return towers[towers.length - 1]; };
+function towerPoint(t) {
+  const floor = 15, fy = Math.floor(rnd() * (t.h / floor)) * floor + 4 + rnd() * 5;
+  const face = (rnd() * 4) | 0, along = Math.floor(rnd() * 5) / 4 - .5 + gauss() * .02;
+  let x = t.cx, z = t.cz;
+  if (face < 2) { x += along * t.w; z += (face ? .5 : -.5) * t.d; } else { z += along * t.d; x += (face === 2 ? .5 : -.5) * t.w; }
+  return [x, t.base + Math.min(fy, t.h), z];
+}
+
+const corners = [];                                          // particles reserved for tower edges (drawn as lines)
+towers.forEach(t => [[-.5, -.5], [.5, -.5], [.5, .5], [-.5, .5]].forEach(([u, v]) => corners.push({ t, u, v })));
+const SEG = small ? 5 : 7;
+let ci = 0, cornerIdx = [];
+for (let i = 0; i < N; i++) {
+  const r = rnd() * total; let lo = 0, hi = tris.length - 1;
+  while (lo < hi) { const m = (lo + hi) >> 1; if (tris[m].cum < r) lo = m + 1; else hi = m; }
+  const tr = tris[lo]; let u = rnd(), v = rnd(); if (u + v > 1) { u = 1 - u; v = 1 - v; }
+  const x = tr.a[0] + u * (tr.b[0] - tr.a[0]) + v * (tr.c[0] - tr.a[0]);
+  const y = tr.a[1] + u * (tr.b[1] - tr.a[1]) + v * (tr.c[1] - tr.a[1]);
+  A[i * 3] = x - ctr.x; A[i * 3 + 1] = -y - ctr.y; A[i * 3 + 2] = rnd() * 40 - ctr.z;
+  tmpC.copy(teal).lerp(indigo, gradT(x, y)); if (rnd() < .06) tmpC.set('#ffffff');
+  colA.set([tmpC.r, tmpC.g, tmpC.b], i * 3); seed[i] = rnd();
+
+  const bp = bookPoint(rnd());
+  B[i * 3] = bp[0]; B[i * 3 + 1] = bp[1]; B[i * 3 + 2] = bp[2];
+  if (bp[3] === 0) tmpC.copy(WHITE3).lerp(teal, rnd() * .55); else if (bp[3] === 1) tmpC.copy(teal).lerp(indigo, .3 + rnd() * .4);
+  else if (bp[3] === 2) tmpC.copy(MIST).lerp(indigo, .25 + rnd() * .35); else tmpC.copy(teal).lerp(WHITE3, rnd() * .6);
+  colB.set([tmpC.r, tmpC.g, tmpC.b], i * 3);
+
+  // city: printed pages stay as the ground, everything else becomes a building
+  let cp, hh = 0;
+  if (bp[3] === 0 && rnd() < .55) { cp = [bp[0], bp[1], bp[2]]; tmpC.copy(MIST).lerp(teal, .6); tmpC.multiplyScalar(.75); }
+  else if (ci < corners.length * SEG) {
+    const c = corners[(ci / SEG) | 0], k = ci % SEG, t = c.t;
+    cp = [t.cx + c.u * t.w, t.base + (k / (SEG - 1)) * t.h, t.cz + c.v * t.d]; cornerIdx.push(i); ci++;
+    hh = (cp[1] - t.base) / maxH; tmpC.copy(teal).lerp(indigo, Math.min(1, hh * 1.4));
+  } else {
+    const t = towerOf(); cp = towerPoint(t); hh = (cp[1] - t.base) / maxH;
+    tmpC.copy(teal).lerp(indigo, Math.min(1, hh * 1.4)); if (rnd() < .12) tmpC.lerp(WHITE3, .8);
+  }
+  C[i * 3] = cp[0]; C[i * 3 + 1] = cp[1]; C[i * 3 + 2] = cp[2]; rise[i] = hh;
+  colC.set([tmpC.r, tmpC.g, tmpC.b], i * 3);
+}
+col.set(colA);
+const P = new Float32Array(N * 3);
+const pgeo = new THREE.BufferGeometry();
+pgeo.setAttribute('position', new THREE.BufferAttribute(P, 3));
+pgeo.setAttribute('color', new THREE.BufferAttribute(col, 3));
+const spr = (() => { const c = document.createElement('canvas'); c.width = c.height = 64; const x = c.getContext('2d'); const g = x.createRadialGradient(32, 32, 0, 32, 32, 32); g.addColorStop(0, 'rgba(255,255,255,1)'); g.addColorStop(.35, 'rgba(255,255,255,.85)'); g.addColorStop(1, 'rgba(255,255,255,0)'); x.fillStyle = g; x.fillRect(0, 0, 64, 64); return new THREE.CanvasTexture(c); })();
+const pmat = new THREE.PointsMaterial({ size: small ? 9 : 8, map: spr, vertexColors: true, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, sizeAttenuation: true, opacity: 0 });
+const points = new THREE.Points(pgeo, pmat); outer.add(points);
+
+// tower edges: consecutive corner particles joined, plus the roof outline
+const pairs = [];
+for (let c = 0; c * SEG < cornerIdx.length; c++) for (let k = 0; k < SEG - 1; k++) { const a = cornerIdx[c * SEG + k], b = cornerIdx[c * SEG + k + 1]; if (b !== undefined) pairs.push(a, b); }
+for (let t = 0; (t * 4 + 3) * SEG < cornerIdx.length; t++) for (let k = 0; k < 4; k++) pairs.push(cornerIdx[(t * 4 + k) * SEG + SEG - 1], cornerIdx[(t * 4 + (k + 1) % 4) * SEG + SEG - 1]);
+const L = new Float32Array(pairs.length * 3);
+const lgeo = new THREE.BufferGeometry(); lgeo.setAttribute('position', new THREE.BufferAttribute(L, 3));
+const lcol = new Float32Array(pairs.length * 3); for (let i = 0; i < pairs.length; i++) lcol.set(colC.subarray(pairs[i] * 3, pairs[i] * 3 + 3), i * 3);
+lgeo.setAttribute('color', new THREE.BufferAttribute(lcol, 3));
+const lmat = new THREE.LineBasicMaterial({ vertexColors: true, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false });
+const lines = new THREE.LineSegments(lgeo, lmat); outer.add(lines);
+
+// centre the book and the city on the origin, and measure them for the camera
+const TB = 0.62, TC = 0.30;
+function centre(arr) { const lo = [1e9, 1e9, 1e9], hi = [-1e9, -1e9, -1e9]; for (let i = 0; i < N; i++) for (let k = 0; k < 3; k++) { const v = arr[i * 3 + k]; if (v < lo[k]) lo[k] = v; if (v > hi[k]) hi[k] = v; }
+  const c = [0, 1, 2].map(k => (lo[k] + hi[k]) / 2); for (let i = 0; i < N; i++) for (let k = 0; k < 3; k++) arr[i * 3 + k] -= c[k]; return [hi[0] - lo[0], hi[1] - lo[1], hi[2] - lo[2]]; }
+const bS = centre(B), cS = centre(C);
+const span = (sz, tilt) => [Math.hypot(sz[0], sz[2] * .45) * 1.04, (sz[1] * Math.cos(tilt) + sz[2] * Math.sin(tilt)) * 1.06];
+const [BW, BH] = span(bS, TB), [CW, CH] = span(cS, TC);
+const labels = [];
+
+/* ---- helpers ---- */
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const range = (p, a, b) => clamp((p - a) / (b - a));
+const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+const easeIn = t => t * t * t;
+const mixC = (a, b, t) => '#' + [0, 1, 2].map(i => Math.round(a[i] + (b[i] - a[i]) * t).toString(16).padStart(2, '0')).join('');
+const WHITE = [255, 255, 255], NAVY = [17, 17, 40];
+
+let W = 1, H = 1;
+const msz = new THREE.Box3().setFromObject(flip).getSize(new THREE.Vector3());
+const MW = msz.x * 1.18, MH = msz.y * 1.22;           // the mark, with room for rotation and float
+const S = {};
+const wide = () => W > 900;
+const centred = o => o.classList.contains('ov-center') || o.classList.contains('ov-left') || (o.classList.contains('ov-split') && wide());
+const heroMap = document.getElementById('heroMap');
+const triL = document.querySelector('.tri-label'), lead = document.getElementById('triLead'), lmap = heroMap && heroMap.querySelector('.lmap');
+function placeMap(b) {
+  // the map sits below a strip reserved for the label; a leader line joins the label to Tripoli
+  if (!heroMap || !lmap) return b;
+  const shown = triL && getComputedStyle(triL).display !== 'none', lh = shown ? triL.offsetHeight || 60 : 0, reserve = shown ? lh + (wide() ? 40 : 26) : 0;
+  const s = Math.max(120, Math.min(b.right - b.left, b.bottom - b.top - reserve) * (wide() ? .9 : .86));
+  const cx = (b.left + b.right) / 2, top = b.top + reserve + ((b.bottom - b.top - reserve) - s) / 2, left = cx - s / 2;
+  lmap.style.left = left + 'px'; lmap.style.top = top + 'px'; lmap.style.width = lmap.style.height = s + 'px';
+  const tx = left + s * .2416, ty = top + s * .0356 * (100 / 99);
+  if (triL && shown) {
+    const lw = triL.offsetWidth || 260;
+    let lx = Math.min(Math.max(tx - 28, b.left), W - 16 - lw); const ly = top - reserve + 4;
+    if (lx > tx - 12) lx = Math.max(8, tx - 12);
+    triL.style.left = lx + 'px'; triL.style.top = ly + 'px';
+    const by = ly + lh, ex = Math.min(Math.max(tx, lx + 14), lx + lw - 14);
+    if (lead) lead.setAttribute('d', 'M' + tx.toFixed(1) + ' ' + (ty - 4).toFixed(1) + ' V' + ((by + ty) / 2).toFixed(1) + ' H' + ex.toFixed(1) + ' V' + by.toFixed(1));
+  }
+  return { left: left, right: left + s, top: top, bottom: top + s };
+}
+function ovBox(o) {
+  const h = o.offsetHeight; let top = o.offsetTop;
+  if (centred(o)) top -= h / 2;
+  let left = 1e9, right = -1e9;
+  [...o.children].forEach(c => { left = Math.min(left, o.offsetLeft + c.offsetLeft); right = Math.max(right, o.offsetLeft + c.offsetLeft + c.offsetWidth); });
+  return { top, bottom: top + h, left, right };
+}
+function fit(b, ww, wh, maxH) {
+  const bw = Math.max(40, b.right - b.left), bh = Math.max(40, b.bottom - b.top);
+  let ppu = Math.min(bw / ww, bh / wh); if (maxH) ppu = Math.min(ppu, maxH / wh);
+  const tanH = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+  return { d: H / (2 * tanH * ppu), ox: W / 2 - (b.left + b.right) / 2, oy: H / 2 - (b.top + b.bottom) / 2 };
+}
+function layout() {
+  const gap = H < 760 ? 16 : (small ? 20 : 32), hintH = small ? 16 : 96;
+  const hero = ovBox(ovs[0]), bk = ovBox(ovs[1]), clu = ovBox(ovs[2]), fin = ovBox(ovs[3]);
+  // the mark takes the side the text leaves free: right of it in LTR, left of it in RTL
+  const rtl = document.documentElement.dir === 'rtl';
+  const beside = (b, gapX) => rtl ? { left: 24, right: b.left - gapX } : { left: b.right + gapX, right: W - 24 };
+  const hb = wide() ? Object.assign(beside(hero, 48), { top: 76, bottom: H - 56 }) : { left: 16, right: W - 16, top: hero.bottom + gap, bottom: H - hintH };
+  const mb = placeMap(hb) || hb;
+  S.hero = fit(mb, MW, MH, Math.min(H * (wide() ? 0.36 : 0.4), (mb.bottom - mb.top) * .66));
+  S.mid = { d: small ? 2600 : 1700, ox: 0, oy: 0 };
+  S.cloud = fit({ left: 16, right: W - 16, top: bk.bottom + gap, bottom: H - 24 }, BW, BH);
+  S.clust = W > 900 ? fit(Object.assign(beside(clu, 40), { top: 72, bottom: H - 40 }), CW, CH)
+                    : fit({ left: 10, right: W - 10, top: clu.bottom + 14, bottom: H - 14 }, CW, CH);
+  S.final = wide() ? fit(Object.assign(beside(fin, 48), { top: 76, bottom: H - 40 }), MW, MH, H * 0.46) : fit({ left: 16, right: W - 16, top: fin.bottom + gap, bottom: H - 24 }, MW, MH, H * 0.42);
+}
+function resize() { W = vp.clientWidth; H = vp.clientHeight; renderer.setSize(W, H, false); camera.aspect = W / H; camera.updateProjectionMatrix(); layout(); }
+new ResizeObserver(resize).observe(vp); resize();
+// switching language moves the text blocks, so the framing is measured again
+new MutationObserver(layout).observe(document.documentElement, { attributes: true, attributeFilter: ['dir'] });
+document.fonts && document.fonts.ready.then(layout);
+const lerpS = (a, b, t) => ({ d: a.d + (b.d - a.d) * t, ox: a.ox + (b.ox - a.ox) * t, oy: a.oy + (b.oy - a.oy) * t });
+window.__mark = { S, layout };
+
+let mx = 0, my = 0, smx = 0, smy = 0;
+addEventListener('pointermove', e => { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; }, { passive: true });
+
+let sp = 0; // smoothed progress
+const clock = new THREE.Clock();
+const v3 = new THREE.Vector3();
+function frame() {
+  if (window.__paused) { nav.classList.remove('dark'); requestAnimationFrame(frame); return; }
+  const t = clock.getElapsedTime();
+  const r = scrolly.getBoundingClientRect();
+  if (r.bottom < -40 || r.top > innerHeight + 40) { requestAnimationFrame(frame); return; } // off screen: nothing to draw
+  const target = clamp(-r.top / Math.max(1, r.height - innerHeight));
+  sp += (target - sp) * 0.085; if (window.__snap) sp = target;
+  const p = sp;
+  smx += (mx - smx) * .05; smy += (my - smy) * .05;
+  bar.style.width = (target * 100).toFixed(2) + '%';
+  hint.style.opacity = target > 0.01 ? 0 : 1;
+  if (heroMap) { const mo = 1 - range(p, 0.012, 0.055); heroMap.style.opacity = mo.toFixed(3); heroMap.style.visibility = mo > 0.002 ? 'visible' : 'hidden'; }
+
+  // background: white -> navy -> white
+  const dark = range(p, 0.13, 0.22) * (1 - range(p, 0.74, 0.84));
+  vp.style.background = mixC(WHITE, NAVY, dark);
+  if (r.bottom > 52) nav.classList.toggle('dark', dark > 0.5);
+
+  // phases
+  const zoomT = easeIn(range(p, 0.09, 0.24));          // fly into the mark
+  const explode = ease(range(p, 0.19, 0.33));          // mark -> cloud
+  const toClust = ease(range(p, 0.44, 0.60));          // book -> city
+  const toMark = ease(range(p, 0.68, 0.80));           // programs -> mark
+  const markIn = range(p, 0.77, 0.86);                 // solid mark returns
+
+  // solid mark
+  const s = 1 + zoomT * 22;
+  zoom.scale.setScalar(s * (p > 0.5 ? 1 : 1));
+  const mOp = p < 0.5 ? 1 - range(p, 0.15, 0.21) : markIn;
+  mats.forEach(m => { m.opacity = mOp; m.depthWrite = mOp > .95; });
+  flip.visible = mOp > 0.002;
+  if (p > 0.5) zoom.scale.setScalar(1);
+
+  // particles
+  const pOp = range(p, 0.16, 0.2) * (1 - range(p, 0.8, 0.86));
+  pmat.opacity = pOp; points.visible = pOp > 0.002;
+  const lineOp = range(p, 0.53, 0.60) * (1 - range(p, 0.67, 0.72));
+  lmat.opacity = lineOp * 0.55; lines.visible = lineOp > 0.002;
+  if (points.visible) {
+    const aS = p < 0.5 ? s : 1;
+    for (let i = 0; i < N; i++) {
+      const j = i * 3, d = seed[i];
+      const e1 = clamp((explode - d * .25) / .75), e2 = clamp((toClust - rise[i] * .5 - d * .12) / .38), e3 = clamp((toMark - d * .25) / .75);
+      let x = A[j] * aS, y = A[j + 1] * aS, z = A[j + 2] * aS;
+      x += (B[j] - x) * e1; y += (B[j + 1] - y) * e1; z += (B[j + 2] - z) * e1;
+      x += (C[j] - x) * e2; y += (C[j + 1] - y) * e2; z += (C[j + 2] - z) * e2;
+      x += (A[j] - x) * e3; y += (A[j + 1] - y) * e3; z += (A[j + 2] - z) * e3;
+      const w = (e1 - e3) * (1 - e2 * .8) * 4; // a breath while free
+      P[j] = x + Math.sin(t * .8 + d * 40) * w; P[j + 1] = y + Math.cos(t * .7 + d * 30) * w; P[j + 2] = z;
+      for (let k = 0; k < 3; k++) { let cv = colA[j + k]; cv += (colB[j + k] - cv) * e1; cv += (colC[j + k] - cv) * e2; cv += (colA[j + k] - cv) * e3; col[j + k] = cv; }
+    }
+    pgeo.attributes.position.needsUpdate = true; pgeo.attributes.color.needsUpdate = true;
+    if (lines.visible) { for (let i = 0; i < pairs.length; i++) { L.set(P.subarray(pairs[i] * 3, pairs[i] * 3 + 3), i * 3); } lgeo.attributes.position.needsUpdate = true; }
+    pmat.blending = dark > .5 ? THREE.AdditiveBlending : THREE.NormalBlending;
+    pmat.size = (small ? 9 : 8) * (1 + (1 - explode) * 0.6 * (p < .5 ? 1 : 0)) * (1 + .45 * explode * (1 - toMark) * (1 - .4 * toClust));
+  }
+
+  // camera: each phase has a framing computed from the real text boxes, so the mark never touches copy
+  let c = lerpS(S.hero, S.mid, ease(range(p, 0.06, 0.14)));
+  c = lerpS(c, S.cloud, ease(range(p, 0.22, 0.36)));
+  c = lerpS(c, S.clust, ease(range(p, 0.44, 0.58)));
+  c = lerpS(c, S.final, ease(range(p, 0.66, 0.82)));
+  const orbit = 0;
+  const par = (1 - range(p, 0.02, 0.1)) * 0.6 + 0.4;
+  camera.position.set(Math.sin(orbit) * c.d * 0.3 + smx * 60 * par, -smy * 40 * par, Math.cos(orbit * 0.3) * c.d);
+  camera.lookAt(0, 0, 0);
+  camera.setViewOffset(W, H, c.ox, c.oy, W, H);
+
+  // rotation of the whole world
+  const idle = Math.sin(t * .5) * .08;
+  const sway = -0.32 + Math.sin(t * 0.16) * 0.42 + smx * .25;
+  const ry = p < 0.12 ? -0.35 + idle + smx * .35 + p * 2 : p < 0.7 ? sway : (1 - toMark) * sway - 0.35 * toMark + idle + smx * .3 * markIn;
+  const tilt = (TB * explode * (1 - toClust) + TC * toClust) * (1 - toMark);
+  outer.rotation.set(0.06 + tilt + smy * .12 * (1 - dark) * (1 - tilt), ry, 0);
+  outer.position.set(0, Math.sin(t * .9) * 4, 0);
+
+  // overlays
+  ovs.forEach(o => {
+    const a = +o.dataset.a, b = +o.dataset.b, span = Math.min(.04, (b - a) * .3);
+    const vin = range(p, a, a + span), vout = 1 - range(p, b - span, b);
+    const v = Math.min(vin, vout);
+    o.style.opacity = v.toFixed(3);
+    const dy = (1 - vin) * 40 - (1 - vout) * 40;
+    o.style.transform = (centred(o) ? 'translateY(calc(-50% + ' + dy.toFixed(1) + 'px))' : 'translateY(' + dy.toFixed(1) + 'px)') + ' scale(' + (0.96 + v * .04).toFixed(3) + ')';
+    o.classList.toggle('on', v > .5);
+  });
+
+  labelsEl.classList.remove('on');
+
+  if (window.__debug) {
+    const bb = new THREE.Box3().setFromObject(flip); let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
+    for (let k = 0; k < 8; k++) { v3.set(k & 1 ? bb.max.x : bb.min.x, k & 2 ? bb.max.y : bb.min.y, k & 4 ? bb.max.z : bb.min.z).project(camera);
+      const X = (v3.x * .5 + .5) * W, Y = (-v3.y * .5 + .5) * H; x0 = Math.min(x0, X); x1 = Math.max(x1, X); y0 = Math.min(y0, Y); y1 = Math.max(y1, Y); }
+    window.__markBox = { x0, y0, x1, y1, vis: flip.visible && mats[0].opacity > .5, p };
+  }
+  renderer.render(scene, camera);
+  requestAnimationFrame(frame);
+}
+frame();
+
+}
+</script>
+</body>
+</html>
