@@ -503,6 +503,27 @@ h1,h2,h3,.pill,.brand,.nav ul a,.label,.ov h2,.ov-hero h1,.p5-hero h1,.p5-h2,.du
 html.at-top .bar{transform:translateY(110%)}
 @media (max-width:860px){.static .vp{padding:28px 0 8px}.static .fallback{padding:8px 0 0}.static .fallback svg{width:min(150px,38vw)}.static .ov{padding-block:28px}}
 </style>
+<style>
+/* ---- Arabic typography: Latin tracking and tight leading break the joined script ---- */
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3{line-height:1.3}
+[dir="rtl"] .ov-hero h1,[dir="rtl"] .ov-hero.ov-split h1,[dir="rtl"] .ov h2,[dir="rtl"] .ov-final h2{line-height:1.3;letter-spacing:0}
+[dir="rtl"] .ov-hero.ov-split h1{font-size:min(6vw,9vh,80px)}
+[dir="rtl"] .ov h2{font-size:clamp(36px,5.6vw,80px)}
+[dir="rtl"] .ov-final h2{font-size:clamp(34px,4.4vw,60px);max-width:none}
+[dir="rtl"] .ov-hero h1{max-width:none}
+[dir="rtl"] .eyebrow,[dir="rtl"] .pill,[dir="rtl"] .pill-xl,[dir="rtl"] .btn,[dir="rtl"] .labels a,[dir="rtl"] .seg span,[dir="rtl"] .tri-label span,[dir="rtl"] .tri-label small{letter-spacing:0}
+[dir="rtl"] .eyebrow{text-transform:none;line-height:1.6}
+[dir="rtl"] .fact b{line-height:1.3}
+[dir="rtl"] .proof b{line-height:1.4}
+[dir="rtl"] .seg span,[dir="rtl"] label.f{font-size:14px;line-height:1.45}
+[dir="rtl"] .note{font-size:13.5px}
+[dir="rtl"] .labels a b{margin-left:0;margin-right:8px}
+/* hero and finale read right to left: text block on the right, the mark on the left */
+[dir="rtl"] .ov-split{text-align:right}
+[dir="rtl"] .ov-split h1,[dir="rtl"] .ov-split h2,[dir="rtl"] .ov-split p{margin-left:auto;margin-right:0;text-align:right}
+[dir="rtl"] .ov-left .sub{margin-left:auto;margin-right:0}
+@media (max-width:900px){[dir="rtl"] .ov-split > *,[dir="rtl"] .ov-split h1,[dir="rtl"] .ov-split h2,[dir="rtl"] .ov-split p{margin-left:auto;margin-right:auto;text-align:center}[dir="rtl"] .ov-hero.ov-split h1{font-size:min(9.5vw,5.4vh,60px)}}
+</style>
 </head>
 <body>
 <header class="nav" id="nav">
@@ -636,7 +657,7 @@ html.at-top .bar{transform:translateY(110%)}
       <p class="lead" data-t="why.lead">The AI tools people use at work change every few weeks. Until now there was nowhere in Libya to learn them live, in Arabic.</p>
     </div>
     <div class="facts">
-        <div class="fact"><b>9 in 10</b><span data-t="why.f1">Libyans are online</span></div>
+        <div class="fact"><b data-t="why.f1b">9 in 10</b><span data-t="why.f1">Libyans are online</span></div>
         <div class="fact"><b data-t="why.f2b">Weeks</b><span data-t="why.f2">between major AI model releases</span></div>
         <div class="fact"><b data-t="why.f3b">Zero</b><span data-t="why.f3">AI academies in Libya before this one</span></div>
       </div>
@@ -807,7 +828,7 @@ html.at-top .bar{transform:translateY(110%)}
       <form novalidate>
         <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
         <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required></label>
-        <label class="f"><span data-t="f.city">City</span><input name="city" autocomplete="address-level2" placeholder="Tripoli"></label>
+        <label class="f"><span data-t="f.city">City</span><input name="city" autocomplete="address-level2" placeholder="Tripoli" data-tp="f.city.ph"></label>
         <input class="hp" name="website" tabindex="-1" autocomplete="off">
         <button class="btn btn-navy" type="submit" data-t="every.c.btn">Save me a seat</button>
         <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
@@ -996,7 +1017,7 @@ ar:{
  'hero.cta1':'احجز مكالمة مجانية','hero.cta2':'استعرض البرامج',
  'start.h':'عرّفنا بنفسك','start.why':'نرد عليك عبر واتساب خلال يوم عمل واحد بالبرنامج المناسب ومواعيده.',
  'start.lead':'أدير مؤسسة','start.learn':'أريد مهارة جديدة','start.sponsor':'أريد أن أرعى دفعة','start.btn':'اعرف البرنامج المناسب لك','start.n1':'في الأثناء، اطّلع على المسار التنفيذي','start.n2':'في الأثناء، اطّلع على البرامج','start.n3':'في الأثناء، اطّلع على الرعاية',
- 'f.name':'الاسم','f.whatsapp':'رقم واتساب','f.org':'المؤسسة','f.email':'البريد الإلكتروني','f.role':'المنصب','f.when':'أفضل وقت للاتصال','f.make':'ماذا تصنع؟','f.city':'المدينة','f.contact':'اسم جهة الاتصال','f.month':'الشهر المفضل','f.size':'حجم الفريق','f.need':'ماذا يجب أن يستطيع الفريق فعله بعد التدريب؟','f.pathway':'المسار','f.reach':'رقم واتساب أو بريد إلكتروني','f.q':'سؤالك',
+ 'f.city.ph':'طرابلس','f.name':'الاسم','f.whatsapp':'رقم واتساب','f.org':'المؤسسة','f.email':'البريد الإلكتروني','f.role':'المنصب','f.when':'أفضل وقت للاتصال','f.make':'ماذا تصنع؟','f.city':'المدينة','f.contact':'اسم جهة الاتصال','f.month':'الشهر المفضل','f.size':'حجم الفريق','f.need':'ماذا يجب أن يستطيع الفريق فعله بعد التدريب؟','f.pathway':'المسار','f.reach':'رقم واتساب أو بريد إلكتروني','f.q':'سؤالك',
  'f.err':'يرجى إضافة اسمك ورقم واتساب يمكننا الوصول إليك عبره.','f.err2':'يرجى إضافة اسمك وبريد إلكتروني صحيح.','f.err3':'يرجى إضافة اسم المؤسسة واسم جهة الاتصال ورقم واتساب.','f.err4':'يرجى إضافة اسمك ووسيلة للتواصل معك وسؤالك.',
  'f.or':'أو راسلنا مباشرة:','f.wa':'واتساب',
  'done.h':'وصلتنا رسالتك.','done.p':'سنرد عليك عبر واتساب خلال يوم عمل واحد.','done.wa':'راسلنا الآن','done.call':'تم طلب المكالمة.','done.seat':'تم طلب المقعد.','done.app':'وصلنا طلبك.','done.req':'وصلنا طلبك.','done.list':'أنت على القائمة.','done.visit':'تم طلب الزيارة.','done.q':'تم إرسال سؤالك.',
@@ -1006,7 +1027,7 @@ ar:{
  'why.k':'لماذا الآن','pg.k':'البرامج','pg.h':'ثلاثة مداخل. اختر مدخلك.','pg.1':'خمسة أيام. تسعة مخرجات لمؤسستك أنت. للرؤساء التنفيذيين والمديرين ورؤساء الأقسام.','pg.1m':'5 أيام · الدفعة القادمة تبدأ 15 نوفمبر','pg.1b':'اطّلع على البرنامج','pg.2':'أسبوعان. عشرة أشياء صنعتها بنفسك: تطبيق، وفيديو، وحملة، وأتمتة. لصنّاع المحتوى والمسوّقين وروّاد الأعمال.','pg.2m':'أسبوعان · الدفعة الأولى في نوفمبر','pg.2b':'اطّلع على البرنامج','pg.3':'عشر ساعات على خمس أمسيات، بالعربية. لا تحتاج إلى خلفية مسبقة، الهاتف يكفي.','pg.3m':'10 ساعات · دفعة جديدة كل شهر','pg.3b':'اطّلع على البرنامج','pg.also':'للمؤسسات:','pg.a1':'ارعَ شهراً','pg.a2':'درّب فريقك','pg.a3':'مسارات 2027','back':'← كل البرامج','exec.k':'المسار التنفيذي للذكاء الاصطناعي','prod.k':'إنتاجية الذكاء الاصطناعي · أحضر مشروعك الخاص','prod.byo':'أحضر مشروعك الخاص','every.k':'الذكاء الاصطناعي للجميع','sp.k':'مبادرة محو الأمية بالذكاء الاصطناعي','co.k':'تدريب مخصص للذكاء الاصطناعي','pw.k':'مسارات أخرى','ab.k':'لماذا الخوارزمي','ct.k':'تواصل معنا',
  'why.h':'ليبيا متصلة بالإنترنت. ولا أحد تقريباً مدرَّب.',
  'why.lead':'أدوات الذكاء الاصطناعي التي يستخدمها الناس في العمل تتغير كل بضعة أسابيع. وحتى اليوم لم يكن في ليبيا مكان لتعلّمها حضورياً، بالعربية.',
- 'why.f1':'من الليبيين متصلون بالإنترنت','why.f2b':'أسابيع','why.f2':'بين كل إصدار رئيسي وآخر لنماذج الذكاء الاصطناعي','why.f3b':'صفر','why.f3':'أكاديميات للذكاء الاصطناعي في ليبيا قبل هذه',
+ 'why.f1b':'9 من 10','why.f1':'من الليبيين متصلون بالإنترنت','why.f2b':'أسابيع','why.f2':'بين كل إصدار رئيسي وآخر لنماذج الذكاء الاصطناعي','why.f3b':'صفر','why.f3':'أكاديميات للذكاء الاصطناعي في ليبيا قبل هذه',
  'ready.h':'احصل على فحص الجاهزية للذكاء الاصطناعي','ready.why':'قائمة مختصرة للمؤسسات الليبية: أين يؤتي الذكاء الاصطناعي ثماره أولاً، وما الذي يجب تجهيزه قبل البدء. مجاناً، إلى بريدك.','ready.btn':'أرسلوا لي الفحص','ready.done':'القائمة في طريقها إليك خلال يوم عمل واحد.',
  'exec.h':'خمسة أيام. تسعة مخرجات لمؤسستك أنت.',
  'exec.lead':'للرؤساء التنفيذيين والمديرين ورؤساء الأقسام. لا تغادر ومعك ملاحظات، بل تغادر ومعك استراتيجية للذكاء الاصطناعي، وخارطة طريق ممولة لتسعين يوماً، والأسئلة التي تمنع أي مورّد من بيعك الشيء الخطأ.',
@@ -1068,10 +1089,12 @@ ar:{
   /* ---------- language ---------- */
   var en={};
   $$('[data-t]').forEach(function(el){ var k=el.getAttribute('data-t'); if(!(k in en)) en[k]=el.textContent; });
+  $$('[data-tp]').forEach(function(el){ var k=el.getAttribute('data-tp'); if(!(k in en)) en[k]=el.placeholder; });
   en.title=document.title; en.desc=$('meta[name=description]').content; T.en=en;
   function setLang(l){
     var d=T[l]||T.en;
     $$('[data-t]').forEach(function(el){ var k=el.getAttribute('data-t'); if(d[k]!=null) el.textContent=d[k]; else if(T.en[k]!=null) el.textContent=T.en[k]; });
+    $$('[data-tp]').forEach(function(el){ var k=el.getAttribute('data-tp'); el.placeholder=(d[k]!=null?d[k]:T.en[k])||''; });
     document.documentElement.lang=l; document.documentElement.dir=(l==='ar'?'rtl':'ltr');
     document.title=d.title||T.en.title; $('meta[name=description]').content=d.desc||T.en.desc;
     $$('.lang button').forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-lang')===l?'true':'false'); });
@@ -1428,17 +1451,22 @@ function fit(b, ww, wh, maxH) {
 function layout() {
   const gap = H < 760 ? 16 : (small ? 20 : 32), hintH = small ? 16 : 96;
   const hero = ovBox(ovs[0]), bk = ovBox(ovs[1]), clu = ovBox(ovs[2]), fin = ovBox(ovs[3]);
-  const hb = wide() ? { left: hero.right + 48, right: W - 24, top: 76, bottom: H - 56 } : { left: 16, right: W - 16, top: hero.bottom + gap, bottom: H - hintH };
+  // the mark takes the side the text leaves free: right of it in LTR, left of it in RTL
+  const rtl = document.documentElement.dir === 'rtl';
+  const beside = (b, gapX) => rtl ? { left: 24, right: b.left - gapX } : { left: b.right + gapX, right: W - 24 };
+  const hb = wide() ? Object.assign(beside(hero, 48), { top: 76, bottom: H - 56 }) : { left: 16, right: W - 16, top: hero.bottom + gap, bottom: H - hintH };
   const mb = placeMap(hb) || hb;
   S.hero = fit(mb, MW, MH, Math.min(H * (wide() ? 0.36 : 0.4), (mb.bottom - mb.top) * .66));
   S.mid = { d: small ? 2600 : 1700, ox: 0, oy: 0 };
   S.cloud = fit({ left: 16, right: W - 16, top: bk.bottom + gap, bottom: H - 24 }, BW, BH);
-  S.clust = W > 900 ? fit({ left: clu.right + 40, right: W - 24, top: 72, bottom: H - 40 }, CW, CH)
+  S.clust = W > 900 ? fit(Object.assign(beside(clu, 40), { top: 72, bottom: H - 40 }), CW, CH)
                     : fit({ left: 10, right: W - 10, top: clu.bottom + 14, bottom: H - 14 }, CW, CH);
-  S.final = wide() ? fit({ left: fin.right + 48, right: W - 24, top: 76, bottom: H - 40 }, MW, MH, H * 0.46) : fit({ left: 16, right: W - 16, top: fin.bottom + gap, bottom: H - 24 }, MW, MH, H * 0.42);
+  S.final = wide() ? fit(Object.assign(beside(fin, 48), { top: 76, bottom: H - 40 }), MW, MH, H * 0.46) : fit({ left: 16, right: W - 16, top: fin.bottom + gap, bottom: H - 24 }, MW, MH, H * 0.42);
 }
 function resize() { W = vp.clientWidth; H = vp.clientHeight; renderer.setSize(W, H, false); camera.aspect = W / H; camera.updateProjectionMatrix(); layout(); }
 new ResizeObserver(resize).observe(vp); resize();
+// switching language moves the text blocks, so the framing is measured again
+new MutationObserver(layout).observe(document.documentElement, { attributes: true, attributeFilter: ['dir'] });
 document.fonts && document.fonts.ready.then(layout);
 const lerpS = (a, b, t) => ({ d: a.d + (b.d - a.d) * t, ox: a.ox + (b.ox - a.ox) * t, oy: a.oy + (b.oy - a.oy) * t });
 window.__mark = { S, layout };
