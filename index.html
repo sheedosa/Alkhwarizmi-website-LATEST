@@ -13,13 +13,18 @@
 <meta property="og:title" content="Alkhwarizmi AI Academy — Libya's first AI academy">
 <meta property="og:description" content="Live AI training in Tripoli, in Arabic first. Executives, professionals and the public. Book a free call.">
 <meta property="og:url" content="https://alkhawarizmi.ai/">
-<meta property="og:image" content="https://alkhawarizmi.ai/og.png">
+<meta property="og:image" content="https://sheedosa.github.io/Alkhwarizmi-website-LATEST/media/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Alkhwarizmi AI Academy reception in Tripoli at dusk">
+<meta name="twitter:image" content="https://sheedosa.github.io/Alkhwarizmi-website-LATEST/media/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#111128">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111128'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='34' fill='%2309C98E'%3EK%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/aileron-latin-700-normal.woff2">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,500;0,600;0,700;1,500&family=Instrument+Sans:wght@400;500;600&family=Noto+Kufi+Arabic:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Noto+Kufi+Arabic:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"EducationalOrganization","name":"Alkhwarizmi AI Academy","alternateName":"أكاديمية الخوارزمي للذكاء الاصطناعي","url":"https://alkhawarizmi.ai/","email":"admin@alkhawarizmi.ai","address":{"@type":"PostalAddress","streetAddress":"Zawiat Dahmani Street","addressLocality":"Tripoli","addressCountry":"LY"},"description":"Libya's first AI academy. Live training in Arabic first.","hasOfferCatalog":{"@type":"OfferCatalog","name":"Programmes","itemListElement":[{"@type":"Course","name":"Executive AI Path","description":"Five days, 20 hours, nine consulting deliverables for your own organisation.","provider":{"@type":"Organization","name":"Alkhwarizmi AI Academy"},"offers":{"@type":"Offer","price":"10200","priceCurrency":"LYD"}},{"@type":"Course","name":"AI Productivity","description":"Two weeks, ten deliverables: apps, video, campaigns and automation.","provider":{"@type":"Organization","name":"Alkhwarizmi AI Academy"},"offers":{"@type":"Offer","price":"7500","priceCurrency":"LYD"}},{"@type":"Course","name":"AI for Everyone","description":"Ten hours over five evenings. No background needed.","provider":{"@type":"Organization","name":"Alkhwarizmi AI Academy"},"offers":{"@type":"Offer","price":"1200","priceCurrency":"LYD"}}]}}
 </script>
@@ -29,12 +34,12 @@
   --navy:#111128; --navy-2:#1A1A36; --paper:#F7F7FA; --white:#FFFFFF;
   --ink:#16161D; --ink-2:#5C5C6B; --line:#DCDCE4; --line-dark:rgba(255,255,255,.14);
   --teal:#09C98E; --teal-ink:#077A56; --indigo:#534CB6; --indigo-soft:#ECEBF8;
-  --display:"Familjen Grotesk","Noto Kufi Arabic",system-ui,sans-serif;
-  --body:"Instrument Sans","IBM Plex Sans Arabic",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --display:"Aileron","Noto Kufi Arabic",system-ui,sans-serif;
+  --body:"Oxygen","IBM Plex Sans Arabic",system-ui,-apple-system,"Segoe UI",sans-serif;
   --fig-ink:#16161D; --fig-quiet:#6B6F80; --fig-rule:#C9CBD6;
   --radius:14px; --gutter:clamp(20px,5vw,72px); --max:1180px;
 }
-[dir="rtl"]{--display:"Noto Kufi Arabic","Familjen Grotesk",system-ui,sans-serif;--body:"IBM Plex Sans Arabic","Instrument Sans",system-ui,sans-serif}
+[dir="rtl"]{--display:"Noto Kufi Arabic","Aileron",system-ui,sans-serif;--body:"IBM Plex Sans Arabic","Oxygen",system-ui,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
@@ -524,6 +529,75 @@ html.at-top .bar{transform:translateY(110%)}
 [dir="rtl"] .ov-left .sub{margin-left:auto;margin-right:0}
 @media (max-width:900px){[dir="rtl"] .ov-split > *,[dir="rtl"] .ov-split h1,[dir="rtl"] .ov-split h2,[dir="rtl"] .ov-split p{margin-left:auto;margin-right:auto;text-align:center}[dir="rtl"] .ov-hero.ov-split h1{font-size:min(9.5vw,5.4vh,60px)}}
 </style>
+<style>
+/* ---- "At the academy": classroom render as section background ---- */
+#about.photo{background:var(--navy) url("media/academy-classroom.webp") center 40%/cover no-repeat;isolation:isolate;overflow:hidden}
+#about.photo::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:linear-gradient(90deg,rgba(17,17,40,.93) 0%,rgba(17,17,40,.8) 40%,rgba(17,17,40,.42) 62%,rgba(17,17,40,.18) 100%),
+             repeating-linear-gradient(to bottom,transparent 0 31px,rgba(255,255,255,.04) 31px 32px)}
+[dir="rtl"] #about.photo::before{background:linear-gradient(270deg,rgba(17,17,40,.93) 0%,rgba(17,17,40,.8) 40%,rgba(17,17,40,.42) 62%,rgba(17,17,40,.18) 100%),repeating-linear-gradient(to bottom,transparent 0 31px,rgba(255,255,255,.04) 31px 32px)}
+#about.photo::after{content:"";position:absolute;left:0;right:0;top:0;height:3px;z-index:1;background:linear-gradient(90deg,#09C98E,#534CB6)}
+#about.photo .slide-in{position:relative;z-index:2}
+#about.photo h2{color:#fff}
+#about.photo .proof li{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);color:#fff;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+#about.photo .proof svg{color:#fff}
+#about.photo .proof span{color:#C9C9DC}
+@media (max-width:900px){
+  #about.photo{background-position:62% top;background-size:auto 520px;background-color:var(--navy)}
+  #about.photo::before,[dir="rtl"] #about.photo::before{background:linear-gradient(180deg,rgba(17,17,40,.55) 0,rgba(17,17,40,.86) 300px,var(--navy) 520px)}
+}
+</style>
+<style>
+@font-face{font-family:"Aileron";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/aileron-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Aileron";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/aileron-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Aileron";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/aileron-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Aileron";font-style:normal;font-weight:800;font-display:swap;src:url(fonts/aileron-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"Aileron";font-style:italic;font-weight:600;font-display:swap;src:url(fonts/aileron-latin-600-italic.woff2) format("woff2")}
+
+/* ---- Step 1: programme photographs ---- */
+.rows.progs>div{grid-template-columns:132px minmax(0,1fr) auto;column-gap:28px;padding:22px 0}
+.rows.progs .glyph.photo{grid-row:1/5;width:132px;height:132px;margin:0;border-radius:10px;overflow:hidden;background:var(--navy);box-shadow:0 1px 0 rgba(17,17,40,.06),0 18px 30px -22px rgba(17,17,40,.55)}
+.rows.progs .glyph.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.rows.progs>div:hover .glyph.photo img{transform:scale(1.05)}
+@media (max-width:640px){.rows.progs>div{grid-template-columns:96px minmax(0,1fr);column-gap:16px}.rows.progs .glyph.photo{width:96px;height:96px;grid-row:1/4}}
+
+/* ---- Step 1: Tripoli behind "Why now" ---- */
+#start.band{background:var(--navy) url("media/tripoli-2400.webp") center bottom/cover no-repeat;position:relative;overflow:hidden;isolation:isolate;padding-top:clamp(64px,7vw,104px);padding-bottom:clamp(200px,24vw,360px)}
+@media (max-width:900px){#start.band{background-image:url("media/tripoli-1200.webp");background-position:32% bottom;background-size:auto 360px;padding-bottom:240px}}
+#start.band::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(17,17,40,.55) 0%,rgba(17,17,40,.25) 55%,rgba(17,17,40,.05) 80%,rgba(17,17,40,.35) 100%),linear-gradient(90deg,rgba(17,17,40,.5) 0%,rgba(17,17,40,.1) 50%,rgba(17,17,40,0) 100%)}
+[dir="rtl"] #start.band::before{background:linear-gradient(180deg,rgba(17,17,40,.55) 0%,rgba(17,17,40,.25) 55%,rgba(17,17,40,.05) 80%,rgba(17,17,40,.35) 100%),linear-gradient(270deg,rgba(17,17,40,.5) 0%,rgba(17,17,40,.1) 50%,rgba(17,17,40,0) 100%)}
+#start.band .slide-in{position:relative;z-index:2}
+#start .lead,#start h2{text-shadow:0 1px 18px rgba(17,17,40,.85)}
+@media (max-width:900px){#start.band::before,[dir="rtl"] #start.band::before{background:linear-gradient(180deg,#111128 0,#111128 calc(100% - 370px),rgba(17,17,40,.35) calc(100% - 210px),rgba(17,17,40,.15) calc(100% - 60px),rgba(17,17,40,.4) 100%)}}
+#start .facts .fact b,#start .facts .fact span{text-shadow:0 1px 14px rgba(17,17,40,.9),0 0 2px rgba(17,17,40,.6)}#start .facts .fact span{color:#E2E2EE}
+#start .band-cap{position:absolute;z-index:2;inset-inline-end:var(--gutter);bottom:14px;margin:0;font-family:var(--display);font-style:italic;font-size:13px;color:rgba(255,255,255,.6)}
+
+/* ---- Step 1: Geometric Expansion contours (brand guide), drawn in code ---- */
+.contours{position:absolute;inset:0;z-index:1;width:100%;height:100%;pointer-events:none;mix-blend-mode:screen;opacity:.9}
+.contours path{fill:none;stroke:url(#ctg);vector-effect:non-scaling-stroke;stroke-width:1;opacity:0;animation:ctr 9s linear infinite}
+@keyframes ctr{0%{opacity:0}12%{opacity:var(--o,.3)}70%{opacity:calc(var(--o,.3)*.5)}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.contours path{animation:none;opacity:var(--o,.3)}}
+</style>
+<style>
+/* ---- Step 2: poster frame and campus photo ---- */
+.player .poster-img{filter:saturate(.95)}
+.player .poster-img+*{}
+.player:has(.poster-img)::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(17,17,40,.05) 40%,rgba(17,17,40,.7) 100%)}
+.player:has(.poster-img) .poster-mark{display:none}
+.player .poster-note{color:#fff}
+.place{margin:28px 0 12px;max-width:560px}
+.place img{display:block;width:100%;height:auto;aspect-ratio:1920/1008;object-fit:cover;border-radius:12px;box-shadow:0 24px 40px -28px rgba(17,17,40,.6)}
+.place figcaption{margin-top:10px;font-family:var(--display);font-style:italic;font-size:14px;color:var(--ink-2)}
+</style>
+<style>
+.nav a.btn.btn-nav,.nav a.btn.btn-nav:hover{color:var(--navy)}
+/* ---- Step 3: programme page headers ---- */
+.page-hero{margin:0;position:relative;height:clamp(200px,32vw,440px);overflow:hidden;background:var(--navy)}
+.page-hero img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 45%}
+.page-hero::after{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:linear-gradient(90deg,#09C98E,#534CB6)}
+[dir="rtl"] .page-hero::after{background:linear-gradient(270deg,#09C98E,#534CB6)}
+@media (max-width:640px){.page-hero{height:200px}}
+</style>
 </head>
 <body>
 <header class="nav" id="nav">
@@ -639,9 +713,9 @@ html.at-top .bar{transform:translateY(110%)}
       <p class="kick" data-t="pg.k">Programmes</p>
       <h2 data-t="pg.h">Three ways in. Pick yours.</h2>
       <dl class="rows progs">
-        <div><span class="glyph"><svg viewBox="0 0 64 40" aria-hidden="true"><line x1="6" y1="30" x2="58" y2="30" stroke="var(--fig-rule)" stroke-width="1.5"/><circle cx="8" cy="30" r="2.5" fill="var(--fig-ink)"/><rect x="4" y="18" width="8" height="5" rx="1" fill="#09C98E"/><circle cx="20" cy="30" r="2.5" fill="var(--fig-ink)"/><rect x="16" y="14" width="8" height="5" rx="1" fill="#09C98E"/><circle cx="32" cy="30" r="2.5" fill="var(--fig-ink)"/><rect x="28" y="14" width="8" height="5" rx="1" fill="#09C98E"/><circle cx="44" cy="30" r="2.5" fill="var(--fig-ink)"/><rect x="40" y="14" width="8" height="5" rx="1" fill="#09C98E"/><circle cx="56" cy="30" r="2.5" fill="var(--fig-ink)"/><rect x="52" y="14" width="8" height="5" rx="1" fill="#09C98E"/><rect x="52" y="8" width="8" height="5" rx="1" fill="#534CB6"/></svg></span><dt data-t="exec.k">Executive AI Path</dt><dd data-t="pg.1">Five days. Nine deliverables for your own organisation. For CEOs, directors and heads of department.</dd><dd class="when" data-t="pg.1m">5 days · next cohort starts 15 November</dd><dd class="go"><a class="btn btn-teal btn-sm" href="#executive" data-t="pg.1b">See the programme</a></dd></div>
-        <div><span class="glyph"><svg viewBox="0 0 64 40" aria-hidden="true"><rect x="4" y="6" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="16" y="6" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="28" y="6" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="40" y="6" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="52" y="6" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="4" y="24" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="16" y="24" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="28" y="24" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="40" y="24" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="52" y="24" width="10" height="10" rx="2" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><path d="M2 20 C 18 18, 30 24, 44 20 S 58 17, 62 20" fill="none" stroke="#09C98E" stroke-width="2.5" stroke-linecap="round"/></svg></span><dt data-t="prod.k">AI Productivity <small class="byo" data-t="prod.byo">Bring your own project</small></dt><dd data-t="pg.2">Two weeks. Ten things you made: an app, a video, a campaign, an automation. For creators, marketers and founders.</dd><dd class="when" data-t="pg.2m">2 weeks · first cohort in November</dd><dd class="go"><a class="btn btn-navy btn-sm" href="#productivity" data-t="pg.2b">See the programme</a></dd></div>
-        <div><span class="glyph"><svg viewBox="0 0 64 40" aria-hidden="true"><rect x="4" y="10" width="9" height="20" rx="2" fill="#09C98E" fill-opacity=".18" stroke="#09C98E" stroke-width="1.5"/><circle cx="8.5" cy="24" r="1.6" fill="var(--fig-ink)"/><rect x="16" y="10" width="9" height="20" rx="2" fill="#09C98E" fill-opacity=".18" stroke="#09C98E" stroke-width="1.5"/><circle cx="20.5" cy="24" r="1.6" fill="var(--fig-ink)"/><rect x="28" y="10" width="9" height="20" rx="2" fill="#09C98E" fill-opacity=".18" stroke="#09C98E" stroke-width="1.5"/><circle cx="32.5" cy="24" r="1.6" fill="var(--fig-ink)"/><rect x="40" y="10" width="9" height="20" rx="2" fill="#09C98E" fill-opacity=".18" stroke="#09C98E" stroke-width="1.5"/><circle cx="44.5" cy="24" r="1.6" fill="var(--fig-ink)"/><rect x="52" y="10" width="9" height="20" rx="2" fill="#09C98E" fill-opacity=".18" stroke="#09C98E" stroke-width="1.5"/><circle cx="56.5" cy="24" r="1.6" fill="var(--fig-ink)"/></svg></span><dt data-t="every.k">AI for Everyone</dt><dd data-t="pg.3">Ten hours over five evenings, in Arabic. No background needed, a phone is enough.</dd><dd class="when" data-t="pg.3m">10 hours · a new cohort every month</dd><dd class="go"><a class="btn btn-navy btn-sm" href="#everyone" data-t="pg.3b">See the programme</a></dd></div>
+        <div><span class="glyph photo"><img src="media/prog-executive.webp" width="400" height="400" alt="Leather notebook open on a 90-day roadmap beside a glass of Libyan tea" loading="lazy" decoding="async"></span><dt data-t="exec.k">Executive AI Path</dt><dd data-t="pg.1">Five days. Nine deliverables for your own organisation. For CEOs, directors and heads of department.</dd><dd class="when" data-t="pg.1m">5 days · next cohort starts 15 November</dd><dd class="go"><a class="btn btn-teal btn-sm" href="#executive" data-t="pg.1b">See the programme</a></dd></div>
+        <div><span class="glyph photo"><img src="media/prog-productivity.webp" width="400" height="400" alt="A phone running a student-built app beside wireframe sketches and a Tripoli window grille" loading="lazy" decoding="async"></span><dt data-t="prod.k">AI Productivity <small class="byo" data-t="prod.byo">Bring your own project</small></dt><dd data-t="pg.2">Two weeks. Ten things you made: an app, a video, a campaign, an automation. For creators, marketers and founders.</dd><dd class="when" data-t="pg.2m">2 weeks · first cohort in November</dd><dd class="go"><a class="btn btn-navy btn-sm" href="#productivity" data-t="pg.2b">See the programme</a></dd></div>
+        <div><span class="glyph photo"><img src="media/prog-everyone.webp" width="400" height="400" alt="A certificate with a teal seal beside reading glasses, a mosaic tile and jasmine" loading="lazy" decoding="async"></span><dt data-t="every.k">AI for Everyone</dt><dd data-t="pg.3">Ten hours over five evenings, in Arabic. No background needed, a phone is enough.</dd><dd class="when" data-t="pg.3m">10 hours · a new cohort every month</dd><dd class="go"><a class="btn btn-navy btn-sm" href="#everyone" data-t="pg.3b">See the programme</a></dd></div>
       </dl>
       <p class="also"><span data-t="pg.also">For organisations:</span> <a href="#sponsor" data-t="pg.a1">Sponsor a month</a><a href="#companies" data-t="pg.a2">Train your team</a><a href="#pathways" data-t="pg.a3">2027 pathways</a></p>
     </div>
@@ -650,6 +724,7 @@ html.at-top .bar{transform:translateY(110%)}
 
 <!-- Why now: a slim band of facts -->
 <section class="slide dark band" id="start" data-title="Why now">
+  <p class="band-cap" data-t="why.cap">Tripoli at night.</p>
   <div class="slide-in">
     <div class="copy">
       <p class="kick" data-t="why.k">Why now</p>
@@ -665,10 +740,10 @@ html.at-top .bar{transform:translateY(110%)}
 </section>
 
 <!-- 9 · Why Alkhwarizmi -->
-<section class="slide" id="about" data-title="Why us">
+<section class="slide dark photo" id="about" data-title="At the academy">
   <div class="slide-in">
     <div class="copy">
-      <p class="kick" data-t="ab.k">Why Alkhwarizmi</p>
+      <p class="kick" data-t="ab.k">At the academy</p>
       <h2 data-t="ab.h">Why people choose Alkhwarizmi.</h2>
       <ul class="proof">
         <li><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="10" width="36" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="42" r="3" fill="currentColor"/><circle cx="31" cy="42" r="3" fill="currentColor"/><path d="M12 20h24M12 26h14" stroke="#09C98E" stroke-width="2.5" stroke-linecap="round"/></svg><b data-t="ab.t1">Live, in the room</b><span data-t="ab.t1s">A classroom on Zawiat Dahmani Street, not a video. People finish what they start here.</span></li>
@@ -704,6 +779,7 @@ html.at-top .bar{transform:translateY(110%)}
         <div><span data-t="ct.email">Email</span><a href="mailto:admin@alkhawarizmi.ai">admin@alkhawarizmi.ai</a></div>
         <div><span data-t="ct.campus">Campus</span><a href="https://maps.google.com/?q=Zawiat+Dahmani+Street,+Tripoli,+Libya" target="_blank" rel="noopener" data-t="ct.addr">Zawiat Dahmani Street, Tripoli, Libya</a></div>
       </div>
+      <figure class="place"><img src="media/lobby-dusk.webp" width="1920" height="1008" alt="The academy reception at dusk, with the K logo and the lightbox" loading="lazy" decoding="async"><figcaption data-t="ct.figcap">Reception, first floor. Walk in, the tea is on us.</figcaption></figure>
     </div>
     <div class="card" data-form="question">
       <h3 data-t="ct.c.h">Send a question</h3>
@@ -726,6 +802,7 @@ html.at-top .bar{transform:translateY(110%)}
 <div id="pages">
 <div class="page" id="executive" hidden>
 <div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
+<figure class="page-hero"><img src="media/head-executive-2000.webp" srcset="media/head-executive-1000.webp 1000w, media/head-executive-2000.webp 2000w" sizes="100vw" width="2000" height="851" alt="Executives round a table at the academy, a 90-day roadmap on screen and Tripoli at dusk behind them" decoding="async"></figure>
 <!-- 3 · Executive AI Path -->
 <section class="slide" id="s-executive" data-title="Executives">
   <div class="slide-in">
@@ -768,6 +845,7 @@ html.at-top .bar{transform:translateY(110%)}
 </div>
 <div class="page" id="productivity" hidden>
 <div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
+<figure class="page-hero"><img src="media/head-productivity-2000.webp" srcset="media/head-productivity-1000.webp 1000w, media/head-productivity-2000.webp 2000w" sizes="100vw" width="2000" height="851" alt="A student holds a phone running their own app while editing a video of the Tripoli corniche" decoding="async"></figure>
 <!-- 4 · AI Productivity -->
 <section class="slide" id="s-productivity" data-title="AI Productivity">
   <div class="slide-in">
@@ -805,6 +883,7 @@ html.at-top .bar{transform:translateY(110%)}
 </div>
 <div class="page" id="everyone" hidden>
 <div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
+<figure class="page-hero"><img src="media/head-everyone-2000.webp" srcset="media/head-everyone-1000.webp 1000w, media/head-everyone-2000.webp 2000w" sizes="100vw" width="2000" height="851" alt="An evening class of all ages at the academy, Tripoli lit up outside the window" decoding="async"></figure>
 <!-- 5 · AI for Everyone -->
 <section class="slide grey" id="s-everyone" data-title="AI for Everyone">
   <div class="slide-in">
@@ -841,6 +920,7 @@ html.at-top .bar{transform:translateY(110%)}
 </div>
 <div class="page" id="sponsor" hidden>
 <div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
+<figure class="page-hero"><img src="media/head-sponsor-2000.webp" srcset="media/head-sponsor-1000.webp 1000w, media/head-sponsor-2000.webp 2000w" sizes="100vw" width="2000" height="851" alt="A sponsor hands a certificate to a graduate in the academy lobby" decoding="async"></figure>
 <!-- 6 · Sponsor -->
 <section class="slide dark" id="s-sponsor" data-title="Sponsor">
   <div class="slide-in">
@@ -884,6 +964,7 @@ html.at-top .bar{transform:translateY(110%)}
 </div>
 <div class="page" id="companies" hidden>
 <div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
+<figure class="page-hero"><img src="media/head-companies-2000.webp" srcset="media/head-companies-1000.webp 1000w, media/head-companies-2000.webp 2000w" sizes="100vw" width="2000" height="851" alt="A company team maps a process on sticky notes during a workshop at the academy" decoding="async"></figure>
 <!-- 7 · Companies -->
 <section class="slide" id="s-companies" data-title="Companies">
   <div class="slide-in">
@@ -923,6 +1004,7 @@ html.at-top .bar{transform:translateY(110%)}
 </div>
 <div class="page" id="pathways" hidden>
 <div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
+<figure class="page-hero"><img src="media/head-pathways-2000.webp" srcset="media/head-pathways-1000.webp 1000w, media/head-pathways-2000.webp 2000w" sizes="100vw" width="2000" height="851" alt="The academy classroom at night, one lamp on, Tripoli and the sea outside" decoding="async"></figure>
 <!-- 8 · More pathways -->
 <section class="slide grey" id="s-pathways" data-title="More pathways">
   <div class="slide-in">
@@ -996,7 +1078,7 @@ var CONFIG = {
   /* VIDEO: a YouTube or Vimeo link, or a direct .mp4 URL. VIDEO_POSTER: an image for the frame (optional).
      SHOW_VIDEO_PLACEHOLDER: keep the frame visible before the film is ready (set false to hide the section until VIDEO is set). */
   VIDEO: '',
-  VIDEO_POSTER: '',
+  VIDEO_POSTER: 'media/watch-poster.webp',
   SHOW_VIDEO_PLACEHOLDER: true
 };
 
@@ -1024,7 +1106,7 @@ ar:{
  'c2':'2 / 10','c3':'3 / 10','c4':'4 / 10','c5':'5 / 10','c6':'6 / 10','c7':'7 / 10','c8':'8 / 10','c9':'9 / 10','c10':'10 / 10',
  'fig.why1':'9 من كل 10 ليبيين متصلون','fig.why2':'0 أكاديميات للذكاء الاصطناعي، حتى الآن','d.sun':'الأحد','d.mon':'الاثنين','d.tue':'الثلاثاء','d.wed':'الأربعاء','d.thu':'الخميس','fig.ex1':'9 مخرجات','fig.ex2':'خمسة أيام. تغادر بخارطة طريق ممولة لتسعين يوماً.','p.app':'تطبيق','p.auto':'أتمتة','p.img':'صورة','p.brand':'هوية','p.prompt':'أوامر','p.video':'فيديو','p.voice':'صوت','p.music':'موسيقى','p.camp':'حملة','p.copy':'نصوص','fig.pr1':'مشروعك يمر عبر العشرة كلها.','fig.pr2':'الأسبوع الأول، ثم الثاني.','fig.ev1':'خمس أمسيات، ساعتان لكل منها، 12 مختبراً','fig.ev2':'لا تحتاج إلى خلفية. الهاتف يكفي.','fig.sp0':'أنت','fig.sp1':'راعٍ واحد كل شهر. ثلاثون شخصاً، مجاناً لهم.','fig.sp2':'اسمك على الشهادات الثلاثين كلها.','c.1':'استشارة مجانية','c.2':'قواعد الذكاء الاصطناعي في العمل','c.3':'مختبرات على مهامكم','c.4':'تقرير للإدارة','fig.co1':'في مقركم، أو في حرمنا، أو عن بُعد. بالعربية.','fig.pa1':'الدبلوم','fig.pa2':'للأطفال','fig.pa3':'صنّاع السياسات','fig.ab1':'خارطة طريق','fig.ab2':'تطبيق يعمل','fig.ab3':'معرض أعمال','fig.cap.why':'الشكل 1. تسعة من كل عشرة ليبيين متصلون. ولا يكاد أحد مدرَّباً.','fig.cap.ab':'الشكل 1. ما تغادر به.','fig.cap.ex':'الشكل 2. الأيام الخمسة، وما يتراكم فيها.','fig.cap.pr':'الشكل 3. عشرة مخرجات، مشروع واحد.','fig.cap.ev':'الشكل 4. خمس أمسيات.','fig.cap.sp':'الشكل 5. شهرك.','fig.cap.co':'الشكل 6. كيف يسير برنامج الفريق.','fig.cap.pa':'الشكل 7. ما يُفتح في 2027.',
  'w.k':'داخل الأكاديمية','w.h':'تسعون ثانية داخل أول أكاديمية للذكاء الاصطناعي في ليبيا.','w.soon':'الفيلم يصل في 30 أكتوبر','w.cap':'صُوّر في الحرم الجامعي، شارع زاوية الدهماني، طرابلس.',
- 'why.k':'لماذا الآن','pg.k':'البرامج','pg.h':'ثلاثة مداخل. اختر مدخلك.','pg.1':'خمسة أيام. تسعة مخرجات لمؤسستك أنت. للرؤساء التنفيذيين والمديرين ورؤساء الأقسام.','pg.1m':'5 أيام · الدفعة القادمة تبدأ 15 نوفمبر','pg.1b':'اطّلع على البرنامج','pg.2':'أسبوعان. عشرة أشياء صنعتها بنفسك: تطبيق، وفيديو، وحملة، وأتمتة. لصنّاع المحتوى والمسوّقين وروّاد الأعمال.','pg.2m':'أسبوعان · الدفعة الأولى في نوفمبر','pg.2b':'اطّلع على البرنامج','pg.3':'عشر ساعات على خمس أمسيات، بالعربية. لا تحتاج إلى خلفية مسبقة، الهاتف يكفي.','pg.3m':'10 ساعات · دفعة جديدة كل شهر','pg.3b':'اطّلع على البرنامج','pg.also':'للمؤسسات:','pg.a1':'ارعَ شهراً','pg.a2':'درّب فريقك','pg.a3':'مسارات 2027','back':'← كل البرامج','exec.k':'المسار التنفيذي للذكاء الاصطناعي','prod.k':'إنتاجية الذكاء الاصطناعي · أحضر مشروعك الخاص','prod.byo':'أحضر مشروعك الخاص','every.k':'الذكاء الاصطناعي للجميع','sp.k':'مبادرة محو الأمية بالذكاء الاصطناعي','co.k':'تدريب مخصص للذكاء الاصطناعي','pw.k':'مسارات أخرى','ab.k':'لماذا الخوارزمي','ct.k':'تواصل معنا',
+ 'why.cap':'طرابلس ليلاً.','why.k':'لماذا الآن','pg.k':'البرامج','pg.h':'ثلاثة مداخل. اختر مدخلك.','pg.1':'خمسة أيام. تسعة مخرجات لمؤسستك أنت. للرؤساء التنفيذيين والمديرين ورؤساء الأقسام.','pg.1m':'5 أيام · الدفعة القادمة تبدأ 15 نوفمبر','pg.1b':'اطّلع على البرنامج','pg.2':'أسبوعان. عشرة أشياء صنعتها بنفسك: تطبيق، وفيديو، وحملة، وأتمتة. لصنّاع المحتوى والمسوّقين وروّاد الأعمال.','pg.2m':'أسبوعان · الدفعة الأولى في نوفمبر','pg.2b':'اطّلع على البرنامج','pg.3':'عشر ساعات على خمس أمسيات، بالعربية. لا تحتاج إلى خلفية مسبقة، الهاتف يكفي.','pg.3m':'10 ساعات · دفعة جديدة كل شهر','pg.3b':'اطّلع على البرنامج','pg.also':'للمؤسسات:','pg.a1':'ارعَ شهراً','pg.a2':'درّب فريقك','pg.a3':'مسارات 2027','back':'← كل البرامج','exec.k':'المسار التنفيذي للذكاء الاصطناعي','prod.k':'إنتاجية الذكاء الاصطناعي · أحضر مشروعك الخاص','prod.byo':'أحضر مشروعك الخاص','every.k':'الذكاء الاصطناعي للجميع','sp.k':'مبادرة محو الأمية بالذكاء الاصطناعي','co.k':'تدريب مخصص للذكاء الاصطناعي','pw.k':'مسارات أخرى','ab.k':'في الأكاديمية','ct.k':'تواصل معنا',
  'why.h':'ليبيا متصلة بالإنترنت. ولا أحد تقريباً مدرَّب.',
  'why.lead':'أدوات الذكاء الاصطناعي التي يستخدمها الناس في العمل تتغير كل بضعة أسابيع. وحتى اليوم لم يكن في ليبيا مكان لتعلّمها حضورياً، بالعربية.',
  'why.f1b':'9 من 10','why.f1':'من الليبيين متصلون بالإنترنت','why.f2b':'أسابيع','why.f2':'بين كل إصدار رئيسي وآخر لنماذج الذكاء الاصطناعي','why.f3b':'صفر','why.f3':'أكاديميات للذكاء الاصطناعي في ليبيا قبل هذه',
@@ -1075,7 +1157,7 @@ ar:{
  'ab.lead':'تتعلم في قاعة دراسية بشارع زاوية الدهماني، بالعربية أولاً، مع أشخاص يبنون بهذه الأدوات كل يوم. كل برنامج ينتهي بشيء صنعته بنفسك: خارطة طريق لمؤسستك، أو تطبيق يعمل، أو معرض أعمال.',
   'ab.c.h':'زُر الحرم الجامعي','ab.c.why':'تعال وشاهد حصة دراسية. ثلاثون دقيقة، بلا أي التزام.','ab.c.btn':'رتّب زيارة',
  'ct.h':'اسألنا أي شيء.','ct.lead':'يرد عليك شخص من الأكاديمية خلال يوم عمل واحد، وليس روبوتاً.',
- 'ct.wa':'واتساب','ct.email':'البريد الإلكتروني','ct.campus':'الحرم الجامعي','ct.addr':'شارع زاوية الدهماني، طرابلس، ليبيا',
+ 'ct.figcap':'الاستقبال، الطابق الأول. تفضّل، الشاي علينا.','ct.wa':'واتساب','ct.email':'البريد الإلكتروني','ct.campus':'الحرم الجامعي','ct.addr':'شارع زاوية الدهماني، طرابلس، ليبيا',
  'ct.c.h':'أرسل سؤالاً','ct.c.why':'عن المحتوى أو المواعيد أو الرسوم أو تدريب فريقك.','ct.c.btn':'أرسل سؤالي','ct.done':'نرد خلال يوم عمل واحد.',
  'ft.copy':'© 2026 أكاديمية الخوارزمي للذكاء الاصطناعي. أول أكاديمية للذكاء الاصطناعي في ليبيا.',
  'bar.call':'احجز مكالمة مجانية',
@@ -1578,6 +1660,32 @@ function frame() {
 frame();
 
 }
+</script>
+<script>
+/* Geometric Expansion: concentric copies of the K mark, pulsing outward. Built from #logo-path. */
+(function(){
+  var src=document.getElementById('logo-path'); if(!src) return;
+  var d=src.getAttribute('d'), NS='http://www.w3.org/2000/svg';
+  function build(host,cx,cy,base,step,n){
+    var svg=document.createElementNS(NS,'svg'); svg.setAttribute('class','contours'); svg.setAttribute('aria-hidden','true');
+    svg.setAttribute('viewBox','0 0 1600 800'); svg.setAttribute('preserveAspectRatio','xMidYMid slice');
+    svg.innerHTML='<defs><linearGradient id="ctg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#09C98E"/><stop offset=".9" stop-color="#534CB6"/></linearGradient></defs>';
+    for(var i=0;i<n;i++){
+      var k=base+step*i, p=document.createElementNS(NS,'path');
+      p.setAttribute('d',d);
+      p.setAttribute('transform','translate('+cx+' '+cy+') scale('+k+') translate(-216 -223)');
+      p.style.setProperty('--o',(0.42-i*0.026).toFixed(3));
+      p.style.animationDelay=(i*0.55)+'s';
+      svg.appendChild(p);
+    }
+    host.insertBefore(svg,host.firstChild);
+  }
+  var band=document.getElementById('start');
+  if(band) build(band,1240,200,0.45,0.28,14);
+  function flip(){var r=document.documentElement.dir==='rtl', s=band&&band.querySelector('.contours path');
+    if(!band) return; band.querySelectorAll('.contours path').forEach(function(p){var t=p.getAttribute('transform'); p.setAttribute('transform',t.replace(/translate\((\d+) /,'translate('+(r?380:1220)+' '));});}
+  flip(); new MutationObserver(flip).observe(document.documentElement,{attributes:true,attributeFilter:['dir']});
+})();
 </script>
 </body>
 </html>
