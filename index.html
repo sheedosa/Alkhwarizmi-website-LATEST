@@ -608,6 +608,445 @@ html.at-top .bar{transform:translateY(110%)}
 .also.soon{margin-top:8px;font-size:14px}
 .also.soon a{font-weight:500;color:var(--ink-2);border-bottom-color:transparent}
 </style>
+<style>
+/* =====================================================================
+   Tech layer. Brand type (Aileron / Oxygen), navy and teal, white and
+   light-grey surfaces, hairline structure. No cards, shadows, glass,
+   gradients or fade-ins. One motion signature: the brand lines.
+   ===================================================================== */
+:root{
+  --paper:#FFFFFF; --grey:#F3F4F7; --grey-2:#E9EBF0; --ink:#111128; --ink-2:#4B4B63; --ink-3:#7A7A91;
+  --rule:rgba(17,17,40,.14); --rule-2:rgba(17,17,40,.3); --rule-dark:rgba(255,255,255,.2);
+  --navy:#111128; --teal:#09C98E; --teal-ink:#0A8A64; --indigo:#534CB6;
+  --wrap:1200px; --gut:clamp(20px,4vw,48px); --r:6px;
+  --fs-1:clamp(40px,5.4vw,68px); --fs-2:clamp(30px,3.6vw,48px); --fs-3:clamp(22px,2.3vw,30px); --fs-4:19px;
+}
+html{scroll-padding-top:84px}
+body{background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6;font-family:var(--body)}
+.slide,.slide.grey,.slide.dark{background-image:none}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.025em;line-height:1.05;font-weight:700;text-wrap:balance}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3{letter-spacing:0;line-height:1.3}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.runhead{display:flex;gap:12px;align-items:baseline;margin:0 0 16px;font:600 13px/1.4 var(--body);color:var(--ink-2);letter-spacing:0;font-style:normal}
+.runhead span:first-child:not(:only-child){font-family:var(--display);font-size:13px;color:var(--teal-ink);font-variant-numeric:tabular-nums}
+.lede{font-size:var(--fs-4);line-height:1.55;color:var(--ink-2);max-width:62ch}
+.cap,figcaption{font-size:13px;line-height:1.45;color:var(--ink-3);margin-top:10px;font-style:normal;font-family:var(--body)}
+figcaption i{font-style:normal;color:var(--ink-3)}
+.tlink{font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px;text-decoration-color:var(--rule-2)}
+.tlink:hover{text-decoration-color:var(--teal)}
+img{display:block;max-width:100%;height:auto}
+.sec-head{padding:clamp(48px,6vw,88px) 0 clamp(20px,3vw,36px)}
+.sec-head h2{font-size:var(--fs-2);margin:0 0 16px;max-width:24ch}
+.sec-head .lede{max-width:66ch}
+
+/* buttons */
+.btn,.pill{border-radius:var(--r);font-weight:600;letter-spacing:0;box-shadow:none}
+.pill-xl{border-radius:var(--r)}
+.btn-teal,.pill-teal{background:var(--teal);color:var(--navy)}
+.btn-navy{background:var(--navy);color:#fff}
+.glow{box-shadow:none}
+
+/* nav */
+.nav{background:rgba(255,255,255,.9);border-bottom:1px solid var(--rule)}
+.nav .menu a{font-size:15px}
+
+/* forms: structure, not cards */
+.card{background:transparent;border:0;border-top:2px solid var(--ink);border-radius:0;box-shadow:none;padding:22px 0 0}
+.card h3{font-family:var(--display);font-weight:700;font-size:22px;line-height:1.15;letter-spacing:-.02em;margin:0 0 6px}
+.card .who{font-size:13.5px;color:var(--ink-3);margin:0 0 10px;font-style:normal;font-family:var(--body)}
+.card .why{color:var(--ink-2);font-size:15px;margin:0 0 16px}
+label.f span{font-weight:600;font-size:13.5px;color:var(--ink)}
+label.f input,label.f textarea,label.f select,.card input,.card textarea,.card select{border:1px solid var(--rule-2);border-radius:var(--r);background:#fff;padding:12px 12px;font-size:16px}
+label.f input:focus,label.f textarea:focus,label.f select:focus,.card input:focus,.card textarea:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px rgba(9,201,142,.25)}
+.card .fhint{font-size:12.5px;color:var(--ink-3);font-style:normal;font-family:var(--body)}
+.card .btn{margin-top:16px;width:100%;padding:14px 22px;border-radius:var(--r)}
+.seg{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 14px}
+.seg label{cursor:pointer;position:relative}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:inline-block;padding:8px 12px;border:1px solid var(--rule-2);border-radius:var(--r);font-size:14px;color:var(--ink);background:#fff;box-shadow:none}
+.seg input:checked+span{background:var(--navy);color:#fff;border-color:var(--navy);font-weight:600}
+.card .alt,.card .done{font-size:14.5px}
+.done{border-radius:var(--r)}
+.dark label.f input,.dark label.f textarea,.dark label.f select,.dark .card input,.dark .card textarea,.dark .card select{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.3);color:#fff}
+.dark .card{border-top-color:#fff}
+.dark .card h3,.dark label.f span{color:#fff}
+.dark .card .why,.dark .card .who,.dark .card .fhint{color:#C4C4DA}
+
+/* ---------- hero (original 3D) : keep, but remove the glow pill ---------- */
+.scrolly .pill-xl.glow{box-shadow:none}
+.ov-hero h1{letter-spacing:-.03em}
+
+/* ---------- who (router tiles) ---------- */
+.who{padding:clamp(48px,6vw,88px) 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--grey)}
+.who h2{font-size:var(--fs-2);margin:0 0 28px}
+.who-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.tile{display:grid;grid-template-rows:auto auto 1fr auto;gap:10px;padding:22px 20px 22px;background:#fff;color:var(--ink);text-decoration:none;min-height:230px;transition:background .15s}
+.tile:hover,.tile:focus-visible{background:var(--navy);color:#fff;outline:0}
+.tile-k{font-size:13px;font-weight:600;color:var(--teal-ink)}
+.tile:hover .tile-k{color:var(--teal)}
+.tile-t{font-family:var(--display);font-weight:700;font-size:22px;line-height:1.1;letter-spacing:-.02em}
+.tile-p{font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+.tile:hover .tile-p{color:#D6D6E4}
+.tile-go{font-size:14px;font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--rule-2)}
+.tile:hover .tile-go{text-decoration-color:var(--teal)}
+.who-also{margin:18px 0 0;font-size:14.5px;color:var(--ink-2)}
+.who-also a{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--rule-2)}
+.who-also .sep{margin:0 8px;color:var(--ink-3)}
+@media (max-width:1000px){.who-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.who-grid{grid-template-columns:1fr}.tile{min-height:0;padding:18px 16px}}
+
+/* ---------- watch ---------- */
+.watch{padding:clamp(48px,6vw,88px) 0;border-bottom:1px solid var(--rule)}
+.watch-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.watch h2{font-size:var(--fs-3);margin:0 0 18px;max-width:30ch}
+.player{border-radius:var(--r);margin-top:0}
+.player .poster-mark{opacity:.1}
+@media (max-width:900px){.watch-grid{grid-template-columns:1fr}}
+
+/* ---------- programmes ---------- */
+.progs{border-bottom:1px solid var(--rule)}
+.prog{display:grid;grid-template-columns:56px minmax(0,1fr) 280px;gap:0 clamp(20px,3vw,48px);padding:32px 0 36px;border-top:1px solid var(--rule)}
+.prog-num{font-family:var(--display);font-weight:700;font-size:15px;color:var(--teal-ink);padding-top:8px;font-variant-numeric:tabular-nums}
+.prog h3{font-size:var(--fs-3);margin:0 0 12px}
+.prog h3 a{color:inherit;text-decoration:none}
+.prog h3 a:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+.prog h3 small{display:block;font-family:var(--body);font-weight:500;font-size:15px;color:var(--teal-ink);margin-top:4px;letter-spacing:0}
+.prog-body p{margin:0 0 16px;max-width:66ch;color:var(--ink-2)}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:0 0 16px;border:1px solid var(--rule);border-radius:var(--r);overflow:hidden}
+.facts div{padding:10px 12px;border-inline-end:1px solid var(--rule);background:var(--grey)}
+.facts div:last-child{border-inline-end:0}
+.facts dt{font-size:12px;color:var(--ink-3);margin:0 0 2px}
+.facts dd{margin:0;font-size:14px;font-weight:600;line-height:1.35;color:var(--ink)}
+.prog-fig{margin:0}
+.prog-fig img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:var(--r)}
+.also-line{padding:26px 0 clamp(40px,6vw,72px);font-size:15px;color:var(--ink-2);max-width:76ch;line-height:1.6}
+.also-line a{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--rule-2)}
+@media (max-width:900px){.prog{grid-template-columns:32px minmax(0,1fr)}.prog-fig{grid-column:2;margin-top:14px;max-width:320px}.facts{grid-template-columns:1fr 1fr}.facts div:nth-child(2){border-inline-end:0}.facts div:nth-child(n+3){border-top:1px solid var(--rule)}}
+
+/* ---------- week ---------- */
+.week{padding:clamp(48px,6vw,88px) 0;border-bottom:1px solid var(--rule);background:var(--grey)}
+.week-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:start}
+.week h2{font-size:var(--fs-3);margin:0 0 16px}
+.week p{color:var(--ink-2);max-width:52ch}
+.tt{width:100%;border-collapse:separate;border-spacing:0;font-size:15px;background:#fff;border:1px solid var(--rule);border-radius:var(--r);overflow:hidden}
+.tt caption{text-align:start;font-size:13px;color:var(--ink-3);padding:0 0 10px;caption-side:top}
+.tt th,.tt td{border-top:1px solid var(--rule);padding:14px 12px;text-align:start;vertical-align:top}
+.tt thead th{border-top:0;background:var(--grey-2);font-size:12.5px;color:var(--ink-2);font-weight:600}
+.tt tbody th{font-size:12.5px;color:var(--ink-3);font-weight:600;width:92px;background:var(--grey)}
+.tt td b{font-family:var(--display);font-weight:700;font-size:16px;display:block;letter-spacing:-.01em}
+.tt td span{color:var(--ink-2);font-size:13.5px}
+@media (max-width:900px){.week-grid{grid-template-columns:1fr}}
+
+/* ---------- why now ---------- */
+.whynow{position:relative;color:#fff;background:var(--navy) url("media/tripoli-2400.webp") center bottom/cover no-repeat;padding:clamp(56px,7vw,104px) 0 clamp(220px,26vw,380px);overflow:hidden;isolation:isolate}
+.whynow::before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,rgba(17,17,40,.9) 0%,rgba(17,17,40,.78) 48%,rgba(17,17,40,.12) 78%,rgba(17,17,40,.4) 100%)}
+.whynow .wrap{position:relative;z-index:2}
+.why-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start}
+.whynow .runhead{color:#C9C9DC}.whynow .runhead span:first-child{color:var(--teal)}
+.whynow h2{font-size:var(--fs-2);margin:0 0 18px;max-width:20ch}
+.whynow p{color:#E2E2EE;max-width:58ch}
+.figures{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:0 24px;border-top:1px solid var(--rule-dark)}
+.figures div{padding:16px 0 18px;border-bottom:1px solid var(--rule-dark)}
+.figures dt{font-family:var(--display);font-weight:700;letter-spacing:-.03em;font-size:clamp(34px,3.6vw,48px);line-height:1;font-variant-numeric:tabular-nums}
+.figures dd{margin:6px 0 0;font-size:14px;color:#D6D6E4;max-width:22ch}
+.figures .src{grid-column:1/-1;font-size:12.5px;color:#B9B9CF;padding-top:10px}
+.whynow .band-cap{position:absolute;z-index:2;inset-inline-end:var(--gut);bottom:14px;margin:0;font-size:12.5px;color:rgba(255,255,255,.75)}
+.contours{display:block;z-index:1}
+@media (max-width:900px){.whynow{background-size:auto 360px;padding-bottom:300px}.whynow::before{background:linear-gradient(180deg,#111128 0,#111128 calc(100% - 360px),rgba(17,17,40,.3) calc(100% - 200px),rgba(17,17,40,.15) calc(100% - 60px),rgba(17,17,40,.4) 100%)}.why-grid{grid-template-columns:1fr}}
+
+/* ---------- the name ---------- */
+.name{padding:clamp(48px,7vw,96px) 0;border-bottom:1px solid var(--rule)}
+.name-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:center}
+.name-fig{margin:0}
+.name-fig img{border-radius:var(--r)}
+.name h2{font-size:var(--fs-2);margin:0 0 20px;max-width:20ch}
+.name p{max-width:58ch;color:var(--ink-2)}
+.dropcap::first-letter{font-size:inherit;float:none;padding:0;color:inherit}
+@media (max-width:900px){.name-grid{grid-template-columns:1fr}}
+
+/* ---------- the room ---------- */
+.room{border-bottom:1px solid var(--rule)}
+.room-hero{margin:0 0 clamp(28px,4vw,48px)}
+.room-hero img{width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:var(--r)}
+.room-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start;padding-bottom:clamp(48px,6vw,88px)}
+.room-copy p{max-width:62ch;margin:0 0 16px;color:var(--ink-2)}
+.details{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.details img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:var(--r)}
+.details span{display:block;font-size:13px;line-height:1.4;color:var(--ink-3);margin-top:8px}
+@media (max-width:900px){.room-hero img{aspect-ratio:3/2}.room-grid{grid-template-columns:1fr}.details{grid-template-columns:1fr 1fr}}
+
+/* ---------- find ---------- */
+.find{padding:clamp(48px,7vw,96px) 0;border-bottom:1px solid var(--rule);background:var(--grey)}
+.find-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:start}
+.find h2{font-size:var(--fs-3);margin:0 0 16px}
+.find p{color:var(--ink-2);max-width:48ch}
+.addr{margin:22px 0 0;border-top:1px solid var(--rule)}
+.addr div{display:grid;grid-template-columns:90px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.addr dt{color:var(--ink-3)}.addr dd{margin:0}.addr a{color:var(--ink)}
+.find-figs{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.find-figs figure{margin:0}
+.find-figs img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:var(--r)}
+@media (max-width:900px){.find-grid{grid-template-columns:1fr}.find-figs{grid-template-columns:1fr}}
+
+/* ---------- faq ---------- */
+.faq{padding:clamp(48px,7vw,96px) 0;border-bottom:1px solid var(--rule)}
+.faq-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(28px,5vw,72px);align-items:start}
+.faq h2{font-size:var(--fs-3);margin:0}
+.qa{margin:0;border-top:1px solid var(--rule)}
+.qa div{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:8px 24px;padding:18px 0;border-bottom:1px solid var(--rule)}
+.qa dt{font-family:var(--display);font-weight:700;font-size:18px;line-height:1.3;letter-spacing:-.01em}
+.qa dd{margin:0;color:var(--ink-2);font-size:15.5px}
+@media (max-width:900px){.faq-grid{grid-template-columns:1fr}.qa div{grid-template-columns:1fr}}
+
+/* ---------- contact ---------- */
+.contactsec{padding:clamp(48px,7vw,96px) 0}
+.contact-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:start}
+.contactsec h2{font-size:var(--fs-3);margin:0 0 14px;max-width:24ch}
+.contactsec p{color:var(--ink-2);max-width:48ch}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--rule);color:var(--ink-2)}
+footer .in{font-size:14px}
+
+/* ---------- programme pages: same surfaces ---------- */
+.page .slide{background-image:none}
+.page .kick{font-style:normal;font-weight:600;font-size:13px;color:var(--teal-ink)}
+.page .fig{border-radius:var(--r);box-shadow:none}
+.back{border-bottom:1px solid var(--rule)}
+.bar .btn{border-radius:var(--r)}
+/* timetable on narrow phones: scroll inside, never widen the page */
+.week-grid > .tt{min-width:0}
+@media (max-width:560px){.tt-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.tt{min-width:420px}.tt caption{position:sticky;left:0}}
+
+/* ---------- short homepage ---------- */
+.who{padding:clamp(48px,6vw,80px) 0}
+.whynow.short{padding:clamp(48px,6vw,80px) 0 clamp(180px,20vw,300px)}
+.whynow.short h2{font-size:var(--fs-3);max-width:22ch;margin:0}
+.whynow.short .figures{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.whynow.short{padding-bottom:280px}.whynow.short .figures{grid-template-columns:1fr 1fr 1fr}.whynow.short .figures dt{font-size:30px}}
+.inside{padding:clamp(48px,6vw,80px) 0;border-bottom:1px solid var(--rule)}
+.inside-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,64px);align-items:center}
+.inside h2{font-size:var(--fs-3);margin:0 0 12px;max-width:20ch}
+.inside p{color:var(--ink-2);max-width:42ch;margin:0}
+.inside-act{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:22px}
+.inside-act .btn{padding:13px 20px}
+@media (max-width:900px){.inside-grid{grid-template-columns:1fr}}
+.reach{padding:clamp(48px,6vw,80px) 0;background:var(--grey)}
+.reach-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:start}
+.reach h2{font-size:var(--fs-3);margin:0 0 12px;max-width:20ch}
+.reach p{color:var(--ink-2);margin:0;max-width:40ch}
+.reach .addr{margin-top:22px}
+@media (max-width:900px){.reach-grid{grid-template-columns:1fr}}
+footer{background:var(--navy);color:#C9C9DC}footer .in span,footer .in{color:#C9C9DC}footer a{color:#fff}
+
+</style>
+<style>
+/* =====================================================================
+   Forms: one component used by all seven forms.
+   ===================================================================== */
+.card.fx{background:#fff;border:1px solid var(--rule);border-top:3px solid var(--teal);border-radius:var(--r);padding:clamp(20px,2.4vw,28px);box-shadow:0 1px 2px rgba(17,17,40,.04),0 12px 32px -20px rgba(17,17,40,.25);color:var(--ink)}
+.card.fx .fx-head{display:flex;flex-direction:column;gap:6px;margin:0 0 8px}
+.card.fx h3{font-family:var(--display);font-size:clamp(21px,1.9vw,24px);line-height:1.15;letter-spacing:-.02em;margin:0;color:var(--ink)}
+.card.fx .reply{display:inline-flex;align-items:center;gap:8px;margin:0;font-size:13.5px;color:var(--ink-2);background:none;padding:0;border:0}
+.card.fx .reply .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 3px rgba(9,201,142,.2);flex:0 0 auto}
+.card.fx .why{font-size:15px;line-height:1.5;color:var(--ink-2);margin:0 0 18px;max-width:none}
+.card.fx form{display:grid;gap:16px;margin:0}
+.card.fx .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card.fx label.f,.card.fx fieldset.f{display:grid;gap:6px;margin:0;min-width:0}
+.card.fx fieldset.f{border:0;padding:0}
+.card.fx legend.fl{margin-bottom:8px;float:none;width:100%}
+.card.fx .fl{display:flex;align-items:baseline;justify-content:flex-start;gap:8px;padding:0;margin:0;font:600 14px/1.3 var(--body);color:var(--ink)}
+.card.fx label.f .fl span,.card.fx .fl span{font:inherit;color:inherit}
+.card.fx .opt{font-style:normal;font-weight:400;font-size:12.5px;color:var(--ink-3)}
+.card.fx label.f input,.card.fx label.f select,.card.fx label.f textarea{width:100%;min-height:50px;padding:12px 14px;border:1px solid var(--rule-2);border-radius:var(--r);background:#fff;font:400 16px/1.4 var(--body);color:var(--ink);box-shadow:none;transition:border-color .15s,box-shadow .15s}
+.card.fx label.f textarea{min-height:96px;resize:vertical}
+.card.fx label.f select{appearance:none;-webkit-appearance:none;padding-inline-end:40px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23111128' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 14px center/12px 8px;cursor:pointer}
+[dir="rtl"] .card.fx label.f select{background-position:left 14px center}
+.card.fx label.f input::placeholder,.card.fx label.f textarea::placeholder{color:#9A9AAE}
+.card.fx label.f input:hover,.card.fx label.f select:hover,.card.fx label.f textarea:hover{border-color:var(--ink-3)}
+.card.fx label.f input:focus,.card.fx label.f select:focus,.card.fx label.f textarea:focus{outline:0;border-color:var(--navy);box-shadow:0 0 0 3px rgba(9,201,142,.28)}
+[dir="rtl"] .card.fx input[dir="ltr"]{text-align:right}
+.card.fx .fhint{display:block;margin:0;font-size:12.5px;line-height:1.4;color:var(--ink-3)}
+/* field errors */
+.card.fx .f.bad input,.card.fx .f.bad textarea{border-color:#C0303B;box-shadow:0 0 0 3px rgba(192,48,59,.12)}
+.card.fx .ferr{display:flex;gap:6px;align-items:flex-start;font-size:13px;line-height:1.4;color:#A4222B;font-weight:600}
+.card.fx .ferr::before{content:"!";flex:0 0 16px;height:16px;border-radius:50%;background:#C0303B;color:#fff;font:700 11px/16px var(--body);text-align:center;margin-top:1px}
+.card.fx .f.bad .fhint{display:none}
+/* choice chips */
+.card.fx .seg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:8px;margin:0}
+.card.fx .seg.seg3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card.fx .seg.seg4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card.fx .seg.seg1{grid-template-columns:1fr}
+.card.fx .seg label{position:relative;display:block;margin:0;cursor:pointer}
+.card.fx .seg input{position:absolute;inset:0;opacity:0;margin:0;pointer-events:none}
+.card.fx .seg span{display:flex;align-items:center;justify-content:flex-start;text-align:start;gap:10px;min-height:46px;padding:10px 14px;border:1px solid var(--rule-2);border-radius:var(--r);background:#fff;font:500 14.5px/1.3 var(--body);color:var(--ink);letter-spacing:0;transition:border-color .15s,background .15s}
+.card.fx .seg.seg3 span,.card.fx .seg.seg4 span{justify-content:center;text-align:center;padding-inline:8px}
+.card.fx .seg.seg1 span::before,.card.fx .seg:not(.seg3):not(.seg4) span::before{content:"";flex:0 0 18px;height:18px;border-radius:50%;border:1.5px solid var(--rule-2);background:#fff;box-sizing:border-box;transition:border .15s}
+.card.fx .seg label:hover span{border-color:var(--ink-3)}
+.card.fx .seg input:checked+span{border-color:var(--navy);background:#F1F2F6;color:var(--ink);font-weight:600;box-shadow:inset 0 0 0 1px var(--navy)}
+.card.fx .seg.seg1 input:checked+span::before,.card.fx .seg:not(.seg3):not(.seg4) input:checked+span::before{border:5px solid var(--navy)}
+.card.fx .seg.seg3 input:checked+span,.card.fx .seg.seg4 input:checked+span{background:var(--navy);color:#fff}
+.card.fx .seg input:focus-visible+span{outline:0;box-shadow:0 0 0 3px rgba(9,201,142,.35),inset 0 0 0 1px var(--navy)}
+/* button, notes */
+.card.fx .btn{width:100%;min-height:54px;margin:4px 0 0;padding:14px 22px;font-size:16px;gap:10px;border-radius:var(--r)}
+.card.fx .btn .ic-ar{transition:transform .2s}
+.card.fx .btn:hover .ic-ar{transform:translateX(3px)}
+[dir="rtl"] .ic-ar{transform:scaleX(-1)}
+[dir="rtl"] .card.fx .btn:hover .ic-ar{transform:scaleX(-1) translateX(3px)}
+.card.fx .btn.busy{opacity:.7;cursor:progress}
+.card.fx .btn.busy .ic-ar{animation:fxspin .8s linear infinite}
+@keyframes fxspin{to{transform:rotate(360deg)}}
+.card.fx .assure{margin:-6px 0 0;text-align:center;font-size:13px;color:var(--ink-3)}
+.card.fx .err{margin:0;font-size:14px;color:#A4222B}
+.card.fx .alt{margin:0;justify-content:center;font-size:14px}
+/* sent */
+.card.fx .done{display:none;gap:14px;align-items:flex-start;padding:18px;border-radius:var(--r);background:#EAF9F3;border:1px solid #BDEEDB;color:#0C4A34;outline:0}
+.card.fx.sent .done{display:flex}
+.card.fx .done .ic-ok{flex:0 0 28px}
+.card.fx .done b{display:block;font-family:var(--display);font-size:19px;margin:2px 0 4px;color:var(--ink)}
+.card.fx .done span{display:block}
+.card.fx .done a{color:var(--teal-ink);font-weight:600}
+.card.fx .done .next{margin:10px 0 0}
+@media (max-width:420px){.card.fx .row2{grid-template-columns:1fr}.card.fx .seg.seg4{grid-template-columns:1fr 1fr}}
+@media (max-width:340px){.card.fx .seg.seg3{grid-template-columns:1fr}}
+[dir="rtl"] .card.fx .fl,[dir="rtl"] .card.fx .seg span{letter-spacing:0}
+/* the homepage contact form sits on grey: keep the panel white */
+.reach .card.fx{margin:0}
+
+/* =====================================================================
+   Programme pages
+   ===================================================================== */
+.pg{background:#fff}
+/* one column grid for the whole site: same edges as the navigation */
+:root{--edge:clamp(20px,5vw,72px)}
+.pg-wrap,.wrap{max-width:1180px;margin:0 auto;padding:0 max(var(--edge),env(safe-area-inset-left))}
+.back-in{max-width:1180px;padding-inline:max(var(--edge),env(safe-area-inset-left))}
+footer{padding-inline:0}
+footer .in{max-width:1180px;margin:0 auto;padding-inline:max(var(--edge),env(safe-area-inset-left))}
+.pg-head{padding:clamp(28px,4vw,56px) 0 0;border-bottom:1px solid var(--rule)}
+.pg-head-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:center}
+.pg-kick{margin:0 0 14px;font:600 14px/1.3 var(--body);color:var(--teal-ink);letter-spacing:0}
+.pg h1{font-family:var(--display);font-size:clamp(34px,4.2vw,56px);line-height:1.04;letter-spacing:-.03em;margin:0 0 18px;max-width:16ch;text-wrap:balance}
+[dir="rtl"] .pg h1{letter-spacing:0;line-height:1.25}
+.pg-lead{margin:0;font-size:clamp(17px,1.4vw,19px);line-height:1.55;color:var(--ink-2);max-width:56ch}
+.pg-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:28px}
+.pg-cta .btn{min-height:52px;padding:12px 22px;font-size:16px;gap:10px}
+.pg-cta .btn:hover .ic-ar{transform:translateX(3px)}
+.pg-note{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--ink-2)}
+.pg-note::before{content:"";width:16px;height:16px;flex:0 0 16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3 3 7-7' fill='none' stroke='%230A8A64' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.pg-img{margin:0;position:relative;border-radius:var(--r);overflow:hidden;background:var(--navy);aspect-ratio:4/3}
+.pg-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.pg-img::after{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:linear-gradient(90deg,#09C98E,#534CB6)}
+.pg-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:clamp(28px,4vw,48px) 0 0;border-top:1px solid var(--rule)}
+.pg-facts>div{padding:18px 20px 22px 0;border-inline-end:1px solid var(--rule);min-width:0}
+.pg-facts>div+div{padding-inline-start:20px}
+.pg-facts>div:last-child{border-inline-end:0}
+.pg-facts dt{font-size:13px;color:var(--ink-3);margin:0 0 6px}
+.pg-facts dd{margin:0;font:700 17px/1.35 var(--display);color:var(--ink);letter-spacing:-.01em}
+.pg-facts dd span{font-family:var(--body);font-weight:400;font-size:15px;color:var(--ink-2);letter-spacing:0}
+.pg-facts dd>span:only-child{font:700 17px/1.35 var(--display);color:var(--ink)}
+[dir="rtl"] .pg-facts dd,[dir="rtl"] .pg-facts dd>span:only-child{letter-spacing:0;line-height:1.5}
+
+.pg-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,400px);grid-template-areas:"a aside" "b aside";column-gap:clamp(40px,6vw,96px);padding-top:clamp(40px,5vw,72px);padding-bottom:clamp(48px,6vw,88px)}
+.pg-a{grid-area:a;min-width:0}.pg-b{grid-area:b;min-width:0}
+.pg-aside{grid-area:aside;align-self:start;position:sticky;top:84px;scroll-margin-top:84px}
+.pg-sec+.pg-sec,.pg-b .pg-sec{margin-top:clamp(40px,5vw,64px)}
+.pg-b:empty{display:none}
+.pg-sec h2{font-family:var(--display);font-size:clamp(22px,2vw,28px);letter-spacing:-.02em;line-height:1.15;margin:0 0 20px}
+[dir="rtl"] .pg-sec h2{letter-spacing:0;line-height:1.35}
+/* outcomes: numbered rule list */
+.pg-out{list-style:none;margin:0;padding:0;counter-reset:o;border-top:1px solid var(--rule)}
+.pg-out li{counter-increment:o;display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;padding:16px 0;border-bottom:1px solid var(--rule);font-size:17px;line-height:1.5;color:var(--ink)}
+.pg-out li::before{content:counter(o,decimal-leading-zero);font:700 14px/1.9 var(--display);color:var(--teal-ink);font-variant-numeric:tabular-nums}
+.pg-make{list-style:none;margin:0 0 20px;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.pg-make{counter-reset:mk}
+.pg-make li{counter-increment:mk;display:flex;flex-direction:column;gap:2px;justify-content:center;min-height:60px;padding:10px 12px;border-top:2px solid var(--navy);background:var(--grey);font:600 15px/1.2 var(--body)}
+.pg-make li::before{content:counter(mk,decimal-leading-zero);font:700 11.5px/1 var(--display);color:var(--teal-ink)}
+/* steps: a vertical line with nodes */
+.pg-steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.pg-steps li{counter-increment:s;position:relative;display:grid;gap:4px;padding:0 0 24px;padding-inline-start:48px}
+.pg-steps li::before{content:counter(s);position:absolute;inset-inline-start:0;top:0;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;font:700 13px/30px var(--display);text-align:center}
+.pg-steps li::after{content:"";position:absolute;inset-inline-start:14.5px;top:34px;bottom:4px;width:1px;background:var(--rule-2)}
+.pg-steps li:last-child{padding-bottom:0}.pg-steps li:last-child::after{display:none}
+.pg-steps b{font:700 17px/1.35 var(--display);color:var(--ink);padding-top:3px}
+.pg-steps span{font-size:15.5px;line-height:1.5;color:var(--ink-2)}
+/* FAQ */
+.pg-faq{border-top:1px solid var(--rule)}
+.pg-faq details{border-bottom:1px solid var(--rule)}
+.pg-faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:56px;padding:14px 0;cursor:pointer;font:600 16.5px/1.4 var(--body);color:var(--ink)}
+.pg-faq summary::-webkit-details-marker{display:none}
+.pg-faq summary::after{content:"";flex:0 0 12px;height:12px;background:linear-gradient(var(--ink),var(--ink)) center/12px 1.6px no-repeat,linear-gradient(var(--ink),var(--ink)) center/1.6px 12px no-repeat;transition:transform .2s}
+.pg-faq details[open] summary::after{transform:rotate(45deg)}
+.pg-faq summary:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.pg-faq p{margin:0 0 18px;font-size:15.5px;line-height:1.6;color:var(--ink-2);max-width:60ch}
+/* pathways rows */
+.pw-list{border-top:1px solid var(--rule)}
+.pw-row{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px 24px;align-items:center;padding:20px 0;border-bottom:1px solid var(--rule)}
+.pw-row b{font:700 19px/1.3 var(--display)}
+.pw-row p{margin:4px 0 0;font-size:15px;color:var(--ink-2);max-width:48ch}
+.pw-when{font-size:14px;font-weight:600;color:var(--ink);white-space:nowrap;padding:4px 10px;border-radius:999px;background:var(--grey)}
+.pw-row .btn{white-space:nowrap}
+/* other programmes */
+.pg-more{background:var(--grey);border-top:1px solid var(--rule);padding:clamp(40px,5vw,64px) 0}
+.pg-more h2{font-family:var(--display);font-size:clamp(20px,1.8vw,24px);margin:0 0 18px;letter-spacing:-.02em}
+.pg-more-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:var(--r);overflow:hidden}
+.pg-more a{position:relative;display:flex;flex-direction:column;gap:4px;padding:18px 44px 18px 18px;background:#fff;text-decoration:none;color:var(--ink);min-height:96px;transition:background .15s}
+[dir="rtl"] .pg-more a{padding:18px 18px 18px 44px}
+.pg-more a:hover{background:#FAFAFC}
+.pg-more small{font-size:13px;color:var(--ink-3)}
+.pg-more b{font:700 16px/1.3 var(--display)}
+.pg-more .ic-ar{position:absolute;inset-inline-end:16px;top:20px;color:var(--teal-ink);transition:transform .2s}
+.pg-more a:hover .ic-ar{transform:translateX(3px)}
+[dir="rtl"] .pg-more a:hover .ic-ar{transform:scaleX(-1) translateX(3px)}
+.page .back{position:relative;z-index:2}
+
+/* ---- tablet and phone ---- */
+@media (max-width:1000px){
+  .pg-more-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .pg-make{grid-template-columns:repeat(5,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .pg-head{padding-top:0;border-bottom:0}
+  .pg-head-grid{grid-template-columns:1fr;gap:24px}
+  .pg-img{order:-1;margin:0 calc(-1*max(var(--edge),env(safe-area-inset-left)));border-radius:0;aspect-ratio:auto;height:clamp(200px,42vw,340px)}
+  .pg-facts{grid-template-columns:1fr 1fr;margin-top:28px;border:1px solid var(--rule);border-radius:var(--r);overflow:hidden}
+  .pg-facts>div,.pg-facts>div+div{padding:14px 16px;background:var(--grey);border-inline-end:0}
+  .pg-facts>div:nth-child(odd){border-inline-end:1px solid var(--rule)}
+  .pg-facts>div:nth-child(n+3){border-top:1px solid var(--rule)}
+  .pg-facts dd,.pg-facts dd>span:only-child{font-size:15.5px}
+  .pg-facts dd span{font-size:14px}
+  .pg-body{grid-template-columns:minmax(0,1fr);grid-template-areas:"a" "aside" "b";padding-top:40px}
+  .pg-aside{position:static;margin-top:40px}
+    .pg-b .pg-sec{margin-top:48px}
+  .pw-row{grid-template-columns:minmax(0,1fr) auto}
+  .pw-row>div{grid-column:1/-1}
+  .pw-row .btn{justify-self:end}
+}
+@media (max-width:640px){
+  .pg h1{font-size:clamp(30px,8.4vw,40px)}
+  .pg-cta{margin-top:22px}
+  .pg-cta .btn{width:100%}
+  .pg-note{width:100%;justify-content:center}
+  .pg-more-grid{grid-template-columns:1fr}
+  .pg-more a{min-height:0;padding-block:14px}
+  .pg-make{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pg-out li{font-size:16px;grid-template-columns:36px minmax(0,1fr)}
+  .pg-aside .card.fx{margin-inline:calc(-1*var(--edge));border-radius:0;border-inline:0;box-shadow:none}
+  .reach .card.fx{margin-inline:calc(-1*var(--edge));border-radius:0;border-inline:0}
+}
+@media (max-width:360px){
+  .pg-facts{grid-template-columns:1fr}
+  .pg-facts>div:nth-child(odd){border-inline-end:0}
+  .pg-facts>div:nth-child(n+2){border-top:1px solid var(--rule)}
+}
+
+/* phones: the bottom bar waits until the header button has scrolled away */
+html.on-page.cta-in-view .bar{transform:translateY(110%)}
+.card.fx.sent form,.card.fx.sent .why{display:none}
+.card.fx .f.bad input:focus,.card.fx .f.bad textarea:focus{border-color:#C0303B;box-shadow:0 0 0 3px rgba(192,48,59,.2)}
+
+</style>
 </head>
 <body>
 <header class="nav" id="nav">
@@ -629,8 +1068,8 @@ html.at-top .bar{transform:translateY(110%)}
   </div>
 </header>
 
-<main id="home">
 
+<main id="home">
 <section class="scrolly" id="top">
     <div class="vp" id="vp">
       <canvas id="gl" aria-hidden="true"></canvas>
@@ -644,414 +1083,347 @@ html.at-top .bar{transform:translateY(110%)}
       <div class="ov ov-hero ov-split" data-stack="1" data-a="-1" data-b="0.065">
         <div class="eyebrow"><span data-t="eb.1">Alkhwarizmi AI Academy</span><i></i><span class="eb-t" data-t="eb.2">Tripoli</span><span class="eb-no1" data-t="eb.3">Nº 01 in Libya</span></div>
         <h1 data-t="hero.h1">Intelligence, made in Libya.</h1>
-        <p data-t="hero.lead">Live classes, in Arabic first, on a campus in Tripoli. Five days for leaders, two weeks for makers, ten hours for everyone.</p>
+        <p data-t="hero.lead">Live AI classes in Arabic, on a campus in Tripoli.</p>
         <div class="ctas">
           <a class="pill pill-teal pill-xl glow" href="#executive" data-t="hero.cta1">Book a free call</a>
-          <a class="quiet" href="#programmes" data-t="hero.cta2">or see the three programmes</a>
+          <a class="quiet" href="#who" data-t="hero.cta2">or find your programme</a>
         </div>
       </div>
       <div class="hint" id="hint" aria-hidden="true"><span></span><em style="font-style:normal" data-t="hint">Scroll to enter</em></div>
 
       <div class="ov ov-dark ov-top ov-book" data-a="0.29" data-b="0.45">
         <p class="kicker" data-t="k1">How it works</p>
-        <h2 data-t="ov1.h">Anyone can watch a video about AI.</h2>
-        <p class="sub" data-t="ov1.p">Very few finish it. Here you learn live, in the room, in Arabic first.</p>
+        <h2 data-t="ov1.h">Taught in a room, in Arabic.</h2>
+        <p class="sub" data-t="ov1.p">Small classes, with a teacher who answers your questions.</p>
       </div>
 
       <div class="ov ov-dark ov-left" data-a="0.55" data-b="0.69">
-        <p class="kicker" data-t="k2">Every pathway ends with proof</p>
-        <h2 data-t="ov2.h">Then you build.</h2>
-        <p class="sub" data-t="ov2.p">A portfolio. A working app. A ninety-day plan. An AI roadmap for your own organisation. Real things, made in Libya.</p>
+        <p class="kicker" data-t="k2">The result</p>
+        <h2 data-t="ov2.h">You leave with work you made.</h2>
+        <p class="sub" data-t="ov2.p">A plan for your organisation, an app, or a certificate.</p>
       </div>
 
       <div class="ov ov-light ov-split ov-final" data-stack="1" data-a="0.86" data-b="1.2">
-        <h2 data-t="ov3.h">Three programmes. One room in Tripoli. Pick yours.</h2>
+        <h2 data-t="ov3.h">Three programmes start in November.</h2>
         <div class="ctas">
           <a class="pill pill-teal pill-xl glow" href="#executive" data-t="hero.cta1">Book a free call</a>
-          <a class="quiet" href="#programmes" data-t="hero.cta2">or see the three programmes</a>
+          <a class="quiet" href="#who" data-t="hero.cta2">or find your programme</a>
         </div>
       </div>
 
       <div class="progress" aria-hidden="true"><i id="bar"></i></div>
     </div>
   </section>
-
-
-
-
-
-
-
-
-<!-- Watch: ninety seconds inside the academy, and the router form -->
-<section class="slide" id="watch" data-title="Watch">
-  <div class="slide-in">
-    <div class="copy">
-      <p class="kick" data-t="w.k">Inside the academy</p>
-      <h2 data-t="w.h">Ninety seconds inside Libya's first AI academy.</h2>
-      <div class="player" id="player">
-        <button type="button" class="play" id="playBtn" aria-label="Play the video"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#09C98E"/><path d="M19 15l14 9-14 9z" fill="#111128"/></svg></button>
-        <svg class="poster-mark" viewBox="47 57 338 333" aria-hidden="true"><use href="#logo-path"/></svg>
-        <span class="poster-note" id="posterNote" data-t="w.soon">Film arriving 30 October</span>
-      </div>
-      <p class="vid-cap" data-t="w.cap">Filmed on campus, Zawiat Dahmani Street, Tripoli.</p>
+<section class="who" id="who">
+  <div class="wrap">
+    <p class="runhead"><span data-t="who.k">Start here</span></p>
+    <h2 data-t="who.h">Which of these is you?</h2>
+    <div class="who-grid">
+      <a class="tile" href="#executive">
+        <span class="tile-k" data-t="who.1k">I run an organisation</span>
+        <span class="tile-t" data-t="who.1t">Executive AI Path</span>
+        <span class="tile-p" data-t="who.1p">Five days. An AI strategy and a 90-day plan for your own organisation. Seven seats, starts 15 November.</span>
+        <span class="tile-go" data-t="who.1g">See the five days</span>
+      </a>
+      <a class="tile" href="#productivity">
+        <span class="tile-k" data-t="who.2k">I make things</span>
+        <span class="tile-t" data-t="who.2t">AI Productivity</span>
+        <span class="tile-p" data-t="who.2p">Two weeks. Bring the project you are working on and leave with it built. Ten seats, founding cohort in November.</span>
+        <span class="tile-go" data-t="who.2g">See the two weeks</span>
+      </a>
+      <a class="tile" href="#everyone">
+        <span class="tile-k" data-t="who.3k">I'm starting from zero</span>
+        <span class="tile-t" data-t="who.3t">AI for Everyone</span>
+        <span class="tile-p" data-t="who.3p">Five evenings in Arabic. A phone is enough. Thirty seats a month, most of them free in a sponsored cohort.</span>
+        <span class="tile-go" data-t="who.3g">See the five evenings</span>
+      </a>
+      <a class="tile" href="#sponsor">
+        <span class="tile-k" data-t="who.4k">I want to sponsor</span>
+        <span class="tile-t" data-t="who.4t">AI Literacy Initiative</span>
+        <span class="tile-p" data-t="who.4p">Fund one month of AI for Everyone: thirty people, free to them, your name on every certificate. 36,000 LYD.</span>
+        <span class="tile-go" data-t="who.4g">See how sponsorship works</span>
+      </a>
     </div>
-    <div class="card" data-form="start">
-      <h3 data-t="start.h">Tell us who you are</h3>
+    <p class="who-also"><a href="#companies" data-t="who.co">Training for a whole team on your own data</a> <span class="sep">·</span> <a href="#pathways" data-t="who.pw">Diploma, kids and policymakers, opening 2027</a></p>
+  </div>
+</section>
+
+<section class="whynow short" id="start">
+  <div class="wrap why-grid">
+    <div class="why-copy">
+      <p class="runhead"><span data-t="why.k">Why now, in Libya</span></p>
+      <h2 data-t="why.h2">Almost every Libyan is online. Almost nobody has been taught how these tools work.</h2>
+    </div>
+    <dl class="figures">
+      <div><dt>88.5%</dt><dd data-t="why.f1">of Libyans use the internet</dd></div>
+      <div><dt>94%</dt><dd data-t="why.f2">of mobile use is on 4G or 5G</dd></div>
+      <div><dt>0</dt><dd data-t="why.f4">AI academies in Libya before this one</dd></div>
+      <dd class="src" data-t="why.src">Figures: DataReportal, Digital 2026: Libya.</dd>
+    </dl>
+  </div>
+  <p class="band-cap" data-t="why.cap">Tripoli at night, from the harbour.</p>
+</section>
+
+<section class="inside" id="watch">
+  <div class="wrap inside-grid">
+    <div class="player" id="player">
+      <button type="button" class="play" id="playBtn" aria-label="Play the video"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#09C98E"/><path d="M19 15l14 9-14 9z" fill="#111128"/></svg></button>
+      <svg class="poster-mark" viewBox="47 57 338 333" aria-hidden="true"><use href="#logo-path"/></svg>
+      <span class="poster-note" id="posterNote" data-t="w.soon">Film arriving 30 October</span>
+    </div>
+    <div class="inside-copy" id="about">
+      <p class="runhead"><span data-t="in.k">Inside the academy</span></p>
+      <h2 data-t="in.h">One classroom on Zawiat Dahmani Street, Tripoli.</h2>
+      <p data-t="in.p">Classes of seven to thirty people, taught in Arabic by a teacher who knows your name. Come and sit in on one before you decide.</p>
+      <div class="inside-act">
+        <a class="btn btn-navy wa-link" href="#contact" data-t="in.btn">Arrange a visit on WhatsApp</a>
+        <a class="tlink" href="https://maps.google.com/?q=Zawiat+Dahmani+Street,+Tripoli,+Libya" target="_blank" rel="noopener" data-t="in.map">Open in Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reach" id="contact">
+  <div class="wrap reach-grid">
+    <div class="reach-copy">
+      <p class="runhead"><span data-t="ct.k">Contact</span></p>
+      <h2 data-t="rc.h">Not sure which programme fits? Ask us.</h2>
+      <p data-t="rc.p">A person from the academy replies on WhatsApp within one working day.</p>
+      <dl class="addr">
+        <div class="wa-only"><dt data-t="ct.wa">WhatsApp</dt><dd><a class="wa-link wa-num" href="#"></a></dd></div>
+        <div><dt data-t="ct.email">Email</dt><dd><a href="mailto:admin@alkhawarizmi.ai">admin@alkhawarizmi.ai</a></dd></div>
+        <div><dt data-t="ct.campus">Campus</dt><dd data-t="ct.addr">Zawiat Dahmani Street, Tripoli</dd></div>
+      </dl>
+    </div>
+    <div class="card fx" data-form="start">
+      <div class="fx-head"><h3 data-t="start.h">Tell us who you are</h3><p class="reply"><i class="dot" aria-hidden="true"></i><span data-t="f.who">A person replies, never a bot.</span></p></div>
       <p class="why" data-t="start.why">We reply on WhatsApp within one working day with the right programme and dates.</p>
       <form novalidate>
-        <div class="seg" role="radiogroup">
-          <label><input type="radio" name="iam" value="leader" checked><span data-t="start.lead">I lead an organisation</span></label>
-          <label><input type="radio" name="iam" value="learner"><span data-t="start.learn">I want a new skill</span></label>
-          <label><input type="radio" name="iam" value="sponsor"><span data-t="start.sponsor">I want to sponsor</span></label>
-        </div>
-        <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
-        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
-        <input class="hp" name="website" tabindex="-1" autocomplete="off">
-        <button class="btn btn-navy" type="submit" data-t="start.btn">Send and get my programme</button>
-        <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
-        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
+        <fieldset class="f fs"><legend class="fl"><span data-t="f.iam">Which is closest to you?</span></legend><div class="seg seg1"><label><input type="radio" name="iam" value="leader" checked><span data-t="start.lead">I lead an organisation</span></label><label><input type="radio" name="iam" value="learner"><span data-t="start.learn">I want a new skill</span></label><label><input type="radio" name="iam" value="sponsor"><span data-t="start.sponsor">I want to sponsor</span></label></div></fieldset><label class="f"><span class="fl"><span data-t="f.name">Your name</span></span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label><label class="f"><span class="fl"><span data-t="f.whatsapp">WhatsApp number</span></span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" dir="ltr" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-navy" type="submit"><span data-t="start.btn">Send and get my programme</span><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <p class="err" role="alert" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
+        <p class="assure" data-t="f.assure5">Nothing to pay. No mailing list.</p>
+        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#contact" data-t="f.wa">WhatsApp</a></p>
       </form>
-      <div class="done"><b data-t="done.h">Received.</b><span data-t="done.p">We will reply on WhatsApp within one working day.</span> <a class="wa-link" href="#" data-t="done.wa">Message us now</a><p class="next"><a class="next-link" href="#programmes" data-t="start.n2">Meanwhile, see the programmes</a><span hidden data-t="start.n1">Meanwhile, see the Executive AI Path</span><span hidden data-t="start.n3">Meanwhile, see how sponsorship works</span></p></div>
-    </div>
-  </div>
-</section>
-
-<section class="slide grey" id="programmes">
-  <div class="slide-in one">
-    <div class="copy">
-      <p class="kick" data-t="pg.k">Programmes</p>
-      <h2 data-t="pg.h">Three ways in. Pick yours.</h2>
-      <dl class="rows progs">
-        <div><span class="glyph photo"><img src="media/prog-executive.webp" width="400" height="400" alt="Leather notebook open on a 90-day roadmap beside a glass of Libyan tea" loading="lazy" decoding="async"></span><dt data-t="exec.k">Executive AI Path</dt><dd data-t="pg.1">Five days. Nine deliverables for your own organisation. For CEOs, directors and heads of department.</dd><dd class="when" data-t="pg.1m">5 days · next cohort starts 15 November</dd><dd class="go"><a class="btn btn-teal btn-sm" href="#executive" data-t="pg.1b">See the five days</a></dd></div>
-        <div><span class="glyph photo"><img src="media/prog-productivity.webp" width="400" height="400" alt="A phone running a student-built app beside wireframe sketches and a Tripoli window grille" loading="lazy" decoding="async"></span><dt data-t="prod.k">AI Productivity <small class="byo" data-t="prod.byo">Bring your own project</small></dt><dd data-t="pg.2">Two weeks. Ten things you made: an app, a video, a campaign, an automation. For creators, marketers and founders.</dd><dd class="when" data-t="pg.2m">2 weeks · founding cohort, November</dd><dd class="go"><a class="btn btn-navy btn-sm" href="#productivity" data-t="pg.2b">See the two weeks</a></dd></div>
-        <div><span class="glyph photo"><img src="media/prog-everyone.webp" width="400" height="400" alt="A certificate with a teal seal beside reading glasses, a mosaic tile and jasmine" loading="lazy" decoding="async"></span><dt data-t="every.k">AI for Everyone</dt><dd data-t="pg.3">Ten hours over five evenings, in Arabic. No background needed, a phone is enough.</dd><dd class="when" data-t="pg.3m">10 hours · a new cohort every month</dd><dd class="go"><a class="btn btn-navy btn-sm" href="#everyone" data-t="pg.3b">See the five evenings</a></dd></div>
-      </dl>
-      <p class="also"><span data-t="pg.also">For organisations:</span> <a href="#sponsor" data-t="pg.a1">Sponsor a month</a><a href="#companies" data-t="pg.a2">Train your team</a></p>
-      <p class="also soon"><a href="#pathways" data-t="pg.a3">Opening in 2027: diploma, kids, policymakers</a></p>
-    </div>
-  </div>
-</section>
-
-<!-- Why now: a slim band of facts -->
-<section class="slide dark band" id="start" data-title="Why now">
-  <p class="band-cap" data-t="why.cap">Tripoli at night.</p>
-  <div class="slide-in">
-    <div class="copy">
-      <p class="kick" data-t="why.k">Why now</p>
-      <h2 data-t="why.h">Libya is online. Almost nobody is trained.</h2>
-      <p class="lead" data-t="why.lead">The AI tools people use at work change every few weeks. Until now there was nowhere in Libya to learn them live, in Arabic.</p>
-    </div>
-    <div class="facts">
-        <div class="fact"><b data-t="why.f1b">9 in 10</b><span data-t="why.f1">Libyans are online</span></div>
-        <div class="fact"><b data-t="why.f2b">94%</b><span data-t="why.f2">of Libyan mobile use is on 4G or 5G</span></div>
-        <div class="fact"><b data-t="why.f3b">Zero</b><span data-t="why.f3">AI academies in Libya before this one</span></div>
-      </div>
-  </div>
-</section>
-
-<!-- 9 · Why Alkhwarizmi -->
-<section class="slide dark photo" id="about" data-title="At the academy">
-  <div class="slide-in">
-    <div class="copy">
-      <p class="kick" data-t="ab.k">At the academy</p>
-      <h2 data-t="ab.h">Taught in a room, not a tab.</h2>
-      <ul class="proof">
-        <li><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="10" width="36" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="42" r="3" fill="currentColor"/><circle cx="31" cy="42" r="3" fill="currentColor"/><path d="M12 20h24M12 26h14" stroke="#09C98E" stroke-width="2.5" stroke-linecap="round"/></svg><b data-t="ab.t1">Live, in the room</b><span data-t="ab.t1s">A classroom on Zawiat Dahmani Street, not a video. Seven to thirty people, and a teacher who knows your name.</span></li>
-        <li><svg viewBox="0 0 48 48" aria-hidden="true"><text x="24" y="33" text-anchor="middle" font-family="'Noto Kufi Arabic','IBM Plex Sans Arabic',sans-serif" font-size="26" font-weight="700" fill="currentColor">ع</text><path d="M8 40h32" stroke="#09C98E" stroke-width="2.5" stroke-linecap="round"/></svg><b data-t="ab.t2">Arabic first</b><span data-t="ab.t2s">Taught in Arabic, with English for the terms the industry already uses.</span></li>
-        <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 6h18l8 8v28H12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M30 6v8h8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M18 28l5 5 9-11" fill="none" stroke="#09C98E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><b data-t="ab.t3">You leave with proof</b><span data-t="ab.t3s">A roadmap for your organisation, a working app, a portfolio. Never just notes.</span></li>
-      </ul>
-    </div>
-    <div class="card" data-form="visit">
-      <h3 data-t="ab.c.h">Visit the campus</h3>
-      <p class="who" data-t="f.who">A person replies, never a bot.</p>
-      <p class="why" data-t="ab.c.why">Come and see a class. Thirty minutes, no obligation.</p>
-      <form novalidate>
-        <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
-        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
-        <input class="hp" name="website" tabindex="-1" autocomplete="off">
-        <button class="btn btn-teal" type="submit" data-t="ab.c.btn">Book my visit</button>
-        <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
-        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
-      </form>
-      <div class="done"><b data-t="done.visit">Visit requested.</b><span data-t="done.p">We will reply on WhatsApp within one working day.</span> <a class="wa-link" href="#" data-t="done.wa">Message us now</a></div>
-    </div>
-  </div>
-</section>
-
-<!-- 10 · Contact -->
-<section class="slide grey compact" id="contact" data-title="Contact">
-  <div class="slide-in">
-    <div class="copy">
-      <p class="kick" data-t="ct.k">Contact</p>
-      <h2 data-t="ct.h">Ask us anything.</h2>
-      <p class="lead" data-t="ct.lead">A person from the academy replies within one working day, never a bot.</p>
-      <div class="contact">
-        <div class="wa-only"><span data-t="ct.wa">WhatsApp</span><a class="wa-link wa-num" href="#"></a></div>
-        <div><span data-t="ct.email">Email</span><a href="mailto:admin@alkhawarizmi.ai">admin@alkhawarizmi.ai</a></div>
-        <div><span data-t="ct.campus">Campus</span><a href="https://maps.google.com/?q=Zawiat+Dahmani+Street,+Tripoli,+Libya" target="_blank" rel="noopener" data-t="ct.addr">Zawiat Dahmani Street, Tripoli, Libya</a></div>
-      </div>
-      <figure class="place"><img src="media/lobby-dusk.webp" width="1920" height="1008" alt="The academy reception at dusk, with the K logo and the lightbox" loading="lazy" decoding="async"><figcaption data-t="ct.figcap">Reception, first floor. Walk in, the tea is on us.</figcaption></figure>
-    </div>
-    <div class="card" data-form="question">
-      <h3 data-t="ct.c.h">Send a question</h3>
-      <p class="why" data-t="ct.c.why">Content, dates, fees, or training for your team.</p>
-      <form novalidate>
-        <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
-        <label class="f"><span data-t="f.reach">WhatsApp number or email</span><input name="phone" autocomplete="tel" required></label>
-        <label class="f"><span data-t="f.q">Your question</span><textarea name="need" required></textarea></label>
-        <input class="hp" name="website" tabindex="-1" autocomplete="off">
-        <button class="btn btn-navy" type="submit" data-t="ct.c.btn">Send my question</button>
-        <p class="err" data-t="f.err4">Please add your name, a way to reach you and your question.</p>
-      </form>
-      <div class="done"><b data-t="done.q">Question sent.</b><span data-t="ct.done">We reply within one working day.</span></div>
+      <div class="done" role="status" tabindex="-1"><svg class="ic-ok" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#09C98E"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#111128" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-t="done.h">Received.</b><span data-t="done.p">We will reply on WhatsApp within one working day.</span> <a class="wa-link" href="#contact" data-t="done.wa">Message us now</a><p class="next"><a class="next-link" href="#who" data-t="start.n2">Meanwhile, see the programmes</a><span hidden data-t="start.n1">Meanwhile, see the Executive AI Path</span><span hidden data-t="start.n3">Meanwhile, see how sponsorship works</span></p></div></div>
     </div>
   </div>
 </section>
 
 </main>
 
+
 <div id="pages">
 <div class="page" id="executive" hidden>
-<div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
-<figure class="page-hero"><img src="media/head-executive-2000.webp" srcset="media/head-executive-1000.webp 1000w, media/head-executive-2000.webp 2000w" sizes="100vw" width="2000" height="851" alt="Executives round a table at the academy, a 90-day roadmap on screen and Tripoli at dusk behind them" decoding="async"></figure>
-<!-- 3 · Executive AI Path -->
-<section class="slide" id="s-executive" data-title="Executives">
-  <div class="slide-in">
-    <div class="copy">
-      <p class="kick" data-t="exec.k">Executive AI Path</p>
-      <h2 data-t="exec.h">Five days. Nine deliverables for your own organisation.</h2>
-      <p class="lead" data-t="exec.lead">For CEOs, directors and heads of department. You don't leave with notes. You leave with an AI strategy for your organisation, a 90-day roadmap with a budget attached, and the questions that stop a vendor selling you the wrong thing.</p>
-      <figure class="fig"><svg class="fig-svg" viewBox="0 0 460 130" role="img" aria-label="Five days, nine deliverables, ending in a 90-day roadmap" font-family="var(--body)" font-size="12"><line x1="20" y1="60" x2="440" y2="60" stroke="var(--fig-rule)" stroke-width="1.5"/><circle cx="36" cy="60" r="6" fill="var(--fig-ink)"/><text x="36" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.sun">Sun</text><circle cx="114" cy="60" r="6" fill="var(--fig-ink)"/><text x="114" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.mon">Mon</text><circle cx="192" cy="60" r="6" fill="var(--fig-ink)"/><text x="192" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.tue">Tue</text><circle cx="270" cy="60" r="6" fill="var(--fig-ink)"/><text x="270" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.wed">Wed</text><circle cx="348" cy="60" r="6" fill="var(--fig-ink)"/><text x="348" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.thu">Thu</text><rect x="22" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="100" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="100" y="14" width="28" height="12" rx="2" fill="#09C98E"/><rect x="178" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="178" y="14" width="28" height="12" rx="2" fill="#09C98E"/><rect x="256" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="256" y="14" width="28" height="12" rx="2" fill="#09C98E"/><rect x="334" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="334" y="14" width="28" height="12" rx="2" fill="#534CB6"/><rect x="394" y="18" width="12" height="12" rx="2" fill="#534CB6"/><text x="412" y="28" fill="var(--fig-ink)" font-weight="600" data-t="fig.ex1">9 deliverables</text><text x="230" y="118" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="fig.ex2">Five days. You leave with a 90-day roadmap and the budget to match.</text></svg><figcaption data-t="fig.cap.ex">Figure 2. The five days, and what stacks up.</figcaption></figure>
-      <ul class="list">
-        <li data-t="exec.l1">Size the AI opportunity in your organisation in numbers your CFO will accept</li>
-        <li data-t="exec.l2">Know where AI breaks: leaked data, confident wrong answers, manipulated instructions, and the controls to demand</li>
-        <li data-t="exec.l3">Read a vendor pitch and a contract without being locked in</li>
-        <li data-t="exec.l4">Finish with a one-page AI strategy, a 90-day roadmap and a private advisory session on your own plan</li>
-      </ul>
-      <p class="meta"><b data-t="exec.m1">5 days, Sunday to Thursday</b><span data-t="exec.m2">20 hours, 14 sessions, 5 hands-on labs</span><span data-t="exec.m3">7 seats a cohort</span></p>
-      <p class="price">10,200 <small data-t="cur">LYD a seat</small></p>
+<div class="back"><div class="back-in"><a href="#who" data-t="back">← All programmes</a></div></div>
+<article class="pg" aria-labelledby="h-executive">
+  <header class="pg-head">
+    <div class="pg-wrap pg-head-grid">
+      <div class="pg-intro">
+        <p class="pg-kick" data-t="exec.k">Executive AI Path</p>
+        <h1 id="h-executive" data-t="exec.h">Five days. Nine deliverables for your own organisation.</h1>
+        <p class="pg-lead" data-t="exec.lead">For CEOs, directors and heads of department. You don't leave with notes. You leave with an AI strategy for your organisation, a 90-day roadmap with a budget attached, and the questions that stop a vendor selling you the wrong thing.</p>
+        <div class="pg-cta"><a class="btn btn-teal" href="#f-executive" data-jump="f-executive"><span data-t="exec.c.h">Book a free 20-minute call</span><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="pg-note" data-t="f.nopay">Nothing to pay now</span></div>
+      </div>
+      <figure class="pg-img"><img src="media/head-executive-2000.webp" srcset="media/head-executive-1000.webp 1000w, media/head-executive-2000.webp 2000w" sizes="(min-width: 1000px) 46vw, 100vw" width="2000" height="851" alt="Executives round a table at the academy, a 90-day roadmap on screen and Tripoli at dusk behind them" decoding="async" fetchpriority="high"></figure>
     </div>
-    <div class="card" data-form="exec-call" data-program="Executive AI Path">
-      <h3 data-t="exec.c.h">Book a free 20-minute call</h3>
-      <p class="who" data-t="f.who">A person replies, never a bot.</p>
+    <div class="pg-wrap"><dl class="pg-facts"><div><dt data-t="fx.next">Next start</dt><dd><span data-t="pg.1f3">Sunday 15 November 2026</span></dd></div><div><dt data-t="fx.len">Length</dt><dd><span data-t="pg.1f1">5 days, Sunday to Thursday, 20 hours</span></dd></div><div><dt data-t="fx.seats">Seats</dt><dd><span data-t="pg.1f2">7 a cohort</span></dd></div><div><dt data-t="fx.fee">Fee</dt><dd>10,200 <span data-t="cur">LYD a seat</span></dd></div></dl></div>
+  </header>
+  <div class="pg-wrap pg-body">
+    <div class="pg-a"><section class="pg-sec"><h2 data-t="pg.out1">What you leave with</h2><ol class="pg-out"><li><span data-t="exec.l1">Size the AI opportunity in your organisation in numbers your CFO will accept</span></li><li><span data-t="exec.l2">Know where AI breaks: leaked data, confident wrong answers, manipulated instructions, and the controls to demand</span></li><li><span data-t="exec.l3">Read a vendor pitch and a contract without being locked in</span></li><li><span data-t="exec.l4">Finish with a one-page AI strategy, a 90-day roadmap and a private advisory session on your own plan</span></li></ol></section><section class="pg-sec"><h2 data-t="pg.how1">How the week runs</h2><ol class="pg-steps"><li><b data-t="ex.h1">Mornings, Sunday to Thursday</b><span data-t="ex.h1s">Four hours a day, so you are back at work by the afternoon.</span></li><li><b data-t="ex.h2">14 sessions, 5 hands-on labs</b><span data-t="ex.h2s">Built on your own organisation's questions, not generic case studies.</span></li><li><b data-t="ex.h3">Seven people in the room</b><span data-t="ex.h3s">The week runs as a working group, not a lecture.</span></li><li><b data-t="ex.h4">A private advisory session</b><span data-t="ex.h4s">The week closes with time on your own plan, one to one.</span></li></ol></section></div>
+    <aside class="pg-aside" id="f-executive"><div class="card fx" data-form="exec-call" data-program="Executive AI Path">
+      <div class="fx-head"><h3 data-t="exec.c.h">Book a free 20-minute call</h3><p class="reply"><i class="dot" aria-hidden="true"></i><span data-t="f.who">A person replies, never a bot.</span></p></div>
       <p class="why" data-t="exec.c.why">Next cohort starts Sunday 15 November 2026. An academy director calls you, answers your questions and holds a seat if it fits. Nothing to pay now.</p>
       <form novalidate>
-        <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
-        <div class="row2">
-          <label class="f"><span data-t="f.role">Role</span><input name="role" autocomplete="organization-title"></label>
-          <label class="f"><span data-t="f.org">Organisation</span><input name="org" autocomplete="organization" autocapitalize="words" enterkeyhint="next"></label>
-        </div>
-        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
-        <label class="f"><span data-t="f.when">Best time to call</span>
-          <select name="when"><option value="morning" data-t="o.morning">Morning</option><option value="afternoon" data-t="o.afternoon">Afternoon</option><option value="evening" data-t="o.evening">Evening</option></select></label>
-        <input class="hp" name="website" tabindex="-1" autocomplete="off">
-        <button class="btn btn-teal" type="submit" data-t="exec.c.btn">Book my call</button>
-        <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
-        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
+        <label class="f"><span class="fl"><span data-t="f.name">Your name</span></span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label><div class="row2"><label class="f"><span class="fl"><span data-t="f.role">Role</span><em class="opt" data-t="f.opt">Optional</em></span><input name="role" autocomplete="organization-title" enterkeyhint="next"></label><label class="f"><span class="fl"><span data-t="f.org">Organisation</span><em class="opt" data-t="f.opt">Optional</em></span><input name="org" autocomplete="organization" autocapitalize="words" enterkeyhint="next"></label></div><label class="f"><span class="fl"><span data-t="f.whatsapp">WhatsApp number</span></span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" dir="ltr" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label><fieldset class="f fs"><legend class="fl"><span data-t="f.when">Best time to call</span></legend><div class="seg seg3"><label><input type="radio" name="when" value="morning" checked><span data-t="o.morning">Morning</span></label><label><input type="radio" name="when" value="afternoon"><span data-t="o.afternoon">Afternoon</span></label><label><input type="radio" name="when" value="evening"><span data-t="o.evening">Evening</span></label></div></fieldset>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-teal" type="submit"><span data-t="exec.c.btn">Book my call</span><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <p class="err" role="alert" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
+        <p class="assure" data-t="f.assure">Nothing to pay now. A reply within one working day.</p>
+        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#contact" data-t="f.wa">WhatsApp</a></p>
       </form>
-      <div class="done"><b data-t="done.call">Call requested.</b><span data-t="done.p">We will reply on WhatsApp within one working day.</span> <a class="wa-link" href="#" data-t="done.wa">Message us now</a></div>
-    </div>
+      <div class="done" role="status" tabindex="-1"><svg class="ic-ok" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#09C98E"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#111128" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-t="done.call">Call requested.</b><span data-t="done.p">We will reply on WhatsApp within one working day.</span> <a class="wa-link" href="#contact" data-t="done.wa">Message us now</a><p class="next"><a href="#who" data-t="done.more">See the other programmes</a></p></div></div>
+    </div></aside>
+    <div class="pg-b"><section class="pg-sec"><h2 data-t="pg.faq">Good to know</h2><div class="pg-faq"><details><summary><span data-t="q3">What does it cost, and when do I pay?</span></summary><p data-t="a3">The fee for each programme is on its page. Nothing is paid on the website. After you book, a director calls you, and if the programme fits, we hold the seat and send payment details by WhatsApp.</p></details><details><summary><span data-t="q4">What if I cannot attend every day?</span></summary><p data-t="a4">Tell us before the cohort starts. The executive week and the evening course both build on the previous session, so we would rather move you to the next cohort than have you miss two days.</p></details><details><summary><span data-t="q5">Can my company send several people?</span></summary><p data-t="a5">Yes. Two or three people from one organisation can join an open cohort. For a whole team we build a programme around your own data and run it at your site or ours; see Custom AI Training.</p></details></div></section></div>
   </div>
-</section>
+  <nav class="pg-more" aria-labelledby="more-executive"><div class="pg-wrap"><h2 id="more-executive" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#productivity"><small data-t="who.2k">I make things</small><b data-t="who.2t">AI Productivity</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#everyone"><small data-t="who.3k">I'm starting from zero</small><b data-t="who.3t">AI for Everyone</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#sponsor"><small data-t="who.4k">I want to sponsor</small><b data-t="who.4t">AI Literacy Initiative</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#companies"><small data-t="pg.ck">For a whole team</small><b data-t="co.k">Custom AI Training</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#pathways"><small data-t="pg.pk">Opening in 2027</small><b data-t="pw.k">More pathways</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
+</article>
 </div>
 <div class="page" id="productivity" hidden>
-<div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
-<figure class="page-hero"><img src="media/head-productivity-2000.webp" srcset="media/head-productivity-1000.webp 1000w, media/head-productivity-2000.webp 2000w" sizes="100vw" width="2000" height="851" alt="A student holds a phone running their own app while editing a video of the Tripoli corniche" decoding="async"></figure>
-<!-- 4 · AI Productivity -->
-<section class="slide" id="s-productivity" data-title="AI Productivity">
-  <div class="slide-in">
-    <div class="copy">
-      <p class="kick" data-t="prod.k">AI Productivity · Bring your own project</p>
-      <h2 data-t="prod.h">Two weeks. Ten things you made.</h2>
-      <p class="lead" data-t="prod.lead">For creators, marketers, founders and freelancers. Other courses teach you to understand AI. This one teaches you to produce with it. Bring the project you are working on: every lab over the two weeks feeds it, and you leave with it built.</p>
-      <figure class="fig"><svg class="fig-svg" viewBox="0 0 460 150" role="img" aria-label="Ten deliverables over two weeks, your own project running through" font-family="var(--body)" font-size="12"><rect x="20" y="14" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="59" y="35" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.app">App</text><rect x="106" y="14" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="145" y="35" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.auto">Automation</text><rect x="192" y="14" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="231" y="35" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.img">Image</text><rect x="278" y="14" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="317" y="35" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.brand">Brand</text><rect x="364" y="14" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="403" y="35" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.prompt">Prompts</text><rect x="20" y="66" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="59" y="87" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.video">Video</text><rect x="106" y="66" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="145" y="87" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.voice">Voice</text><rect x="192" y="66" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="231" y="87" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.music">Music</text><rect x="278" y="66" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="317" y="87" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.camp">Campaign</text><rect x="364" y="66" width="78" height="34" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="403" y="87" fill="var(--fig-ink)" text-anchor="middle" font-size="11.5" data-t="p.copy">Copy</text><path d="M14 57 C 80 50, 140 64, 230 57 S 380 50, 452 57" fill="none" stroke="#09C98E" stroke-width="3" stroke-linecap="round"/><text x="20" y="126" fill="var(--fig-ink)" font-weight="600" data-t="fig.pr1">Your own project runs through all ten.</text><text x="20" y="142" fill="var(--fig-ink)" fill="var(--fig-quiet)" data-t="fig.pr2">Week one, then week two.</text></svg><figcaption data-t="fig.cap.pr">Figure 3. Ten deliverables, one project.</figcaption></figure>
-      <ul class="list">
-        <li data-t="prod.l1">Week one: productivity, AI coding, automation, image and brand design</li>
-        <li data-t="prod.l2">Week two: AI video, voice and music, campaigns and copy</li>
-        <li data-t="prod.l3">By day three you ship your first app or video</li>
-        <li data-t="prod.l4">You leave with your own project built, and a portfolio you can show a client</li>
-      </ul>
-      <p class="meta"><b data-t="prod.m1">10 teaching days, Sunday to Thursday</b><span data-t="prod.m2">10 seats, live studio labs</span></p>
-      <p class="price">7,500 <small data-t="cur">LYD a seat</small></p>
+<div class="back"><div class="back-in"><a href="#who" data-t="back">← All programmes</a></div></div>
+<article class="pg" aria-labelledby="h-productivity">
+  <header class="pg-head">
+    <div class="pg-wrap pg-head-grid">
+      <div class="pg-intro">
+        <p class="pg-kick" data-t="prod.k">AI Productivity · Bring your own project</p>
+        <h1 id="h-productivity" data-t="prod.h">Two weeks. Ten things you made.</h1>
+        <p class="pg-lead" data-t="prod.lead">For creators, marketers, founders and freelancers. Other courses teach you to understand AI. This one teaches you to produce with it. Bring the project you are working on: every lab over the two weeks feeds it, and you leave with it built.</p>
+        <div class="pg-cta"><a class="btn btn-teal" href="#f-productivity" data-jump="f-productivity"><span data-t="prod.c.h">Reserve a seat</span><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="pg-note" data-t="f.nopay">Nothing to pay now</span></div>
+      </div>
+      <figure class="pg-img"><img src="media/head-productivity-2000.webp" srcset="media/head-productivity-1000.webp 1000w, media/head-productivity-2000.webp 2000w" sizes="(min-width: 1000px) 46vw, 100vw" width="2000" height="851" alt="A student holds a phone running their own app while editing a video of the Tripoli corniche" decoding="async" fetchpriority="high"></figure>
     </div>
-    <div class="card" data-form="prod-seat" data-program="AI Productivity">
-      <h3 data-t="prod.c.h">Reserve a seat</h3>
-      <p class="who" data-t="f.who">A person replies, never a bot.</p>
+    <div class="pg-wrap"><dl class="pg-facts"><div><dt data-t="fx.next">Next start</dt><dd><span data-t="pg.2f3">Founding cohort, November 2026</span></dd></div><div><dt data-t="fx.len">Length</dt><dd><span data-t="pg.2f1">2 weeks, 10 teaching days</span></dd></div><div><dt data-t="fx.seats">Seats</dt><dd><span data-t="pg.2f2">10 a cohort</span></dd></div><div><dt data-t="fx.fee">Fee</dt><dd>7,500 <span data-t="cur">LYD a seat</span></dd></div></dl></div>
+  </header>
+  <div class="pg-wrap pg-body">
+    <div class="pg-a"><section class="pg-sec"><h2 data-t="pg.out2">What you make</h2><ul class="pg-make"><li data-t="p.app">App</li><li data-t="p.auto">Automation</li><li data-t="p.img">Image</li><li data-t="p.brand">Brand</li><li data-t="p.prompt">Prompts</li><li data-t="p.video">Video</li><li data-t="p.voice">Voice</li><li data-t="p.music">Music</li><li data-t="p.camp">Campaign</li><li data-t="p.copy">Copy</li></ul><ol class="pg-out"><li><span data-t="prod.l3">By day three you ship your first app or video</span></li><li><span data-t="prod.l4">You leave with your own project built, and a portfolio you can show a client</span></li></ol></section><section class="pg-sec"><h2 data-t="pg.how2">How the two weeks run</h2><ol class="pg-steps"><li><b data-t="pr.h1">Week one</b><span data-t="pr.h1s">Productivity, AI coding, automation, image and brand design.</span></li><li><b data-t="pr.h2">Week two</b><span data-t="pr.h2s">AI video, voice and music, campaigns and copy.</span></li><li><b data-t="pr.h3">Studio labs, Sunday to Thursday</b><span data-t="pr.h3s">Ten seats, so every lab is hands-on with a teacher beside you.</span></li><li><b data-t="pr.h4">Your own laptop and phone</b><span data-t="dt.2">Studio work is built on your own phone and laptop.</span></li></ol></section></div>
+    <aside class="pg-aside" id="f-productivity"><div class="card fx" data-form="prod-seat" data-program="AI Productivity">
+      <div class="fx-head"><h3 data-t="prod.c.h">Reserve a seat</h3><p class="reply"><i class="dot" aria-hidden="true"></i><span data-t="f.who">A person replies, never a bot.</span></p></div>
       <p class="why" data-t="prod.c.why">Founding cohort, November 2026. Nothing to pay now; we confirm your seat and the dates on WhatsApp.</p>
       <form novalidate>
-        <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
-        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
-        <label class="f"><span data-t="f.make">What do you make?</span>
-          <select name="work"><option value="content" data-t="o.content">Content and social media</option><option value="marketing" data-t="o.marketing">Marketing</option><option value="business" data-t="o.business">I run a business</option><option value="freelance" data-t="o.freelance">Freelance work</option><option value="other" data-t="o.other">Something else</option></select></label>
-        <input class="hp" name="website" tabindex="-1" autocomplete="off">
-        <button class="btn btn-teal" type="submit" data-t="prod.c.btn">Reserve my seat</button>
-        <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
-        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
+        <label class="f"><span class="fl"><span data-t="f.name">Your name</span></span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label><label class="f"><span class="fl"><span data-t="f.whatsapp">WhatsApp number</span></span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" dir="ltr" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label><fieldset class="f fs"><legend class="fl"><span data-t="f.make">What do you make?</span></legend><div class="seg "><label><input type="radio" name="work" value="content" checked><span data-t="o.content">Content and social media</span></label><label><input type="radio" name="work" value="marketing"><span data-t="o.marketing">Marketing</span></label><label><input type="radio" name="work" value="business"><span data-t="o.business">I run a business</span></label><label><input type="radio" name="work" value="freelance"><span data-t="o.freelance">Freelance work</span></label><label><input type="radio" name="work" value="other"><span data-t="o.other">Something else</span></label></div></fieldset>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-teal" type="submit"><span data-t="prod.c.btn">Reserve my seat</span><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <p class="err" role="alert" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
+        <p class="assure" data-t="f.assure">Nothing to pay now. A reply within one working day.</p>
+        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#contact" data-t="f.wa">WhatsApp</a></p>
       </form>
-      <div class="done"><b data-t="done.seat">Seat requested.</b><span data-t="done.p">We will reply on WhatsApp within one working day.</span> <a class="wa-link" href="#" data-t="done.wa">Message us now</a></div>
-    </div>
+      <div class="done" role="status" tabindex="-1"><svg class="ic-ok" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#09C98E"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#111128" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-t="done.seat">Seat requested.</b><span data-t="done.p">We will reply on WhatsApp within one working day.</span> <a class="wa-link" href="#contact" data-t="done.wa">Message us now</a><p class="next"><a href="#who" data-t="done.more">See the other programmes</a></p></div></div>
+    </div></aside>
+    <div class="pg-b"><section class="pg-sec"><h2 data-t="pg.faq">Good to know</h2><div class="pg-faq"><details><summary><span data-t="q1">Do I need to know how to code?</span></summary><p data-t="a1">No. None of the three programmes assumes any programming. The studio programme builds apps and automations with tools that take instructions in plain language; the executive programme is about decisions, not code.</p></details><details><summary><span data-t="q3">What does it cost, and when do I pay?</span></summary><p data-t="a3">The fee for each programme is on its page. Nothing is paid on the website. After you book, a director calls you, and if the programme fits, we hold the seat and send payment details by WhatsApp.</p></details><details><summary><span data-t="q6">Is there a certificate?</span></summary><p data-t="a6">AI for Everyone ends with a Certificate of AI Literacy from the academy. The other two programmes end with a certificate of completion and, more usefully, the plan or the project you built.</p></details></div></section></div>
   </div>
-</section>
+  <nav class="pg-more" aria-labelledby="more-productivity"><div class="pg-wrap"><h2 id="more-productivity" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#executive"><small data-t="who.1k">I run an organisation</small><b data-t="who.1t">Executive AI Path</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#everyone"><small data-t="who.3k">I'm starting from zero</small><b data-t="who.3t">AI for Everyone</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#sponsor"><small data-t="who.4k">I want to sponsor</small><b data-t="who.4t">AI Literacy Initiative</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#companies"><small data-t="pg.ck">For a whole team</small><b data-t="co.k">Custom AI Training</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#pathways"><small data-t="pg.pk">Opening in 2027</small><b data-t="pw.k">More pathways</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
+</article>
 </div>
 <div class="page" id="everyone" hidden>
-<div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
-<figure class="page-hero"><img src="media/head-everyone-2000.webp" srcset="media/head-everyone-1000.webp 1000w, media/head-everyone-2000.webp 2000w" sizes="100vw" width="2000" height="851" alt="An evening class of all ages at the academy, Tripoli lit up outside the window" decoding="async"></figure>
-<!-- 5 · AI for Everyone -->
-<section class="slide grey" id="s-everyone" data-title="AI for Everyone">
-  <div class="slide-in">
-    <div class="copy">
-      <p class="kick" data-t="every.k">AI for Everyone</p>
-      <h2 data-t="every.h">Ten hours, and the conversation stops going over your head.</h2>
-      <p class="lead" data-t="every.lead">Five evenings, two hours each, Sunday to Thursday, in Arabic. No background needed. A phone is enough.</p>
-      <figure class="fig"><svg class="fig-svg" viewBox="0 0 460 120" role="img" aria-label="Five evenings of two hours with twelve labs" font-family="var(--body)" font-size="12"><rect x="20" y="16" width="76" height="48" rx="6" fill="#09C98E" fill-opacity="0.14" stroke="#09C98E" stroke-width="1.5"/><text x="58" y="36" fill="var(--fig-ink)" text-anchor="middle" font-weight="600">2 h</text><circle cx="38" cy="52" r="4" fill="var(--fig-ink)"/><circle cx="54" cy="52" r="4" fill="var(--fig-ink)"/><rect x="108" y="16" width="76" height="48" rx="6" fill="#09C98E" fill-opacity="0.14" stroke="#09C98E" stroke-width="1.5"/><text x="146" y="36" fill="var(--fig-ink)" text-anchor="middle" font-weight="600">2 h</text><circle cx="126" cy="52" r="4" fill="var(--fig-ink)"/><circle cx="142" cy="52" r="4" fill="var(--fig-ink)"/><circle cx="158" cy="52" r="4" fill="var(--fig-ink)"/><rect x="196" y="16" width="76" height="48" rx="6" fill="#09C98E" fill-opacity="0.14" stroke="#09C98E" stroke-width="1.5"/><text x="234" y="36" fill="var(--fig-ink)" text-anchor="middle" font-weight="600">2 h</text><circle cx="214" cy="52" r="4" fill="var(--fig-ink)"/><circle cx="230" cy="52" r="4" fill="var(--fig-ink)"/><circle cx="246" cy="52" r="4" fill="var(--fig-ink)"/><rect x="284" y="16" width="76" height="48" rx="6" fill="#09C98E" fill-opacity="0.14" stroke="#09C98E" stroke-width="1.5"/><text x="322" y="36" fill="var(--fig-ink)" text-anchor="middle" font-weight="600">2 h</text><circle cx="302" cy="52" r="4" fill="var(--fig-ink)"/><circle cx="318" cy="52" r="4" fill="var(--fig-ink)"/><rect x="372" y="16" width="76" height="48" rx="6" fill="#09C98E" fill-opacity="0.14" stroke="#09C98E" stroke-width="1.5"/><text x="410" y="36" fill="var(--fig-ink)" text-anchor="middle" font-weight="600">2 h</text><circle cx="390" cy="52" r="4" fill="var(--fig-ink)"/><circle cx="406" cy="52" r="4" fill="var(--fig-ink)"/><text x="20" y="92" fill="var(--fig-ink)" font-weight="600" data-t="fig.ev1">Five evenings, two hours each, 12 hands-on labs</text><text x="20" y="110" fill="var(--fig-ink)" fill="var(--fig-quiet)" data-t="fig.ev2">No background needed. A phone is enough.</text></svg><figcaption data-t="fig.cap.ev">Figure 4. Five evenings.</figcaption></figure>
-      <ul class="list">
-        <li data-t="every.l1">What AI is and what it cannot do</li>
-        <li data-t="every.l2">Write, summarise and translate with prompts that work</li>
-        <li data-t="every.l3">Spot a cloned voice note, the four scam patterns, and what never to type into AI</li>
-        <li data-t="every.l4">Automate one real task from your own job, then show the class how</li>
-      </ul>
-      <p class="meta"><b data-t="every.m1">10 hours, 12 hands-on labs</b><span data-t="every.m2">30 people a cohort, a new cohort every month</span></p>
-      <p class="price">1,200 <small data-t="every.price">LYD, or free in a sponsored cohort</small></p>
+<div class="back"><div class="back-in"><a href="#who" data-t="back">← All programmes</a></div></div>
+<article class="pg" aria-labelledby="h-everyone">
+  <header class="pg-head">
+    <div class="pg-wrap pg-head-grid">
+      <div class="pg-intro">
+        <p class="pg-kick" data-t="every.k">AI for Everyone</p>
+        <h1 id="h-everyone" data-t="every.h">Ten hours, and the conversation stops going over your head.</h1>
+        <p class="pg-lead" data-t="every.lead">Five evenings, two hours each, Sunday to Thursday, in Arabic. No background needed. A phone is enough.</p>
+        <div class="pg-cta"><a class="btn btn-teal" href="#f-everyone" data-jump="f-everyone"><span data-t="every.c.h">Join the next cohort</span><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="pg-note" data-t="f.free">Most seats are free</span></div>
+      </div>
+      <figure class="pg-img"><img src="media/head-everyone-2000.webp" srcset="media/head-everyone-1000.webp 1000w, media/head-everyone-2000.webp 2000w" sizes="(min-width: 1000px) 46vw, 100vw" width="2000" height="851" alt="An evening class of all ages at the academy, Tripoli lit up outside the window" decoding="async" fetchpriority="high"></figure>
     </div>
-    <div class="card" data-form="everyone-seat" data-program="AI for Everyone">
-      <h3 data-t="every.c.h">Join the next cohort</h3>
-      <p class="who" data-t="f.who">A person replies, never a bot.</p>
+    <div class="pg-wrap"><dl class="pg-facts"><div><dt data-t="fx.next">Next start</dt><dd><span data-t="pg.3f3">A new cohort every month</span></dd></div><div><dt data-t="fx.len">Length</dt><dd><span data-t="pg.3f1">10 hours over 5 evenings</span></dd></div><div><dt data-t="fx.seats">Seats</dt><dd><span data-t="pg.3f2">30 a cohort</span></dd></div><div><dt data-t="fx.fee">Fee</dt><dd>1,200 <span data-t="every.price">LYD, or free in a sponsored cohort</span></dd></div></dl></div>
+  </header>
+  <div class="pg-wrap pg-body">
+    <div class="pg-a"><section class="pg-sec"><h2 data-t="pg.out3">What you learn</h2><ol class="pg-out"><li><span data-t="every.l1">What AI is and what it cannot do</span></li><li><span data-t="every.l2">Write, summarise and translate with prompts that work</span></li><li><span data-t="every.l3">Spot a cloned voice note, the four scam patterns, and what never to type into AI</span></li><li><span data-t="every.l4">Automate one real task from your own job, then show the class how</span></li></ol></section><section class="pg-sec"><h2 data-t="pg.how3">How the evenings run</h2><ol class="pg-steps"><li><b data-t="ev.h1">Five evenings after work</b><span data-t="ev.h1s">Sunday to Thursday, two hours each.</span></li><li><b data-t="ev.h2">12 hands-on labs</b><span data-t="ev.h2s">A phone is enough. No laptop, no background needed.</span></li><li><b data-t="ev.h3">Taught in Arabic</b><span data-t="ev.h3s">English terms are explained the first time they come up.</span></li><li><b data-t="ev.h4">A certificate at the end</b><span data-t="ev.h4s">The Certificate of AI Literacy, with your name on it.</span></li></ol></section></div>
+    <aside class="pg-aside" id="f-everyone"><div class="card fx" data-form="everyone-seat" data-program="AI for Everyone">
+      <div class="fx-head"><h3 data-t="every.c.h">Join the next cohort</h3><p class="reply"><i class="dot" aria-hidden="true"></i><span data-t="f.who">A person replies, never a bot.</span></p></div>
       <p class="why" data-t="every.c.why">We tell you the next open dates and whether a sponsored, free seat is available. Nothing to pay now.</p>
       <form novalidate>
-        <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
-        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
-        <label class="f"><span data-t="f.city">City</span><input name="city" autocomplete="address-level2" placeholder="Tripoli" data-tp="f.city.ph"></label>
-        <input class="hp" name="website" tabindex="-1" autocomplete="off">
-        <button class="btn btn-navy" type="submit" data-t="every.c.btn">Save my seat</button>
-        <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
-        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
+        <label class="f"><span class="fl"><span data-t="f.name">Your name</span></span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label><label class="f"><span class="fl"><span data-t="f.whatsapp">WhatsApp number</span></span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" dir="ltr" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label><label class="f"><span class="fl"><span data-t="f.city">City</span><em class="opt" data-t="f.opt">Optional</em></span><input name="city" autocomplete="address-level2" placeholder="Tripoli" data-tp="f.city.ph" enterkeyhint="send"></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-teal" type="submit"><span data-t="every.c.btn">Save my seat</span><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <p class="err" role="alert" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
+        <p class="assure" data-t="f.assure">Nothing to pay now. A reply within one working day.</p>
+        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#contact" data-t="f.wa">WhatsApp</a></p>
       </form>
-      <div class="done"><b data-t="done.seat">Seat requested.</b><span data-t="done.p">We will reply on WhatsApp within one working day.</span> <a class="wa-link" href="#" data-t="done.wa">Message us now</a></div>
-    </div>
+      <div class="done" role="status" tabindex="-1"><svg class="ic-ok" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#09C98E"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#111128" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-t="done.seat">Seat requested.</b><span data-t="done.p">We will reply on WhatsApp within one working day.</span> <a class="wa-link" href="#contact" data-t="done.wa">Message us now</a><p class="next"><a href="#who" data-t="done.more">See the other programmes</a></p></div></div>
+    </div></aside>
+    <div class="pg-b"><section class="pg-sec"><h2 data-t="pg.faq">Good to know</h2><div class="pg-faq"><details><summary><span data-t="q1">Do I need to know how to code?</span></summary><p data-t="a1">No. None of the three programmes assumes any programming. The studio programme builds apps and automations with tools that take instructions in plain language; the executive programme is about decisions, not code.</p></details><details><summary><span data-t="q2">Is it taught in Arabic or English?</span></summary><p data-t="a2">In Arabic. English words are used where the industry uses them, and the teacher explains each one the first time it comes up. Materials are in both languages.</p></details><details><summary><span data-t="q4">What if I cannot attend every day?</span></summary><p data-t="a4">Tell us before the cohort starts. The executive week and the evening course both build on the previous session, so we would rather move you to the next cohort than have you miss two days.</p></details></div></section></div>
   </div>
-</section>
+  <nav class="pg-more" aria-labelledby="more-everyone"><div class="pg-wrap"><h2 id="more-everyone" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#executive"><small data-t="who.1k">I run an organisation</small><b data-t="who.1t">Executive AI Path</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#productivity"><small data-t="who.2k">I make things</small><b data-t="who.2t">AI Productivity</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#sponsor"><small data-t="who.4k">I want to sponsor</small><b data-t="who.4t">AI Literacy Initiative</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#companies"><small data-t="pg.ck">For a whole team</small><b data-t="co.k">Custom AI Training</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#pathways"><small data-t="pg.pk">Opening in 2027</small><b data-t="pw.k">More pathways</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
+</article>
 </div>
 <div class="page" id="sponsor" hidden>
-<div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
-<figure class="page-hero"><img src="media/head-sponsor-2000.webp" srcset="media/head-sponsor-1000.webp 1000w, media/head-sponsor-2000.webp 2000w" sizes="100vw" width="2000" height="851" alt="A sponsor hands a certificate to a graduate in the academy lobby" decoding="async"></figure>
-<!-- 6 · Sponsor -->
-<section class="slide dark" id="s-sponsor" data-title="Sponsor">
-  <div class="slide-in">
-    <div class="copy">
-      <p class="kick" data-t="sp.k">AI Literacy Initiative</p>
-      <h2 data-t="sp.h">Sponsor a month. Your name on thirty certificates.</h2>
-      <p class="lead" data-t="sp.lead">The AI Literacy Initiative funds AI for Everyone one month at a time. One sponsor, one cohort of thirty people who pay nothing. A teacher who can spot a cloned voice. A shopkeeper who answers customers in two languages. A nurse who checks before she trusts.</p>
-      <figure class="fig"><svg class="fig-svg" viewBox="0 0 460 112" role="img" aria-label="Twelve months, one sponsor each, your name on a month" font-family="var(--body)" font-size="12"><rect x="20" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="56" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="92" y="16" width="30" height="40" rx="4" fill="#09C98E" stroke="#09C98E" stroke-width="1.5"/><text x="107" y="42" fill="var(--fig-ink)" text-anchor="middle" font-weight="700" fill="var(--navy)" font-size="11" data-t="fig.sp0">You</text><rect x="128" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="164" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="200" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="236" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="272" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="308" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="344" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="380" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><rect x="416" y="16" width="30" height="40" rx="4" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="20" y="84" fill="var(--fig-ink)" font-weight="600" data-t="fig.sp1">One sponsor a month. Thirty people, free to them.</text><text x="20" y="102" fill="var(--fig-ink)" fill="var(--fig-quiet)" data-t="fig.sp2">Your name on all thirty certificates.</text></svg><figcaption data-t="fig.cap.sp">Figure 5. Your month.</figcaption></figure>
-      <div class="facts">
-        <div class="fact"><b>36,000</b><span data-t="sp.f1">LYD funds one cohort</span></div>
-        <div class="fact"><b>30</b><span data-t="sp.f2">people, free to them</span></div>
-        <div class="fact"><b>12</b><span data-t="sp.f3">months to choose from in 2027</span></div>
+<div class="back"><div class="back-in"><a href="#who" data-t="back">← All programmes</a></div></div>
+<article class="pg" aria-labelledby="h-sponsor">
+  <header class="pg-head">
+    <div class="pg-wrap pg-head-grid">
+      <div class="pg-intro">
+        <p class="pg-kick" data-t="sp.k">AI Literacy Initiative</p>
+        <h1 id="h-sponsor" data-t="sp.h">Sponsor a month. Your name on thirty certificates.</h1>
+        <p class="pg-lead" data-t="sp.lead">The AI Literacy Initiative funds AI for Everyone one month at a time. One sponsor, one cohort of thirty people who pay nothing. A teacher who can spot a cloned voice. A shopkeeper who answers customers in two languages. A nurse who checks before she trusts.</p>
+        <div class="pg-cta"><a class="btn btn-teal" href="#f-sponsor" data-jump="f-sponsor"><span data-t="sp.c.h">Apply to sponsor a month</span><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="pg-note" data-t="f.onesp">One sponsor a month</span></div>
       </div>
-      <ul class="list">
-        <li data-t="sp.l1">Your organisation's name on all thirty certificates</li>
-        <li data-t="sp.l2">Choose a public cohort or a group you care about</li>
-        <li data-t="sp.l3">A report after the cohort: scam-detection scores before and after, labs completed</li>
-      </ul>
+      <figure class="pg-img"><img src="media/head-sponsor-2000.webp" srcset="media/head-sponsor-1000.webp 1000w, media/head-sponsor-2000.webp 2000w" sizes="(min-width: 1000px) 46vw, 100vw" width="2000" height="851" alt="A sponsor hands a certificate to a graduate in the academy lobby" decoding="async" fetchpriority="high"></figure>
     </div>
-    <div class="card" data-form="sponsor" data-program="AI Literacy Initiative">
-      <h3 data-t="sp.c.h">Apply to sponsor a month</h3>
-      <p class="who" data-t="f.who">A person replies, never a bot.</p>
+    <div class="pg-wrap"><dl class="pg-facts"><div><dt data-t="fx.cost">Cost</dt><dd>36,000 <span data-t="fx.cost.v">LYD for one month</span></dd></div><div><dt data-t="fx.people">People trained</dt><dd>30 <span data-t="fx.people.v">free to them</span></dd></div><div><dt data-t="fx.months">Months</dt><dd>12 <span data-t="fx.months.v">in 2027, one sponsor each</span></dd></div><div><dt data-t="fx.vis">Your name</dt><dd><span data-t="fx.vis.v">On all thirty certificates</span></dd></div></dl></div>
+  </header>
+  <div class="pg-wrap pg-body">
+    <div class="pg-a"><section class="pg-sec"><h2 data-t="pg.out4">What your sponsorship pays for</h2><ol class="pg-out"><li><span data-t="sp.l1">Your organisation's name on all thirty certificates</span></li><li><span data-t="sp.l2">Choose a public cohort or a group you care about</span></li><li><span data-t="sp.l3">A report after the cohort: scam-detection scores before and after, labs completed</span></li></ol></section><section class="pg-sec"><h2 data-t="pg.how4">How a sponsored month works</h2><ol class="pg-steps"><li><b data-t="spx.1">You apply and choose a month</b><span data-t="spx.1s">Any month in 2027, or let us suggest one.</span></li><li><b data-t="spx.2">We confirm within five working days</b><span data-t="spx.2s">Each month has one sponsor only.</span></li><li><b data-t="spx.3">Thirty people take the course</b><span data-t="spx.3s">Five evenings of AI for Everyone, free to them.</span></li><li><b data-t="spx.4">You receive the report</b><span data-t="spx.4s">Results before and after, and the labs completed.</span></li></ol></section></div>
+    <aside class="pg-aside" id="f-sponsor"><div class="card fx" data-form="sponsor" data-program="AI Literacy Initiative">
+      <div class="fx-head"><h3 data-t="sp.c.h">Apply to sponsor a month</h3><p class="reply"><i class="dot" aria-hidden="true"></i><span data-t="f.who">A person replies, never a bot.</span></p></div>
       <p class="why" data-t="sp.c.why">Each month has one sponsor. We reply within one working day and confirm your month within five.</p>
       <form novalidate>
-        <label class="f"><span data-t="f.org">Organisation</span><input name="org" autocomplete="organization" autocapitalize="words" enterkeyhint="next" required></label>
-        <label class="f"><span data-t="f.contact">Contact name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
-        <div class="row2">
-          <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
-          <label class="f"><span data-t="f.email">Email</span><input name="email" type="email" inputmode="email" autocapitalize="off" autocomplete="email" enterkeyhint="next"></label>
-        </div>
-        <label class="f"><span data-t="f.month">Preferred month</span>
-          <select name="month"><option value="2027-01" data-t="m.jan">January 2027</option><option value="2027-02" data-t="m.feb">February 2027</option><option value="2027-03" data-t="m.mar">March 2027</option><option value="2027-04" data-t="m.apr">April 2027</option><option value="2027-05" data-t="m.may">May 2027</option><option value="2027-06" data-t="m.jun">June 2027</option><option value="2027-07" data-t="m.jul">July 2027</option><option value="2027-08" data-t="m.aug">August 2027</option><option value="2027-09" data-t="m.sep">September 2027</option><option value="2027-10" data-t="m.oct">October 2027</option><option value="2027-11" data-t="m.nov">November 2027</option><option value="2027-12" data-t="m.dec">December 2027</option><option value="any" data-t="m.any">Any month</option></select></label>
-        <input class="hp" name="website" tabindex="-1" autocomplete="off">
-        <button class="btn btn-teal" type="submit" data-t="sp.c.btn">Send my application</button>
-        <p class="err" data-t="f.err3">Please add your organisation, a contact name and a WhatsApp number.</p>
-        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
+        <label class="f"><span class="fl"><span data-t="f.org">Organisation</span></span><input name="org" autocomplete="organization" autocapitalize="words" enterkeyhint="next" required></label><label class="f"><span class="fl"><span data-t="f.contact">Contact name</span></span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label><label class="f"><span class="fl"><span data-t="f.whatsapp">WhatsApp number</span></span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" dir="ltr" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label><label class="f"><span class="fl"><span data-t="f.email">Email</span><em class="opt" data-t="f.opt">Optional</em></span><input name="email" type="email" inputmode="email" autocapitalize="off" autocomplete="email" enterkeyhint="next" dir="ltr"></label><label class="f"><span class="fl"><span data-t="f.month">Preferred month</span></span><select name="month"><option value="2027-01" data-t="m.jan">January 2027</option><option value="2027-02" data-t="m.feb">February 2027</option><option value="2027-03" data-t="m.mar">March 2027</option><option value="2027-04" data-t="m.apr">April 2027</option><option value="2027-05" data-t="m.may">May 2027</option><option value="2027-06" data-t="m.jun">June 2027</option><option value="2027-07" data-t="m.jul">July 2027</option><option value="2027-08" data-t="m.aug">August 2027</option><option value="2027-09" data-t="m.sep">September 2027</option><option value="2027-10" data-t="m.oct">October 2027</option><option value="2027-11" data-t="m.nov">November 2027</option><option value="2027-12" data-t="m.dec">December 2027</option><option value="any" data-t="m.any">Any month</option></select></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-teal" type="submit"><span data-t="sp.c.btn">Send my application</span><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <p class="err" role="alert" data-t="f.err3">Please add your organisation, a contact name and a WhatsApp number.</p>
+        <p class="assure" data-t="f.assure2">No commitment until we confirm your month.</p>
+        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#contact" data-t="f.wa">WhatsApp</a></p>
       </form>
-      <div class="done"><b data-t="done.app">Application received.</b><span data-t="sp.done">We confirm your month within five working days.</span> <a class="wa-link" href="#" data-t="done.wa">Message us now</a></div>
-    </div>
+      <div class="done" role="status" tabindex="-1"><svg class="ic-ok" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#09C98E"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#111128" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-t="done.app">Application received.</b><span data-t="sp.done">We confirm your month within five working days.</span> <a class="wa-link" href="#contact" data-t="done.wa">Message us now</a></div></div>
+    </div></aside>
+    <div class="pg-b"></div>
   </div>
-</section>
+  <nav class="pg-more" aria-labelledby="more-sponsor"><div class="pg-wrap"><h2 id="more-sponsor" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#executive"><small data-t="who.1k">I run an organisation</small><b data-t="who.1t">Executive AI Path</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#productivity"><small data-t="who.2k">I make things</small><b data-t="who.2t">AI Productivity</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#everyone"><small data-t="who.3k">I'm starting from zero</small><b data-t="who.3t">AI for Everyone</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#companies"><small data-t="pg.ck">For a whole team</small><b data-t="co.k">Custom AI Training</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#pathways"><small data-t="pg.pk">Opening in 2027</small><b data-t="pw.k">More pathways</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
+</article>
 </div>
 <div class="page" id="companies" hidden>
-<div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
-<figure class="page-hero"><img src="media/head-companies-2000.webp" srcset="media/head-companies-1000.webp 1000w, media/head-companies-2000.webp 2000w" sizes="100vw" width="2000" height="851" alt="A company team maps a process on sticky notes during a workshop at the academy" decoding="async"></figure>
-<!-- 7 · Companies -->
-<section class="slide" id="s-companies" data-title="Companies">
-  <div class="slide-in">
-    <div class="copy">
-      <p class="kick" data-t="co.k">Custom AI Training</p>
-      <h2 data-t="co.h">Train your whole team on your own data.</h2>
-      <p class="lead" data-t="co.lead">Your staff are already using AI at work, with no rules and no training. We build a programme for your industry and your data, then run it at your site, on our campus or online, in Arabic.</p>
-      <figure class="fig"><svg class="fig-svg" viewBox="0 0 460 104" role="img" aria-label="Four steps from consultation to a report to leadership" font-family="var(--body)" font-size="12"><rect x="20" y="20" width="98" height="44" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="69" y="46" fill="var(--fig-ink)" text-anchor="middle" font-size="11" data-t="c.1">Free consultation</text><path d="M120 42 L130 42" stroke="var(--fig-ink)" stroke-width="1.5" marker-end="url(#fig-arrow)"/><rect x="132" y="20" width="98" height="44" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="181" y="46" fill="var(--fig-ink)" text-anchor="middle" font-size="11" data-t="c.2">Rules for AI at work</text><path d="M232 42 L242 42" stroke="var(--fig-ink)" stroke-width="1.5" marker-end="url(#fig-arrow)"/><rect x="244" y="20" width="98" height="44" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="293" y="46" fill="var(--fig-ink)" text-anchor="middle" font-size="11" data-t="c.3">Labs on your tasks</text><path d="M344 42 L354 42" stroke="var(--fig-ink)" stroke-width="1.5" marker-end="url(#fig-arrow)"/><rect x="356" y="20" width="98" height="44" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="405" y="46" fill="var(--fig-ink)" text-anchor="middle" font-size="11" data-t="c.4">Report to leadership</text><text x="20" y="94" fill="var(--fig-ink)" font-weight="600" data-t="fig.co1">At your site, on our campus, or online. In Arabic.</text></svg><figcaption data-t="fig.cap.co">Figure 6. How a team programme runs.</figcaption></figure>
-      <ul class="list">
-        <li data-t="co.l1">A free consultation to work out what your team needs</li>
-        <li data-t="co.l2">Clear rules on what may and may not go into an AI tool</li>
-        <li data-t="co.l3">Hands-on labs on your real tasks, not generic examples</li>
-        <li data-t="co.l4">A report to leadership on what changed</li>
-      </ul>
+<div class="back"><div class="back-in"><a href="#who" data-t="back">← All programmes</a></div></div>
+<article class="pg" aria-labelledby="h-companies">
+  <header class="pg-head">
+    <div class="pg-wrap pg-head-grid">
+      <div class="pg-intro">
+        <p class="pg-kick" data-t="co.k">Custom AI Training</p>
+        <h1 id="h-companies" data-t="co.h">Train your whole team on your own data.</h1>
+        <p class="pg-lead" data-t="co.lead">Your staff are already using AI at work, with no rules and no training. We build a programme for your industry and your data, then run it at your site, on our campus or online, in Arabic.</p>
+        <div class="pg-cta"><a class="btn btn-teal" href="#f-companies" data-jump="f-companies"><span data-t="co.c.h">Request a proposal</span><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="pg-note" data-t="f.freecons">The consultation is free</span></div>
+      </div>
+      <figure class="pg-img"><img src="media/head-companies-2000.webp" srcset="media/head-companies-1000.webp 1000w, media/head-companies-2000.webp 2000w" sizes="(min-width: 1000px) 46vw, 100vw" width="2000" height="851" alt="A company team maps a process on sticky notes during a workshop at the academy" decoding="async" fetchpriority="high"></figure>
     </div>
-    <div class="card" data-form="company" data-program="Custom AI Training">
-      <h3 data-t="co.c.h">Request a proposal</h3>
-      <p class="who" data-t="f.who">A person replies, never a bot.</p>
+    <div class="pg-wrap"><dl class="pg-facts"><div><dt data-t="fx.where">Where</dt><dd><span data-t="fx.where.v">Your site, our campus or online</span></dd></div><div><dt data-t="fx.lang">Language</dt><dd><span data-t="fx.lang.v">Arabic</span></dd></div><div><dt data-t="fx.team">Team size</dt><dd><span data-t="fx.team.v">From 1 to 200+</span></dd></div><div><dt data-t="fx.prop">Proposal</dt><dd><span data-t="fx.prop.v">Plan and price within a week</span></dd></div></dl></div>
+  </header>
+  <div class="pg-wrap pg-body">
+    <div class="pg-a"><section class="pg-sec"><h2 data-t="pg.how5">How a team programme runs</h2><ol class="pg-steps"><li><b data-t="c.1">Free consultation</b><span data-t="co.l1">A free consultation to work out what your team needs</span></li><li><b data-t="c.2">Rules for AI at work</b><span data-t="co.l2">Clear rules on what may and may not go into an AI tool</span></li><li><b data-t="c.3">Labs on your tasks</b><span data-t="co.l3">Hands-on labs on your real tasks, not generic examples</span></li><li><b data-t="c.4">Report to leadership</b><span data-t="co.l4">A report to leadership on what changed</span></li></ol></section></div>
+    <aside class="pg-aside" id="f-companies"><div class="card fx" data-form="company" data-program="Custom AI Training">
+      <div class="fx-head"><h3 data-t="co.c.h">Request a proposal</h3><p class="reply"><i class="dot" aria-hidden="true"></i><span data-t="f.who">A person replies, never a bot.</span></p></div>
       <p class="why" data-t="co.c.why">Tell us about the team. We reply within one working day and send a plan and a price within a week.</p>
       <form novalidate>
-        <label class="f"><span data-t="f.org">Company</span><input name="org" autocomplete="organization" autocapitalize="words" enterkeyhint="next" required></label>
-        <div class="row2">
-          <label class="f"><span data-t="f.contact">Contact name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
-          <label class="f"><span data-t="f.size">Team size</span>
-            <select name="size"><option value="1-10">1–10</option><option value="11-50">11–50</option><option value="51-200">51–200</option><option value="200+">200+</option></select></label>
-        </div>
-        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
-        <label class="f"><span data-t="f.need">What should the team be able to do afterwards?</span><textarea name="need"></textarea></label>
-        <input class="hp" name="website" tabindex="-1" autocomplete="off">
-        <button class="btn btn-navy" type="submit" data-t="co.c.btn">Send me a proposal</button>
-        <p class="err" data-t="f.err3">Please add your company, a contact name and a WhatsApp number.</p>
-        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
+        <label class="f"><span class="fl"><span data-t="f.company">Company</span></span><input name="org" autocomplete="organization" autocapitalize="words" enterkeyhint="next" required></label><label class="f"><span class="fl"><span data-t="f.contact">Contact name</span></span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label><label class="f"><span class="fl"><span data-t="f.whatsapp">WhatsApp number</span></span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" dir="ltr" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label><fieldset class="f fs"><legend class="fl"><span data-t="f.size">Team size</span></legend><div class="seg seg4"><label><input type="radio" name="size" value="1-10" checked><span>1–10</span></label><label><input type="radio" name="size" value="11-50"><span>11–50</span></label><label><input type="radio" name="size" value="51-200"><span>51–200</span></label><label><input type="radio" name="size" value="200+"><span>200+</span></label></div></fieldset><label class="f"><span class="fl"><span data-t="f.need">What should the team be able to do afterwards?</span><em class="opt" data-t="f.opt">Optional</em></span><textarea name="need" rows="3"></textarea></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-navy" type="submit"><span data-t="co.c.btn">Send me a proposal</span><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <p class="err" role="alert" data-t="f.err3">Please add your organisation, a contact name and a WhatsApp number.</p>
+        <p class="assure" data-t="f.assure3">Free consultation. No commitment.</p>
+        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#contact" data-t="f.wa">WhatsApp</a></p>
       </form>
-      <div class="done"><b data-t="done.req">Request received.</b><span data-t="co.done">We will contact you within one working day to set up the consultation.</span> <a class="wa-link" href="#" data-t="done.wa">Message us now</a></div>
-    </div>
+      <div class="done" role="status" tabindex="-1"><svg class="ic-ok" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#09C98E"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#111128" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-t="done.req">Request received.</b><span data-t="co.done">We will contact you within one working day to set up the consultation.</span> <a class="wa-link" href="#contact" data-t="done.wa">Message us now</a></div></div>
+    </div></aside>
+    <div class="pg-b"><section class="pg-sec"><h2 data-t="pg.faq">Good to know</h2><div class="pg-faq"><details><summary><span data-t="q5">Can my company send several people?</span></summary><p data-t="a5">Yes. Two or three people from one organisation can join an open cohort. For a whole team we build a programme around your own data and run it at your site or ours; see Custom AI Training.</p></details><details><summary><span data-t="q2">Is it taught in Arabic or English?</span></summary><p data-t="a2">In Arabic. English words are used where the industry uses them, and the teacher explains each one the first time it comes up. Materials are in both languages.</p></details></div></section></div>
   </div>
-</section>
+  <nav class="pg-more" aria-labelledby="more-companies"><div class="pg-wrap"><h2 id="more-companies" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#executive"><small data-t="who.1k">I run an organisation</small><b data-t="who.1t">Executive AI Path</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#productivity"><small data-t="who.2k">I make things</small><b data-t="who.2t">AI Productivity</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#everyone"><small data-t="who.3k">I'm starting from zero</small><b data-t="who.3t">AI for Everyone</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#sponsor"><small data-t="who.4k">I want to sponsor</small><b data-t="who.4t">AI Literacy Initiative</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#pathways"><small data-t="pg.pk">Opening in 2027</small><b data-t="pw.k">More pathways</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
+</article>
 </div>
 <div class="page" id="pathways" hidden>
-<div class="back"><div class="back-in"><a href="#programmes" data-t="back">← All programmes</a></div></div>
-<figure class="page-hero"><img src="media/head-pathways-2000.webp" srcset="media/head-pathways-1000.webp 1000w, media/head-pathways-2000.webp 2000w" sizes="100vw" width="2000" height="851" alt="The academy classroom at night, one lamp on, Tripoli and the sea outside" decoding="async"></figure>
-<!-- 8 · More pathways -->
-<section class="slide grey" id="s-pathways" data-title="More pathways">
-  <div class="slide-in">
-    <div class="copy">
-      <p class="kick" data-t="pw.k">More pathways</p>
-      <h2 data-t="pw.h">Opening in 2027.</h2>
-      <p class="lead" data-t="pw.lead">Join the waitlist and you hear first when dates are set.</p>
-      <figure class="fig"><svg class="fig-svg" viewBox="0 0 460 80" role="img" aria-label="Three more pathways along 2027" font-family="var(--body)" font-size="12"><line x1="20" y1="40" x2="440" y2="40" stroke="var(--fig-rule)" stroke-width="1.5"/><circle cx="60" cy="40" r="6" fill="#534CB6"/><text x="60" y="24" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" font-size="11" data-t="m.jan">Jan 2027</text><text x="60" y="66" fill="var(--fig-ink)" text-anchor="middle" font-weight="600" data-t="fig.pa1">Diploma</text><circle cx="230" cy="40" r="6" fill="#534CB6"/><text x="230" y="24" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" font-size="11">2027</text><text x="230" y="66" fill="var(--fig-ink)" text-anchor="middle" font-weight="600" data-t="fig.pa2">AI for Kids</text><circle cx="400" cy="40" r="6" fill="#534CB6"/><text x="400" y="24" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" font-size="11" data-t="pw.q3">On request</text><text x="400" y="66" fill="var(--fig-ink)" text-anchor="middle" font-weight="600" data-t="fig.pa3">Policymakers</text></svg><figcaption data-t="fig.cap.pa">Figure 7. What opens in 2027.</figcaption></figure>
-      <dl class="rows">
-        <div><dt data-t="pw.1">AI Practitioner Diploma</dt><dd data-t="pw.1s">Eight months, from beginner to a practitioner someone will hire. Price announced with the dates.</dd><dd class="when" data-t="pw.q1">January 2027</dd></div>
-        <div><dt data-t="pw.2">AI for Kids</dt><dd data-t="pw.2s">Ages 10 to 16, two levels, two weeks each. Dates and price in 2027.</dd><dd class="when" data-t="pw.q2">2027</dd></div>
-        <div><dt data-t="pw.3">AI for Policymakers</dt><dd data-t="pw.3s">For ministries and public bodies: the rules Libya needs and how to write them.</dd><dd class="when" data-t="pw.q3">On request</dd></div>
-      </dl>
+<div class="back"><div class="back-in"><a href="#who" data-t="back">← All programmes</a></div></div>
+<article class="pg" aria-labelledby="h-pathways">
+  <header class="pg-head">
+    <div class="pg-wrap pg-head-grid">
+      <div class="pg-intro">
+        <p class="pg-kick" data-t="pw.k">More pathways</p>
+        <h1 id="h-pathways" data-t="pw.h">Opening in 2027.</h1>
+        <p class="pg-lead" data-t="pw.lead">Join the waitlist and you hear first when dates are set.</p>
+        <div class="pg-cta"><a class="btn btn-teal" href="#f-pathways" data-jump="f-pathways"><span data-t="pw.c.h">Join the waitlist</span><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="pg-note" data-t="f.nocommit">No commitment</span></div>
+      </div>
+      <figure class="pg-img"><img src="media/head-pathways-2000.webp" srcset="media/head-pathways-1000.webp 1000w, media/head-pathways-2000.webp 2000w" sizes="(min-width: 1000px) 46vw, 100vw" width="2000" height="851" alt="The academy classroom at night, one lamp on, Tripoli and the sea outside" decoding="async" fetchpriority="high"></figure>
     </div>
-    <div class="card" data-form="waitlist">
-      <h3 data-t="pw.c.h">Join the waitlist</h3>
-      <p class="who" data-t="f.who">A person replies, never a bot.</p>
+    
+  </header>
+  <div class="pg-wrap pg-body">
+    <div class="pg-a"><section class="pg-sec"><h2 data-t="pg.pw">Three pathways</h2><div class="pw-list"><div class="pw-row"><div><b data-t="pw.1">AI Practitioner Diploma</b><p data-t="pw.1s">Eight months, from beginner to a practitioner someone will hire. Price announced with the dates.</p></div><span class="pw-when" data-t="pw.q1">January 2027</span><a class="btn btn-line btn-sm" href="#f-pathways" data-jump="f-pathways" data-pick="AI Practitioner Diploma"><span data-t="pw.join">Join the waitlist</span></a></div><div class="pw-row"><div><b data-t="pw.2">AI for Kids</b><p data-t="pw.2s">Ages 10 to 16, two levels, two weeks each. Dates and price in 2027.</p></div><span class="pw-when" data-t="pw.q2">2027</span><a class="btn btn-line btn-sm" href="#f-pathways" data-jump="f-pathways" data-pick="AI for Kids"><span data-t="pw.join">Join the waitlist</span></a></div><div class="pw-row"><div><b data-t="pw.3">AI for Policymakers</b><p data-t="pw.3s">For ministries and public bodies: the rules Libya needs and how to write them.</p></div><span class="pw-when" data-t="pw.q3">On request</span><a class="btn btn-line btn-sm" href="#f-pathways" data-jump="f-pathways" data-pick="AI for Policymakers"><span data-t="pw.join">Join the waitlist</span></a></div></div></section></div>
+    <aside class="pg-aside" id="f-pathways"><div class="card fx" data-form="waitlist">
+      <div class="fx-head"><h3 data-t="pw.c.h">Join the waitlist</h3><p class="reply"><i class="dot" aria-hidden="true"></i><span data-t="f.who">A person replies, never a bot.</span></p></div>
       <p class="why" data-t="pw.c.why">No commitment. One message when the dates are confirmed.</p>
       <form novalidate>
-        <label class="f"><span data-t="f.pathway">Pathway</span>
-          <select name="program"><option value="AI Practitioner Diploma" data-t="pw.1">AI Practitioner Diploma</option><option value="AI for Kids" data-t="pw.2">AI for Kids</option><option value="AI for Policymakers" data-t="pw.3">AI for Policymakers</option></select></label>
-        <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
-        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
-        <input class="hp" name="website" tabindex="-1" autocomplete="off">
-        <button class="btn btn-navy" type="submit" data-t="pw.c.btn">Add me to the waitlist</button>
-        <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
+        <fieldset class="f fs"><legend class="fl"><span data-t="f.pathway">Pathway</span></legend><div class="seg seg1"><label><input type="radio" name="program" value="AI Practitioner Diploma" checked><span data-t="pw.1">AI Practitioner Diploma</span></label><label><input type="radio" name="program" value="AI for Kids"><span data-t="pw.2">AI for Kids</span></label><label><input type="radio" name="program" value="AI for Policymakers"><span data-t="pw.3">AI for Policymakers</span></label></div></fieldset><label class="f"><span class="fl"><span data-t="f.name">Your name</span></span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label><label class="f"><span class="fl"><span data-t="f.whatsapp">WhatsApp number</span></span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" dir="ltr" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-navy" type="submit"><span data-t="pw.c.btn">Add me to the waitlist</span><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <p class="err" role="alert" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
+        <p class="assure" data-t="f.assure4">One message when dates are set. Nothing else.</p>
+        <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#contact" data-t="f.wa">WhatsApp</a></p>
       </form>
-      <div class="done"><b data-t="done.list">You're on the list.</b><span data-t="pw.done">We message you when dates are confirmed.</span></div>
-    </div>
+      <div class="done" role="status" tabindex="-1"><svg class="ic-ok" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#09C98E"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#111128" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-t="done.list">You're on the list.</b><span data-t="pw.done">We message you when dates are confirmed.</span> <a class="wa-link" href="#contact" data-t="done.wa">Message us now</a></div></div>
+    </div></aside>
+    <div class="pg-b"></div>
   </div>
-</section>
+  <nav class="pg-more" aria-labelledby="more-pathways"><div class="pg-wrap"><h2 id="more-pathways" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#executive"><small data-t="who.1k">I run an organisation</small><b data-t="who.1t">Executive AI Path</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#productivity"><small data-t="who.2k">I make things</small><b data-t="who.2t">AI Productivity</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#everyone"><small data-t="who.3k">I'm starting from zero</small><b data-t="who.3t">AI for Everyone</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#sponsor"><small data-t="who.4k">I want to sponsor</small><b data-t="who.4t">AI Literacy Initiative</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#companies"><small data-t="pg.ck">For a whole team</small><b data-t="co.k">Custom AI Training</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
+</article>
 </div>
 </div>
 
@@ -1116,17 +1488,17 @@ ar:{
  'hero.cta1':'احجز مكالمة مجانية','hero.cta2':'أو استعرض البرامج الثلاثة',
  'start.h':'عرّفنا بنفسك','start.why':'نرد عليك عبر واتساب خلال يوم عمل واحد بالبرنامج المناسب ومواعيده.',
  'start.lead':'أدير مؤسسة','start.learn':'أريد مهارة جديدة','start.sponsor':'أريد أن أرعى دفعة','start.btn':'أرسل واعرف برنامجي','start.n1':'في الأثناء، اطّلع على المسار التنفيذي','start.n2':'في الأثناء، اطّلع على البرامج','start.n3':'في الأثناء، اطّلع على الرعاية',
- 'f.city.ph':'طرابلس','f.who':'يردّ عليك شخص، لا روبوت.','f.wahint':'نردّ عبر واتساب، ولا نتصل بك دون موعد.','f.name':'الاسم','f.whatsapp':'رقم واتساب','f.org':'المؤسسة','f.email':'البريد الإلكتروني','f.role':'المنصب','f.when':'أفضل وقت للاتصال','f.make':'ماذا تصنع؟','f.city':'المدينة','f.contact':'اسم جهة الاتصال','f.month':'الشهر المفضل','f.size':'حجم الفريق','f.need':'ماذا يجب أن يستطيع الفريق فعله بعد التدريب؟','f.pathway':'المسار','f.reach':'رقم واتساب أو بريد إلكتروني','f.q':'سؤالك',
+ 'f.city.ph':'طرابلس','hero.run1':'دليل البرامج 2026–27','hero.run2':'شارع زاوية الدهماني، طرابلس','toc.1':'البرامج','toc.2':'لماذا الآن، في ليبيا','toc.3':'الاسم','toc.4':'القاعة','toc.5':'كيف تصل إلينا','toc.6':'أسئلة يطرحها الناس','hero.cap':'القاعة في الرابعة عصراً، والمدينة القديمة في الأفق.','cap.vis':'تصوّر للمقر قبل الافتتاح.','w.k':'داخل الأكاديمية','w.h':'تسعون ثانية داخل المبنى، صُوّرت في شارع زاوية الدهماني.','w.cap':'يصوّر الفيلم فريق الأكاديمية أثناء التجهيز، وسيُستبدل بنسخة من الدفعة الأولى في ديسمبر.','pg.k':'البرامج','pg.h':'ثلاثة برامج، كلٌّ منها مبنيّ حول شيء واحد تأخذه معك.','pg.lead':'نعلّم ثلاثة أشياء جيداً بدلاً من أشياء كثيرة بشكل مقبول. كل برنامج يُدرَّس حضورياً في القاعة نفسها وبهيئة التدريس الصغيرة نفسها، بالعربية مع الإنجليزية للمصطلحات التي يستخدمها القطاع أصلاً، وكل برنامج ينتهي بعمل صنعته بنفسك، لا بملف من الشرائح. الرسوم والمواعيد الدقيقة في صفحة كل برنامج.','pg.1':'برنامج من خمسة أيام للرؤساء التنفيذيين والمديرين ورؤساء الأقسام. تأتي بأسئلة مؤسستك وتغادر باستراتيجية ذكاء اصطناعي مكتوبة لها، وخطة لتسعين يوماً بميزانيتها، وفهمٍ واضح لما تسأله أي مورّد يأتي ليبيعك شيئاً. الدفعة سبعة أشخاص، فالأسبوع مجموعة عمل لا محاضرة.','fx.len':'المدة','fx.seats':'المقاعد','fx.next':'البداية القادمة','fx.for':'لمن','pg.1f1':'5 أيام، من الأحد إلى الخميس، 20 ساعة','pg.1f2':'7 في الدفعة','pg.1f3':'الأحد 15 نوفمبر 2026','pg.1f4':'من يقرّرون الميزانيات','pg.1b':'الأيام الخمسة بالتفصيل','pg.1cap':'ما تغادر به: الخطة، على الورق، بالأرقام.','prod.byo':'أحضر مشروعك الخاص','pg.2':'استوديو من أسبوعين لمن يصنعون الأشياء لكسب عيشهم: المحتوى، والتسويق، ومشروع صغير، والعمل الحر. تحضر المشروع الذي تعمل عليه أصلاً، وعلى مدى عشرة أيام تدريسية يغذّيه كل مختبر. بحلول اليوم الثالث يكون معظم الناس قد أطلقوا أول تطبيق أو فيديو؛ وفي النهاية يكون مشروعك مبنياً ومعك معرض أعمال تعرضه على عميل.','pg.2f1':'أسبوعان، 10 أيام تدريسية','pg.2f2':'10 في الدفعة','pg.2f3':'الدفعة المؤسِّسة، نوفمبر 2026','pg.2f4':'صنّاع المحتوى والمسوّقون والمؤسسون والمستقلون','pg.2b':'الأسبوعان بالتفصيل','pg.2cap':'ما تغادر به: الشيء نفسه، يعمل على هاتفك.','pg.3':'خمس أمسيات، ساعتان في كلٍّ منها، تُدرَّس بالعربية لمن لا خلفية تقنية لهم. تتعلم ما تستطيعه هذه الأدوات وما لا تستطيعه، وكيف تكتب وتلخّص وتترجم بها، وكيف تميّز رسالة صوتية مزيّفة والاحتيالات الشائعة، وكيف تؤتمت مهمة صغيرة من عملك. الهاتف هو كل ما تحتاجه. راعٍ واحد يموّل دفعة كل شهر، فمعظم المقاعد مجانية لأصحابها.','pg.3f1':'10 ساعات على 5 أمسيات','pg.3f2':'30 في الدفعة','pg.3f3':'دفعة جديدة كل شهر','pg.3f4':'أي شخص معه هاتف','pg.3b':'الأمسيات الخمس بالتفصيل','pg.3cap':'ما تغادر به: شهادة في محو الأمية بالذكاء الاصطناعي، وعادة التحقق.','pg.also':'للمؤسسات:','pg.a1':'ارعَ شهراً من برنامج الذكاء الاصطناعي للجميع','pg.a2':'درّب فريقك كله على بياناتكم','pg.a3':'يفتح في 2027 دبلوم للممارسين، وبرنامج للأطفال، ودورة لصنّاع السياسات؛','pg.a3b':'انضم إلى قائمة الانتظار','wk.k':'أسبوع في الأكاديمية','wk.h':'يعمل المبنى من الأحد إلى الخميس: الصباح للقادة والمساء للجميع.','wk.p':'تتقاسم البرامج الثلاثة قاعة واحدة وأسبوعاً واحداً، فالجدول أدناه هو شكل أسبوع عادي حين تعمل الثلاثة معاً. يأتي التنفيذيون في الصباح لأسبوع كامل. ولدفعة الاستوديو القاعة في منتصف النهار لأسبوعين. ويجتمع برنامج الذكاء الاصطناعي للجميع بعد الدوام. يُغلق المبنى الجمعة والسبت، إلا لأمسية تعريفية أحياناً للمدعوّين.','wk.cap':'الجدول 1. أسبوع تدريسي، والبرامج الثلاثة تعمل.','d.sun':'الأحد','d.mon':'الاثنين','d.tue':'الثلاثاء','d.wed':'الأربعاء','d.thu':'الخميس','wk.r1':'الصباح','wk.r1s':'أربع ساعات يومياً، أسبوع واحد','wk.r2':'منتصف النهار','prod.k2':'استوديو إنتاجية الذكاء الاصطناعي','wk.r2s':'مختبرات استوديو، أسبوعان','wk.r3':'المساء','wk.r3s':'ساعتان في الأمسية، أسبوع واحد','why.k':'لماذا الآن، في ليبيا','why.h':'كل الليبيين تقريباً متصلون بالإنترنت، ولا أحد تقريباً عُلِّم ما تفعله هذه الأدوات.','why.lead':'تسعة من كل عشرة في ليبيا يستخدمون الإنترنت، ومعظمهم على الهاتف عبر شبكات 4G أو 5G. وأدوات الذكاء الاصطناعي التي تصل إلى تلك الهواتف تتغير كل بضعة أسابيع، والناس يستخدمونها فعلاً في العمل والمدرسة والبيت، بالتخمين غالباً. وحتى هذا العام لم يكن في البلاد مكان تجلس فيه داخل قاعة ليعلّمك أحد كيف تعمل، بالعربية، ويجيب عن أسئلتك. هذه هي الفجوة التي بُنيت الأكاديمية لسدّها، بدءاً بمن يتخذون القرارات نيابة عن غيرهم.','why.f1':'من الليبيين يستخدمون الإنترنت','why.f2':'من استخدام الهاتف على شبكات 4G أو 5G','why.f3':'شخص على وسائل التواصل، في بلد عدد سكانه 7.5 مليون','why.f4':'أكاديميات للذكاء الاصطناعي في ليبيا قبل هذه','why.src':'الأرقام: DataReportal، Digital 2026: Libya.','why.cap':'طرابلس ليلاً، من الميناء.','name.k':'الاسم','name.h':'لماذا سُمّيت أكاديمية في طرابلس باسم عالم رياضيات من بغداد.','name.cap':'شكل إكمال المربع من كتاب الجبر، إلى جانب دفتر من أسبوع التخطيط الأول.','name.p1':'عمل محمد بن موسى الخوارزمي في بغداد في أوائل القرن التاسع الميلادي، في بيت الحكمة. وحوالي سنة 820 ألّف كتاباً في حل المعادلات بالجبر والمقابلة؛ ومن كلمة الجبر جاءت كلمة algebra. وحين تُرجم عمله في الحساب إلى اللاتينية بعد ثلاثة قرون، كُتب اسمه Algoritmi، ومنه صارت كلمة algorithm، أي الخوارزمية: أي طريقة من خطوات متتابعة تستطيع الآلة أن تتبعها.','name.p2':'كل نظام تعلّم الأكاديمية الناسَ استخدامه هو، في عمقه، خوارزمية طويلة جداً. اخترنا الاسم تذكيراً بأن لهذا المجال جذراً عربياً ومستقبلاً ليبياً، وبأن طريقة فهم الشيء الصعب ما زالت كما علّمها الخوارزمي: مثال محلول واحد في كل مرة، على الورق، حتى تستطيع حل المثال التالي بنفسك.','ab.k':'القاعة','ab.h':'قاعة واحدة في الطابق الأول، بُنيت لثلاثين شخصاً ومدرّب يعرف أسماءهم.','ab.p1':'تشغل الأكاديمية الطابق الأول من مبنى في شارع زاوية الدهماني، على بعد دقائق من الكورنيش. فيها استقبال بمقعد طويل بلون التركواز، وقاعة بمكاتب بيضاء مرتّبة بحيث يصل المدرّب إلى كل واحد منها، وشاشة في المقدمة وإضاءة حلقية مربعة في الأعلى، ومطبخ صغير يُعدّ فيه الشاي. هذا هو المقر كله، وهكذا أُريد له أن يكون.','ab.p2':'التدريس حضوري وبالعربية. تُستخدم الإنجليزية للكلمات التي يستخدمها القطاع بالإنجليزية أصلاً، وهي أقل مما يتوقع الناس. والصفوف صغيرة بحيث لا يستطيع أحد الاختباء في الخلف: سبعة في البرنامج التنفيذي، وعشرة في الاستوديو، وثلاثون في دفعة المساء. كل برنامج منظّم حول عمل تأخذه معك، لأن الخطة أو التطبيق أو الشهادة هي الدليل الصادق الوحيد على أن الدورة فعلت شيئاً.','dt.1':'يُقدَّم الشاي في العاشرة وفي الرابعة.','dt.2':'يُبنى عمل الاستوديو على هاتفك وحاسوبك أنت.','dt.3':'تحمل شهادة محو الأمية بالذكاء الاصطناعي اسم الراعي.','dt.4':'الإضاءة الحلقية موجودة ليُصوَّر كل ما على الشاشة للتوثيق.','ab.c.h':'تعال واحضر حصة','find.k':'كيف تصل إلينا','find.h':'شارع زاوية الدهماني، الطابق الأول، والاستقبال على يسارك حين تصعد.','find.p':'المبنى في شارع زاوية الدهماني وسط طرابلس، على مسافة قصيرة سيراً من الكورنيش وعشر دقائق بالسيارة من المدينة القديمة. يفتح الاستقبال في أيام التدريس من جلسة الصباح حتى نهاية حصة المساء. إن كانت زيارتك الأولى، راسلنا على واتساب حين تنطلق وسيستقبلك أحدنا عند الباب. المواقف في الشارع.','find.cap1':'وسط طرابلس؛ الشارع مُعلَّم بالتركواز.','find.cap2':'المدخل عند الغسق.','faq.k':'أسئلة يطرحها الناس','faq.h':'ما يسألنا عنه الناس على واتساب قبل أن يحجزوا.','q1':'هل أحتاج أن أعرف البرمجة؟','a1':'لا. لا يفترض أي من البرامج الثلاثة أي برمجة. برنامج الاستوديو يبني التطبيقات والأتمتة بأدوات تأخذ التعليمات بلغة عادية؛ والبرنامج التنفيذي عن القرارات لا عن الشيفرة.','q2':'هل التدريس بالعربية أم بالإنجليزية؟','a2':'بالعربية. تُستخدم كلمات إنجليزية حيث يستخدمها القطاع، ويشرح المدرّب كل واحدة منها أول مرة ترد. المواد باللغتين.','q3':'كم التكلفة، ومتى أدفع؟','a3':'رسوم كل برنامج في صفحته. لا يُدفع شيء على الموقع. بعد الحجز يتصل بك مدير، وإن كان البرنامج مناسباً نحجز المقعد ونرسل تفاصيل الدفع عبر واتساب.','q4':'ماذا لو لم أستطع الحضور كل يوم؟','a4':'أخبرنا قبل بداية الدفعة. الأسبوع التنفيذي ودورة المساء يبني كلٌّ منهما على الجلسة السابقة، فنفضّل نقلك إلى الدفعة التالية على أن تفوّت يومين.','q5':'هل تستطيع شركتي إرسال عدة أشخاص؟','a5':'نعم. يستطيع شخصان أو ثلاثة من مؤسسة واحدة الانضمام إلى دفعة مفتوحة. ولفريق كامل نبني برنامجاً حول بياناتكم وننفّذه في مقركم أو مقرّنا؛ انظر التدريب المخصص.','q6':'هل هناك شهادة؟','a6':'ينتهي برنامج الذكاء الاصطناعي للجميع بشهادة محو الأمية بالذكاء الاصطناعي من الأكاديمية. وينتهي البرنامجان الآخران بشهادة إتمام، والأهم: بالخطة أو المشروع الذي بنيته.','ct.k':'تواصل معنا','ct.h':'اسألنا أي شيء عن المحتوى أو المواعيد أو الرسوم أو تدريب فريقك.','ct.lead':'يردّ عليك شخص من الأكاديمية خلال يوم عمل واحد. ويأتي الرد ممن يستطيع فعلاً الإجابة عن السؤال، وهو عادةً أحد المديرين الثلاثة.','who.k':'ابدأ من هنا','who.h':'أيّ هؤلاء أنت؟','who.1k':'أدير مؤسسة','who.1t':'المسار التنفيذي للذكاء الاصطناعي','who.1p':'خمسة أيام. استراتيجية ذكاء اصطناعي وخطة لتسعين يوماً لمؤسستك أنت. سبعة مقاعد، تبدأ 15 نوفمبر.','who.1g':'اطّلع على الأيام الخمسة','who.2k':'أصنع الأشياء','who.2t':'إنتاجية الذكاء الاصطناعي','who.2p':'أسبوعان. أحضر المشروع الذي تعمل عليه وغادر وقد بنيته. عشرة مقاعد، الدفعة المؤسِّسة في نوفمبر.','who.2g':'اطّلع على الأسبوعين','who.3k':'أبدأ من الصفر','who.3t':'الذكاء الاصطناعي للجميع','who.3p':'خمس أمسيات بالعربية. الهاتف يكفي. ثلاثون مقعداً كل شهر، معظمها مجاني في دفعة مرعية.','who.3g':'اطّلع على الأمسيات الخمس','who.4k':'أريد أن أرعى','who.4t':'مبادرة محو الأمية بالذكاء الاصطناعي','who.4p':'موّل شهراً من برنامج الذكاء الاصطناعي للجميع: ثلاثون شخصاً، مجاناً لهم، واسمك على كل شهادة. 36,000 دينار.','who.4g':'اعرف كيف تعمل الرعاية','who.co':'تدريب لفريق كامل على بياناتكم','who.pw':'الدبلوم والأطفال وصنّاع السياسات، يفتح في 2027','why.h2':'كل الليبيين تقريباً متصلون بالإنترنت، ولا أحد تقريباً تعلّم كيف تعمل هذه الأدوات.','in.k':'داخل الأكاديمية','in.h':'قاعة واحدة في شارع زاوية الدهماني، طرابلس.','in.p':'صفوف من سبعة إلى ثلاثين شخصاً، بالعربية، مع مدرّب يعرف اسمك. تعال واحضر حصة قبل أن تقرر.','in.btn':'رتّب زيارة عبر واتساب','in.map':'افتح في الخرائط','rc.h':'لست متأكداً أي برنامج يناسبك؟ اسألنا.','rc.p':'يردّ عليك شخص من الأكاديمية عبر واتساب خلال يوم عمل واحد.','ct.addr':'شارع زاوية الدهماني، طرابلس','f.opt':'اختياري','f.assure':'لا شيء تدفعه الآن. نردّ خلال يوم عمل واحد.','f.assure2':'لا التزام قبل أن نؤكد شهرك.','f.assure3':'الاستشارة مجانية، ودون أي التزام.','f.assure4':'رسالة واحدة عند تحديد المواعيد، لا أكثر.','f.assure5':'لا شيء تدفعه، ولا قوائم بريدية.','f.iam':'أيّها أقرب إليك؟','f.company':'الشركة','f.nopay':'لا شيء تدفعه الآن','f.free':'معظم المقاعد مجانية','f.onesp':'راعٍ واحد لكل شهر','f.freecons':'الاستشارة مجانية','f.nocommit':'دون أي التزام','done.more':'تصفّح البرامج الأخرى','fx.fee':'الرسوم','fx.cost':'التكلفة','fx.cost.v':'دينار ليبي لشهر واحد','fx.people':'عدد المتدربين','fx.people.v':'مجاناً لهم','fx.months':'الأشهر','fx.months.v':'في 2027، راعٍ واحد لكل شهر','fx.vis':'اسم مؤسستك','fx.vis.v':'على الشهادات الثلاثين كلها','fx.where':'المكان','fx.where.v':'في مقرّكم أو في مقرّنا أو عن بُعد','fx.lang':'اللغة','fx.lang.v':'العربية','fx.team':'حجم الفريق','fx.team.v':'من شخص واحد إلى أكثر من 200','fx.prop':'العرض','fx.prop.v':'خطة وسعر خلال أسبوع','pg.out1':'ما تغادر به','pg.out2':'ما تصنعه','pg.out3':'ما تتعلّمه','pg.out4':'ما تموّله رعايتك','pg.how1':'كيف يسير الأسبوع','pg.how2':'كيف يسير الأسبوعان','pg.how3':'كيف تسير الأمسيات','pg.how4':'كيف يسير شهر الرعاية','pg.how5':'كيف يسير برنامج الفريق','pg.faq':'معلومات تهمّك','pg.more':'برامج أخرى','pg.pw':'ثلاثة مسارات','pg.ck':'لفريق كامل','pg.pk':'تفتح في 2027','pw.join':'انضم إلى قائمة الانتظار','ex.h1':'صباحاً، من الأحد إلى الخميس','ex.h1s':'أربع ساعات يومياً، فتعود إلى عملك بعد الظهر.','ex.h2':'14 جلسة و5 مختبرات تطبيقية','ex.h2s':'مبنية على أسئلة مؤسستك أنت، لا على حالات عامة.','ex.h3':'سبعة أشخاص في القاعة','ex.h3s':'الأسبوع مجموعة عمل، لا محاضرة.','ex.h4':'جلسة استشارية خاصة','ex.h4s':'يُختتم الأسبوع بوقت مخصّص لخطتك أنت، وجهاً لوجه.','pr.h1':'الأسبوع الأول','pr.h2':'الأسبوع الثاني','pr.h3':'مختبرات الاستوديو، من الأحد إلى الخميس','pr.h3s':'عشرة مقاعد، فكل مختبر تطبيقي والمدرّب إلى جانبك.','pr.h4':'حاسوبك وهاتفك','ev.h1':'خمس أمسيات بعد العمل','ev.h1s':'من الأحد إلى الخميس، ساعتان كل أمسية.','ev.h2':'12 مختبراً تطبيقياً','ev.h2s':'الهاتف يكفي. لا حاسوب ولا خبرة سابقة.','ev.h3':'بالعربية','ev.h3s':'تُشرح المصطلحات الإنجليزية عند أول ظهور لها.','ev.h4':'شهادة في النهاية','ev.h4s':'شهادة محو الأمية بالذكاء الاصطناعي، باسمك.','spx.1':'تتقدّم وتختار شهراً','spx.1s':'أي شهر في 2027، أو نقترح عليك شهراً.','spx.2':'نؤكد خلال خمسة أيام عمل','spx.2s':'لكل شهر راعٍ واحد فقط.','spx.3':'ثلاثون شخصاً يحضرون الدورة','spx.3s':'خمس أمسيات من الذكاء الاصطناعي للجميع، مجاناً لهم.','spx.4':'يصلك التقرير','spx.4s':'النتائج قبل الدورة وبعدها، والمختبرات المنجزة.','pr.h1s':'الإنتاجية، والبرمجة بالذكاء الاصطناعي، والأتمتة، وتصميم الصور والهوية.','pr.h2s':'الفيديو والصوت والموسيقى بالذكاء الاصطناعي، والحملات والنصوص.','back':'→ كل البرامج','f.who':'يردّ عليك شخص، لا روبوت.','f.wahint':'نردّ عبر واتساب، ولا نتصل بك دون موعد.','f.name':'الاسم','f.whatsapp':'رقم واتساب','f.org':'المؤسسة','f.email':'البريد الإلكتروني','f.role':'المنصب','f.when':'أفضل وقت للاتصال','f.make':'ماذا تصنع؟','f.city':'المدينة','f.contact':'اسم جهة الاتصال','f.month':'الشهر المفضل','f.size':'حجم الفريق','f.need':'ماذا يجب أن يستطيع الفريق فعله بعد التدريب؟','f.pathway':'المسار','f.reach':'رقم واتساب أو بريد إلكتروني','f.q':'سؤالك',
  'f.err':'يرجى إضافة اسمك ورقم واتساب يمكننا الوصول إليك عبره.','f.err2':'يرجى إضافة اسمك وبريد إلكتروني صحيح.','f.err3':'يرجى إضافة اسم المؤسسة واسم جهة الاتصال ورقم واتساب.','f.err4':'يرجى إضافة اسمك ووسيلة للتواصل معك وسؤالك.',
  'f.or':'أو راسلنا مباشرة:','f.wa':'واتساب',
  'done.h':'وصلتنا رسالتك.','done.p':'سنرد عليك عبر واتساب خلال يوم عمل واحد.','done.wa':'راسلنا الآن','done.call':'تم طلب المكالمة.','done.seat':'تم طلب المقعد.','done.app':'وصلنا طلبك.','done.req':'وصلنا طلبك.','done.list':'أنت على القائمة.','done.visit':'تم طلب الزيارة.','done.q':'تم إرسال سؤالك.',
  'c2':'2 / 10','c3':'3 / 10','c4':'4 / 10','c5':'5 / 10','c6':'6 / 10','c7':'7 / 10','c8':'8 / 10','c9':'9 / 10','c10':'10 / 10',
- 'fig.why1':'9 من كل 10 ليبيين متصلون','fig.why2':'0 أكاديميات للذكاء الاصطناعي، حتى الآن','d.sun':'الأحد','d.mon':'الاثنين','d.tue':'الثلاثاء','d.wed':'الأربعاء','d.thu':'الخميس','fig.ex1':'9 مخرجات','fig.ex2':'خمسة أيام. تغادر بخارطة طريق لتسعين يوماً وبميزانيتها.','p.app':'تطبيق','p.auto':'أتمتة','p.img':'صورة','p.brand':'هوية','p.prompt':'أوامر','p.video':'فيديو','p.voice':'صوت','p.music':'موسيقى','p.camp':'حملة','p.copy':'نصوص','fig.pr1':'مشروعك يمر عبر العشرة كلها.','fig.pr2':'الأسبوع الأول، ثم الثاني.','fig.ev1':'خمس أمسيات، ساعتان لكل منها، 12 مختبراً','fig.ev2':'لا تحتاج إلى خلفية. الهاتف يكفي.','fig.sp0':'أنت','fig.sp1':'راعٍ واحد كل شهر. ثلاثون شخصاً، مجاناً لهم.','fig.sp2':'اسمك على الشهادات الثلاثين كلها.','c.1':'استشارة مجانية','c.2':'قواعد الذكاء الاصطناعي في العمل','c.3':'مختبرات على مهامكم','c.4':'تقرير للإدارة','fig.co1':'في مقركم، أو في حرمنا، أو عن بُعد. بالعربية.','fig.pa1':'الدبلوم','fig.pa2':'للأطفال','fig.pa3':'صنّاع السياسات','fig.ab1':'خارطة طريق','fig.ab2':'تطبيق يعمل','fig.ab3':'معرض أعمال','fig.cap.why':'الشكل 1. تسعة من كل عشرة ليبيين متصلون. ولا يكاد أحد مدرَّباً.','fig.cap.ab':'الشكل 1. ما تغادر به.','fig.cap.ex':'الشكل 2. الأيام الخمسة، وما يتراكم فيها.','fig.cap.pr':'الشكل 3. عشرة مخرجات، مشروع واحد.','fig.cap.ev':'الشكل 4. خمس أمسيات.','fig.cap.sp':'الشكل 5. شهرك.','fig.cap.co':'الشكل 6. كيف يسير برنامج الفريق.','fig.cap.pa':'الشكل 7. ما يُفتح في 2027.',
- 'w.k':'داخل الأكاديمية','w.h':'تسعون ثانية داخل أول أكاديمية للذكاء الاصطناعي في ليبيا.','w.soon':'الفيلم يصل في 30 أكتوبر','w.cap':'صُوّر في الحرم الجامعي، شارع زاوية الدهماني، طرابلس.',
- 'why.cap':'طرابلس ليلاً.','why.k':'لماذا الآن','pg.k':'البرامج','pg.h':'ثلاثة مداخل. اختر مدخلك.','pg.1':'خمسة أيام. تسعة مخرجات لمؤسستك أنت. للرؤساء التنفيذيين والمديرين ورؤساء الأقسام.','pg.1m':'5 أيام · الدفعة القادمة تبدأ 15 نوفمبر','pg.1b':'اطّلع على الأيام الخمسة','pg.2':'أسبوعان. عشرة أشياء صنعتها بنفسك: تطبيق، وفيديو، وحملة، وأتمتة. لصنّاع المحتوى والمسوّقين وروّاد الأعمال.','pg.2m':'أسبوعان · الدفعة المؤسِّسة، نوفمبر','pg.2b':'اطّلع على الأسبوعين','pg.3':'عشر ساعات على خمس أمسيات، بالعربية. لا تحتاج إلى خلفية مسبقة، الهاتف يكفي.','pg.3m':'10 ساعات · دفعة جديدة كل شهر','pg.3b':'اطّلع على الأمسيات الخمس','pg.also':'للمؤسسات:','pg.a1':'ارعَ شهراً','pg.a2':'درّب فريقك','pg.a3':'يفتح في 2027: الدبلوم، الأطفال، صنّاع السياسات','back':'← كل البرامج','exec.k':'المسار التنفيذي للذكاء الاصطناعي','prod.k':'إنتاجية الذكاء الاصطناعي · أحضر مشروعك الخاص','prod.byo':'أحضر مشروعك الخاص','every.k':'الذكاء الاصطناعي للجميع','sp.k':'مبادرة محو الأمية بالذكاء الاصطناعي','co.k':'تدريب مخصص للذكاء الاصطناعي','pw.k':'مسارات أخرى','ab.k':'في الأكاديمية','ct.k':'تواصل معنا',
- 'why.h':'ليبيا متصلة بالإنترنت. ولا أحد تقريباً مدرَّب.',
- 'why.lead':'أدوات الذكاء الاصطناعي التي يستخدمها الناس في العمل تتغير كل بضعة أسابيع. وحتى اليوم لم يكن في ليبيا مكان لتعلّمها حضورياً، بالعربية.',
- 'why.f1b':'9 من 10','why.f1':'من الليبيين متصلون بالإنترنت','why.f2b':'94%','why.f2':'من استخدام الهاتف في ليبيا على شبكات 4G أو 5G','why.f3b':'صفر','why.f3':'أكاديميات للذكاء الاصطناعي في ليبيا قبل هذه',
+ 'fig.why1':'9 من كل 10 ليبيين متصلون','fig.why2':'0 أكاديميات للذكاء الاصطناعي، حتى الآن','fig.ex1':'9 مخرجات','fig.ex2':'خمسة أيام. تغادر بخارطة طريق لتسعين يوماً وبميزانيتها.','p.app':'تطبيق','p.auto':'أتمتة','p.img':'صورة','p.brand':'هوية','p.prompt':'أوامر','p.video':'فيديو','p.voice':'صوت','p.music':'موسيقى','p.camp':'حملة','p.copy':'نصوص','fig.pr1':'مشروعك يمر عبر العشرة كلها.','fig.pr2':'الأسبوع الأول، ثم الثاني.','fig.ev1':'خمس أمسيات، ساعتان لكل منها، 12 مختبراً','fig.ev2':'لا تحتاج إلى خلفية. الهاتف يكفي.','fig.sp0':'أنت','fig.sp1':'راعٍ واحد كل شهر. ثلاثون شخصاً، مجاناً لهم.','fig.sp2':'اسمك على الشهادات الثلاثين كلها.','c.1':'استشارة مجانية','c.2':'قواعد الذكاء الاصطناعي في العمل','c.3':'مختبرات على مهامكم','c.4':'تقرير للإدارة','fig.co1':'في مقركم، أو في حرمنا، أو عن بُعد. بالعربية.','fig.pa1':'الدبلوم','fig.pa2':'للأطفال','fig.pa3':'صنّاع السياسات','fig.ab1':'خارطة طريق','fig.ab2':'تطبيق يعمل','fig.ab3':'معرض أعمال','fig.cap.why':'الشكل 1. تسعة من كل عشرة ليبيين متصلون. ولا يكاد أحد مدرَّباً.','fig.cap.ab':'الشكل 1. ما تغادر به.','fig.cap.ex':'الشكل 2. الأيام الخمسة، وما يتراكم فيها.','fig.cap.pr':'الشكل 3. عشرة مخرجات، مشروع واحد.','fig.cap.ev':'الشكل 4. خمس أمسيات.','fig.cap.sp':'الشكل 5. شهرك.','fig.cap.co':'الشكل 6. كيف يسير برنامج الفريق.','fig.cap.pa':'الشكل 7. ما يُفتح في 2027.',
+ 'w.soon':'الفيلم يصل في 30 أكتوبر',
+ 'pg.1m':'5 أيام · الدفعة القادمة تبدأ 15 نوفمبر','pg.2m':'أسبوعان · الدفعة المؤسِّسة، نوفمبر','pg.3m':'10 ساعات · دفعة جديدة كل شهر','exec.k':'المسار التنفيذي للذكاء الاصطناعي','prod.k':'إنتاجية الذكاء الاصطناعي · أحضر مشروعك الخاص','every.k':'الذكاء الاصطناعي للجميع','sp.k':'مبادرة محو الأمية بالذكاء الاصطناعي','co.k':'تدريب مخصص للذكاء الاصطناعي','pw.k':'مسارات أخرى',
+ 
+ 
+ 'why.f1b':'9 من 10','why.f2b':'94%','why.f3b':'صفر',
  'ready.h':'احصل على فحص الجاهزية للذكاء الاصطناعي','ready.why':'قائمة مختصرة للمؤسسات الليبية: أين يؤتي الذكاء الاصطناعي ثماره أولاً، وما الذي يجب تجهيزه قبل البدء. مجاناً، إلى بريدك.','ready.btn':'أرسلوا لي الفحص','ready.done':'القائمة في طريقها إليك خلال يوم عمل واحد.',
  'exec.h':'خمسة أيام. تسعة مخرجات لمؤسستك أنت.',
  'exec.lead':'للرؤساء التنفيذيين والمديرين ورؤساء الأقسام. لا تغادر ومعك ملاحظات، بل تغادر ومعك استراتيجية للذكاء الاصطناعي لمؤسستك، وخارطة طريق لتسعين يوماً بميزانيتها، والأسئلة التي تمنع أي مورّد من بيعك الشيء الخطأ.',
@@ -1170,11 +1542,11 @@ ar:{
  'pw.2':'الذكاء الاصطناعي للأطفال','pw.2s':'من 10 إلى 16 عاماً، مستويان، أسبوعان لكل مستوى. المواعيد والسعر في 2027.','pw.q2':'2027',
  'pw.3':'الذكاء الاصطناعي لصنّاع السياسات','pw.3s':'للوزارات والهيئات العامة: القواعد التي تحتاجها ليبيا وكيف تُكتب.','pw.q3':'عند الطلب',
  'pw.c.h':'انضم إلى قائمة الانتظار','pw.c.why':'بلا التزام. رسالة واحدة عند تأكيد المواعيد.','pw.c.btn':'أضفني إلى القائمة','pw.done':'نراسلك عند تأكيد المواعيد.',
- 'ab.h':'تعليم في قاعة، لا في نافذة متصفح.','ab.t1':'حضورياً، في القاعة','ab.t1s':'قاعة دراسية في شارع زاوية الدهماني، لا فيديو. من سبعة إلى ثلاثين شخصاً، ومدرّب يعرف اسمك.','ab.t2':'بالعربية أولاً','ab.t2s':'نعلّم بالعربية، مع الإنجليزية للمصطلحات التي يستخدمها القطاع أصلاً.','ab.t3':'تغادر ومعك دليل','ab.t3s':'خارطة طريق لمؤسستك، أو تطبيق يعمل، أو معرض أعمال. لا مجرد ملاحظات.',
+ 'ab.t1':'حضورياً، في القاعة','ab.t1s':'قاعة دراسية في شارع زاوية الدهماني، لا فيديو. من سبعة إلى ثلاثين شخصاً، ومدرّب يعرف اسمك.','ab.t2':'بالعربية أولاً','ab.t2s':'نعلّم بالعربية، مع الإنجليزية للمصطلحات التي يستخدمها القطاع أصلاً.','ab.t3':'تغادر ومعك دليل','ab.t3s':'خارطة طريق لمؤسستك، أو تطبيق يعمل، أو معرض أعمال. لا مجرد ملاحظات.',
  'ab.lead':'تتعلم في قاعة دراسية بشارع زاوية الدهماني، بالعربية أولاً، مع أشخاص يبنون بهذه الأدوات كل يوم. كل برنامج ينتهي بشيء صنعته بنفسك: خارطة طريق لمؤسستك، أو تطبيق يعمل، أو معرض أعمال.',
-  'ab.c.h':'زُر الأكاديمية','ab.c.why':'تعال وشاهد حصة دراسية. ثلاثون دقيقة، بلا أي التزام.','ab.c.btn':'احجز زيارتي',
- 'ct.h':'اسألنا أي شيء.','ct.lead':'يرد عليك شخص من الأكاديمية خلال يوم عمل واحد، وليس روبوتاً.',
- 'ct.figcap':'الاستقبال، الطابق الأول. تفضّل، الشاي علينا.','ct.wa':'واتساب','ct.email':'البريد الإلكتروني','ct.campus':'الحرم الجامعي','ct.addr':'شارع زاوية الدهماني، طرابلس، ليبيا',
+  'ab.c.why':'تعال وشاهد حصة دراسية. ثلاثون دقيقة، بلا أي التزام.','ab.c.btn':'احجز زيارتي',
+ 
+ 'ct.figcap':'الاستقبال، الطابق الأول. تفضّل، الشاي علينا.','ct.wa':'واتساب','ct.email':'البريد الإلكتروني','ct.campus':'الحرم الجامعي',
  'ct.c.h':'أرسل سؤالاً','ct.c.why':'عن المحتوى أو المواعيد أو الرسوم أو تدريب فريقك.','ct.c.btn':'أرسل سؤالي','ct.done':'نرد خلال يوم عمل واحد.',
  'ft.copy':'© 2026 أكاديمية الخوارزمي للذكاء الاصطناعي. أول أكاديمية للذكاء الاصطناعي في ليبيا.',
  'bar.call':'احجز مكالمة مجانية',
@@ -1215,9 +1587,9 @@ ar:{
     document.documentElement.classList.toggle('on-page',isPage);
     window.__paused=isPage; if(isPage){ $('#nav').classList.remove('dark'); }
     var barA=$('.bar a.btn-teal');
-    if(isPage){ var card=$('#'+h+' .card'), cb=card&&$('button[type=submit]',card); if(barA&&cb){ barA.textContent=cb.textContent; barA.href='#'+h; barA.onclick=function(e){ e.preventDefault(); card.scrollIntoView({behavior:'smooth',block:'start'}); var f=$('input',card); f&&setTimeout(function(){f.focus({preventScroll:true});},500); }; } }
+    if(isPage){ var card=$('#'+h+' .card'), cb=card&&$('button[type=submit]',card); if(barA&&cb){ barA.textContent=cb.textContent.trim(); barA.href='#'+h; barA.onclick=function(e){ e.preventDefault(); card.scrollIntoView({behavior:'smooth',block:'start'}); var f=$('input',card); f&&setTimeout(function(){f.focus({preventScroll:true});},500); }; } }
     else if(barA){ barA.textContent=(T[document.documentElement.lang]||T.en)['bar.call']; barA.href='#executive'; barA.onclick=null; }
-    if(isPage){ window.scrollTo(0,0); var h2=$('#'+h+' h2'); document.title=(h2?h2.textContent+' · ':'')+(T[document.documentElement.lang]||T.en).title; }
+    if(isPage){ window.scrollTo(0,0); var h2=$('#'+h+' h1'); document.title=(h2?h2.textContent+' · ':'')+(T[document.documentElement.lang]||T.en).title; }
     else { document.title=(T[document.documentElement.lang]||T.en).title; if(h){ var el=document.getElementById(h); if(el) setTimeout(function(){ el.scrollIntoView({block:'start'}); },0); } }
   }
   addEventListener('hashchange',route);
@@ -1298,32 +1670,33 @@ ar:{
       var ok=$$('[required]',form).every(function(i){ return i.value.trim().length>0; });
       if(ok && $('input[type=email][required]',form)) ok=/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(data.email||'');
       if(!ok){ card.classList.add('error'); var f=$$('[required]',form).filter(function(i){return !i.value.trim();})[0]; if(f) f.focus(); return; }
-      var btn=$('button[type=submit]',form), label=btn.textContent; btn.disabled=true; btn.textContent='…';
+      var btn=$('button[type=submit]',form); btn.disabled=true; btn.classList.add('busy');
       var summary=Object.keys(data).filter(function(k){return ['form','page','lang'].indexOf(k)<0 && data[k];}).map(function(k){return k+': '+data[k];}).join('\n');
-      function finish(){ card.classList.add('sent'); if(kind==='start'){ var nx=$('.next-link',card); if(nx){ var map={leader:['#executive','start.n1'],learner:['#programmes','start.n2'],sponsor:['#sponsor','start.n3']}, m=map[data.iam]||map.learner, tt=(T[document.documentElement.lang]||T.en); nx.href=m[0]; nx.textContent=tt[m[1]]||T.en[m[1]]||nx.textContent; } } track('generate_lead',{form:kind,program:program}); var d=$('.done .wa-link',card); if(d&&wa){ d.href=waUrl('Hello Alkhwarizmi, I just sent a form on the website.\n'+summary); } card.scrollIntoView({block:'nearest'}); }
+      function finish(){ card.classList.add('sent'); if(kind==='start'){ var nx=$('.next-link',card); if(nx){ var map={leader:['#executive','start.n1'],learner:['#who','start.n2'],sponsor:['#sponsor','start.n3']}, m=map[data.iam]||map.learner, tt=(T[document.documentElement.lang]||T.en); nx.href=m[0]; nx.textContent=tt[m[1]]||T.en[m[1]]||nx.textContent; } } track('generate_lead',{form:kind,program:program}); var d=$('.done .wa-link',card); if(d&&wa){ d.href=waUrl('Hello Alkhwarizmi, I just sent a form on the website.\n'+summary); } card.scrollIntoView({block:'nearest'}); }
       function fallback(){ /* no endpoint: hand off to WhatsApp, or email */
         if(wa){ window.open(waUrl('Hello Alkhwarizmi,\n'+summary),'_blank','noopener'); }
         else { location.href='mailto:'+CONFIG.EMAIL+'?subject='+encodeURIComponent('Website: '+kind+(program?' / '+program:''))+'&body='+encodeURIComponent(summary); }
         finish();
       }
-      if(!CONFIG.FORM_ENDPOINT){ fallback(); btn.disabled=false; btn.textContent=label; return; }
+      if(!CONFIG.FORM_ENDPOINT){ fallback(); btn.disabled=false; btn.classList.remove('busy'); return; }
       data._subject='Website lead: '+kind+(program?' / '+program:''); data._replyto=data.email||'';
       fetch(CONFIG.FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
         .then(function(r){ if(!r.ok) throw new Error(r.status); finish(); })
         .catch(function(){ fallback(); })
-        .then(function(){ btn.disabled=false; btn.textContent=label; });
+        .then(function(){ btn.disabled=false; btn.classList.remove('busy'); });
     });
   });
 })();
 </script>
 <script>
-(function(){ var root=document.documentElement; if(matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('static'); setTimeout(function(){ if(!window.__mark) root.classList.add('static'); },6000); })();
+(function(){ var root=document.documentElement; if(matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('static'); setTimeout(function(){ if(!window.__mark) root.classList.add('static'); },9000); })();
 </script>
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script type="module">
-import * as THREE from 'three';
-import { SVGLoader } from 'three/addons/loaders/SVGLoader.js';
-import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+await new Promise(function(r){ if(document.readyState==='complete') setTimeout(r,250); else addEventListener('load',function(){ setTimeout(r,250); }); });
+const THREE = await import('three');
+const { SVGLoader } = await import('three/addons/loaders/SVGLoader.js');
+const { RoomEnvironment } = await import('three/addons/environments/RoomEnvironment.js');
 
 const root = document.documentElement;
 if (!root.classList.contains('static')) {
@@ -1703,6 +2076,66 @@ frame();
     if(!band) return; band.querySelectorAll('.contours path').forEach(function(p){var t=p.getAttribute('transform'); p.setAttribute('transform',t.replace(/translate\((\d+) /,'translate('+(r?380:1220)+' '));});}
   flip(); new MutationObserver(flip).observe(document.documentElement,{attributes:true,attributeFilter:['dir']});
 })();
+</script>
+<script>
+/* ---------- programme pages and forms: jump links, field-level validation ---------- */
+(function(){
+  function $(q,c){return (c||document).querySelector(q);} function $$(q,c){return Array.prototype.slice.call((c||document).querySelectorAll(q));}
+  var MSG={
+    en:{req:'Please fill this in.',phone:'Please enter a WhatsApp number with at least 8 digits.',email:'Please check the email address.'},
+    ar:{req:'يرجى تعبئة هذا الحقل.',phone:'يرجى إدخال رقم واتساب من 8 أرقام على الأقل.',email:'يرجى التحقق من البريد الإلكتروني.'}
+  };
+  function lang(){ return document.documentElement.lang==='ar'?'ar':'en'; }
+  function digits(v){ return (v||'').replace(/[٠-٩]/g,function(d){return String(d.charCodeAt(0)-1632);}).replace(/[۰-۹]/g,function(d){return String(d.charCodeAt(0)-1776);}).replace(/\D/g,''); }
+
+  /* jump from the page header (and pathway rows) to the form without changing the route */
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-jump]'); if(!a) return;
+    e.preventDefault();
+    var t=document.getElementById(a.getAttribute('data-jump')); if(!t) return;
+    var pick=a.getAttribute('data-pick');
+    if(pick){ var r=$('input[type=radio][value="'+pick+'"]',t); if(r) r.checked=true; }
+    t.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+    var f=$('input:not([type=radio]):not(.hp),select,textarea',t); if(f) setTimeout(function(){ f.focus({preventScroll:true}); },450);
+  });
+
+  function setErr(field,msg){
+    var wrap=field.closest('.f'); if(!wrap) return;
+    var s=$('.ferr',wrap);
+    if(msg){ if(!s){ s=document.createElement('small'); s.className='ferr'; s.id='e'+Math.random().toString(36).slice(2,8); wrap.appendChild(s); } s.textContent=msg; field.setAttribute('aria-invalid','true'); field.setAttribute('aria-describedby',s.id); wrap.classList.add('bad'); }
+    else { if(s) s.remove(); field.removeAttribute('aria-invalid'); field.removeAttribute('aria-describedby'); wrap.classList.remove('bad'); }
+  }
+  function check(field){
+    var v=(field.value||'').trim(), m=MSG[lang()];
+    if(field.required && !v) return m.req;
+    if(field.type==='tel' && v && digits(v).length<8) return m.phone;
+    if(field.type==='email' && v && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) return m.email;
+    return '';
+  }
+  /* runs before the main form handler (capture phase) and stops it when a field is wrong */
+  document.addEventListener('submit',function(e){
+    var form=e.target, card=form.closest('.card'); if(!card) return;
+    var first=null;
+    $$('input:not(.hp):not([type=radio]),textarea',form).forEach(function(f){ var m=check(f); setErr(f,m); if(m&&!first) first=f; });
+    if(first){ e.preventDefault(); e.stopImmediatePropagation(); card.classList.remove('error'); first.focus(); return; }
+    var tel=$('input[type=tel]',form); if(tel){ tel.value=tel.value.replace(/[٠-٩]/g,function(d){return String(d.charCodeAt(0)-1632);}); }
+  },true);
+  /* clear a message as soon as the field is fixed; check again when leaving a touched field */
+  document.addEventListener('input',function(e){ var f=e.target; if(f.getAttribute&&f.getAttribute('aria-invalid')==='true' && !check(f)) setErr(f,''); });
+  document.addEventListener('focusout',function(e){ var f=e.target; if(f.matches&&f.matches('.card input:not(.hp):not([type=radio]),.card textarea') && f.value.trim()) setErr(f,check(f)); });
+
+  /* hide the phone bottom bar while the page's own header button is on screen */
+  if('IntersectionObserver' in window){
+    var seen=new Set();
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) seen.add(e.target); else seen.delete(e.target); }); document.documentElement.classList.toggle('cta-in-view',seen.size>0); });
+    $$('.pg-cta').forEach(function(el){ io.observe(el); });
+  }
+  /* when a form is sent, move focus to the confirmation so screen readers announce it */
+  if('MutationObserver' in window){
+    $$('.card.fx').forEach(function(c){ new MutationObserver(function(){ if(c.classList.contains('sent')){ var d=$('.done',c); if(d) d.focus({preventScroll:true}); } }).observe(c,{attributes:true,attributeFilter:['class']}); });
+  }
+})();
+
 </script>
 </body>
 </html>
