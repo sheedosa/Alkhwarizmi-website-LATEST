@@ -909,7 +909,7 @@ footer{background:var(--navy);color:#C9C9DC}footer .in span,footer .in{color:#C9
 .card.fx .done a{color:var(--teal-ink);font-weight:600}
 .card.fx .done .next{margin:10px 0 0}
 @media (max-width:420px){.card.fx .row2{grid-template-columns:1fr}.card.fx .seg.seg4{grid-template-columns:1fr 1fr}}
-@media (max-width:340px){.card.fx .seg.seg3{grid-template-columns:1fr}}
+@media (max-width:360px){.card.fx .seg.seg3 span{padding-inline:4px;font-size:14px}}
 [dir="rtl"] .card.fx .fl,[dir="rtl"] .card.fx .seg span{letter-spacing:0}
 /* the homepage contact form sits on grey: keep the panel white */
 .reach .card.fx{margin:0}
@@ -950,7 +950,9 @@ footer .in{max-width:1180px;margin:0 auto;padding-inline:max(var(--edge),env(saf
 
 .pg-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,400px);grid-template-areas:"a aside" "b aside";column-gap:clamp(40px,6vw,96px);padding-top:clamp(40px,5vw,72px);padding-bottom:clamp(48px,6vw,88px)}
 .pg-a{grid-area:a;min-width:0}.pg-b{grid-area:b;min-width:0}
-.pg-aside{grid-area:aside;align-self:start;position:sticky;top:84px;scroll-margin-top:84px}
+.pg-aside{grid-area:aside;align-self:start;position:static;scroll-margin-top:84px}
+/* pinned only when the whole form fits the window (set by script) */
+.pg-aside.can-stick{position:sticky;top:84px}
 .pg-sec+.pg-sec,.pg-b .pg-sec{margin-top:clamp(40px,5vw,64px)}
 .pg-b:empty{display:none}
 .pg-sec h2{font-family:var(--display);font-size:clamp(22px,2vw,28px);letter-spacing:-.02em;line-height:1.15;margin:0 0 20px}
@@ -1046,6 +1048,115 @@ html.on-page.cta-in-view .bar{transform:translateY(110%)}
 .card.fx.sent form,.card.fx.sent .why{display:none}
 .card.fx .f.bad input:focus,.card.fx .f.bad textarea:focus{border-color:#C0303B;box-shadow:0 0 0 3px rgba(192,48,59,.2)}
 
+/* ---- form fit fixes (audit) ---- */
+/* labels: the Optional tag sits right after the label text, even when it wraps */
+.card.fx .fl{display:block}
+.card.fx .fl>span{display:inline}
+.card.fx .opt{margin-inline-start:6px;white-space:nowrap}
+/* choice buttons in one row share one height */
+.card.fx .seg label{display:flex}
+.card.fx .seg span{flex:1 1 auto;width:100%}
+/* desktop: a little tighter, so more forms fit beside the content */
+@media (min-width:901px){
+  .card.fx form{gap:14px}
+  .card.fx .why{margin-bottom:14px}
+  .card.fx label.f input,.card.fx label.f select{min-height:48px;padding-block:11px}
+  .card.fx label.f textarea{min-height:84px}
+  .card.fx .btn{min-height:52px}
+}
+/* tablets: keep the form at a comfortable reading width instead of 740px wide fields */
+@media (min-width:641px) and (max-width:900px){
+  .pg-aside .card.fx,.reach .card.fx{max-width:620px}
+  .card.fx .seg:not(.seg1):not(.seg3):not(.seg4){grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* number ranges (1–10, 200+) read left to right in Arabic too */
+.card.fx .seg.seg4 span{direction:ltr;unicode-bidi:isolate}
+
+/* =====================================================================
+   Background layer: one visual language taken from the hero's dotted
+   Libya map. A dot field (data), a fine grid (structure) and two soft
+   brand glows (teal and indigo). Everything sits behind the content
+   (z-index:-1 inside an isolated section) and fades out with a mask,
+   so no texture ever runs under body text at full strength.
+   ===================================================================== */
+:root{
+  --dots:radial-gradient(circle,rgba(17,17,40,.24) 1.2px,transparent 1.7px);
+  --dots-w:radial-gradient(circle,rgba(255,255,255,.10) 1.1px,transparent 1.6px);
+  --grid:linear-gradient(rgba(17,17,40,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(17,17,40,.075) 1px,transparent 1px);
+  --g-teal:rgba(9,201,142,.22); --g-indigo:rgba(83,76,182,.16);
+}
+.bgx{position:relative;isolation:isolate}
+.bgx::before,.bgx::after{content:"";position:absolute;pointer-events:none;z-index:-1}
+
+/* ---- hero (the 3D canvas is transparent, so this shows through) ---- */
+/* the hero's base colour is set by script (white to navy on scroll), so the texture lives on two layers above it */
+.scrolly .vp{isolation:isolate}
+.scrolly .vp::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:
+  radial-gradient(38% 50% at 78% 58%,rgba(9,201,142,.20),transparent 72%),
+  radial-gradient(30% 40% at 92% 30%,rgba(83,76,182,.14),transparent 70%),
+  radial-gradient(38% 46% at 6% 8%,rgba(83,76,182,.08),transparent 70%)}
+.scrolly .vp::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--dots) 0 0/26px 26px;
+  -webkit-mask-image:radial-gradient(55% 60% at 8% 0%,#000 0%,transparent 70%);mask-image:radial-gradient(55% 60% at 8% 0%,#000 0%,transparent 70%)}
+
+/* ---- "Which of these is you?" : blueprint grid from the top right ---- */
+.who.bgx{overflow:hidden}
+.who.bgx::before{inset:0;background:var(--grid);background-size:44px 44px;background-position:-1px -1px;
+  -webkit-mask-image:radial-gradient(70% 90% at 100% 0%,#000 0%,transparent 72%);mask-image:radial-gradient(70% 90% at 100% 0%,#000 0%,transparent 72%)}
+.who.bgx::after{width:min(720px,70vw);height:520px;top:-220px;inset-inline-end:-160px;background:radial-gradient(closest-side,var(--g-teal),transparent);filter:blur(10px)}
+
+/* ---- Inside: dot field on the far side, indigo glow behind the film ---- */
+.inside.bgx{overflow:hidden;background:linear-gradient(180deg,#fff,#FAFBFC)}
+.inside.bgx::before{inset:0;background:var(--dots) 0 0/26px 26px;
+  -webkit-mask-image:radial-gradient(45% 80% at 100% 50%,#000 0%,transparent 75%);mask-image:radial-gradient(45% 80% at 100% 50%,#000 0%,transparent 75%)}
+.inside.bgx::after{width:min(760px,80vw);height:560px;top:50%;inset-inline-start:-140px;transform:translateY(-50%);background:radial-gradient(closest-side,var(--g-indigo),transparent)}
+
+/* ---- Contact: grid from the bottom left, teal glow behind the form ---- */
+.reach.bgx{overflow:hidden}
+.reach.bgx::before{inset:0;background:var(--grid);background-size:44px 44px;
+  -webkit-mask-image:radial-gradient(60% 80% at 0% 100%,#000 0%,transparent 72%);mask-image:radial-gradient(60% 80% at 0% 100%,#000 0%,transparent 72%)}
+.reach.bgx::after{width:min(820px,90vw);height:640px;top:40px;inset-inline-end:-120px;background:radial-gradient(closest-side,var(--g-teal),transparent)}
+
+/* ---- footer: a faint dot field on navy ---- */
+footer{position:relative;isolation:isolate;overflow:hidden}
+footer::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--dots-w) 0 0/22px 22px;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 40%,#000 60%,transparent);mask-image:linear-gradient(90deg,transparent,#000 40%,#000 60%,transparent)}
+
+/* ---- programme pages ---- */
+.pg-head.bgx{overflow:hidden;background:linear-gradient(180deg,#FFFFFF 0%,#F6F8FB 100%)}
+.pg-head.bgx::before{inset:0;background:var(--dots) 0 0/26px 26px;
+  -webkit-mask-image:radial-gradient(75% 95% at 0% 0%,#000 10%,transparent 78%);mask-image:radial-gradient(75% 95% at 0% 0%,#000 10%,transparent 78%)}
+.pg-head.bgx::after{width:min(900px,80vw);height:640px;top:-80px;inset-inline-end:-200px;background:
+  radial-gradient(closest-side,var(--g-teal),transparent 85%)}
+.pg-head .pg-img{box-shadow:0 30px 60px -36px rgba(17,17,40,.45)}
+.pg-head .pg-facts{position:relative}
+/* no overflow here: the form beside it is sticky */
+.pg-body-wrap.bgx{background:linear-gradient(180deg,#FFFFFF 0%,#FFFFFF 30%,#F6F8FB 100%)}
+.pg-body-wrap.bgx{overflow-x:clip}
+.pg-body-wrap.bgx>.pg-body{position:relative}
+.pg-body-wrap.bgx>.pg-body::before{content:"";position:absolute;z-index:-1;pointer-events:none;inset:auto auto 0 0;width:70%;height:60%;background:var(--dots) 0 0/26px 26px;
+  -webkit-mask-image:radial-gradient(70% 70% at 0% 100%,#000 0%,transparent 75%);mask-image:radial-gradient(70% 70% at 0% 100%,#000 0%,transparent 75%)}
+.pg-body-wrap.bgx::before{width:min(640px,60vw);height:620px;top:40px;inset-inline-end:0;background:radial-gradient(closest-side,var(--g-indigo),transparent)}
+.pg-body-wrap.bgx::after{inset:0;background:var(--grid);background-size:44px 44px;
+  -webkit-mask-image:radial-gradient(50% 55% at 100% 0%,#000 0%,transparent 78%);mask-image:radial-gradient(50% 55% at 100% 0%,#000 0%,transparent 78%)}
+.pg-more.bgx{overflow:hidden}
+.pg-more.bgx::before{inset:0;background:var(--dots) 0 0/26px 26px;
+  -webkit-mask-image:radial-gradient(50% 120% at 100% 100%,#000 0%,transparent 75%);mask-image:radial-gradient(50% 120% at 100% 100%,#000 0%,transparent 75%)}
+.pg-more-grid{position:relative}
+
+/* phones: smaller glows, lighter texture so text stays crisp */
+@media (max-width:640px){
+  :root{--dots:radial-gradient(circle,rgba(17,17,40,.13) 1px,transparent 1.5px)}
+  .who.bgx::after,.reach.bgx::after,.pg-head.bgx::after,.inside.bgx::after{opacity:.8}
+}
+@media (forced-colors:active){.bgx::before,.bgx::after,.scrolly .vp::before,.scrolly .vp::after,footer::before{display:none}}
+@media (max-width:900px){
+  .scrolly .vp::before{background:
+    radial-gradient(60% 34% at 55% 78%,rgba(9,201,142,.20),transparent 72%),
+    radial-gradient(50% 30% at 90% 62%,rgba(83,76,182,.13),transparent 70%),
+    radial-gradient(60% 30% at 0% 6%,rgba(83,76,182,.08),transparent 70%)}
+}
+
 </style>
 </head>
 <body>
@@ -1114,7 +1225,7 @@ html.on-page.cta-in-view .bar{transform:translateY(110%)}
       <div class="progress" aria-hidden="true"><i id="bar"></i></div>
     </div>
   </section>
-<section class="who" id="who">
+<section class="who bgx" id="who">
   <div class="wrap">
     <p class="runhead"><span data-t="who.k">Start here</span></p>
     <h2 data-t="who.h">Which of these is you?</h2>
@@ -1164,7 +1275,7 @@ html.on-page.cta-in-view .bar{transform:translateY(110%)}
   <p class="band-cap" data-t="why.cap">Tripoli at night, from the harbour.</p>
 </section>
 
-<section class="inside" id="watch">
+<section class="inside bgx" id="watch">
   <div class="wrap inside-grid">
     <div class="player" id="player">
       <button type="button" class="play" id="playBtn" aria-label="Play the video"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#09C98E"/><path d="M19 15l14 9-14 9z" fill="#111128"/></svg></button>
@@ -1183,7 +1294,7 @@ html.on-page.cta-in-view .bar{transform:translateY(110%)}
   </div>
 </section>
 
-<section class="reach" id="contact">
+<section class="reach bgx" id="contact">
   <div class="wrap reach-grid">
     <div class="reach-copy">
       <p class="runhead"><span data-t="ct.k">Contact</span></p>
@@ -1218,7 +1329,7 @@ html.on-page.cta-in-view .bar{transform:translateY(110%)}
 <div class="page" id="executive" hidden>
 <div class="back"><div class="back-in"><a href="#who" data-t="back">← All programmes</a></div></div>
 <article class="pg" aria-labelledby="h-executive">
-  <header class="pg-head">
+  <header class="pg-head bgx">
     <div class="pg-wrap pg-head-grid">
       <div class="pg-intro">
         <p class="pg-kick" data-t="exec.k">Executive AI Path</p>
@@ -1230,7 +1341,7 @@ html.on-page.cta-in-view .bar{transform:translateY(110%)}
     </div>
     <div class="pg-wrap"><dl class="pg-facts"><div><dt data-t="fx.next">Next start</dt><dd><span data-t="pg.1f3">Sunday 15 November 2026</span></dd></div><div><dt data-t="fx.len">Length</dt><dd><span data-t="pg.1f1">5 days, Sunday to Thursday, 20 hours</span></dd></div><div><dt data-t="fx.seats">Seats</dt><dd><span data-t="pg.1f2">7 a cohort</span></dd></div><div><dt data-t="fx.fee">Fee</dt><dd>10,200 <span data-t="cur">LYD a seat</span></dd></div></dl></div>
   </header>
-  <div class="pg-wrap pg-body">
+  <div class="pg-body-wrap bgx"><div class="pg-wrap pg-body">
     <div class="pg-a"><section class="pg-sec"><h2 data-t="pg.out1">What you leave with</h2><ol class="pg-out"><li><span data-t="exec.l1">Size the AI opportunity in your organisation in numbers your CFO will accept</span></li><li><span data-t="exec.l2">Know where AI breaks: leaked data, confident wrong answers, manipulated instructions, and the controls to demand</span></li><li><span data-t="exec.l3">Read a vendor pitch and a contract without being locked in</span></li><li><span data-t="exec.l4">Finish with a one-page AI strategy, a 90-day roadmap and a private advisory session on your own plan</span></li></ol></section><section class="pg-sec"><h2 data-t="pg.how1">How the week runs</h2><ol class="pg-steps"><li><b data-t="ex.h1">Mornings, Sunday to Thursday</b><span data-t="ex.h1s">Four hours a day, so you are back at work by the afternoon.</span></li><li><b data-t="ex.h2">14 sessions, 5 hands-on labs</b><span data-t="ex.h2s">Built on your own organisation's questions, not generic case studies.</span></li><li><b data-t="ex.h3">Seven people in the room</b><span data-t="ex.h3s">The week runs as a working group, not a lecture.</span></li><li><b data-t="ex.h4">A private advisory session</b><span data-t="ex.h4s">The week closes with time on your own plan, one to one.</span></li></ol></section></div>
     <aside class="pg-aside" id="f-executive"><div class="card fx" data-form="exec-call" data-program="Executive AI Path">
       <div class="fx-head"><h3 data-t="exec.c.h">Book a free 20-minute call</h3><p class="reply"><i class="dot" aria-hidden="true"></i><span data-t="f.who">A person replies, never a bot.</span></p></div>
@@ -1246,14 +1357,14 @@ html.on-page.cta-in-view .bar{transform:translateY(110%)}
       <div class="done" role="status" tabindex="-1"><svg class="ic-ok" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#09C98E"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#111128" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-t="done.call">Call requested.</b><span data-t="done.p">We will reply on WhatsApp within one working day.</span> <a class="wa-link" href="#contact" data-t="done.wa">Message us now</a><p class="next"><a href="#who" data-t="done.more">See the other programmes</a></p></div></div>
     </div></aside>
     <div class="pg-b"><section class="pg-sec"><h2 data-t="pg.faq">Good to know</h2><div class="pg-faq"><details><summary><span data-t="q3">What does it cost, and when do I pay?</span></summary><p data-t="a3">The fee for each programme is on its page. Nothing is paid on the website. After you book, a director calls you, and if the programme fits, we hold the seat and send payment details by WhatsApp.</p></details><details><summary><span data-t="q4">What if I cannot attend every day?</span></summary><p data-t="a4">Tell us before the cohort starts. The executive week and the evening course both build on the previous session, so we would rather move you to the next cohort than have you miss two days.</p></details><details><summary><span data-t="q5">Can my company send several people?</span></summary><p data-t="a5">Yes. Two or three people from one organisation can join an open cohort. For a whole team we build a programme around your own data and run it at your site or ours; see Custom AI Training.</p></details></div></section></div>
-  </div>
-  <nav class="pg-more" aria-labelledby="more-executive"><div class="pg-wrap"><h2 id="more-executive" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#productivity"><small data-t="who.2k">I make things</small><b data-t="who.2t">AI Productivity</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#everyone"><small data-t="who.3k">I'm starting from zero</small><b data-t="who.3t">AI for Everyone</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#sponsor"><small data-t="who.4k">I want to sponsor</small><b data-t="who.4t">AI Literacy Initiative</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#companies"><small data-t="pg.ck">For a whole team</small><b data-t="co.k">Custom AI Training</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#pathways"><small data-t="pg.pk">Opening in 2027</small><b data-t="pw.k">More pathways</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
+  </div></div>
+  <nav class="pg-more bgx" aria-labelledby="more-executive"><div class="pg-wrap"><h2 id="more-executive" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#productivity"><small data-t="who.2k">I make things</small><b data-t="who.2t">AI Productivity</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#everyone"><small data-t="who.3k">I'm starting from zero</small><b data-t="who.3t">AI for Everyone</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#sponsor"><small data-t="who.4k">I want to sponsor</small><b data-t="who.4t">AI Literacy Initiative</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#companies"><small data-t="pg.ck">For a whole team</small><b data-t="co.k">Custom AI Training</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#pathways"><small data-t="pg.pk">Opening in 2027</small><b data-t="pw.k">More pathways</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
 </article>
 </div>
 <div class="page" id="productivity" hidden>
 <div class="back"><div class="back-in"><a href="#who" data-t="back">← All programmes</a></div></div>
 <article class="pg" aria-labelledby="h-productivity">
-  <header class="pg-head">
+  <header class="pg-head bgx">
     <div class="pg-wrap pg-head-grid">
       <div class="pg-intro">
         <p class="pg-kick" data-t="prod.k">AI Productivity · Bring your own project</p>
@@ -1265,7 +1376,7 @@ html.on-page.cta-in-view .bar{transform:translateY(110%)}
     </div>
     <div class="pg-wrap"><dl class="pg-facts"><div><dt data-t="fx.next">Next start</dt><dd><span data-t="pg.2f3">Founding cohort, November 2026</span></dd></div><div><dt data-t="fx.len">Length</dt><dd><span data-t="pg.2f1">2 weeks, 10 teaching days</span></dd></div><div><dt data-t="fx.seats">Seats</dt><dd><span data-t="pg.2f2">10 a cohort</span></dd></div><div><dt data-t="fx.fee">Fee</dt><dd>7,500 <span data-t="cur">LYD a seat</span></dd></div></dl></div>
   </header>
-  <div class="pg-wrap pg-body">
+  <div class="pg-body-wrap bgx"><div class="pg-wrap pg-body">
     <div class="pg-a"><section class="pg-sec"><h2 data-t="pg.out2">What you make</h2><ul class="pg-make"><li data-t="p.app">App</li><li data-t="p.auto">Automation</li><li data-t="p.img">Image</li><li data-t="p.brand">Brand</li><li data-t="p.prompt">Prompts</li><li data-t="p.video">Video</li><li data-t="p.voice">Voice</li><li data-t="p.music">Music</li><li data-t="p.camp">Campaign</li><li data-t="p.copy">Copy</li></ul><ol class="pg-out"><li><span data-t="prod.l3">By day three you ship your first app or video</span></li><li><span data-t="prod.l4">You leave with your own project built, and a portfolio you can show a client</span></li></ol></section><section class="pg-sec"><h2 data-t="pg.how2">How the two weeks run</h2><ol class="pg-steps"><li><b data-t="pr.h1">Week one</b><span data-t="pr.h1s">Productivity, AI coding, automation, image and brand design.</span></li><li><b data-t="pr.h2">Week two</b><span data-t="pr.h2s">AI video, voice and music, campaigns and copy.</span></li><li><b data-t="pr.h3">Studio labs, Sunday to Thursday</b><span data-t="pr.h3s">Ten seats, so every lab is hands-on with a teacher beside you.</span></li><li><b data-t="pr.h4">Your own laptop and phone</b><span data-t="dt.2">Studio work is built on your own phone and laptop.</span></li></ol></section></div>
     <aside class="pg-aside" id="f-productivity"><div class="card fx" data-form="prod-seat" data-program="AI Productivity">
       <div class="fx-head"><h3 data-t="prod.c.h">Reserve a seat</h3><p class="reply"><i class="dot" aria-hidden="true"></i><span data-t="f.who">A person replies, never a bot.</span></p></div>
@@ -1281,14 +1392,14 @@ html.on-page.cta-in-view .bar{transform:translateY(110%)}
       <div class="done" role="status" tabindex="-1"><svg class="ic-ok" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#09C98E"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#111128" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-t="done.seat">Seat requested.</b><span data-t="done.p">We will reply on WhatsApp within one working day.</span> <a class="wa-link" href="#contact" data-t="done.wa">Message us now</a><p class="next"><a href="#who" data-t="done.more">See the other programmes</a></p></div></div>
     </div></aside>
     <div class="pg-b"><section class="pg-sec"><h2 data-t="pg.faq">Good to know</h2><div class="pg-faq"><details><summary><span data-t="q1">Do I need to know how to code?</span></summary><p data-t="a1">No. None of the three programmes assumes any programming. The studio programme builds apps and automations with tools that take instructions in plain language; the executive programme is about decisions, not code.</p></details><details><summary><span data-t="q3">What does it cost, and when do I pay?</span></summary><p data-t="a3">The fee for each programme is on its page. Nothing is paid on the website. After you book, a director calls you, and if the programme fits, we hold the seat and send payment details by WhatsApp.</p></details><details><summary><span data-t="q6">Is there a certificate?</span></summary><p data-t="a6">AI for Everyone ends with a Certificate of AI Literacy from the academy. The other two programmes end with a certificate of completion and, more usefully, the plan or the project you built.</p></details></div></section></div>
-  </div>
-  <nav class="pg-more" aria-labelledby="more-productivity"><div class="pg-wrap"><h2 id="more-productivity" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#executive"><small data-t="who.1k">I run an organisation</small><b data-t="who.1t">Executive AI Path</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#everyone"><small data-t="who.3k">I'm starting from zero</small><b data-t="who.3t">AI for Everyone</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#sponsor"><small data-t="who.4k">I want to sponsor</small><b data-t="who.4t">AI Literacy Initiative</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#companies"><small data-t="pg.ck">For a whole team</small><b data-t="co.k">Custom AI Training</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#pathways"><small data-t="pg.pk">Opening in 2027</small><b data-t="pw.k">More pathways</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
+  </div></div>
+  <nav class="pg-more bgx" aria-labelledby="more-productivity"><div class="pg-wrap"><h2 id="more-productivity" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#executive"><small data-t="who.1k">I run an organisation</small><b data-t="who.1t">Executive AI Path</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#everyone"><small data-t="who.3k">I'm starting from zero</small><b data-t="who.3t">AI for Everyone</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#sponsor"><small data-t="who.4k">I want to sponsor</small><b data-t="who.4t">AI Literacy Initiative</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#companies"><small data-t="pg.ck">For a whole team</small><b data-t="co.k">Custom AI Training</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#pathways"><small data-t="pg.pk">Opening in 2027</small><b data-t="pw.k">More pathways</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
 </article>
 </div>
 <div class="page" id="everyone" hidden>
 <div class="back"><div class="back-in"><a href="#who" data-t="back">← All programmes</a></div></div>
 <article class="pg" aria-labelledby="h-everyone">
-  <header class="pg-head">
+  <header class="pg-head bgx">
     <div class="pg-wrap pg-head-grid">
       <div class="pg-intro">
         <p class="pg-kick" data-t="every.k">AI for Everyone</p>
@@ -1300,7 +1411,7 @@ html.on-page.cta-in-view .bar{transform:translateY(110%)}
     </div>
     <div class="pg-wrap"><dl class="pg-facts"><div><dt data-t="fx.next">Next start</dt><dd><span data-t="pg.3f3">A new cohort every month</span></dd></div><div><dt data-t="fx.len">Length</dt><dd><span data-t="pg.3f1">10 hours over 5 evenings</span></dd></div><div><dt data-t="fx.seats">Seats</dt><dd><span data-t="pg.3f2">30 a cohort</span></dd></div><div><dt data-t="fx.fee">Fee</dt><dd>1,200 <span data-t="every.price">LYD, or free in a sponsored cohort</span></dd></div></dl></div>
   </header>
-  <div class="pg-wrap pg-body">
+  <div class="pg-body-wrap bgx"><div class="pg-wrap pg-body">
     <div class="pg-a"><section class="pg-sec"><h2 data-t="pg.out3">What you learn</h2><ol class="pg-out"><li><span data-t="every.l1">What AI is and what it cannot do</span></li><li><span data-t="every.l2">Write, summarise and translate with prompts that work</span></li><li><span data-t="every.l3">Spot a cloned voice note, the four scam patterns, and what never to type into AI</span></li><li><span data-t="every.l4">Automate one real task from your own job, then show the class how</span></li></ol></section><section class="pg-sec"><h2 data-t="pg.how3">How the evenings run</h2><ol class="pg-steps"><li><b data-t="ev.h1">Five evenings after work</b><span data-t="ev.h1s">Sunday to Thursday, two hours each.</span></li><li><b data-t="ev.h2">12 hands-on labs</b><span data-t="ev.h2s">A phone is enough. No laptop, no background needed.</span></li><li><b data-t="ev.h3">Taught in Arabic</b><span data-t="ev.h3s">English terms are explained the first time they come up.</span></li><li><b data-t="ev.h4">A certificate at the end</b><span data-t="ev.h4s">The Certificate of AI Literacy, with your name on it.</span></li></ol></section></div>
     <aside class="pg-aside" id="f-everyone"><div class="card fx" data-form="everyone-seat" data-program="AI for Everyone">
       <div class="fx-head"><h3 data-t="every.c.h">Join the next cohort</h3><p class="reply"><i class="dot" aria-hidden="true"></i><span data-t="f.who">A person replies, never a bot.</span></p></div>
@@ -1316,14 +1427,14 @@ html.on-page.cta-in-view .bar{transform:translateY(110%)}
       <div class="done" role="status" tabindex="-1"><svg class="ic-ok" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#09C98E"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#111128" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-t="done.seat">Seat requested.</b><span data-t="done.p">We will reply on WhatsApp within one working day.</span> <a class="wa-link" href="#contact" data-t="done.wa">Message us now</a><p class="next"><a href="#who" data-t="done.more">See the other programmes</a></p></div></div>
     </div></aside>
     <div class="pg-b"><section class="pg-sec"><h2 data-t="pg.faq">Good to know</h2><div class="pg-faq"><details><summary><span data-t="q1">Do I need to know how to code?</span></summary><p data-t="a1">No. None of the three programmes assumes any programming. The studio programme builds apps and automations with tools that take instructions in plain language; the executive programme is about decisions, not code.</p></details><details><summary><span data-t="q2">Is it taught in Arabic or English?</span></summary><p data-t="a2">In Arabic. English words are used where the industry uses them, and the teacher explains each one the first time it comes up. Materials are in both languages.</p></details><details><summary><span data-t="q4">What if I cannot attend every day?</span></summary><p data-t="a4">Tell us before the cohort starts. The executive week and the evening course both build on the previous session, so we would rather move you to the next cohort than have you miss two days.</p></details></div></section></div>
-  </div>
-  <nav class="pg-more" aria-labelledby="more-everyone"><div class="pg-wrap"><h2 id="more-everyone" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#executive"><small data-t="who.1k">I run an organisation</small><b data-t="who.1t">Executive AI Path</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#productivity"><small data-t="who.2k">I make things</small><b data-t="who.2t">AI Productivity</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#sponsor"><small data-t="who.4k">I want to sponsor</small><b data-t="who.4t">AI Literacy Initiative</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#companies"><small data-t="pg.ck">For a whole team</small><b data-t="co.k">Custom AI Training</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#pathways"><small data-t="pg.pk">Opening in 2027</small><b data-t="pw.k">More pathways</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
+  </div></div>
+  <nav class="pg-more bgx" aria-labelledby="more-everyone"><div class="pg-wrap"><h2 id="more-everyone" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#executive"><small data-t="who.1k">I run an organisation</small><b data-t="who.1t">Executive AI Path</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#productivity"><small data-t="who.2k">I make things</small><b data-t="who.2t">AI Productivity</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#sponsor"><small data-t="who.4k">I want to sponsor</small><b data-t="who.4t">AI Literacy Initiative</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#companies"><small data-t="pg.ck">For a whole team</small><b data-t="co.k">Custom AI Training</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#pathways"><small data-t="pg.pk">Opening in 2027</small><b data-t="pw.k">More pathways</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
 </article>
 </div>
 <div class="page" id="sponsor" hidden>
 <div class="back"><div class="back-in"><a href="#who" data-t="back">← All programmes</a></div></div>
 <article class="pg" aria-labelledby="h-sponsor">
-  <header class="pg-head">
+  <header class="pg-head bgx">
     <div class="pg-wrap pg-head-grid">
       <div class="pg-intro">
         <p class="pg-kick" data-t="sp.k">AI Literacy Initiative</p>
@@ -1335,7 +1446,7 @@ html.on-page.cta-in-view .bar{transform:translateY(110%)}
     </div>
     <div class="pg-wrap"><dl class="pg-facts"><div><dt data-t="fx.cost">Cost</dt><dd>36,000 <span data-t="fx.cost.v">LYD for one month</span></dd></div><div><dt data-t="fx.people">People trained</dt><dd>30 <span data-t="fx.people.v">free to them</span></dd></div><div><dt data-t="fx.months">Months</dt><dd>12 <span data-t="fx.months.v">in 2027, one sponsor each</span></dd></div><div><dt data-t="fx.vis">Your name</dt><dd><span data-t="fx.vis.v">On all thirty certificates</span></dd></div></dl></div>
   </header>
-  <div class="pg-wrap pg-body">
+  <div class="pg-body-wrap bgx"><div class="pg-wrap pg-body">
     <div class="pg-a"><section class="pg-sec"><h2 data-t="pg.out4">What your sponsorship pays for</h2><ol class="pg-out"><li><span data-t="sp.l1">Your organisation's name on all thirty certificates</span></li><li><span data-t="sp.l2">Choose a public cohort or a group you care about</span></li><li><span data-t="sp.l3">A report after the cohort: scam-detection scores before and after, labs completed</span></li></ol></section><section class="pg-sec"><h2 data-t="pg.how4">How a sponsored month works</h2><ol class="pg-steps"><li><b data-t="spx.1">You apply and choose a month</b><span data-t="spx.1s">Any month in 2027, or let us suggest one.</span></li><li><b data-t="spx.2">We confirm within five working days</b><span data-t="spx.2s">Each month has one sponsor only.</span></li><li><b data-t="spx.3">Thirty people take the course</b><span data-t="spx.3s">Five evenings of AI for Everyone, free to them.</span></li><li><b data-t="spx.4">You receive the report</b><span data-t="spx.4s">Results before and after, and the labs completed.</span></li></ol></section></div>
     <aside class="pg-aside" id="f-sponsor"><div class="card fx" data-form="sponsor" data-program="AI Literacy Initiative">
       <div class="fx-head"><h3 data-t="sp.c.h">Apply to sponsor a month</h3><p class="reply"><i class="dot" aria-hidden="true"></i><span data-t="f.who">A person replies, never a bot.</span></p></div>
@@ -1351,14 +1462,14 @@ html.on-page.cta-in-view .bar{transform:translateY(110%)}
       <div class="done" role="status" tabindex="-1"><svg class="ic-ok" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#09C98E"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#111128" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-t="done.app">Application received.</b><span data-t="sp.done">We confirm your month within five working days.</span> <a class="wa-link" href="#contact" data-t="done.wa">Message us now</a></div></div>
     </div></aside>
     <div class="pg-b"></div>
-  </div>
-  <nav class="pg-more" aria-labelledby="more-sponsor"><div class="pg-wrap"><h2 id="more-sponsor" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#executive"><small data-t="who.1k">I run an organisation</small><b data-t="who.1t">Executive AI Path</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#productivity"><small data-t="who.2k">I make things</small><b data-t="who.2t">AI Productivity</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#everyone"><small data-t="who.3k">I'm starting from zero</small><b data-t="who.3t">AI for Everyone</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#companies"><small data-t="pg.ck">For a whole team</small><b data-t="co.k">Custom AI Training</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#pathways"><small data-t="pg.pk">Opening in 2027</small><b data-t="pw.k">More pathways</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
+  </div></div>
+  <nav class="pg-more bgx" aria-labelledby="more-sponsor"><div class="pg-wrap"><h2 id="more-sponsor" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#executive"><small data-t="who.1k">I run an organisation</small><b data-t="who.1t">Executive AI Path</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#productivity"><small data-t="who.2k">I make things</small><b data-t="who.2t">AI Productivity</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#everyone"><small data-t="who.3k">I'm starting from zero</small><b data-t="who.3t">AI for Everyone</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#companies"><small data-t="pg.ck">For a whole team</small><b data-t="co.k">Custom AI Training</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#pathways"><small data-t="pg.pk">Opening in 2027</small><b data-t="pw.k">More pathways</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
 </article>
 </div>
 <div class="page" id="companies" hidden>
 <div class="back"><div class="back-in"><a href="#who" data-t="back">← All programmes</a></div></div>
 <article class="pg" aria-labelledby="h-companies">
-  <header class="pg-head">
+  <header class="pg-head bgx">
     <div class="pg-wrap pg-head-grid">
       <div class="pg-intro">
         <p class="pg-kick" data-t="co.k">Custom AI Training</p>
@@ -1370,7 +1481,7 @@ html.on-page.cta-in-view .bar{transform:translateY(110%)}
     </div>
     <div class="pg-wrap"><dl class="pg-facts"><div><dt data-t="fx.where">Where</dt><dd><span data-t="fx.where.v">Your site, our campus or online</span></dd></div><div><dt data-t="fx.lang">Language</dt><dd><span data-t="fx.lang.v">Arabic</span></dd></div><div><dt data-t="fx.team">Team size</dt><dd><span data-t="fx.team.v">From 1 to 200+</span></dd></div><div><dt data-t="fx.prop">Proposal</dt><dd><span data-t="fx.prop.v">Plan and price within a week</span></dd></div></dl></div>
   </header>
-  <div class="pg-wrap pg-body">
+  <div class="pg-body-wrap bgx"><div class="pg-wrap pg-body">
     <div class="pg-a"><section class="pg-sec"><h2 data-t="pg.how5">How a team programme runs</h2><ol class="pg-steps"><li><b data-t="c.1">Free consultation</b><span data-t="co.l1">A free consultation to work out what your team needs</span></li><li><b data-t="c.2">Rules for AI at work</b><span data-t="co.l2">Clear rules on what may and may not go into an AI tool</span></li><li><b data-t="c.3">Labs on your tasks</b><span data-t="co.l3">Hands-on labs on your real tasks, not generic examples</span></li><li><b data-t="c.4">Report to leadership</b><span data-t="co.l4">A report to leadership on what changed</span></li></ol></section></div>
     <aside class="pg-aside" id="f-companies"><div class="card fx" data-form="company" data-program="Custom AI Training">
       <div class="fx-head"><h3 data-t="co.c.h">Request a proposal</h3><p class="reply"><i class="dot" aria-hidden="true"></i><span data-t="f.who">A person replies, never a bot.</span></p></div>
@@ -1386,14 +1497,14 @@ html.on-page.cta-in-view .bar{transform:translateY(110%)}
       <div class="done" role="status" tabindex="-1"><svg class="ic-ok" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#09C98E"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#111128" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-t="done.req">Request received.</b><span data-t="co.done">We will contact you within one working day to set up the consultation.</span> <a class="wa-link" href="#contact" data-t="done.wa">Message us now</a></div></div>
     </div></aside>
     <div class="pg-b"><section class="pg-sec"><h2 data-t="pg.faq">Good to know</h2><div class="pg-faq"><details><summary><span data-t="q5">Can my company send several people?</span></summary><p data-t="a5">Yes. Two or three people from one organisation can join an open cohort. For a whole team we build a programme around your own data and run it at your site or ours; see Custom AI Training.</p></details><details><summary><span data-t="q2">Is it taught in Arabic or English?</span></summary><p data-t="a2">In Arabic. English words are used where the industry uses them, and the teacher explains each one the first time it comes up. Materials are in both languages.</p></details></div></section></div>
-  </div>
-  <nav class="pg-more" aria-labelledby="more-companies"><div class="pg-wrap"><h2 id="more-companies" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#executive"><small data-t="who.1k">I run an organisation</small><b data-t="who.1t">Executive AI Path</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#productivity"><small data-t="who.2k">I make things</small><b data-t="who.2t">AI Productivity</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#everyone"><small data-t="who.3k">I'm starting from zero</small><b data-t="who.3t">AI for Everyone</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#sponsor"><small data-t="who.4k">I want to sponsor</small><b data-t="who.4t">AI Literacy Initiative</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#pathways"><small data-t="pg.pk">Opening in 2027</small><b data-t="pw.k">More pathways</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
+  </div></div>
+  <nav class="pg-more bgx" aria-labelledby="more-companies"><div class="pg-wrap"><h2 id="more-companies" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#executive"><small data-t="who.1k">I run an organisation</small><b data-t="who.1t">Executive AI Path</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#productivity"><small data-t="who.2k">I make things</small><b data-t="who.2t">AI Productivity</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#everyone"><small data-t="who.3k">I'm starting from zero</small><b data-t="who.3t">AI for Everyone</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#sponsor"><small data-t="who.4k">I want to sponsor</small><b data-t="who.4t">AI Literacy Initiative</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#pathways"><small data-t="pg.pk">Opening in 2027</small><b data-t="pw.k">More pathways</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
 </article>
 </div>
 <div class="page" id="pathways" hidden>
 <div class="back"><div class="back-in"><a href="#who" data-t="back">← All programmes</a></div></div>
 <article class="pg" aria-labelledby="h-pathways">
-  <header class="pg-head">
+  <header class="pg-head bgx">
     <div class="pg-wrap pg-head-grid">
       <div class="pg-intro">
         <p class="pg-kick" data-t="pw.k">More pathways</p>
@@ -1405,7 +1516,7 @@ html.on-page.cta-in-view .bar{transform:translateY(110%)}
     </div>
     
   </header>
-  <div class="pg-wrap pg-body">
+  <div class="pg-body-wrap bgx"><div class="pg-wrap pg-body">
     <div class="pg-a"><section class="pg-sec"><h2 data-t="pg.pw">Three pathways</h2><div class="pw-list"><div class="pw-row"><div><b data-t="pw.1">AI Practitioner Diploma</b><p data-t="pw.1s">Eight months, from beginner to a practitioner someone will hire. Price announced with the dates.</p></div><span class="pw-when" data-t="pw.q1">January 2027</span><a class="btn btn-line btn-sm" href="#f-pathways" data-jump="f-pathways" data-pick="AI Practitioner Diploma"><span data-t="pw.join">Join the waitlist</span></a></div><div class="pw-row"><div><b data-t="pw.2">AI for Kids</b><p data-t="pw.2s">Ages 10 to 16, two levels, two weeks each. Dates and price in 2027.</p></div><span class="pw-when" data-t="pw.q2">2027</span><a class="btn btn-line btn-sm" href="#f-pathways" data-jump="f-pathways" data-pick="AI for Kids"><span data-t="pw.join">Join the waitlist</span></a></div><div class="pw-row"><div><b data-t="pw.3">AI for Policymakers</b><p data-t="pw.3s">For ministries and public bodies: the rules Libya needs and how to write them.</p></div><span class="pw-when" data-t="pw.q3">On request</span><a class="btn btn-line btn-sm" href="#f-pathways" data-jump="f-pathways" data-pick="AI for Policymakers"><span data-t="pw.join">Join the waitlist</span></a></div></div></section></div>
     <aside class="pg-aside" id="f-pathways"><div class="card fx" data-form="waitlist">
       <div class="fx-head"><h3 data-t="pw.c.h">Join the waitlist</h3><p class="reply"><i class="dot" aria-hidden="true"></i><span data-t="f.who">A person replies, never a bot.</span></p></div>
@@ -1421,8 +1532,8 @@ html.on-page.cta-in-view .bar{transform:translateY(110%)}
       <div class="done" role="status" tabindex="-1"><svg class="ic-ok" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#09C98E"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#111128" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b data-t="done.list">You're on the list.</b><span data-t="pw.done">We message you when dates are confirmed.</span> <a class="wa-link" href="#contact" data-t="done.wa">Message us now</a></div></div>
     </div></aside>
     <div class="pg-b"></div>
-  </div>
-  <nav class="pg-more" aria-labelledby="more-pathways"><div class="pg-wrap"><h2 id="more-pathways" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#executive"><small data-t="who.1k">I run an organisation</small><b data-t="who.1t">Executive AI Path</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#productivity"><small data-t="who.2k">I make things</small><b data-t="who.2t">AI Productivity</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#everyone"><small data-t="who.3k">I'm starting from zero</small><b data-t="who.3t">AI for Everyone</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#sponsor"><small data-t="who.4k">I want to sponsor</small><b data-t="who.4t">AI Literacy Initiative</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#companies"><small data-t="pg.ck">For a whole team</small><b data-t="co.k">Custom AI Training</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
+  </div></div>
+  <nav class="pg-more bgx" aria-labelledby="more-pathways"><div class="pg-wrap"><h2 id="more-pathways" data-t="pg.more">Other programmes</h2><div class="pg-more-grid"><a href="#executive"><small data-t="who.1k">I run an organisation</small><b data-t="who.1t">Executive AI Path</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#productivity"><small data-t="who.2k">I make things</small><b data-t="who.2t">AI Productivity</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#everyone"><small data-t="who.3k">I'm starting from zero</small><b data-t="who.3t">AI for Everyone</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#sponsor"><small data-t="who.4k">I want to sponsor</small><b data-t="who.4t">AI Literacy Initiative</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#companies"><small data-t="pg.ck">For a whole team</small><b data-t="co.k">Custom AI Training</b><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></nav>
 </article>
 </div>
 </div>
@@ -2130,6 +2241,13 @@ frame();
     var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) seen.add(e.target); else seen.delete(e.target); }); document.documentElement.classList.toggle('cta-in-view',seen.size>0); });
     $$('.pg-cta').forEach(function(el){ io.observe(el); });
   }
+  /* pin the form beside the content only when all of it fits in the window */
+  function fit(){ $$('.pg-aside').forEach(function(a){ var c=a.firstElementChild; var h=c?c.offsetHeight:0; a.classList.toggle('can-stick', innerWidth>900 && h>0 && h <= innerHeight-84-16); }); }
+  addEventListener('resize',fit); addEventListener('hashchange',function(){ setTimeout(fit,30); });
+  document.addEventListener('click',function(e){ if(e.target.closest('.lang button,.seg label')) setTimeout(fit,30); });
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
+  $$('.card.fx').forEach(function(c){ if('ResizeObserver' in window) new ResizeObserver(fit).observe(c); });
+  fit();
   /* when a form is sent, move focus to the confirmation so screen readers announce it */
   if('MutationObserver' in window){
     $$('.card.fx').forEach(function(c){ new MutationObserver(function(){ if(c.classList.contains('sent')){ var d=$('.done',c); if(d) d.focus({preventScroll:true}); } }).observe(c,{attributes:true,attributeFilter:['class']}); });
