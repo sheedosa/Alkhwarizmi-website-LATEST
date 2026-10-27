@@ -598,6 +598,16 @@ html.at-top .bar{transform:translateY(110%)}
 [dir="rtl"] .page-hero::after{background:linear-gradient(270deg,#09C98E,#534CB6)}
 @media (max-width:640px){.page-hero{height:200px}}
 </style>
+<style>
+/* ---- Copy audit: quiet second action, form reassurance ---- */
+.ctas a.quiet,.ctas .quiet{background:none;border:0;padding:0;color:inherit;font:inherit;font-weight:500;text-decoration:underline;text-underline-offset:5px;text-decoration-color:rgba(255,255,255,.45);opacity:.85}
+.ov-light .ctas .quiet{text-decoration-color:rgba(17,17,40,.35)}
+.ctas .quiet:hover{opacity:1}
+.card .who{margin:-6px 0 10px;font-size:13px;color:var(--ink-2)}
+.card .fhint{display:block;margin-top:6px;font-size:12.5px;color:var(--ink-2)}
+.also.soon{margin-top:8px;font-size:14px}
+.also.soon a{font-weight:500;color:var(--ink-2);border-bottom-color:transparent}
+</style>
 </head>
 <body>
 <header class="nav" id="nav">
@@ -634,18 +644,18 @@ html.at-top .bar{transform:translateY(110%)}
       <div class="ov ov-hero ov-split" data-stack="1" data-a="-1" data-b="0.065">
         <div class="eyebrow"><span data-t="eb.1">Alkhwarizmi AI Academy</span><i></i><span class="eb-t" data-t="eb.2">Tripoli</span><span class="eb-no1" data-t="eb.3">Nº 01 in Libya</span></div>
         <h1 data-t="hero.h1">Intelligence, made in Libya.</h1>
-        <p data-t="hero.lead">Live classes, in Arabic first, on a campus in Tripoli. Whether you run an organisation or want a new skill, you leave with something that works.</p>
+        <p data-t="hero.lead">Live classes, in Arabic first, on a campus in Tripoli. Five days for leaders, two weeks for makers, ten hours for everyone.</p>
         <div class="ctas">
           <a class="pill pill-teal pill-xl glow" href="#executive" data-t="hero.cta1">Book a free call</a>
-          <a class="pill pill-outline pill-xl" href="#programmes" data-t="hero.cta2">See the programmes</a>
+          <a class="quiet" href="#programmes" data-t="hero.cta2">or see the three programmes</a>
         </div>
       </div>
       <div class="hint" id="hint" aria-hidden="true"><span></span><em style="font-style:normal" data-t="hint">Scroll to enter</em></div>
 
       <div class="ov ov-dark ov-top ov-book" data-a="0.29" data-b="0.45">
-        <p class="kicker" data-t="k1">Libya's first AI academy</p>
-        <h2 data-t="ov1.h">Every skill starts on a page.</h2>
-        <p class="sub" data-t="ov1.p">Anyone can watch a video about AI. Very few finish it. Here you learn live, in the room, in Arabic first.</p>
+        <p class="kicker" data-t="k1">How it works</p>
+        <h2 data-t="ov1.h">Anyone can watch a video about AI.</h2>
+        <p class="sub" data-t="ov1.p">Very few finish it. Here you learn live, in the room, in Arabic first.</p>
       </div>
 
       <div class="ov ov-dark ov-left" data-a="0.55" data-b="0.69">
@@ -655,10 +665,10 @@ html.at-top .bar{transform:translateY(110%)}
       </div>
 
       <div class="ov ov-light ov-split ov-final" data-stack="1" data-a="0.86" data-b="1.2">
-        <h2 data-t="ov3.h">Your place in Libya's AI future starts here.</h2>
+        <h2 data-t="ov3.h">Three programmes. One room in Tripoli. Pick yours.</h2>
         <div class="ctas">
           <a class="pill pill-teal pill-xl glow" href="#executive" data-t="hero.cta1">Book a free call</a>
-          <a class="pill pill-outline pill-xl" href="#programmes" data-t="hero.cta2">See the programmes</a>
+          <a class="quiet" href="#programmes" data-t="hero.cta2">or see the three programmes</a>
         </div>
       </div>
 
@@ -696,9 +706,9 @@ html.at-top .bar{transform:translateY(110%)}
           <label><input type="radio" name="iam" value="sponsor"><span data-t="start.sponsor">I want to sponsor</span></label>
         </div>
         <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
-        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required></label>
+        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
         <input class="hp" name="website" tabindex="-1" autocomplete="off">
-        <button class="btn btn-navy" type="submit" data-t="start.btn">Get the right programme</button>
+        <button class="btn btn-navy" type="submit" data-t="start.btn">Send and get my programme</button>
         <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
         <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
       </form>
@@ -713,11 +723,12 @@ html.at-top .bar{transform:translateY(110%)}
       <p class="kick" data-t="pg.k">Programmes</p>
       <h2 data-t="pg.h">Three ways in. Pick yours.</h2>
       <dl class="rows progs">
-        <div><span class="glyph photo"><img src="media/prog-executive.webp" width="400" height="400" alt="Leather notebook open on a 90-day roadmap beside a glass of Libyan tea" loading="lazy" decoding="async"></span><dt data-t="exec.k">Executive AI Path</dt><dd data-t="pg.1">Five days. Nine deliverables for your own organisation. For CEOs, directors and heads of department.</dd><dd class="when" data-t="pg.1m">5 days · next cohort starts 15 November</dd><dd class="go"><a class="btn btn-teal btn-sm" href="#executive" data-t="pg.1b">See the programme</a></dd></div>
-        <div><span class="glyph photo"><img src="media/prog-productivity.webp" width="400" height="400" alt="A phone running a student-built app beside wireframe sketches and a Tripoli window grille" loading="lazy" decoding="async"></span><dt data-t="prod.k">AI Productivity <small class="byo" data-t="prod.byo">Bring your own project</small></dt><dd data-t="pg.2">Two weeks. Ten things you made: an app, a video, a campaign, an automation. For creators, marketers and founders.</dd><dd class="when" data-t="pg.2m">2 weeks · first cohort in November</dd><dd class="go"><a class="btn btn-navy btn-sm" href="#productivity" data-t="pg.2b">See the programme</a></dd></div>
-        <div><span class="glyph photo"><img src="media/prog-everyone.webp" width="400" height="400" alt="A certificate with a teal seal beside reading glasses, a mosaic tile and jasmine" loading="lazy" decoding="async"></span><dt data-t="every.k">AI for Everyone</dt><dd data-t="pg.3">Ten hours over five evenings, in Arabic. No background needed, a phone is enough.</dd><dd class="when" data-t="pg.3m">10 hours · a new cohort every month</dd><dd class="go"><a class="btn btn-navy btn-sm" href="#everyone" data-t="pg.3b">See the programme</a></dd></div>
+        <div><span class="glyph photo"><img src="media/prog-executive.webp" width="400" height="400" alt="Leather notebook open on a 90-day roadmap beside a glass of Libyan tea" loading="lazy" decoding="async"></span><dt data-t="exec.k">Executive AI Path</dt><dd data-t="pg.1">Five days. Nine deliverables for your own organisation. For CEOs, directors and heads of department.</dd><dd class="when" data-t="pg.1m">5 days · next cohort starts 15 November</dd><dd class="go"><a class="btn btn-teal btn-sm" href="#executive" data-t="pg.1b">See the five days</a></dd></div>
+        <div><span class="glyph photo"><img src="media/prog-productivity.webp" width="400" height="400" alt="A phone running a student-built app beside wireframe sketches and a Tripoli window grille" loading="lazy" decoding="async"></span><dt data-t="prod.k">AI Productivity <small class="byo" data-t="prod.byo">Bring your own project</small></dt><dd data-t="pg.2">Two weeks. Ten things you made: an app, a video, a campaign, an automation. For creators, marketers and founders.</dd><dd class="when" data-t="pg.2m">2 weeks · founding cohort, November</dd><dd class="go"><a class="btn btn-navy btn-sm" href="#productivity" data-t="pg.2b">See the two weeks</a></dd></div>
+        <div><span class="glyph photo"><img src="media/prog-everyone.webp" width="400" height="400" alt="A certificate with a teal seal beside reading glasses, a mosaic tile and jasmine" loading="lazy" decoding="async"></span><dt data-t="every.k">AI for Everyone</dt><dd data-t="pg.3">Ten hours over five evenings, in Arabic. No background needed, a phone is enough.</dd><dd class="when" data-t="pg.3m">10 hours · a new cohort every month</dd><dd class="go"><a class="btn btn-navy btn-sm" href="#everyone" data-t="pg.3b">See the five evenings</a></dd></div>
       </dl>
-      <p class="also"><span data-t="pg.also">For organisations:</span> <a href="#sponsor" data-t="pg.a1">Sponsor a month</a><a href="#companies" data-t="pg.a2">Train your team</a><a href="#pathways" data-t="pg.a3">2027 pathways</a></p>
+      <p class="also"><span data-t="pg.also">For organisations:</span> <a href="#sponsor" data-t="pg.a1">Sponsor a month</a><a href="#companies" data-t="pg.a2">Train your team</a></p>
+      <p class="also soon"><a href="#pathways" data-t="pg.a3">Opening in 2027: diploma, kids, policymakers</a></p>
     </div>
   </div>
 </section>
@@ -733,7 +744,7 @@ html.at-top .bar{transform:translateY(110%)}
     </div>
     <div class="facts">
         <div class="fact"><b data-t="why.f1b">9 in 10</b><span data-t="why.f1">Libyans are online</span></div>
-        <div class="fact"><b data-t="why.f2b">Weeks</b><span data-t="why.f2">between major AI model releases</span></div>
+        <div class="fact"><b data-t="why.f2b">94%</b><span data-t="why.f2">of Libyan mobile use is on 4G or 5G</span></div>
         <div class="fact"><b data-t="why.f3b">Zero</b><span data-t="why.f3">AI academies in Libya before this one</span></div>
       </div>
   </div>
@@ -744,21 +755,22 @@ html.at-top .bar{transform:translateY(110%)}
   <div class="slide-in">
     <div class="copy">
       <p class="kick" data-t="ab.k">At the academy</p>
-      <h2 data-t="ab.h">Why people choose Alkhwarizmi.</h2>
+      <h2 data-t="ab.h">Taught in a room, not a tab.</h2>
       <ul class="proof">
-        <li><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="10" width="36" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="42" r="3" fill="currentColor"/><circle cx="31" cy="42" r="3" fill="currentColor"/><path d="M12 20h24M12 26h14" stroke="#09C98E" stroke-width="2.5" stroke-linecap="round"/></svg><b data-t="ab.t1">Live, in the room</b><span data-t="ab.t1s">A classroom on Zawiat Dahmani Street, not a video. People finish what they start here.</span></li>
+        <li><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="10" width="36" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="42" r="3" fill="currentColor"/><circle cx="31" cy="42" r="3" fill="currentColor"/><path d="M12 20h24M12 26h14" stroke="#09C98E" stroke-width="2.5" stroke-linecap="round"/></svg><b data-t="ab.t1">Live, in the room</b><span data-t="ab.t1s">A classroom on Zawiat Dahmani Street, not a video. Seven to thirty people, and a teacher who knows your name.</span></li>
         <li><svg viewBox="0 0 48 48" aria-hidden="true"><text x="24" y="33" text-anchor="middle" font-family="'Noto Kufi Arabic','IBM Plex Sans Arabic',sans-serif" font-size="26" font-weight="700" fill="currentColor">ع</text><path d="M8 40h32" stroke="#09C98E" stroke-width="2.5" stroke-linecap="round"/></svg><b data-t="ab.t2">Arabic first</b><span data-t="ab.t2s">Taught in Arabic, with English for the terms the industry already uses.</span></li>
         <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 6h18l8 8v28H12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M30 6v8h8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M18 28l5 5 9-11" fill="none" stroke="#09C98E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><b data-t="ab.t3">You leave with proof</b><span data-t="ab.t3s">A roadmap for your organisation, a working app, a portfolio. Never just notes.</span></li>
       </ul>
     </div>
     <div class="card" data-form="visit">
       <h3 data-t="ab.c.h">Visit the campus</h3>
+      <p class="who" data-t="f.who">A person replies, never a bot.</p>
       <p class="why" data-t="ab.c.why">Come and see a class. Thirty minutes, no obligation.</p>
       <form novalidate>
         <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
-        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required></label>
+        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
         <input class="hp" name="website" tabindex="-1" autocomplete="off">
-        <button class="btn btn-teal" type="submit" data-t="ab.c.btn">Arrange a visit</button>
+        <button class="btn btn-teal" type="submit" data-t="ab.c.btn">Book my visit</button>
         <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
         <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
       </form>
@@ -809,30 +821,30 @@ html.at-top .bar{transform:translateY(110%)}
     <div class="copy">
       <p class="kick" data-t="exec.k">Executive AI Path</p>
       <h2 data-t="exec.h">Five days. Nine deliverables for your own organisation.</h2>
-      <p class="lead" data-t="exec.lead">For CEOs, directors and heads of department. You don't leave with notes. You leave with an AI strategy, a funded 90-day roadmap and the questions that stop a vendor selling you the wrong thing.</p>
-      <figure class="fig"><svg class="fig-svg" viewBox="0 0 460 130" role="img" aria-label="Five days, nine deliverables, ending in a 90-day roadmap" font-family="var(--body)" font-size="12"><line x1="20" y1="60" x2="440" y2="60" stroke="var(--fig-rule)" stroke-width="1.5"/><circle cx="36" cy="60" r="6" fill="var(--fig-ink)"/><text x="36" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.sun">Sun</text><circle cx="114" cy="60" r="6" fill="var(--fig-ink)"/><text x="114" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.mon">Mon</text><circle cx="192" cy="60" r="6" fill="var(--fig-ink)"/><text x="192" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.tue">Tue</text><circle cx="270" cy="60" r="6" fill="var(--fig-ink)"/><text x="270" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.wed">Wed</text><circle cx="348" cy="60" r="6" fill="var(--fig-ink)"/><text x="348" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.thu">Thu</text><rect x="22" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="100" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="100" y="14" width="28" height="12" rx="2" fill="#09C98E"/><rect x="178" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="178" y="14" width="28" height="12" rx="2" fill="#09C98E"/><rect x="256" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="256" y="14" width="28" height="12" rx="2" fill="#09C98E"/><rect x="334" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="334" y="14" width="28" height="12" rx="2" fill="#534CB6"/><rect x="394" y="18" width="12" height="12" rx="2" fill="#534CB6"/><text x="412" y="28" fill="var(--fig-ink)" font-weight="600" data-t="fig.ex1">9 deliverables</text><text x="230" y="118" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="fig.ex2">Five days. You leave with a funded 90-day roadmap.</text></svg><figcaption data-t="fig.cap.ex">Figure 2. The five days, and what stacks up.</figcaption></figure>
+      <p class="lead" data-t="exec.lead">For CEOs, directors and heads of department. You don't leave with notes. You leave with an AI strategy for your organisation, a 90-day roadmap with a budget attached, and the questions that stop a vendor selling you the wrong thing.</p>
+      <figure class="fig"><svg class="fig-svg" viewBox="0 0 460 130" role="img" aria-label="Five days, nine deliverables, ending in a 90-day roadmap" font-family="var(--body)" font-size="12"><line x1="20" y1="60" x2="440" y2="60" stroke="var(--fig-rule)" stroke-width="1.5"/><circle cx="36" cy="60" r="6" fill="var(--fig-ink)"/><text x="36" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.sun">Sun</text><circle cx="114" cy="60" r="6" fill="var(--fig-ink)"/><text x="114" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.mon">Mon</text><circle cx="192" cy="60" r="6" fill="var(--fig-ink)"/><text x="192" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.tue">Tue</text><circle cx="270" cy="60" r="6" fill="var(--fig-ink)"/><text x="270" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.wed">Wed</text><circle cx="348" cy="60" r="6" fill="var(--fig-ink)"/><text x="348" y="86" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="d.thu">Thu</text><rect x="22" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="100" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="100" y="14" width="28" height="12" rx="2" fill="#09C98E"/><rect x="178" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="178" y="14" width="28" height="12" rx="2" fill="#09C98E"/><rect x="256" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="256" y="14" width="28" height="12" rx="2" fill="#09C98E"/><rect x="334" y="30" width="28" height="12" rx="2" fill="#09C98E"/><rect x="334" y="14" width="28" height="12" rx="2" fill="#534CB6"/><rect x="394" y="18" width="12" height="12" rx="2" fill="#534CB6"/><text x="412" y="28" fill="var(--fig-ink)" font-weight="600" data-t="fig.ex1">9 deliverables</text><text x="230" y="118" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" data-t="fig.ex2">Five days. You leave with a 90-day roadmap and the budget to match.</text></svg><figcaption data-t="fig.cap.ex">Figure 2. The five days, and what stacks up.</figcaption></figure>
       <ul class="list">
         <li data-t="exec.l1">Size the AI opportunity in your organisation in numbers your CFO will accept</li>
-        <li data-t="exec.l2">Know where generative AI breaks: data leakage, hallucination, prompt injection, and the controls to demand</li>
+        <li data-t="exec.l2">Know where AI breaks: leaked data, confident wrong answers, manipulated instructions, and the controls to demand</li>
         <li data-t="exec.l3">Read a vendor pitch and a contract without being locked in</li>
-        <li data-t="exec.l4">Finish with your AI North Star, a 90-day roadmap and a closing advisory session</li>
+        <li data-t="exec.l4">Finish with a one-page AI strategy, a 90-day roadmap and a private advisory session on your own plan</li>
       </ul>
-      <p class="meta"><b data-t="exec.m1">5 days, Sunday to Thursday</b><span data-t="exec.m2">20 hours, 14 modules, 5 no-code labs</span><span data-t="exec.m3">7 seats a cohort</span></p>
+      <p class="meta"><b data-t="exec.m1">5 days, Sunday to Thursday</b><span data-t="exec.m2">20 hours, 14 sessions, 5 hands-on labs</span><span data-t="exec.m3">7 seats a cohort</span></p>
       <p class="price">10,200 <small data-t="cur">LYD a seat</small></p>
     </div>
     <div class="card" data-form="exec-call" data-program="Executive AI Path">
       <h3 data-t="exec.c.h">Book a free 20-minute call</h3>
-      <p class="why" data-t="exec.c.why">Next cohort starts Sunday 15 November 2026. An academy director calls you, answers your questions and holds a seat if it fits.</p>
+      <p class="who" data-t="f.who">A person replies, never a bot.</p>
+      <p class="why" data-t="exec.c.why">Next cohort starts Sunday 15 November 2026. An academy director calls you, answers your questions and holds a seat if it fits. Nothing to pay now.</p>
       <form novalidate>
         <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
         <div class="row2">
           <label class="f"><span data-t="f.role">Role</span><input name="role" autocomplete="organization-title"></label>
           <label class="f"><span data-t="f.org">Organisation</span><input name="org" autocomplete="organization" autocapitalize="words" enterkeyhint="next"></label>
         </div>
-        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required></label>
+        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
         <label class="f"><span data-t="f.when">Best time to call</span>
           <select name="when"><option value="morning" data-t="o.morning">Morning</option><option value="afternoon" data-t="o.afternoon">Afternoon</option><option value="evening" data-t="o.evening">Evening</option></select></label>
-        <label class="chk"><input type="checkbox" name="readiness" value="yes" checked><span data-t="exec.c.chk">Also send me the free AI readiness check for Libyan organisations</span></label>
         <input class="hp" name="website" tabindex="-1" autocomplete="off">
         <button class="btn btn-teal" type="submit" data-t="exec.c.btn">Book my call</button>
         <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
@@ -860,15 +872,16 @@ html.at-top .bar{transform:translateY(110%)}
         <li data-t="prod.l3">By day three you ship your first app or video</li>
         <li data-t="prod.l4">You leave with your own project built, and a portfolio you can show a client</li>
       </ul>
-      <p class="meta"><b data-t="prod.m1">10 teaching days, Sunday to Thursday</b><span data-t="prod.m2">Small cohorts, live studio labs</span></p>
+      <p class="meta"><b data-t="prod.m1">10 teaching days, Sunday to Thursday</b><span data-t="prod.m2">10 seats, live studio labs</span></p>
       <p class="price">7,500 <small data-t="cur">LYD a seat</small></p>
     </div>
     <div class="card" data-form="prod-seat" data-program="AI Productivity">
       <h3 data-t="prod.c.h">Reserve a seat</h3>
-      <p class="why" data-t="prod.c.why">First cohort in November 2026. Nothing to pay now; we confirm your seat and the dates on WhatsApp.</p>
+      <p class="who" data-t="f.who">A person replies, never a bot.</p>
+      <p class="why" data-t="prod.c.why">Founding cohort, November 2026. Nothing to pay now; we confirm your seat and the dates on WhatsApp.</p>
       <form novalidate>
         <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
-        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required></label>
+        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
         <label class="f"><span data-t="f.make">What do you make?</span>
           <select name="work"><option value="content" data-t="o.content">Content and social media</option><option value="marketing" data-t="o.marketing">Marketing</option><option value="business" data-t="o.business">I run a business</option><option value="freelance" data-t="o.freelance">Freelance work</option><option value="other" data-t="o.other">Something else</option></select></label>
         <input class="hp" name="website" tabindex="-1" autocomplete="off">
@@ -896,20 +909,21 @@ html.at-top .bar{transform:translateY(110%)}
         <li data-t="every.l1">What AI is and what it cannot do</li>
         <li data-t="every.l2">Write, summarise and translate with prompts that work</li>
         <li data-t="every.l3">Spot a cloned voice note, the four scam patterns, and what never to type into AI</li>
-        <li data-t="every.l4">Automate one real task from your own job, then teach it back</li>
+        <li data-t="every.l4">Automate one real task from your own job, then show the class how</li>
       </ul>
       <p class="meta"><b data-t="every.m1">10 hours, 12 hands-on labs</b><span data-t="every.m2">30 people a cohort, a new cohort every month</span></p>
       <p class="price">1,200 <small data-t="every.price">LYD, or free in a sponsored cohort</small></p>
     </div>
     <div class="card" data-form="everyone-seat" data-program="AI for Everyone">
       <h3 data-t="every.c.h">Join the next cohort</h3>
-      <p class="why" data-t="every.c.why">We tell you the next open dates and whether a sponsored, free seat is available.</p>
+      <p class="who" data-t="f.who">A person replies, never a bot.</p>
+      <p class="why" data-t="every.c.why">We tell you the next open dates and whether a sponsored, free seat is available. Nothing to pay now.</p>
       <form novalidate>
         <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
-        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required></label>
+        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
         <label class="f"><span data-t="f.city">City</span><input name="city" autocomplete="address-level2" placeholder="Tripoli" data-tp="f.city.ph"></label>
         <input class="hp" name="website" tabindex="-1" autocomplete="off">
-        <button class="btn btn-navy" type="submit" data-t="every.c.btn">Save me a seat</button>
+        <button class="btn btn-navy" type="submit" data-t="every.c.btn">Save my seat</button>
         <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
         <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
       </form>
@@ -942,18 +956,19 @@ html.at-top .bar{transform:translateY(110%)}
     </div>
     <div class="card" data-form="sponsor" data-program="AI Literacy Initiative">
       <h3 data-t="sp.c.h">Apply to sponsor a month</h3>
+      <p class="who" data-t="f.who">A person replies, never a bot.</p>
       <p class="why" data-t="sp.c.why">Each month has one sponsor. We reply within one working day and confirm your month within five.</p>
       <form novalidate>
         <label class="f"><span data-t="f.org">Organisation</span><input name="org" autocomplete="organization" autocapitalize="words" enterkeyhint="next" required></label>
         <label class="f"><span data-t="f.contact">Contact name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
         <div class="row2">
-          <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required></label>
+          <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
           <label class="f"><span data-t="f.email">Email</span><input name="email" type="email" inputmode="email" autocapitalize="off" autocomplete="email" enterkeyhint="next"></label>
         </div>
         <label class="f"><span data-t="f.month">Preferred month</span>
           <select name="month"><option value="2027-01" data-t="m.jan">January 2027</option><option value="2027-02" data-t="m.feb">February 2027</option><option value="2027-03" data-t="m.mar">March 2027</option><option value="2027-04" data-t="m.apr">April 2027</option><option value="2027-05" data-t="m.may">May 2027</option><option value="2027-06" data-t="m.jun">June 2027</option><option value="2027-07" data-t="m.jul">July 2027</option><option value="2027-08" data-t="m.aug">August 2027</option><option value="2027-09" data-t="m.sep">September 2027</option><option value="2027-10" data-t="m.oct">October 2027</option><option value="2027-11" data-t="m.nov">November 2027</option><option value="2027-12" data-t="m.dec">December 2027</option><option value="any" data-t="m.any">Any month</option></select></label>
         <input class="hp" name="website" tabindex="-1" autocomplete="off">
-        <button class="btn btn-teal" type="submit" data-t="sp.c.btn">Apply to sponsor</button>
+        <button class="btn btn-teal" type="submit" data-t="sp.c.btn">Send my application</button>
         <p class="err" data-t="f.err3">Please add your organisation, a contact name and a WhatsApp number.</p>
         <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
       </form>
@@ -971,10 +986,10 @@ html.at-top .bar{transform:translateY(110%)}
     <div class="copy">
       <p class="kick" data-t="co.k">Custom AI Training</p>
       <h2 data-t="co.h">Train your whole team on your own data.</h2>
-      <p class="lead" data-t="co.lead">Your staff are already using AI at work, with no rules and no training. We build a programme for your industry, your data and your workflows, delivered at your site, on our campus or online, in Arabic.</p>
+      <p class="lead" data-t="co.lead">Your staff are already using AI at work, with no rules and no training. We build a programme for your industry and your data, then run it at your site, on our campus or online, in Arabic.</p>
       <figure class="fig"><svg class="fig-svg" viewBox="0 0 460 104" role="img" aria-label="Four steps from consultation to a report to leadership" font-family="var(--body)" font-size="12"><rect x="20" y="20" width="98" height="44" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="69" y="46" fill="var(--fig-ink)" text-anchor="middle" font-size="11" data-t="c.1">Free consultation</text><path d="M120 42 L130 42" stroke="var(--fig-ink)" stroke-width="1.5" marker-end="url(#fig-arrow)"/><rect x="132" y="20" width="98" height="44" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="181" y="46" fill="var(--fig-ink)" text-anchor="middle" font-size="11" data-t="c.2">Rules for AI at work</text><path d="M232 42 L242 42" stroke="var(--fig-ink)" stroke-width="1.5" marker-end="url(#fig-arrow)"/><rect x="244" y="20" width="98" height="44" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="293" y="46" fill="var(--fig-ink)" text-anchor="middle" font-size="11" data-t="c.3">Labs on your tasks</text><path d="M344 42 L354 42" stroke="var(--fig-ink)" stroke-width="1.5" marker-end="url(#fig-arrow)"/><rect x="356" y="20" width="98" height="44" rx="6" fill="none" stroke="var(--fig-rule)" stroke-width="1.5"/><text x="405" y="46" fill="var(--fig-ink)" text-anchor="middle" font-size="11" data-t="c.4">Report to leadership</text><text x="20" y="94" fill="var(--fig-ink)" font-weight="600" data-t="fig.co1">At your site, on our campus, or online. In Arabic.</text></svg><figcaption data-t="fig.cap.co">Figure 6. How a team programme runs.</figcaption></figure>
       <ul class="list">
-        <li data-t="co.l1">A free consultation to scope what your team needs</li>
+        <li data-t="co.l1">A free consultation to work out what your team needs</li>
         <li data-t="co.l2">Clear rules on what may and may not go into an AI tool</li>
         <li data-t="co.l3">Hands-on labs on your real tasks, not generic examples</li>
         <li data-t="co.l4">A report to leadership on what changed</li>
@@ -982,7 +997,8 @@ html.at-top .bar{transform:translateY(110%)}
     </div>
     <div class="card" data-form="company" data-program="Custom AI Training">
       <h3 data-t="co.c.h">Request a proposal</h3>
-      <p class="why" data-t="co.c.why">Tell us about the team. We reply within one working day and send a scope and price within a week.</p>
+      <p class="who" data-t="f.who">A person replies, never a bot.</p>
+      <p class="why" data-t="co.c.why">Tell us about the team. We reply within one working day and send a plan and a price within a week.</p>
       <form novalidate>
         <label class="f"><span data-t="f.org">Company</span><input name="org" autocomplete="organization" autocapitalize="words" enterkeyhint="next" required></label>
         <div class="row2">
@@ -990,10 +1006,10 @@ html.at-top .bar{transform:translateY(110%)}
           <label class="f"><span data-t="f.size">Team size</span>
             <select name="size"><option value="1-10">1–10</option><option value="11-50">11–50</option><option value="51-200">51–200</option><option value="200+">200+</option></select></label>
         </div>
-        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required></label>
+        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
         <label class="f"><span data-t="f.need">What should the team be able to do afterwards?</span><textarea name="need"></textarea></label>
         <input class="hp" name="website" tabindex="-1" autocomplete="off">
-        <button class="btn btn-navy" type="submit" data-t="co.c.btn">Request a proposal</button>
+        <button class="btn btn-navy" type="submit" data-t="co.c.btn">Send me a proposal</button>
         <p class="err" data-t="f.err3">Please add your company, a contact name and a WhatsApp number.</p>
         <p class="alt"><span data-t="f.or">Or message us directly:</span> <a class="wa-link" href="#" data-t="f.wa">WhatsApp</a></p>
       </form>
@@ -1014,19 +1030,20 @@ html.at-top .bar{transform:translateY(110%)}
       <p class="lead" data-t="pw.lead">Join the waitlist and you hear first when dates are set.</p>
       <figure class="fig"><svg class="fig-svg" viewBox="0 0 460 80" role="img" aria-label="Three more pathways along 2027" font-family="var(--body)" font-size="12"><line x1="20" y1="40" x2="440" y2="40" stroke="var(--fig-rule)" stroke-width="1.5"/><circle cx="60" cy="40" r="6" fill="#534CB6"/><text x="60" y="24" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" font-size="11" data-t="m.jan">Jan 2027</text><text x="60" y="66" fill="var(--fig-ink)" text-anchor="middle" font-weight="600" data-t="fig.pa1">Diploma</text><circle cx="230" cy="40" r="6" fill="#534CB6"/><text x="230" y="24" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" font-size="11">2027</text><text x="230" y="66" fill="var(--fig-ink)" text-anchor="middle" font-weight="600" data-t="fig.pa2">AI for Kids</text><circle cx="400" cy="40" r="6" fill="#534CB6"/><text x="400" y="24" fill="var(--fig-ink)" text-anchor="middle" fill="var(--fig-quiet)" font-size="11" data-t="pw.q3">On request</text><text x="400" y="66" fill="var(--fig-ink)" text-anchor="middle" font-weight="600" data-t="fig.pa3">Policymakers</text></svg><figcaption data-t="fig.cap.pa">Figure 7. What opens in 2027.</figcaption></figure>
       <dl class="rows">
-        <div><dt data-t="pw.1">AI Practitioner Diploma</dt><dd data-t="pw.1s">Eight months, about 640 contact hours, from beginner to a practitioner someone will hire. 19,200 LYD.</dd><dd class="when" data-t="pw.q1">January 2027</dd></div>
-        <div><dt data-t="pw.2">AI for Kids</dt><dd data-t="pw.2s">Ages 10 to 16, two certified levels, two weeks each. 1,920 LYD a level.</dd><dd class="when" data-t="pw.q2">2027</dd></div>
+        <div><dt data-t="pw.1">AI Practitioner Diploma</dt><dd data-t="pw.1s">Eight months, from beginner to a practitioner someone will hire. Price announced with the dates.</dd><dd class="when" data-t="pw.q1">January 2027</dd></div>
+        <div><dt data-t="pw.2">AI for Kids</dt><dd data-t="pw.2s">Ages 10 to 16, two levels, two weeks each. Dates and price in 2027.</dd><dd class="when" data-t="pw.q2">2027</dd></div>
         <div><dt data-t="pw.3">AI for Policymakers</dt><dd data-t="pw.3s">For ministries and public bodies: the rules Libya needs and how to write them.</dd><dd class="when" data-t="pw.q3">On request</dd></div>
       </dl>
     </div>
     <div class="card" data-form="waitlist">
       <h3 data-t="pw.c.h">Join the waitlist</h3>
+      <p class="who" data-t="f.who">A person replies, never a bot.</p>
       <p class="why" data-t="pw.c.why">No commitment. One message when the dates are confirmed.</p>
       <form novalidate>
         <label class="f"><span data-t="f.pathway">Pathway</span>
           <select name="program"><option value="AI Practitioner Diploma" data-t="pw.1">AI Practitioner Diploma</option><option value="AI for Kids" data-t="pw.2">AI for Kids</option><option value="AI for Policymakers" data-t="pw.3">AI for Policymakers</option></select></label>
         <label class="f"><span data-t="f.name">Your name</span><input name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" required></label>
-        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required></label>
+        <label class="f"><span data-t="f.whatsapp">WhatsApp number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+218 9X XXX XXXX" required><small class="fhint" data-t="f.wahint">We reply on WhatsApp, never by cold call.</small></label>
         <input class="hp" name="website" tabindex="-1" autocomplete="off">
         <button class="btn btn-navy" type="submit" data-t="pw.c.btn">Add me to the waitlist</button>
         <p class="err" data-t="f.err">Please add your name and a WhatsApp number we can reach.</p>
@@ -1091,34 +1108,34 @@ ar:{
  'hero.chip':'الحرم الجامعي يفتح في طرابلس، نوفمبر 2026',
  'hero.h1':'ذكاءٌ صُنع في ليبيا.',
  'eb.1':'أكاديمية الخوارزمي للذكاء الاصطناعي','eb.2':'طرابلس','eb.3':'الأولى في ليبيا','tri.1':'أول أكاديمية للذكاء الاصطناعي في ليبيا','tri.2':'طرابلس · 32.89° شمالاً، 13.19° شرقاً','hint':'مرّر للدخول',
- 'k1':'أول أكاديمية للذكاء الاصطناعي في ليبيا','ov1.h':'كل مهارة تبدأ من صفحة.','ov1.p':'أي شخص يستطيع مشاهدة فيديو عن الذكاء الاصطناعي. القليلون يكملونه. هنا تتعلم حضورياً، في القاعة، بالعربية أولاً.',
+ 'k1':'كيف نعمل','ov1.h':'أي شخص يستطيع مشاهدة فيديو عن الذكاء الاصطناعي.','ov1.p':'القليلون يكملونه. هنا تتعلم حضورياً، في القاعة، بالعربية أولاً.',
  'k2':'كل مسار ينتهي بدليل','ov2.h':'ثم تبني.','ov2.p':'معرض أعمال. تطبيق يعمل. خطة لتسعين يوماً. خارطة طريق للذكاء الاصطناعي لمؤسستك أنت. أشياء حقيقية، صُنعت في ليبيا.',
- 'ov3.h':'مكانك في مستقبل ليبيا مع الذكاء الاصطناعي يبدأ هنا.',
+ 'ov3.h':'ثلاثة برامج. قاعة واحدة في طرابلس. اختر برنامجك.',
  'exec.c.chk':'أرسلوا لي أيضاً فحص الجاهزية المجاني للمؤسسات الليبية',
- 'hero.lead':'دروس حضورية مباشرة، بالعربية أولاً، في حرمٍ جامعي بطرابلس. سواء كنت تدير مؤسسة أو تريد مهارة جديدة، تغادر ومعك شيء يعمل فعلاً.',
- 'hero.cta1':'احجز مكالمة مجانية','hero.cta2':'استعرض البرامج',
+ 'hero.lead':'دروس حضورية مباشرة، بالعربية أولاً، في مقرّنا بطرابلس. خمسة أيام للقادة، أسبوعان لصنّاع المحتوى، وعشر ساعات للجميع.',
+ 'hero.cta1':'احجز مكالمة مجانية','hero.cta2':'أو استعرض البرامج الثلاثة',
  'start.h':'عرّفنا بنفسك','start.why':'نرد عليك عبر واتساب خلال يوم عمل واحد بالبرنامج المناسب ومواعيده.',
- 'start.lead':'أدير مؤسسة','start.learn':'أريد مهارة جديدة','start.sponsor':'أريد أن أرعى دفعة','start.btn':'اعرف البرنامج المناسب لك','start.n1':'في الأثناء، اطّلع على المسار التنفيذي','start.n2':'في الأثناء، اطّلع على البرامج','start.n3':'في الأثناء، اطّلع على الرعاية',
- 'f.city.ph':'طرابلس','f.name':'الاسم','f.whatsapp':'رقم واتساب','f.org':'المؤسسة','f.email':'البريد الإلكتروني','f.role':'المنصب','f.when':'أفضل وقت للاتصال','f.make':'ماذا تصنع؟','f.city':'المدينة','f.contact':'اسم جهة الاتصال','f.month':'الشهر المفضل','f.size':'حجم الفريق','f.need':'ماذا يجب أن يستطيع الفريق فعله بعد التدريب؟','f.pathway':'المسار','f.reach':'رقم واتساب أو بريد إلكتروني','f.q':'سؤالك',
+ 'start.lead':'أدير مؤسسة','start.learn':'أريد مهارة جديدة','start.sponsor':'أريد أن أرعى دفعة','start.btn':'أرسل واعرف برنامجي','start.n1':'في الأثناء، اطّلع على المسار التنفيذي','start.n2':'في الأثناء، اطّلع على البرامج','start.n3':'في الأثناء، اطّلع على الرعاية',
+ 'f.city.ph':'طرابلس','f.who':'يردّ عليك شخص، لا روبوت.','f.wahint':'نردّ عبر واتساب، ولا نتصل بك دون موعد.','f.name':'الاسم','f.whatsapp':'رقم واتساب','f.org':'المؤسسة','f.email':'البريد الإلكتروني','f.role':'المنصب','f.when':'أفضل وقت للاتصال','f.make':'ماذا تصنع؟','f.city':'المدينة','f.contact':'اسم جهة الاتصال','f.month':'الشهر المفضل','f.size':'حجم الفريق','f.need':'ماذا يجب أن يستطيع الفريق فعله بعد التدريب؟','f.pathway':'المسار','f.reach':'رقم واتساب أو بريد إلكتروني','f.q':'سؤالك',
  'f.err':'يرجى إضافة اسمك ورقم واتساب يمكننا الوصول إليك عبره.','f.err2':'يرجى إضافة اسمك وبريد إلكتروني صحيح.','f.err3':'يرجى إضافة اسم المؤسسة واسم جهة الاتصال ورقم واتساب.','f.err4':'يرجى إضافة اسمك ووسيلة للتواصل معك وسؤالك.',
  'f.or':'أو راسلنا مباشرة:','f.wa':'واتساب',
  'done.h':'وصلتنا رسالتك.','done.p':'سنرد عليك عبر واتساب خلال يوم عمل واحد.','done.wa':'راسلنا الآن','done.call':'تم طلب المكالمة.','done.seat':'تم طلب المقعد.','done.app':'وصلنا طلبك.','done.req':'وصلنا طلبك.','done.list':'أنت على القائمة.','done.visit':'تم طلب الزيارة.','done.q':'تم إرسال سؤالك.',
  'c2':'2 / 10','c3':'3 / 10','c4':'4 / 10','c5':'5 / 10','c6':'6 / 10','c7':'7 / 10','c8':'8 / 10','c9':'9 / 10','c10':'10 / 10',
- 'fig.why1':'9 من كل 10 ليبيين متصلون','fig.why2':'0 أكاديميات للذكاء الاصطناعي، حتى الآن','d.sun':'الأحد','d.mon':'الاثنين','d.tue':'الثلاثاء','d.wed':'الأربعاء','d.thu':'الخميس','fig.ex1':'9 مخرجات','fig.ex2':'خمسة أيام. تغادر بخارطة طريق ممولة لتسعين يوماً.','p.app':'تطبيق','p.auto':'أتمتة','p.img':'صورة','p.brand':'هوية','p.prompt':'أوامر','p.video':'فيديو','p.voice':'صوت','p.music':'موسيقى','p.camp':'حملة','p.copy':'نصوص','fig.pr1':'مشروعك يمر عبر العشرة كلها.','fig.pr2':'الأسبوع الأول، ثم الثاني.','fig.ev1':'خمس أمسيات، ساعتان لكل منها، 12 مختبراً','fig.ev2':'لا تحتاج إلى خلفية. الهاتف يكفي.','fig.sp0':'أنت','fig.sp1':'راعٍ واحد كل شهر. ثلاثون شخصاً، مجاناً لهم.','fig.sp2':'اسمك على الشهادات الثلاثين كلها.','c.1':'استشارة مجانية','c.2':'قواعد الذكاء الاصطناعي في العمل','c.3':'مختبرات على مهامكم','c.4':'تقرير للإدارة','fig.co1':'في مقركم، أو في حرمنا، أو عن بُعد. بالعربية.','fig.pa1':'الدبلوم','fig.pa2':'للأطفال','fig.pa3':'صنّاع السياسات','fig.ab1':'خارطة طريق','fig.ab2':'تطبيق يعمل','fig.ab3':'معرض أعمال','fig.cap.why':'الشكل 1. تسعة من كل عشرة ليبيين متصلون. ولا يكاد أحد مدرَّباً.','fig.cap.ab':'الشكل 1. ما تغادر به.','fig.cap.ex':'الشكل 2. الأيام الخمسة، وما يتراكم فيها.','fig.cap.pr':'الشكل 3. عشرة مخرجات، مشروع واحد.','fig.cap.ev':'الشكل 4. خمس أمسيات.','fig.cap.sp':'الشكل 5. شهرك.','fig.cap.co':'الشكل 6. كيف يسير برنامج الفريق.','fig.cap.pa':'الشكل 7. ما يُفتح في 2027.',
+ 'fig.why1':'9 من كل 10 ليبيين متصلون','fig.why2':'0 أكاديميات للذكاء الاصطناعي، حتى الآن','d.sun':'الأحد','d.mon':'الاثنين','d.tue':'الثلاثاء','d.wed':'الأربعاء','d.thu':'الخميس','fig.ex1':'9 مخرجات','fig.ex2':'خمسة أيام. تغادر بخارطة طريق لتسعين يوماً وبميزانيتها.','p.app':'تطبيق','p.auto':'أتمتة','p.img':'صورة','p.brand':'هوية','p.prompt':'أوامر','p.video':'فيديو','p.voice':'صوت','p.music':'موسيقى','p.camp':'حملة','p.copy':'نصوص','fig.pr1':'مشروعك يمر عبر العشرة كلها.','fig.pr2':'الأسبوع الأول، ثم الثاني.','fig.ev1':'خمس أمسيات، ساعتان لكل منها، 12 مختبراً','fig.ev2':'لا تحتاج إلى خلفية. الهاتف يكفي.','fig.sp0':'أنت','fig.sp1':'راعٍ واحد كل شهر. ثلاثون شخصاً، مجاناً لهم.','fig.sp2':'اسمك على الشهادات الثلاثين كلها.','c.1':'استشارة مجانية','c.2':'قواعد الذكاء الاصطناعي في العمل','c.3':'مختبرات على مهامكم','c.4':'تقرير للإدارة','fig.co1':'في مقركم، أو في حرمنا، أو عن بُعد. بالعربية.','fig.pa1':'الدبلوم','fig.pa2':'للأطفال','fig.pa3':'صنّاع السياسات','fig.ab1':'خارطة طريق','fig.ab2':'تطبيق يعمل','fig.ab3':'معرض أعمال','fig.cap.why':'الشكل 1. تسعة من كل عشرة ليبيين متصلون. ولا يكاد أحد مدرَّباً.','fig.cap.ab':'الشكل 1. ما تغادر به.','fig.cap.ex':'الشكل 2. الأيام الخمسة، وما يتراكم فيها.','fig.cap.pr':'الشكل 3. عشرة مخرجات، مشروع واحد.','fig.cap.ev':'الشكل 4. خمس أمسيات.','fig.cap.sp':'الشكل 5. شهرك.','fig.cap.co':'الشكل 6. كيف يسير برنامج الفريق.','fig.cap.pa':'الشكل 7. ما يُفتح في 2027.',
  'w.k':'داخل الأكاديمية','w.h':'تسعون ثانية داخل أول أكاديمية للذكاء الاصطناعي في ليبيا.','w.soon':'الفيلم يصل في 30 أكتوبر','w.cap':'صُوّر في الحرم الجامعي، شارع زاوية الدهماني، طرابلس.',
- 'why.cap':'طرابلس ليلاً.','why.k':'لماذا الآن','pg.k':'البرامج','pg.h':'ثلاثة مداخل. اختر مدخلك.','pg.1':'خمسة أيام. تسعة مخرجات لمؤسستك أنت. للرؤساء التنفيذيين والمديرين ورؤساء الأقسام.','pg.1m':'5 أيام · الدفعة القادمة تبدأ 15 نوفمبر','pg.1b':'اطّلع على البرنامج','pg.2':'أسبوعان. عشرة أشياء صنعتها بنفسك: تطبيق، وفيديو، وحملة، وأتمتة. لصنّاع المحتوى والمسوّقين وروّاد الأعمال.','pg.2m':'أسبوعان · الدفعة الأولى في نوفمبر','pg.2b':'اطّلع على البرنامج','pg.3':'عشر ساعات على خمس أمسيات، بالعربية. لا تحتاج إلى خلفية مسبقة، الهاتف يكفي.','pg.3m':'10 ساعات · دفعة جديدة كل شهر','pg.3b':'اطّلع على البرنامج','pg.also':'للمؤسسات:','pg.a1':'ارعَ شهراً','pg.a2':'درّب فريقك','pg.a3':'مسارات 2027','back':'← كل البرامج','exec.k':'المسار التنفيذي للذكاء الاصطناعي','prod.k':'إنتاجية الذكاء الاصطناعي · أحضر مشروعك الخاص','prod.byo':'أحضر مشروعك الخاص','every.k':'الذكاء الاصطناعي للجميع','sp.k':'مبادرة محو الأمية بالذكاء الاصطناعي','co.k':'تدريب مخصص للذكاء الاصطناعي','pw.k':'مسارات أخرى','ab.k':'في الأكاديمية','ct.k':'تواصل معنا',
+ 'why.cap':'طرابلس ليلاً.','why.k':'لماذا الآن','pg.k':'البرامج','pg.h':'ثلاثة مداخل. اختر مدخلك.','pg.1':'خمسة أيام. تسعة مخرجات لمؤسستك أنت. للرؤساء التنفيذيين والمديرين ورؤساء الأقسام.','pg.1m':'5 أيام · الدفعة القادمة تبدأ 15 نوفمبر','pg.1b':'اطّلع على الأيام الخمسة','pg.2':'أسبوعان. عشرة أشياء صنعتها بنفسك: تطبيق، وفيديو، وحملة، وأتمتة. لصنّاع المحتوى والمسوّقين وروّاد الأعمال.','pg.2m':'أسبوعان · الدفعة المؤسِّسة، نوفمبر','pg.2b':'اطّلع على الأسبوعين','pg.3':'عشر ساعات على خمس أمسيات، بالعربية. لا تحتاج إلى خلفية مسبقة، الهاتف يكفي.','pg.3m':'10 ساعات · دفعة جديدة كل شهر','pg.3b':'اطّلع على الأمسيات الخمس','pg.also':'للمؤسسات:','pg.a1':'ارعَ شهراً','pg.a2':'درّب فريقك','pg.a3':'يفتح في 2027: الدبلوم، الأطفال، صنّاع السياسات','back':'← كل البرامج','exec.k':'المسار التنفيذي للذكاء الاصطناعي','prod.k':'إنتاجية الذكاء الاصطناعي · أحضر مشروعك الخاص','prod.byo':'أحضر مشروعك الخاص','every.k':'الذكاء الاصطناعي للجميع','sp.k':'مبادرة محو الأمية بالذكاء الاصطناعي','co.k':'تدريب مخصص للذكاء الاصطناعي','pw.k':'مسارات أخرى','ab.k':'في الأكاديمية','ct.k':'تواصل معنا',
  'why.h':'ليبيا متصلة بالإنترنت. ولا أحد تقريباً مدرَّب.',
  'why.lead':'أدوات الذكاء الاصطناعي التي يستخدمها الناس في العمل تتغير كل بضعة أسابيع. وحتى اليوم لم يكن في ليبيا مكان لتعلّمها حضورياً، بالعربية.',
- 'why.f1b':'9 من 10','why.f1':'من الليبيين متصلون بالإنترنت','why.f2b':'أسابيع','why.f2':'بين كل إصدار رئيسي وآخر لنماذج الذكاء الاصطناعي','why.f3b':'صفر','why.f3':'أكاديميات للذكاء الاصطناعي في ليبيا قبل هذه',
+ 'why.f1b':'9 من 10','why.f1':'من الليبيين متصلون بالإنترنت','why.f2b':'94%','why.f2':'من استخدام الهاتف في ليبيا على شبكات 4G أو 5G','why.f3b':'صفر','why.f3':'أكاديميات للذكاء الاصطناعي في ليبيا قبل هذه',
  'ready.h':'احصل على فحص الجاهزية للذكاء الاصطناعي','ready.why':'قائمة مختصرة للمؤسسات الليبية: أين يؤتي الذكاء الاصطناعي ثماره أولاً، وما الذي يجب تجهيزه قبل البدء. مجاناً، إلى بريدك.','ready.btn':'أرسلوا لي الفحص','ready.done':'القائمة في طريقها إليك خلال يوم عمل واحد.',
  'exec.h':'خمسة أيام. تسعة مخرجات لمؤسستك أنت.',
- 'exec.lead':'للرؤساء التنفيذيين والمديرين ورؤساء الأقسام. لا تغادر ومعك ملاحظات، بل تغادر ومعك استراتيجية للذكاء الاصطناعي، وخارطة طريق ممولة لتسعين يوماً، والأسئلة التي تمنع أي مورّد من بيعك الشيء الخطأ.',
+ 'exec.lead':'للرؤساء التنفيذيين والمديرين ورؤساء الأقسام. لا تغادر ومعك ملاحظات، بل تغادر ومعك استراتيجية للذكاء الاصطناعي لمؤسستك، وخارطة طريق لتسعين يوماً بميزانيتها، والأسئلة التي تمنع أي مورّد من بيعك الشيء الخطأ.',
  'exec.l1':'قدّر فرصة الذكاء الاصطناعي في مؤسستك بأرقام يقبلها مديرك المالي',
- 'exec.l2':'اعرف أين يخفق الذكاء الاصطناعي التوليدي: تسرب البيانات، والهلوسة، وحقن الأوامر، والضوابط التي يجب أن تطلبها',
+ 'exec.l2':'اعرف أين يخفق الذكاء الاصطناعي: تسرّب البيانات، والإجابات الخاطئة بثقة، والتعليمات المتلاعَب بها، والضوابط التي يجب أن تطلبها',
  'exec.l3':'اقرأ عرض المورّد والعقد دون أن تُقيَّد به',
- 'exec.l4':'اختم بنجم الشمال لمؤسستك، وخارطة طريق لتسعين يوماً، وجلسة استشارية ختامية',
- 'exec.m1':'5 أيام، من الأحد إلى الخميس','exec.m2':'20 ساعة، 14 وحدة، 5 مختبرات بلا برمجة','exec.m3':'7 مقاعد في الدفعة','cur':'دينار ليبي للمقعد',
- 'exec.c.h':'احجز مكالمة مجانية لعشرين دقيقة','exec.c.why':'الدفعة القادمة تبدأ الأحد 15 نوفمبر 2026. يتصل بك مدير من الأكاديمية، ويجيب عن أسئلتك، ويحجز لك مقعداً إن كان البرنامج مناسباً.',
+ 'exec.l4':'اختم باستراتيجية ذكاء اصطناعي من صفحة واحدة، وخارطة طريق لتسعين يوماً، وجلسة استشارية خاصة حول خطتك',
+ 'exec.m1':'5 أيام، من الأحد إلى الخميس','exec.m2':'20 ساعة، 14 جلسة، 5 مختبرات عملية','exec.m3':'7 مقاعد في الدفعة','cur':'دينار ليبي للمقعد',
+ 'exec.c.h':'احجز مكالمة مجانية لعشرين دقيقة','exec.c.why':'الدفعة القادمة تبدأ الأحد 15 نوفمبر 2026. يتصل بك مدير من الأكاديمية، ويجيب عن أسئلتك، ويحجز لك مقعداً إن كان البرنامج مناسباً. لا شيء تدفعه الآن.',
  'o.morning':'صباحاً','o.afternoon':'بعد الظهر','o.evening':'مساءً','exec.c.btn':'احجز مكالمتي',
  'prod.h':'أسبوعان. عشرة أشياء صنعتها بنفسك.',
  'prod.lead':'لصنّاع المحتوى والمسوّقين وروّاد الأعمال والمستقلين. الدورات الأخرى تعلّمك أن تفهم الذكاء الاصطناعي. هذه تعلّمك أن تنتج به. أحضر المشروع الذي تعمل عليه: كل مختبر خلال الأسبوعين يصبّ فيه، وتغادر وهو مبنيّ.',
@@ -1126,36 +1143,36 @@ ar:{
  'prod.l2':'الأسبوع الثاني: فيديو وصوت وموسيقى بالذكاء الاصطناعي، والحملات والنصوص',
  'prod.l3':'بحلول اليوم الثالث تنجز أول تطبيق أو فيديو لك',
  'prod.l4':'تغادر ومشروعك مبنيّ، ومعك معرض أعمال يمكنك عرضه على عميل',
- 'prod.m1':'10 أيام تدريس، من الأحد إلى الخميس','prod.m2':'دفعات صغيرة، مختبرات استوديو مباشرة',
- 'prod.c.h':'احجز مقعداً','prod.c.why':'الدفعة الأولى في نوفمبر 2026. لا شيء تدفعه الآن؛ نؤكد مقعدك والمواعيد عبر واتساب.',
+ 'prod.m1':'10 أيام تدريس، من الأحد إلى الخميس','prod.m2':'10 مقاعد، مختبرات استوديو مباشرة',
+ 'prod.c.h':'احجز مقعداً','prod.c.why':'الدفعة المؤسِّسة، نوفمبر 2026. لا شيء تدفعه الآن؛ نؤكد مقعدك والمواعيد عبر واتساب.',
  'o.content':'محتوى ووسائل تواصل','o.marketing':'تسويق','o.business':'أدير عملاً تجارياً','o.freelance':'عمل حر','o.other':'شيء آخر','prod.c.btn':'احجز مقعدي',
  'every.h':'عشر ساعات، ويتوقف الحديث عن أن يمرّ فوق رأسك.',
  'every.lead':'خمس أمسيات، ساعتان في كل منها، من الأحد إلى الخميس، بالعربية. لا تحتاج إلى خلفية مسبقة. الهاتف يكفي.',
  'every.l1':'ما هو الذكاء الاصطناعي وما الذي لا يستطيع فعله',
  'every.l2':'اكتب ولخّص وترجم بأوامر تعمل فعلاً',
  'every.l3':'اكتشف الرسالة الصوتية المزيفة، وأنماط الاحتيال الأربعة، وما الذي لا تكتبه أبداً في الذكاء الاصطناعي',
- 'every.l4':'أتمت مهمة حقيقية من عملك، ثم علّمها لغيرك',
+ 'every.l4':'أتمت مهمة حقيقية من عملك، ثم أرِ زملاءك كيف فعلتها',
  'every.m1':'10 ساعات، 12 مختبراً عملياً','every.m2':'30 شخصاً في الدفعة، ودفعة جديدة كل شهر','every.price':'دينار ليبي، أو مجاناً في دفعة مرعية',
- 'every.c.h':'انضم إلى الدفعة القادمة','every.c.why':'نخبرك بالمواعيد المفتوحة القادمة وما إذا كان هناك مقعد مجاني مرعي.','every.c.btn':'احجزوا لي مقعداً',
+ 'every.c.h':'انضم إلى الدفعة القادمة','every.c.why':'نخبرك بالمواعيد المفتوحة القادمة وما إذا كان هناك مقعد مجاني مرعي. لا شيء تدفعه الآن.','every.c.btn':'احجز مقعدي',
  'sp.h':'ارعَ شهراً. واسمك على ثلاثين شهادة.',
  'sp.lead':'تموّل مبادرة محو الأمية بالذكاء الاصطناعي برنامج "الذكاء الاصطناعي للجميع" شهراً بشهر. راعٍ واحد، ودفعة واحدة من ثلاثين شخصاً لا يدفعون شيئاً. معلّمة تكتشف الصوت المزيف. صاحب متجر يرد على زبائنه بلغتين. ممرضة تتحقق قبل أن تثق.',
  'sp.f1':'دينار ليبي تموّل دفعة واحدة','sp.f2':'شخصاً، مجاناً لهم','sp.f3':'شهراً للاختيار من بينها في 2027',
  'sp.l1':'اسم مؤسستك على الشهادات الثلاثين كلها','sp.l2':'اختر دفعة عامة أو مجموعة تهمّك','sp.l3':'تقرير بعد الدفعة: درجات اكتشاف الاحتيال قبل وبعد، والمختبرات المنجزة',
  'sp.c.h':'قدّم طلباً لرعاية شهر','sp.c.why':'لكل شهر راعٍ واحد. نرد خلال يوم عمل واحد ونؤكد شهرك خلال خمسة أيام.',
  'm.jan':'يناير 2027','m.feb':'فبراير 2027','m.mar':'مارس 2027','m.apr':'أبريل 2027','m.may':'مايو 2027','m.jun':'يونيو 2027','m.jul':'يوليو 2027','m.aug':'أغسطس 2027','m.sep':'سبتمبر 2027','m.oct':'أكتوبر 2027','m.nov':'نوفمبر 2027','m.dec':'ديسمبر 2027','m.any':'أي شهر',
- 'sp.c.btn':'قدّم طلب الرعاية','sp.done':'نؤكد شهرك خلال خمسة أيام عمل.',
+ 'sp.c.btn':'أرسل طلبي','sp.done':'نؤكد شهرك خلال خمسة أيام عمل.',
  'co.h':'درّب فريقك كله على بياناتكم أنتم.',
- 'co.lead':'موظفوك يستخدمون الذكاء الاصطناعي في العمل بالفعل، بلا قواعد وبلا تدريب. نبني برنامجاً لقطاعكم وبياناتكم وسير عملكم، يُقدَّم في مقركم أو في حرمنا الجامعي أو عن بُعد، بالعربية.',
+ 'co.lead':'موظفوك يستخدمون الذكاء الاصطناعي في العمل بالفعل، بلا قواعد وبلا تدريب. نبني برنامجاً لقطاعكم وبياناتكم، ثم ننفّذه في مقركم أو في مقرّنا أو عن بُعد، بالعربية.',
  'co.l1':'استشارة مجانية لتحديد ما يحتاجه فريقك','co.l2':'قواعد واضحة لما يجوز وما لا يجوز إدخاله في أدوات الذكاء الاصطناعي','co.l3':'مختبرات عملية على مهامكم الحقيقية، لا على أمثلة عامة','co.l4':'تقرير للإدارة عمّا تغيّر',
- 'co.c.h':'اطلب عرضاً','co.c.why':'حدّثنا عن الفريق. نرد خلال يوم عمل واحد ونرسل نطاق العمل والسعر خلال أسبوع.','co.c.btn':'اطلب عرضاً','co.done':'سنتواصل معك خلال يوم عمل واحد لترتيب الاستشارة.',
+ 'co.c.h':'اطلب عرضاً','co.c.why':'حدّثنا عن الفريق. نرد خلال يوم عمل واحد ونرسل خطة وسعراً خلال أسبوع.','co.c.btn':'أرسلوا لي عرضاً','co.done':'سنتواصل معك خلال يوم عمل واحد لترتيب الاستشارة.',
  'pw.h':'تُفتح في 2027.','pw.lead':'انضم إلى قائمة الانتظار لتكون أول من يعرف عند تحديد المواعيد.',
- 'pw.1':'دبلوم ممارس الذكاء الاصطناعي','pw.1s':'ثمانية أشهر، نحو 640 ساعة تدريس، من مبتدئ إلى ممارس يوظّفه أحد. 19,200 دينار ليبي.','pw.q1':'يناير 2027',
- 'pw.2':'الذكاء الاصطناعي للأطفال','pw.2s':'من 10 إلى 16 عاماً، مستويان معتمدان، أسبوعان لكل مستوى. 1,920 دينار ليبي للمستوى.','pw.q2':'2027',
+ 'pw.1':'دبلوم ممارس الذكاء الاصطناعي','pw.1s':'ثمانية أشهر، من مبتدئ إلى ممارس يوظّفه أحد. يُعلن السعر مع المواعيد.','pw.q1':'يناير 2027',
+ 'pw.2':'الذكاء الاصطناعي للأطفال','pw.2s':'من 10 إلى 16 عاماً، مستويان، أسبوعان لكل مستوى. المواعيد والسعر في 2027.','pw.q2':'2027',
  'pw.3':'الذكاء الاصطناعي لصنّاع السياسات','pw.3s':'للوزارات والهيئات العامة: القواعد التي تحتاجها ليبيا وكيف تُكتب.','pw.q3':'عند الطلب',
  'pw.c.h':'انضم إلى قائمة الانتظار','pw.c.why':'بلا التزام. رسالة واحدة عند تأكيد المواعيد.','pw.c.btn':'أضفني إلى القائمة','pw.done':'نراسلك عند تأكيد المواعيد.',
- 'ab.h':'لماذا يختار الناس الخوارزمي.','ab.t1':'حضورياً، في القاعة','ab.t1s':'قاعة دراسية في شارع زاوية الدهماني، لا فيديو. هنا يكمل الناس ما بدأوه.','ab.t2':'بالعربية أولاً','ab.t2s':'نعلّم بالعربية، مع الإنجليزية للمصطلحات التي يستخدمها القطاع أصلاً.','ab.t3':'تغادر ومعك دليل','ab.t3s':'خارطة طريق لمؤسستك، أو تطبيق يعمل، أو معرض أعمال. لا مجرد ملاحظات.',
+ 'ab.h':'تعليم في قاعة، لا في نافذة متصفح.','ab.t1':'حضورياً، في القاعة','ab.t1s':'قاعة دراسية في شارع زاوية الدهماني، لا فيديو. من سبعة إلى ثلاثين شخصاً، ومدرّب يعرف اسمك.','ab.t2':'بالعربية أولاً','ab.t2s':'نعلّم بالعربية، مع الإنجليزية للمصطلحات التي يستخدمها القطاع أصلاً.','ab.t3':'تغادر ومعك دليل','ab.t3s':'خارطة طريق لمؤسستك، أو تطبيق يعمل، أو معرض أعمال. لا مجرد ملاحظات.',
  'ab.lead':'تتعلم في قاعة دراسية بشارع زاوية الدهماني، بالعربية أولاً، مع أشخاص يبنون بهذه الأدوات كل يوم. كل برنامج ينتهي بشيء صنعته بنفسك: خارطة طريق لمؤسستك، أو تطبيق يعمل، أو معرض أعمال.',
-  'ab.c.h':'زُر الحرم الجامعي','ab.c.why':'تعال وشاهد حصة دراسية. ثلاثون دقيقة، بلا أي التزام.','ab.c.btn':'رتّب زيارة',
+  'ab.c.h':'زُر الأكاديمية','ab.c.why':'تعال وشاهد حصة دراسية. ثلاثون دقيقة، بلا أي التزام.','ab.c.btn':'احجز زيارتي',
  'ct.h':'اسألنا أي شيء.','ct.lead':'يرد عليك شخص من الأكاديمية خلال يوم عمل واحد، وليس روبوتاً.',
  'ct.figcap':'الاستقبال، الطابق الأول. تفضّل، الشاي علينا.','ct.wa':'واتساب','ct.email':'البريد الإلكتروني','ct.campus':'الحرم الجامعي','ct.addr':'شارع زاوية الدهماني، طرابلس، ليبيا',
  'ct.c.h':'أرسل سؤالاً','ct.c.why':'عن المحتوى أو المواعيد أو الرسوم أو تدريب فريقك.','ct.c.btn':'أرسل سؤالي','ct.done':'نرد خلال يوم عمل واحد.',
