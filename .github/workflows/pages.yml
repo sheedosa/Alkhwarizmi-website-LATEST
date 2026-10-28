@@ -20,8 +20,8 @@ jobs:
       - name: Collect site files
         run: |
           mkdir -p _site
-          cp index.html .nojekyll _site/
-          cp -r media fonts _site/
+          cp index.html 404.html robots.txt sitemap.xml favicon.ico apple-touch-icon.png icon-192.png icon-512.png icon.svg site.webmanifest .nojekyll _site/
+          cp -r media fonts vendor _site/
       - name: Publish to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
