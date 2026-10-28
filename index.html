@@ -1256,6 +1256,60 @@ footer.ft{background:var(--navy);color:#C9C9DC;padding:0}
 @media (max-width:1000px){.who-ind{grid-template-columns:1fr 1fr}.who-ind-k{grid-column:1/-1;max-width:none;padding:12px 18px}}
 @media (max-width:600px){.who-ind{grid-template-columns:1fr}}
 </style>
+<style>
+/* ---- v9: mobile ---- */
+/* tap targets: every footer and inline text link is at least 44px tall to the finger */
+.ft-col a,.ft-base a,.ft-social a{display:inline-flex;align-items:center;min-height:44px;margin-block:-8px}
+.ft-col{gap:2px}
+.ft-col h2{margin-bottom:8px}
+.ft-brand .ft-logo{min-height:44px}
+.addr dd a,.reach .addr a,.inside-act .tlink,.pg-faq summary,.pv-note a,.quiet,.hero .quiet,.ctas .quiet{display:inline-flex;align-items:center;min-height:44px}
+.card.fx .pv-note{margin-top:-14px}
+.card.fx .pv-note a{padding:0 8px}
+.addr dd a{margin-block:-10px}
+/* the coordinates line under the hero badge: readable on every phone */
+.tri-label small,.eb small{font-size:12px}
+/* landscape phones: header slimmer, hero side by side */
+@media (max-height:520px) and (orientation:landscape) and (min-width:640px){
+  .nav-in{min-height:52px;padding-block:6px}
+  .burger,.lang .lang-btn{min-height:40px}
+  .ov-split{top:50%;text-align:left;transform:translateY(-50%)}
+  .ov-split > *,.ov-split h1,.ov-split h2,.ov-split p{margin-left:0;margin-right:0;text-align:left;max-width:min(52vw,480px)}
+  .ov-split .ctas{justify-content:flex-start}
+  .eyebrow{justify-content:flex-start}
+  .ov-hero.ov-split h1{font-size:min(5.6vw,13vh,56px)}
+  .ov-hero p{font-size:clamp(14px,2.2vw,17px)}
+  .ctas{margin-top:14px}
+  [dir="rtl"] .ov-split > *,[dir="rtl"] .ov-split h1,[dir="rtl"] .ov-split h2,[dir="rtl"] .ov-split p{margin-left:auto;margin-right:0;text-align:right}
+  [dir="rtl"] .ov-hero.ov-split h1,[dir="rtl"] .ov-split h2{max-width:min(52vw,480px)!important;width:auto}
+  [dir="rtl"] .ov-split .ctas,[dir="rtl"] .eyebrow{justify-content:flex-start}
+  .ov h2{font-size:min(5vw,12vh,48px)}
+  .ov .kicker{margin-bottom:8px;font-size:15px}
+}
+/* the very narrowest phones (folded screens, 280px) */
+@media (max-width:300px){
+  :root{--edge:14px}
+  .card.fx{padding:16px 14px}
+  .card.fx .row2{grid-template-columns:1fr}
+  .card.fx .seg.seg3,.card.fx .seg.seg4{grid-template-columns:1fr 1fr}
+  .pg h1{font-size:28px}
+  .pg-facts{grid-template-columns:1fr}
+  .who-grid{grid-template-columns:1fr}
+  .nav .brand span{display:none}
+  .nav .brand{min-width:44px;min-height:44px;display:inline-flex;align-items:center}
+}
+/* the mark alone (small phones) still has a full-size tap area */
+.nav .brand{min-width:44px;min-height:44px}
+/* phones: comfortable reading sizes and spacing */
+@media (max-width:640px){
+  .pg-lead,.lead{font-size:16.5px}
+  .pg-cta .btn,.card.fx .btn{min-height:52px}
+  .pg-facts dd,.pg-facts dd>span:only-child{font-size:15px}
+  .pg-out li,.pg-steps span{font-size:15.5px}
+  .who .tile{padding:18px 16px}
+  .tile .tile-go{min-height:40px;display:inline-flex;align-items:center}
+}
+</style>
 </head>
 <body>
 <header class="nav" id="nav">
@@ -1619,7 +1673,7 @@ footer.ft{background:var(--navy);color:#C9C9DC;padding:0}
         <p class="pg-lead" data-t="ad.lead">For boards, executive teams and public bodies. We help you write the rules for AI in your organisation, choose vendors and tools on your terms, and set a roadmap your people can deliver. Independent, in Arabic, and on record.</p>
         <div class="pg-cta"><a class="btn btn-teal" href="#f-advisory" data-jump="f-advisory"><span data-t="ad.c.h">Request a conversation</span><svg class="ic-ar" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="pg-note" data-t="f.firstfree">The first conversation is free</span></div>
       </div>
-      <figure class="pg-img"><img src="media/lobby-dusk.webp" width="1920" height="1008" alt="The academy reception in Tripoli at dusk, set for a leadership briefing" decoding="async" fetchpriority="high"></figure>
+      <figure class="pg-img"><img src="media/lobby-dusk.webp" srcset="media/lobby-dusk-1000.webp 1000w, media/lobby-dusk.webp 1920w" sizes="(min-width: 1000px) 46vw, 100vw" width="1920" height="1008" alt="The academy reception in Tripoli at dusk, set for a leadership briefing" decoding="async" fetchpriority="high"></figure>
     </div>
     <div class="pg-wrap"><dl class="pg-facts"><div><dt data-t="fx.for">For</dt><dd><span data-t="ad.f1">Boards, executive teams, ministries</span></dd></div><div><dt data-t="fx.starts">Starts with</dt><dd><span data-t="ad.f2">One conversation, then a scoping note</span></dd></div><div><dt data-t="fx.where">Where</dt><dd><span data-t="fx.where.v">Your site, our campus or online</span></dd></div><div><dt data-t="fx.prop">Proposal</dt><dd><span data-t="ad.f4">Scope and price within a week</span></dd></div></dl></div>
   </header>
@@ -1913,7 +1967,7 @@ ar:{
   (function(){
     var pl=$('#player'), btn=$('#playBtn'), sec=$('#watch'); if(!pl) return;
     var url=(CONFIG.VIDEO||'').trim();
-    if(CONFIG.VIDEO_POSTER){ var im=document.createElement('img'); im.className='poster-img'; im.alt=''; im.src=CONFIG.VIDEO_POSTER; pl.insertBefore(im, pl.firstChild); }
+    if(CONFIG.VIDEO_POSTER){ var im=document.createElement('img'); im.className='poster-img'; im.alt=''; im.src=CONFIG.VIDEO_POSTER; if(/watch-poster\.webp$/.test(CONFIG.VIDEO_POSTER)){ im.srcset='media/watch-poster-800.webp 800w, media/watch-poster.webp 1600w'; im.sizes='(min-width: 901px) 58vw, 100vw'; } im.width=1600; im.height=900; im.decoding='async'; pl.insertBefore(im, pl.firstChild); }
     if(!url){ if(!CONFIG.SHOW_VIDEO_PLACEHOLDER){ sec.hidden=true; } else { btn.disabled=true; btn.style.opacity='.55'; } return; }
     $('#posterNote').hidden=true;
     function embed(){
@@ -2155,7 +2209,7 @@ let W = 1, H = 1;
 const msz = new THREE.Box3().setFromObject(flip).getSize(new THREE.Vector3());
 const MW = msz.x * 1.18, MH = msz.y * 1.22;           // the mark, with room for rotation and float
 const S = {};
-const wide = () => W > 900;
+const wide = () => W > 900 || (W >= 640 && H < 520);
 const centred = o => o.classList.contains('ov-center') || o.classList.contains('ov-left') || (o.classList.contains('ov-split') && wide());
 const heroMap = document.getElementById('heroMap');
 const triL = document.querySelector('.tri-label'), lead = document.getElementById('triLead'), lmap = heroMap && heroMap.querySelector('.lmap');
