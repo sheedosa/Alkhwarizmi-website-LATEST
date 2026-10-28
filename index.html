@@ -1445,6 +1445,36 @@ footer.ft{background:var(--navy);color:#C9C9DC;padding:0}
 }
 @media (max-height:560px){.ov-final .sub{display:none}.ov-facts{margin-top:10px}}
 </style>
+<style>
+/* =====================================================================
+   v14: alignment pass
+   ===================================================================== */
+/* 1. Form footnotes: the lines under the submit button were capped at a reading width and left-anchored,
+      so their centred text sat 6-19px off the button's centre. They now span the form and centre on it. */
+.card.fx .assure,.card.fx .pv-note,.card.fx .alt,.card.fx .err{width:100%;max-width:none;justify-self:stretch;margin-left:0;margin-right:0;text-align:center}
+.card.fx .alt{justify-content:center}
+.card.fx .pv-note a{padding:0 8px;margin:0 auto}
+.card.fx .done{text-align:center}
+/* 2. "A person replies" dot: its glow ring stuck 3px outside the column edge */
+.reply .dot{margin-inline-start:3px}
+/* 3. FAQ rows: the + sat right after the question; it now lines up on the row's far edge, like the rule under it */
+details > summary{display:flex;width:100%;justify-content:space-between}
+/* 4. "Also from the academy": six links in a five-column grid left an empty grey block. Three columns, two full rows. */
+@media (min-width:641px){.pg-more-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* 5. Pathways list: the date tags floated at different x positions; they now share one column and keep their size on phones */
+@media (min-width:641px){.pw-row{grid-template-columns:minmax(0,1fr) 120px auto}.pw-when{justify-self:start}}
+.pw-when{justify-self:start;width:max-content}
+/* 6. Programme headers: the photo was centred against the text, so its top edge moved page to page.
+      It now starts on the same line as the programme name. */
+@media (min-width:901px){.pg-head-grid{align-items:start}.pg-img{margin-top:4px}}
+/* 7. Phones: the page reserved space for the sticky bar twice (body and footer), leaving a white strip under the footer */
+@media (max-width:860px){body{padding-bottom:0!important}}
+/* 8. The note beside a header button ("Nothing to pay now") wraps under it on narrow phones; its tick now sits on the button's edge */
+.pg-note{margin-inline-start:0}
+@media (max-width:640px){.pg-cta{column-gap:16px}}
+/* 9. Section openers: the kicker's gradient rule and the heading under it share one start edge in both languages */
+.runhead,.pg-kick,.ov-final .ov-k{padding-inline:0}
+</style>
 </head>
 <body>
 <header class="nav" id="nav">
