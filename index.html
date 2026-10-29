@@ -1877,6 +1877,14 @@ details > summary{display:flex;width:100%;justify-content:space-between}
 [dir="rtl"] .pc-facts span,[dir="rtl"] .pc-who{font-size:13px}
 [dir="rtl"] .pc-go{font-size:15px}
 </style>
+<style>
+/* v22: the scroll is shorter by the closing frame it no longer has */
+.scrolly{height:796vh}
+@media (max-width:760px){.scrolly{height:552vh}}
+.static .scrolly{height:auto}
+/* programmes follow the animation directly */
+.scrolly + .who{border-top:0}
+</style>
 </head>
 <body>
 <header class="nav" id="nav">
@@ -1927,14 +1935,6 @@ details > summary{display:flex;width:100%;justify-content:space-between}
         <p class="sub" data-t="ov2.p">An approved AI strategy, a team that uses the tools safely, a report your leadership can read.</p>
       </div>
 
-      <div class="ov ov-light ov-split ov-final" data-stack="1" data-a="0.86" data-b="1.2">
-        <p class="ov-k" data-t="ov3.k">Your first step</p><h2 data-t="ov3.h">Start with a free conversation.</h2><p class="sub" data-t="ov3.p">Forty minutes with a director. You leave knowing where AI fits in your organisation, and what to do first.</p><ul class="ov-facts"><li data-t="ov3.f1">A reply within one working day</li><li data-t="ov3.f2">In Arabic</li><li data-t="ov3.f3">No obligation</li></ul>
-        <div class="ctas">
-          <a class="btn btn-pri btn-lg" href="#contact" data-t="hero.cta1">Get in touch</a>
-          <a class="btn btn-sec" href="#who" data-t="hero.cta2">Our services</a>
-        </div>
-      </div>
-
       <div class="progress" aria-hidden="true"><i id="bar"></i></div>
     </div>
   </section>
@@ -1968,16 +1968,7 @@ details > summary{display:flex;width:100%;justify-content:space-between}
     <div class="fit-cta"><a class="btn btn-pri fit-go" href="#"><span data-t="fit.go">See the programme</span></a><a class="btn btn-sec" href="#contact" data-t="fit.talk">Or just get in touch</a><button type="button" class="fit-again" data-t="fit.again">Start again</button></div></div>
 </div></section>
 
-<section class="whynow short" id="start">
-  <div class="wrap why-grid">
-    <div class="why-copy">
-      <p class="runhead"><span data-t="why.k">Why now</span></p>
-      <h2 data-t="why.h2">Your staff already use AI. Nobody trained them.</h2>
-    </div>
-    <div class="figwrap"><dl class="figures figs4"><div><dt>75%</dt><dd data-t="why.f1">of employees in the Middle East used AI at work in the past year</dd></div><div><dt>61%</dt><dd data-t="why.f2">of people using AI at work have had no training from their employer</dd></div><div><dt>78%</dt><dd data-t="why.f3">of AI users bring their own tools to work, not ones the company chose</dd></div><div><dt>48%</dt><dd data-t="why.f4">of privacy and security professionals admit putting non-public company data into AI tools</dd></div></dl><p class="why-so" data-t="why.so">The tools are already in your building. The skills and the rules are not.</p><a class="why-go" href="#companies"><span data-t="why.go">Train your team</span><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><p class="figsrc" data-t="why.src">Sources: PwC Middle East, Workforce Hopes and Fears 2025; Microsoft and LinkedIn, Work Trend Index 2024; Cisco, Data Privacy Benchmark 2024.</p></div>
-  </div>
-  
-</section>
+
 
 <section class="inside bgx" id="watch">
   <div class="wrap inside-grid">
@@ -2799,7 +2790,7 @@ function fit(b, ww, wh, maxH) {
 }
 function layout() {
   const gap = H < 760 ? 16 : (small ? 20 : 32), hintH = small ? 16 : 96;
-  const hero = ovBox(ovs[0]), bk = ovBox(ovs[1]), clu = ovBox(ovs[2]), fin = ovBox(ovs[3]);
+  const hero = ovBox(ovs[0]), bk = ovBox(ovs[1]), clu = ovBox(ovs[2]), fin = ovs[3] ? ovBox(ovs[3]) : null;
   // the mark takes the side the text leaves free: right of it in LTR, left of it in RTL
   const rtl = document.documentElement.dir === 'rtl';
   const beside = (b, gapX) => rtl ? { left: 24, right: b.left - gapX } : { left: b.right + gapX, right: W - 24 };
@@ -2810,7 +2801,7 @@ function layout() {
   S.cloud = fit({ left: 16, right: W - 16, top: bk.bottom + gap, bottom: H - 24 }, BW, BH);
   S.clust = W > 900 ? fit(Object.assign(beside(clu, 40), { top: 72, bottom: H - 40 }), CW, CH)
                     : fit({ left: 10, right: W - 10, top: clu.bottom + 14, bottom: H - 14 }, CW, CH);
-  S.final = wide() ? fit(Object.assign(beside(fin, 48), { top: 76, bottom: H - 40 }), MW, MH, H * 0.46) : fit({ left: 16, right: W - 16, top: fin.bottom + gap, bottom: H - 24 }, MW, MH, H * 0.42);
+  S.final = fin ? (wide() ? fit(Object.assign(beside(fin, 48), { top: 76, bottom: H - 40 }), MW, MH, H * 0.46) : fit({ left: 16, right: W - 16, top: fin.bottom + gap, bottom: H - 24 }, MW, MH, H * 0.42)) : fit({ left: 16, right: W - 16, top: 72, bottom: H - 40 }, MW, MH, H * (wide() ? 0.5 : 0.42));
 }
 function resize() { W = vp.clientWidth; H = vp.clientHeight; renderer.setSize(W, H, false); camera.aspect = W / H; camera.updateProjectionMatrix(); layout(); }
 new ResizeObserver(resize).observe(vp); resize();
@@ -2831,11 +2822,11 @@ function frame() {
   const t = clock.getElapsedTime();
   const r = scrolly.getBoundingClientRect();
   if (r.bottom < -40 || r.top > innerHeight + 40) { requestAnimationFrame(frame); return; } // off screen: nothing to draw
-  const target = clamp(-r.top / Math.max(1, r.height - innerHeight));
+  const target = clamp(-r.top / Math.max(1, r.height - innerHeight)) * 0.87;
   sp += (target - sp) * 0.085; if (window.__snap) sp = target;
   const p = sp;
   smx += (mx - smx) * .05; smy += (my - smy) * .05;
-  bar.style.width = (target * 100).toFixed(2) + '%';
+  bar.style.width = (target / 0.87 * 100).toFixed(2) + '%';
   hint.style.opacity = target > 0.01 ? 0 : 1;
   if (heroMap) { const mo = 1 - range(p, 0.012, 0.055); heroMap.style.opacity = mo.toFixed(3); heroMap.style.visibility = mo > 0.002 ? 'visible' : 'hidden'; }
 
